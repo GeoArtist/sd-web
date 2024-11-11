@@ -11,6 +11,7 @@ const schema = z.object({
     telephone: z.union([z.string().min(9, "Numer telefonu musi mieć przynajmniej 9 cyfr"), z.literal("")]),
     email: z.union([z.string().email("Nieprawidłowy format adresu email"), z.literal("")]),
     message: z.string().min(1, "Wprowadź treść wiadomości"),
+    rodo_permission: z.boolean().refine(data => data===true, {message:"Zgoda na kontakt i przetwarzanie danych jest wymagana"})
 }).refine(data => data.telephone|| data.email,
     {message:"Podaj przynajmniej jeden sposób kontaktu", path:["telephoneOremail"]}
 )
@@ -22,6 +23,7 @@ export default function KontaktPage() {
         resolver: zodResolver(schema)
     });
     const {errors}= formState;
+    console.log(errors)
     const [sendStatus, setSendStatus] = useState({status:0, message:""})
     async function onSubmit(formData:FormValues){
         const status = await sendMail(formData)
@@ -47,8 +49,13 @@ export default function KontaktPage() {
             <label htmlFor="message">Wiadomość: </label>
             <textarea id="message" placeholder="Wpisz treść wiadomości" {...register("message")}  />
             <p className={styles.error}>{errors.message?.message}</p>
+            
+            <input type="checkbox"  id='rodo-permission' {...register("rodo_permission")}/>
+            <label htmlFor="rodo-permission">Dane kontaktowe podaję dobrowolnie oraz wyrażam zgodę na kontakt i przetwarzanie danych w celu uzyskania odpowiedzi od SOFT-DATA Marek Szczepkowski, ul. Marii Dąbrowskiej 13/52, 10-685 Olsztyn, zgodnie z regulaminem</label>
+            <p className={styles.error}>{errors.rodo_permission?.message}</p>
 
             <button>Wyślij</button>
+
         </form>
         {/* Send status */}
         {sendStatus.status!==0 && <p className={sendStatus.status===200 ? styles.success : styles.error}>{sendStatus.message}</p>}
