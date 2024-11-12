@@ -4,3 +4,46 @@
 .success {
     color: green;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-inline: auto;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    &__label {
+        margin-bottom: 0.25rem;
+    }
+    &__input {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+    }
+
+    &__textarea {
+        min-height: 100px;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+    }
+}
+
+.form__rodo {
+    text-wrap-style: balance;
+    margin-bottom: 2rem;
+    & input[type="checkbox"] {
+        vertical-align: -2px;
+        margin-inline: 0rem 0.25rem;
+        width: 1rem;
+        aspect-ratio: 1;
+    }
+    & span {
+        font-style: italic;
+        margin-inline: 0.5ch;
+    }
+}
