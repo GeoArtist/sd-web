@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    font-size: var(--font-size-default);
+    font-family: var(--font-family-default);
+    color: var(--color-text-default);
+    min-height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text-default);
+}
+
+button {
+    cursor: pointer;
+}
