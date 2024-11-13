@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles/reset.scss"
 import "./styles/theme.scss"
 import {roboto} from './fonts/fonts'
+import { Layout } from "./_components/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,10 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body className={roboto.variable}>
-        {children}
+        <Layout>{children}</Layout>
       </body>
+
     </html>
   );
 }

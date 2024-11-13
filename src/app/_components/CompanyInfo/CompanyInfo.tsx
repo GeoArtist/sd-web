@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import telephone from '../../../../public/icons/telephone.svg'
-import email from '../../../../public/icons/email.svg'
+import telephone from '@/public/icons/telephone.svg'
+import email from '@/public/icons/email.svg'
 import styles from './CompanyInfo.module.scss'
 
-export const CompanyInfo= () => {
+export function CompanyInfo() {
     return <>
     <article className={styles.companyInfo}>
         <section className={styles.contact}>

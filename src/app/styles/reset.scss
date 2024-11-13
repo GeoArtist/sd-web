@@ -34,6 +34,8 @@ body {
     font-family: var(--font-family-default);
     color: var(--color-text-default);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
