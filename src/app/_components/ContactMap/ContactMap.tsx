@@ -6,14 +6,14 @@ import { icon,LatLngExpression } from "leaflet"
 import email from '@/public/icons/email.svg'
 import './leaflet_popup.scss'
 
-const homePosition:LatLngExpression  = [53.74752979970894, 20.51380898578665]
+const homePosition:LatLngExpression  = [53.74870, 20.51345]
 
 const sizeMarkerIcon = 50
 const IconMarker = icon({
     iconUrl: email.src,
     iconSize: [sizeMarkerIcon, sizeMarkerIcon],
-    iconAnchor: [sizeMarkerIcon / 2, sizeMarkerIcon * 1.2],
-    popupAnchor: [0, -sizeMarkerIcon]
+    iconAnchor: [sizeMarkerIcon / 2, sizeMarkerIcon /2 ],
+    popupAnchor: [0, -sizeMarkerIcon /4]
 })
 const popupDescription = <>
 <span className={styles.bold}>SOFT-DATA Marek Szczepkowski</span><br/>
