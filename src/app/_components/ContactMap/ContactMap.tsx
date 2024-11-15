@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import styles from './ContactMap.module.scss'
 import { icon,LatLngExpression } from "leaflet"
 import email from '@/public/icons/email.svg'
-import './leaflet_popup.scss'
 
 const homePosition:LatLngExpression  = [53.74870, 20.51345]
 

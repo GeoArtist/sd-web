@@ -8,6 +8,17 @@
     font-weight: 700;
 }
 
+// PopUp
+.map div:global(.leaflet-popup-content-wrapper) {
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+    background-color: lightblue;
+}
+.map div:global(.leaflet-popup-tip) {
+    background-color: black;
+}
+
+// ToolTip
 .tooltip {
     background-color: transparent;
     border: None;
