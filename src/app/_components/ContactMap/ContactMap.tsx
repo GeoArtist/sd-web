@@ -1,5 +1,5 @@
 
-import { MapContainer,TileLayer, Marker, Popup} from 'react-leaflet'
+import { MapContainer,TileLayer, Marker, Popup, Tooltip} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import styles from './ContactMap.module.scss'
 import { icon,LatLngExpression } from "leaflet"
@@ -13,7 +13,7 @@ const IconMarker = icon({
     iconUrl: email.src,
     iconSize: [sizeMarkerIcon, sizeMarkerIcon],
     iconAnchor: [sizeMarkerIcon / 2, sizeMarkerIcon /2 ],
-    popupAnchor: [0, -sizeMarkerIcon /4]
+    popupAnchor: [0, -sizeMarkerIcon /3]
 })
 const popupDescription = <>
 <span className={styles.bold}>SOFT-DATA Marek Szczepkowski</span><br/>
@@ -33,6 +33,7 @@ export default  function ContactMap(){
         <Marker icon={IconMarker} position={homePosition}>
             <Popup>{popupDescription}
             </Popup>
+            <Tooltip className={`${styles.tooltip} ${styles.bold}`} direction="bottom" offset={[0, sizeMarkerIcon /8]} opacity={1} permanent>SOFT-DATA</Tooltip>
         </Marker>
     </MapContainer>)
     </div>

@@ -7,8 +7,12 @@
 .bold {
     font-weight: 700;
 }
-.leaflet-popup-content-wrapper {
-    padding: 10px;
-    text-align: center;
-    background-color: yellow !important;
+
+.tooltip {
+    background-color: transparent;
+    border: None;
+    box-shadow: None;
+    &::before {
+        display: none;
+    }
 }
