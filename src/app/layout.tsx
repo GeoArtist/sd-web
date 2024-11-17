@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./styles/reset.scss"
 import "./styles/theme.scss"
 import {roboto} from './fonts/fonts'
-import { Layout } from "./_components/Layout/Layout";
+import { Layout } from "./components/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Create Next App",

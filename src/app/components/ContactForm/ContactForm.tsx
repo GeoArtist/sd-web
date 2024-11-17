@@ -1,30 +1,20 @@
 'use client'
-import {z} from 'zod'
-import {useForm} from 'react-hook-form'
+
 import {zodResolver} from '@hookform/resolvers/zod'
+import { sendMail } from '@/api/send_email';
+import {contactFormSchema, ContactFormValues} from '@/schemas/contactForm'
 import styles from './ContactForm.module.scss'
+
+import {useForm} from 'react-hook-form'
 import {useState} from 'react';
-import { sendMail } from '@/app/api/send_email';
-
-const schema = z.object({
-    name: z.string().min(1, "Podaj swoje imię"),
-    telephone: z.union([z.string().min(9, "Numer telefonu musi mieć przynajmniej 9 cyfr"), z.literal("")]),
-    email: z.union([z.string().email("Nieprawidłowy format adresu email"), z.literal("")]),
-    message: z.string().min(1, "Wprowadź treść wiadomości"),
-    rodo_permission: z.boolean().refine(data => data===true, {message:"Zgoda na kontakt i przetwarzanie danych jest wymagana"})
-}).refine(data => data.telephone|| data.email,
-    {message:"Podaj przynajmniej jeden sposób kontaktu", path:["telephoneOremail"]}
-)
-
-type FormValues = z.infer<typeof schema> & {telephoneOremail?:string}
 
 export function ContactForm() {
-    const {register, handleSubmit, formState} = useForm<FormValues>({
-        resolver: zodResolver(schema)
+    const {register, handleSubmit, formState} = useForm<ContactFormValues>({
+        resolver: zodResolver(contactFormSchema)
     });
     const {errors}= formState;
     const [sendStatus, setSendStatus] = useState({status:0, message:""})
-    async function onSubmit(formData:FormValues){
+    async function onSubmit(formData:ContactFormValues){
         const status = await sendMail(formData)
         setSendStatus(status)
     }
