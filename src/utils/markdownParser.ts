@@ -36,8 +36,7 @@ export async function getAllContents() {
   return allPostsData
 }
 
-export async function getContent(fileName:string):Promise<ContentType> {
-    
+export async function getSelectedContent(fileName:string):Promise<ContentType> {
     // All content fileNames
     const fileNames = fs.readdirSync(CONTENT_DIRECTORY);
     const contentFileName = fileNames.find((file) => file.replace(/\.md$/, '') === fileName);
@@ -53,11 +52,12 @@ export async function getContent(fileName:string):Promise<ContentType> {
     const fullPath = path.join(CONTENT_DIRECTORY, contentFileName);
     const fileContent = fs.readFileSync(fullPath, 'utf8');
     const {data, content} = matter(fileContent);
-
-        
+  
     return {
         fileName,
         data,
         content
       };
     }
+
+  
