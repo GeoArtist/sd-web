@@ -1,23 +1,12 @@
-// export enum GeoOfferService {
-//     mdcp = 'mapa-do-celow-projektowych',
-//     inne = 'inne-opracowania-geodezyjne',
-//     intentaryzacje = 'pomiary-inwentaryzacyjne',
-//     podzialy = 'podzialy-nieruchomosci',
-//     prawne = 'mapy-do-celow-pranwych',
-//     rozgraniczenia = 'rozgraniczenia-nieruchomosci',
-//     tyczenia = 'tyczenia-obiektow-budowlanych',
-//     wznowienia = 'wznowienia-granic',
-// }
-interface Dictionary {
-    [key: string]: string; 
-}
-export const geoOfferMap:Dictionary = {
- 'mapa-do-celow-projektowych':'mdcp',
- 'inne-opracowania-geodezyjne': 'inne',
- 'pomiary-inwentaryzacyjne': 'intentaryzacje',
- 'podzialy-nieruchomosci': 'podzialy',
- 'mapy-do-celow-pranwych':'prawne',
- 'rozgraniczenia-nieruchomosci': 'rozgraniczenia',
- 'tyczenia-obiektow-budowlanych': 'tyczenia',
- 'wznowienia-granic': 'wznowienia',
-}
+import { GeoOffer } from '../types/geoOffer';
+
+export const geoOffer: GeoOffer[] = [
+    {path: 'mapa-do-celow-projektowych', mdFileName: 'mdcp', navName: 'Mapa do celów projektowych'},
+    {path: 'tyczenia-obiektow-budowlanych', mdFileName: 'tyczenia', navName: 'Tyczenie obiektów budowlanych'},
+    {path: 'pomiary-inwentaryzacyjne', mdFileName: 'inwentaryzacje', navName: 'Pomiary inwentaryzacyjne'},
+    {path: 'wznowienia-granic', mdFileName: 'wznowienia', navName: 'Wznowienie / wyznaczenie granic'},
+    {path: 'podzialy-nieruchomosci', mdFileName: 'podzialy', navName: 'Podziały nieruchomości'},
+    {path: 'rozgraniczenie-nieruchomosci', mdFileName: 'rozgraniczenia', navName: 'Rozgraniczenie nieruchomości'},
+    {path: 'mapa-do-celow-prawnych', mdFileName: 'prawne', navName: 'Mapa do celów prawnych'},
+    {path: 'inne-opracowania', mdFileName: 'inne', navName: 'Inne opracowania'},
+]

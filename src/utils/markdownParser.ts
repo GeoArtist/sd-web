@@ -40,14 +40,14 @@ export async function getAllContents(subfolder?:string):Promise<MarkDownContent[
   return allPostsData
 }
 
-export async function getSelectedContent(fileName:string, subfolder?:string):Promise<MarkDownContent> {
+export async function getSelectedContent(fileName:string, subfolder?:string):Promise<MarkDownContentType> {
     const dir = getPath(subfolder)
     // All content fileNames
     const fileNames = fs.readdirSync(dir);
     const contentFileName = fileNames.find((file) => file.replace(/\.md$/, '') === fileName);
 
     if (!contentFileName) {
-        return {} as MarkDownContent;
+        return {} as MarkDownContentType;
     }
 
     const fullPath = path.join(dir, contentFileName);

@@ -1,7 +1,7 @@
 "use server";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
-import { Email, EmailResponse } from "../types/email";
+import { EmailType, EmailResponseType } from "../types/email";
 dotenv.config(); // Load environment variables from .env file
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
@@ -26,7 +26,7 @@ export async function sendMail({
   telephone,
   email,
   message,
-}: Email): Promise<EmailResponse> {
+}: EmailType): Promise<EmailResponseType> {
   // Verify the connection configuration
   try {
     const isVerified = await transporter.verify();

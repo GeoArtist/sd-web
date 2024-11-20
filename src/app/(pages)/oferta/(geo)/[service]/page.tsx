@@ -1,4 +1,5 @@
-import { geoOfferMap } from "@/constants/geoOffer"
+import ServiceDescription from "@/app/components/ServiceDescription/ServiceDescription"
+import { geoOffer } from "@/constants/geoOffer"
 import { getSelectedContent } from "@/utils/markdownParser"
 
 export  default async function GeoOffer({params}:{params:Promise<{service:string}>}){
@@ -6,7 +7,8 @@ export  default async function GeoOffer({params}:{params:Promise<{service:string
     const service  = (await params).service
     
     // Get the markdown file name from the service (query param)
-    const md_filename = geoOfferMap[service]
+    const md_filename = geoOffer.filter(geo => geo.path === service)[0]?.mdFileName
+
     if (!md_filename) {
         throw new Error('Service not found')
     }
@@ -15,7 +17,8 @@ export  default async function GeoOffer({params}:{params:Promise<{service:string
 
     return<>
     <h1>GEO OFFER</h1>
-    <p>Service: {md_content.legalBasis}</p>
+    <ServiceDescription md_content={md_content}/>
+   
     </>
 }
 

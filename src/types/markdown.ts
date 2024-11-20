@@ -2,7 +2,7 @@
 export type MarkDownContent ={
     fileName: string,
     title: string,
-    description: string,
+    description: string[],
     time: string,
     legalBasis:string[]
     content: string
