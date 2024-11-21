@@ -2,26 +2,34 @@
     position: absolute;
     top: 100%;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    min-width: 270px;
+    display: none;
+    min-width: max-content;
     background-color: lightblue;
     color: black;
     border: 1px solid black;
-    & a,
-    & li {
-        height: 2.5rem;
-    }
+    opacity: 0;
+    transition:
+        display 0.25s cubic-bezier(0.1, 0.76, 0.58, 1),
+        opacity 0.25s cubic-bezier(0.1, 0.76, 0.58, 1);
+    transition-behavior: allow-discrete;
     & a {
-        margin: 0 0.5rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        padding: 0.5rem 0.75rem;
     }
     & li:not(:last-child) {
         border-bottom: 1px solid black;
     }
     & li:hover {
         color: lightcyan;
+    }
+}
+.open {
+    display: grid;
+    opacity: 1;
+    @starting-style {
+        display: grid;
+        opacity: 0;
     }
 }

@@ -2,16 +2,15 @@
     background-color: lightblue;
     display: flex;
     align-items: center;
-    height: 3rem;
 
     &__wrapper {
         width: 40%;
-        height: 100%;
         display: flex;
         align-items: center;
         margin-inline: auto;
     }
 
+    // Adjust logo to left
     &__logo {
         margin-inline: 0 auto;
     }

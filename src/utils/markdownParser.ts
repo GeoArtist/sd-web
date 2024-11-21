@@ -23,7 +23,7 @@ export async function getAllContents(subfolder?:string):Promise<MarkDownContent[
     // Read markdown file as string
     const fullPath = path.join(dir, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    console.log(fileNames)
+
     // Use gray-matter to parse the post metadata section
     const {data: {title, description, time, legalBasis}, content}  = matter(fileContents);
 

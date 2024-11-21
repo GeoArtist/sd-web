@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
+      "@/hooks/*": ["./src/hooks/*"],
       "@/components/*": ["./src/app/components/*"],
       "@/constants/*": ["./src/constants/*"],
     }

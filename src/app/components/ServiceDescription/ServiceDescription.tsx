@@ -4,8 +4,7 @@ import styles from './ServiceDescription.module.scss'
 export default function ServiceDescription({md_content}:{md_content:MarkDownContent}){
     
     const {title, description, time, legalBasis} = md_content
-    
-    console.log(description)
+
     return<>
     <div className={styles.wrapper}>
         <h2>{title}</h2>
