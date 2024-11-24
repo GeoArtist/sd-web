@@ -1,10 +1,11 @@
+@use "../../styles/constants" as c;
+
 .footer {
     height: 70px;
     background-color: var(--clr-theme-2);
     color: var(--clr-white);
     display: grid;
-    grid-template-columns: 1fr minmax(1000px, 1fr) 1fr;
-
+    grid-template-columns: c.$grid-temp-col;
     container: footer / inline-size;
 
     &__wrapper {
@@ -19,7 +20,7 @@
     &__links {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        // gap: 0.5rem;
         & a {
             transition: transform 0.3s ease;
         }
@@ -27,7 +28,15 @@
             color: var(--clr-black);
             transform: scale(1.035);
         }
+        & span {
+            // color: var(--clr-black);
+            font-weight: var(--fw-bold);
+        }
     }
+    &__links {
+        gap: 0.5rem;
+    }
+
     &__logo {
         height: auto;
         width: 3rem;
@@ -44,17 +53,16 @@
 
             &:hover {
                 transform: scale(1);
-                filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+                filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
             }
         }
     }
 
     @container (max-width: 1000px) {
         &__wrapper {
-            margin-block: 0.5rem;
+            padding-block: 1.5rem;
             grid-template-columns: 1fr;
             display: grid;
-            gap: 0rem;
             grid-column: 1;
         }
 
@@ -62,7 +70,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 3rem;
+            height: 1rem;
             text-wrap: nowrap;
         }
 

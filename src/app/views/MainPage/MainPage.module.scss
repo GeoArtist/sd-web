@@ -1,9 +1,11 @@
+@use "../../styles/constants" as c;
 .mainPage {
-    max-width: 1400px;
-    margin-inline: auto;
+    display: grid;
+    grid-template-columns: c.$grid-temp-col;
 }
 
 .carousel {
+    grid-column: span 3;
     width: 100%;
     height: 50vh;
     position: relative;
