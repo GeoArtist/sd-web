@@ -1,12 +1,10 @@
-@use "../../styles/constants" as c;
-
 .footer {
-    height: 70px;
     background-color: var(--clr-theme-2);
     color: var(--clr-white);
     display: grid;
-    grid-template-columns: c.$grid-temp-col;
+    grid-template-columns: 1fr minmax(1000px, 1fr) 1fr;
     container: footer / inline-size;
+    padding-block: 0.5rem;
 
     &__wrapper {
         margin-inline: 2rem;
@@ -53,14 +51,14 @@
 
             &:hover {
                 transform: scale(1);
-                filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
+                filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
             }
         }
     }
 
     @container (max-width: 1000px) {
         &__wrapper {
-            padding-block: 1.5rem;
+            padding-block: 1rem;
             grid-template-columns: 1fr;
             display: grid;
             grid-column: 1;
@@ -82,6 +80,5 @@
 @media (max-width: 1000px) {
     .footer {
         grid-template-columns: 1fr;
-        height: auto;
     }
 }
