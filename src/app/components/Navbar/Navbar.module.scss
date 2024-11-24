@@ -1,22 +1,26 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    margin-left: 3rem;
 
     & > ul {
         display: flex;
         align-items: center;
+        text-wrap: nowrap;
+        font-size: 1.15rem;
 
         & > li {
             display: flex;
             cursor: pointer;
 
             &:hover {
-                color: lightcyan;
+                background: var(--clr-theme-2);
+                color: var(--clr-white);
             }
 
             // Links
             & > a {
-                margin: 1rem 0.5rem;
+                margin: 1rem 0.75rem;
             }
         }
     }

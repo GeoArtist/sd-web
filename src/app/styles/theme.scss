@@ -2,12 +2,26 @@ body {
     --font-size-default: 16px;
     --font-family-default: var(--font-roboto), Arial, sans-serif;
 
+    --fz-default: 16px;
+    --ff-default: var(--font-roboto), Arial, sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    // COLORS
     --clr-text-default: #222020;
     --clr-text-grey: #7a7a7a;
-    --clr-yellow: #ffde00;
-    --clr-white: #ffffff;
-    --clr-grey: #f4f4f4;
 
-    --clr-theme-main: #056943;
-    --clr-price: #c60c0c;
+    --clr-red: #f0120e;
+    --clr-yellow: #f0ef0e;
+    --clr-white: #ffffff;
+    --clr-grey: #f0f2f5;
+    --clr-black: #000000;
+
+    --clr-theme-1: #65edfc;
+    --clr-theme-2: #4ca0de;
+    --clr-theme-3: #658efc;
+    --clr-theme-4: #6d65fc;
+    --clr-theme-5: #b9cbfc;
 }
