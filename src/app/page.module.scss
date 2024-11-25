@@ -1,6 +1,7 @@
 .span {
     color: red;
-    & p:hover {
+    & p:hover,
+    & p:focus-visible {
         color: blue;
     }
 }

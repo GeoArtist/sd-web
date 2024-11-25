@@ -7,8 +7,8 @@ export default function Hamburger(){
 
     return  <>
 
-        <div className={styles.hamburger}>
-            <div className={`${styles.hamburger__icon} ${showMenu ? 'active': ''}`} onClick={showMenuUpdate}>
+        <div className={styles.hamburger} tabIndex={0}>
+            <div className={`${styles.hamburger__icon} ${showMenu ? 'active': ''}`} onClick={showMenuUpdate} tabIndex={1}>
             <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 200 200"  >
             <g strokeWidth="8.5" strokeLinecap="round">
                 <path

@@ -26,7 +26,8 @@
                 transform 0.3s ease,
                 filter 0.3s ease;
         }
-        & a:hover {
+        & a:hover,
+        & a:focus-visible {
             filter: drop-shadow(var(--_link_shadow));
             transform: scale(1.1);
             font-weight: var(--fw-bold);
@@ -41,7 +42,8 @@
 
     &__links {
         gap: 1rem;
-        a:hover {
+        a:hover,
+        a:focus-visible {
             filter: drop-shadow(var(--_link_shadow));
         }
     }
@@ -62,7 +64,8 @@
                 transform 0.3s ease,
                 filter 0.3s ease;
 
-            &:hover {
+            &:hover,
+            &:focus-visible {
                 transform: scale(1.05);
                 filter: drop-shadow(var(--_link_shadow));
             }

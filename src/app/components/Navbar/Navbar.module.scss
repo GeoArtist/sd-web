@@ -13,7 +13,8 @@
             display: flex;
             cursor: pointer;
 
-            &:hover {
+            &:hover,
+            &:focus-visible {
                 background: var(--clr-theme-2);
                 color: var(--clr-white);
             }
@@ -99,7 +100,8 @@
                     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
                 }
 
-                &:hover {
+                &:hover,
+                &:focus-visible {
                     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
                     transform: scale(1.1);
                     font-weight: var(--fw-bold);

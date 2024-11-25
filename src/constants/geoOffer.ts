@@ -1,4 +1,4 @@
-import { GeoOffer } from '../types/geoOffer';
+import { GeoOffer } from '@/types/geoOffer';
 
 export const geoOffer: GeoOffer[] = [
     {path: 'mapa-do-celow-projektowych', mdFileName: 'mdcp', navName: 'Mapa do celów projektowych'},

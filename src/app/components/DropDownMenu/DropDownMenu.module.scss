@@ -31,7 +31,8 @@
     & li:not(:last-child) {
         border-bottom: 1px solid var(--_border_clr);
     }
-    & li:hover {
+    & li:hover,
+    & li:focus-visible {
         color: var(--clr-white);
         background-color: var(--clr-theme-2);
     }

@@ -27,6 +27,7 @@
       "@/constants/*": ["./src/constants/*"],
       "@/contexts/*": ["./src/app/contexts/*"],
       "@/views/*": ["./src/app/views/*"],
+      "@/types/*": ["./src/types/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
