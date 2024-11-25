@@ -4,12 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import styles from './ContactMap.module.scss'
 import { icon,LatLngExpression } from "leaflet"
 import email from '@/public/icons/email.svg'
-
+import feather from '@/public/icons/feather.svg'
 const homePosition:LatLngExpression  = [53.74870, 20.51345]
 
 const sizeMarkerIcon = 50
 const IconMarker = icon({
-    iconUrl: email.src,
+    iconUrl: feather.src,
     iconSize: [sizeMarkerIcon, sizeMarkerIcon],
     iconAnchor: [sizeMarkerIcon / 2, sizeMarkerIcon /2 ],
     popupAnchor: [0, -sizeMarkerIcon /3]
@@ -32,7 +32,7 @@ export default  function ContactMap(){
         <Marker icon={IconMarker} position={homePosition}>
             <Popup>{popupDescription}
             </Popup>
-            <Tooltip className={`${styles.tooltip} ${styles.bold}`} direction="bottom" offset={[0, sizeMarkerIcon /8]} opacity={1} permanent>SOFT-DATA</Tooltip>
+            <Tooltip className={`${styles.tooltip} ${styles.bold}`} direction="bottom" offset={[-sizeMarkerIcon/9, sizeMarkerIcon /3.25]} opacity={1} permanent>SOFT-DATA</Tooltip>
         </Marker>
     </MapContainer>)
     </div>
