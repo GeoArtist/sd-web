@@ -32,7 +32,7 @@ export default  function ContactMap(){
         <Marker icon={IconMarker} position={homePosition}>
             <Popup>{popupDescription}
             </Popup>
-            <Tooltip className={`${styles.tooltip} ${styles.bold}`} direction="bottom" offset={[-sizeMarkerIcon/9, sizeMarkerIcon /3.25]} opacity={1} permanent>SOFT-DATA</Tooltip>
+            <Tooltip className={styles.bold} direction="bottom" offset={[-sizeMarkerIcon/9, sizeMarkerIcon /3.25]} opacity={1} permanent>SOFT-DATA</Tooltip>
         </Marker>
     </MapContainer>)
     </div>
