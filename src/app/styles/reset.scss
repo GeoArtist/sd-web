@@ -41,10 +41,10 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-body:has(div.active) {
-    overflow-y: scroll;
-    position: fixed;
-}
+// body:has(div.active) {
+//     overflow-y: scroll;
+//     position: fixed;
+// }
 
 li {
     list-style: none;
