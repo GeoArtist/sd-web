@@ -54,10 +54,8 @@
     }
 
     .navbar:has(div:global(.active)) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
+        position: fixed;
+        inset: 0;
         right: 0;
         margin: 0;
         display: grid;
@@ -66,7 +64,7 @@
         overflow: hidden;
         transition: right 0.25s cubic-bezier(0.1, 0.76, 0.58, 1);
 
-        & > div {
+        & > div:has(svg) {
             grid-row: 1;
             grid-column: 2;
             justify-self: end;
@@ -78,11 +76,6 @@
             & svg,
             & path {
                 stroke: var(--clr-white);
-            }
-            & > div:hover svg,
-            & > div:hover path {
-                stroke: var(--clr-black);
-                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
             }
         }
         & .navbar__list {
@@ -103,13 +96,20 @@
                 filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
                 & a {
                     width: 100%;
+                    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
                 }
 
                 &:hover {
-                    color: var(--clr-black);
+                    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
                     transform: scale(1.1);
+                    font-weight: var(--fw-bold);
                 }
             }
         }
+    }
+    .sidebarBGC {
+        background-color: rgba(0, 0, 0, 0.4);
+        grid-column: 1;
+        grid-row: 1/-1;
     }
 }

@@ -2,11 +2,13 @@
 .topbar {
     background-color: var(--clr-white);
     display: grid;
+    position: sticky;
+    top: 0;
     grid-template-columns: c.$grid-temp-col;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     container: topbar / inline-size;
-    isolation: isolate;
     z-index: 10;
+    height: 54px;
     &__wrapper {
         grid-column: 2;
         display: flex;
@@ -19,6 +21,17 @@
         height: 2.75rem;
         width: 16rem;
     }
+    & a {
+        filter: drop-shadow(var(--_link_shadow));
+
+        transition: transform 0.3s ease;
+        // filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.025);
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+        }
+    }
     @container topbar (max-width: 1000px) {
         &__wrapper {
             grid-column: 1;
@@ -30,5 +43,6 @@
 @media (max-width: 1000px) {
     .topbar {
         grid-template-columns: 1fr;
+        position: static;
     }
 }

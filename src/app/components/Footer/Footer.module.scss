@@ -1,4 +1,6 @@
 .footer {
+    --_link_shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+
     background-color: var(--clr-theme-2);
     color: var(--clr-white);
     display: grid;
@@ -18,21 +20,30 @@
     &__links {
         display: inline-flex;
         align-items: center;
-        // gap: 0.5rem;
+        filter: drop-shadow(var(--_link_shadow));
         & a {
-            transition: transform 0.3s ease;
+            transition:
+                transform 0.3s ease,
+                filter 0.3s ease;
         }
         & a:hover {
-            color: var(--clr-black);
-            transform: scale(1.035);
-        }
-        & span {
-            // color: var(--clr-black);
+            filter: drop-shadow(var(--_link_shadow));
+            transform: scale(1.1);
             font-weight: var(--fw-bold);
         }
     }
+    &__card {
+        & a:nth-child(2) {
+            font-weight: var(--fw-bold);
+            margin-inline: 0 0.75rem;
+        }
+    }
+
     &__links {
-        gap: 0.5rem;
+        gap: 1rem;
+        a:hover {
+            filter: drop-shadow(var(--_link_shadow));
+        }
     }
 
     &__logo {
@@ -45,13 +56,15 @@
         display: inline-flex;
         align-items: center;
         & a {
-            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(var(--_link_shadow));
             transform: scale(0.8);
-            transition: transform 0.3s ease;
+            transition:
+                transform 0.3s ease,
+                filter 0.3s ease;
 
             &:hover {
-                transform: scale(1);
-                filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.4));
+                transform: scale(1.05);
+                filter: drop-shadow(var(--_link_shadow));
             }
         }
     }

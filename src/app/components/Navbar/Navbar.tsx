@@ -17,7 +17,8 @@ export function Navbar(){
    
 // 
     return <>
-        <nav className={styles.navbar} onMouseLeave={showMenu ? showMenuUpdate : undefined}>
+        <nav className={styles.navbar} >
+            {showMenu && <div className={styles.sidebarBGC} onClick={showMenuUpdate}></div>}
             <ul className={styles.navbar__list} >
                 <li><Link href="/" className={currentPath === '/' ? styles.active : "" } onClick={showMenuUpdate}>STRONA GŁÓWNA</Link></li>
                 {/* Dropdown Offer Menu */}
