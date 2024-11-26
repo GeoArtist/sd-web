@@ -6,7 +6,7 @@ import {contactFormSchema, ContactFormValues} from '@/schemas/contactForm'
 import styles from './ContactForm.module.scss'
 
 import {useForm} from 'react-hook-form'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Button from '../Button/Button';
 
 export function ContactForm() {
@@ -22,9 +22,9 @@ export function ContactForm() {
         const status = await sendMail(formData)
         setSendStatus(status)
     }
- 
+    
 
-    console.log(errors)
+    console.log('render')
     const isEmailOrTelephone = getValues('email')?.length==0 && getValues('telephone')?.length==0   
     return (
         <>
@@ -36,12 +36,12 @@ export function ContactForm() {
             </div>  
             <div>
                 <label htmlFor="email" className={styles.form__label}>Email: </label>
-                <input id="email" type="text"placeholder="Podaj Twój adres e-mail" {...register("email")}  className={`${styles.form__input} ${(errors.email || isEmailOrTelephone) ? styles.invalid : styles.valid }`} />
+                <input id="email" type="text"placeholder="Podaj Twój adres e-mail" {...register("email")}  className={`${styles.form__input} ${(errors.email || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.email?.message}</p>
             </div>
             <div>
                 <label htmlFor="telephone" className={styles.form__label}>Telefon: </label>
-                <input id="telephone" type="text" placeholder="Podaj Twój numer telefonu" {...register("telephone")} className={`${styles.form__input} ${(errors.telephone || isEmailOrTelephone) ? styles.invalid : styles.valid }`} />
+                <input id="telephone" type="text" placeholder="Podaj Twój numer telefonu" {...register("telephone")} className={`${styles.form__input} ${(errors.telephone || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.telephone?.message}</p>
                 <p className={styles.error}>{(isEmailOrTelephone || !errors.telephoneOremail ? errors.telephoneOremail?.message: '') }</p>
             </div>
