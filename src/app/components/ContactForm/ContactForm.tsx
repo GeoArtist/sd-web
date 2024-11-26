@@ -10,20 +10,22 @@ import {useState} from 'react';
 import Button from '../Button/Button';
 
 export function ContactForm() {
+    const [sendStatus, setSendStatus] = useState({status:0, message:""})
     const {register, handleSubmit, formState, getValues} = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
         mode:"onChange"
 
     });
     const {errors}= formState;
-    const [sendStatus, setSendStatus] = useState({status:0, message:""})
     
     async function onSubmit(formData:ContactFormValues){
         const status = await sendMail(formData)
         setSendStatus(status)
     }
-    console.log(Boolean(errors.email || errors.telephoneOremail))
-    const isEmailOrTelephone = getValues('email')?.length==0 && getValues('telephone')?.length==0 
+ 
+
+    console.log(errors)
+    const isEmailOrTelephone = getValues('email')?.length==0 && getValues('telephone')?.length==0   
     return (
         <>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -41,7 +43,7 @@ export function ContactForm() {
                 <label htmlFor="telephone" className={styles.form__label}>Telefon: </label>
                 <input id="telephone" type="text" placeholder="Podaj Twój numer telefonu" {...register("telephone")} className={`${styles.form__input} ${(errors.telephone || isEmailOrTelephone) ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.telephone?.message}</p>
-                <p className={styles.error}>{(isEmailOrTelephone ? errors.telephoneOremail?.message: '') }</p>
+                <p className={styles.error}>{(isEmailOrTelephone || !errors.telephoneOremail ? errors.telephoneOremail?.message: '') }</p>
             </div>
              <div>
                 <label htmlFor="message" className={styles.form__label}>Wiadomość: </label>
