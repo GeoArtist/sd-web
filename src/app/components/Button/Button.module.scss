@@ -1,0 +1,18 @@
+.button {
+    background-color: var(--clr-white);
+    border: 2px solid var(--clr-theme-2);
+    border-radius: 0.5rem;
+    color: var(--clr-theme-2);
+    padding: 0.5rem 1rem;
+    transform: scale(0.95);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    &:hover,
+    :focus-visible {
+        background-color: var(--clr-theme-2);
+        color: var(--clr-white);
+        transform: scale(1);
+    }
+}
