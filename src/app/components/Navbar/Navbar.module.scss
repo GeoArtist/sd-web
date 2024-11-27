@@ -41,21 +41,22 @@
     position: relative;
 }
 
-@container topbar (max-width: 1000px) {
+@media (max-width: 1000px) {
     .navbar__list {
         display: none;
         position: relative;
     }
-    .navbar__list:has(+ div:global(.active)) {
+    .navbar__list:has(+ div:global(.showMenuSidebar)) {
         display: block;
         // position: fixed;
     }
-    .navbar:not(:has(div:global(.active))) {
+    .navbar:not(:has(div:global(.showMenuSidebar))) {
         right: -500px;
     }
 
-    .navbar:has(div:global(.active)) {
+    .navbar:has(div:global(.showMenuSidebar)) {
         position: fixed;
+        height: 100%;
         inset: 0;
         right: 0;
         margin: 0;

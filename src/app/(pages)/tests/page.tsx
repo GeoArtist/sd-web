@@ -1,15 +1,61 @@
+'use client'
+import { useState, useEffect } from "react";
+import styles from "./page.module.css";
 
-import { geoOffer } from '@/constants/geoOffer'
-import { getSelectedContent } from '@/utils/markdownParser'
-import React from 'react'
+const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-export default async function Test(){
-    const data = await getSelectedContent('mdcp', 'geo')
-      
-    console.log(geoOffer['mapa-do-celow-projektowych'] )
+  // Funkcja sprawdzająca szerokość okna
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000);
+    };
 
+    handleResize(); // Sprawdzanie podczas ładowania komponentu
+    window.addEventListener("resize", handleResize);
 
-    return <div>Test</div>
-}
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
+  return (
+    <div>
+      {isMobile ? (
+        <div className={styles.mobileContainer}>
+          <button
+            className={styles.hamburger}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
+            ☰
+          </button>
+          {isSidebarOpen && (
+            <div className={styles.sidebar}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                ✖
+              </button>
+              <ul className={styles.sidebarLinks}>
+                <li><a href="/">Strona domowa</a></li>
+                <li><a href="/about">O nas</a></li>
+                <li><a href="/contact">Kontakt</a></li>
+              </ul>
+            </div>
+          )}
+        </div>
+      ) : (
+        <nav className={styles.navbar}>
+          <ul className={styles.navLinks}>
+            <li><a href="/">Strona domowa</a></li>
+            <li><a href="/about">O nas</a></li>
+            <li><a href="/contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      )}
+    </div>
+  );
+};
+
+export default Navbar;
 

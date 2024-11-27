@@ -17,7 +17,7 @@
         display: none;
     }
 
-    &:global(.active) svg {
+    &:global(.showMenuSidebar) svg {
         transform: rotate(90deg);
     }
     path {
@@ -44,29 +44,29 @@
     path:nth-child(6) {
         transform-origin: 62% 52%;
     }
-    &:global(.active) path:nth-child(1) {
+    &:global(.showMenuSidebar) path:nth-child(1) {
         transform: translateX(9px) translateY(1px) rotate(45deg);
     }
-    &:global(.active) path:nth-child(2) {
+    &:global(.showMenuSidebar) path:nth-child(2) {
         stroke-dasharray: 225 299;
         stroke-dashoffset: -72px;
     }
-    &:global(.active) path:nth-child(3) {
+    &:global(.showMenuSidebar) path:nth-child(3) {
         transform: translateX(9px) translateY(1px) rotate(-45deg);
     }
-    &:global(.active) path:nth-child(4) {
+    &:global(.showMenuSidebar) path:nth-child(4) {
         stroke-dasharray: 225 299;
         stroke-dashoffset: -72px;
     }
-    &:global(.active) path:nth-child(5) {
+    &:global(.showMenuSidebar) path:nth-child(5) {
         transform: translateX(9px) translateY(1px) rotate(-45deg);
     }
-    &:global(.active) path:nth-child(6) {
+    &:global(.showMenuSidebar) path:nth-child(6) {
         transform: translateX(9px) translateY(1px) rotate(45deg);
     }
 }
 
-@container topbar (max-width: 1000px) {
+@media (max-width: 1000px) {
     .hamburger__icon {
         display: block;
 
