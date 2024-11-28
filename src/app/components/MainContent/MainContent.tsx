@@ -9,7 +9,6 @@ export function MainContent({children}: MainContentProps) {
     return <>
         <div className={styles.mainContent}>
             {children}
-            
         </div>
     </>
 }

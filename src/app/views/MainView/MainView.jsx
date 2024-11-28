@@ -1,10 +1,10 @@
 
-import styles from './MainPage.module.scss';
+import styles from './MainView.module.scss';
 import FeatureCards from '../../components/FeatureCards/FeatureCards';
 import Carousel from '@/app/components/Carousel/Carousel';
 
 
-export function MainPage() {
+export function MainView() {
  
     return <>
     <Carousel/>

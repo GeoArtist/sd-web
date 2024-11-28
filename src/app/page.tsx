@@ -1,9 +1,9 @@
 import styles from './page.module.scss';
-import { MainPage } from '@/views/MainPage/MainPage';
+import { MainView } from '@/views/MainView/MainView';
 
 export default function Home() {
   return <>
-    <MainPage></MainPage>
+    <MainView></MainView>
   </>;
 }
 
