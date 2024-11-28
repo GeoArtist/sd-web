@@ -1,11 +1,13 @@
-.contact__layout {
+.contactLayout {
     display: grid;
     max-width: 1000px;
     grid-template-columns: repeat(2, 1fr);
     margin-inline: auto;
     margin-block: 2rem;
-    gap: 2rem;
 
+    &__wrapper {
+        margin-inline: 2rem;
+    }
     & h1,
     h2 {
         font-size: 2rem;
@@ -13,5 +15,23 @@
         margin-block: 2rem;
         padding-bottom: 0.25rem;
         width: fit-content;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contactLayout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        &__wrapper {
+            max-width: 500px;
+        }
+        &__wrapper:nth-of-type(2) {
+            margin-block: 4rem 3rem;
+        }
+        & h1,
+        h2 {
+            margin-inline: auto;
+            margin-block: 1.5rem;
+        }
     }
 }

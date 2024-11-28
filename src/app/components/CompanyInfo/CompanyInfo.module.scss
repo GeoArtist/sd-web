@@ -1,23 +1,60 @@
 .companyInfo {
     display: block;
     width: fit-content;
-    padding: 1rem;
-    border: 1px solid #000;
+    padding: 2rem;
+    border: 2px solid var(--clr-theme-2);
+    border-radius: 1rem;
+
+    & h3,
+    & h4 {
+        font-size: 1.15rem;
+        margin-bottom: 0.35rem;
+        text-wrap: pretty;
+    }
 
     & section:first-of-type {
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    & span.contactWay {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        margin-block: 0.5rem;
+        & img {
+            height: 1.5rem;
+            width: 1.5rem;
+            margin-top: 2px;
+            margin-inline: 0 0.5rem;
+            color: blue;
+        }
+        & a {
+            margin-left: 0.25rem;
+        }
+    }
+
+    & section.address {
+        // margin-top: 1rem;
+        & h4 {
+            margin-bottom: 0.5rem;
+        }
+        & p:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        // & p:nth-child(4) {
+        //     padding-top: 0.25rem;
+        // }
     }
 }
 
-.contactWay {
-    display: flex;
-    width: fit-content;
-    align-items: center;
-    & img {
-        height: 1.25rem;
-        width: 1.25rem;
-        margin-top: 2px;
-        margin-inline: 0 0.5rem;
-        color: blue;
+@media (max-width: 1000px) {
+    .companyInfo {
+        width: unset;
+        max-width: 350px;
+        padding: 1.5rem;
+        & section:first-of-type {
+            margin-bottom: 1.5rem;
+        }
     }
 }

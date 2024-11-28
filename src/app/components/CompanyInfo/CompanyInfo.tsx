@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import telephone from '@/public/icons/telephone.svg'
 import email from '@/public/icons/email.svg'
 import styles from './CompanyInfo.module.scss'
@@ -11,11 +12,11 @@ export function CompanyInfo() {
             <h3>Zadzwoń do nas lub wyślij e-mail</h3>
             <span className={styles.contactWay}>
                 <Image src={telephone} alt="phone"/>
-                <p>+48 535 154 251</p>
+                <Link href="tel:+48535154251">+48 535 154 251</Link>
             </span>
             <span className={styles.contactWay}>
                 <Image src={email} alt="email"/>
-                <p>kontakt@soft-data.pl</p>
+                <Link href="mailto:kontakt@soft-data.pl">kontakt@soft-data.pl</Link>
             </span>
         </section>
         <section className={styles.address}>

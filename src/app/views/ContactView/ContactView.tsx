@@ -10,12 +10,12 @@ const DynamicMap = dynamic(() => import('@/app/components/ContactMap/ContactMap'
 
 export default function ContactView() {
 return <>
-    <div className={styles.contact__layout}>
-      <div>
+    <div className={styles.contactLayout}>
+      <div className={styles.contactLayout__wrapper}>
         <h1>Skontaktuj się z nami!</h1>
         <CompanyInfo/>
       </div>
-      <div>
+      <div className={styles.contactLayout__wrapper}>
       <h2>Formularz kontaktowy</h2>
       <ContactForm/>
       </div>
