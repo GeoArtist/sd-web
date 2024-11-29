@@ -15,4 +15,11 @@
         color: var(--clr-white);
         transform: scale(1);
     }
+    &:disabled,
+    &[disabled] {
+        border: 1px solid var(--clr-disabled-border);
+        background-color: var(--clr-disabled-bg);
+        color: var(--clr-disabled-color);
+        transform: scale(0.95);
+    }
 }

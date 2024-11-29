@@ -76,6 +76,7 @@ button {
     cursor: pointer;
 }
 
+// SCROLLBAR
 *::-webkit-scrollbar {
     width: 1.2rem;
     // height: 20px;
@@ -93,4 +94,13 @@ button {
 }
 *::-webkit-scrollbar-track {
     background: var(--clr-darkgrey);
+}
+
+// TOASTER
+.custom-toaster {
+    top: 5vh; /* Adjust top position */
+    right: 2.5vw; /* Adjust left position */
+    // right: auto; /* Prevent default alignment */
+    // bottom: auto; /* Reset bottom alignment */
+    // position: fixed !important; /* Ensure it's fixed */
 }

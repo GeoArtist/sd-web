@@ -4,27 +4,32 @@ import {zodResolver} from '@hookform/resolvers/zod'
 import { sendMail } from '@/api/send_email';
 import {contactFormSchema, ContactFormValues} from '@/schemas/contactForm'
 import styles from './ContactForm.module.scss'
-
+import { toast } from 'sonner';
 import {useForm} from 'react-hook-form'
-import {useState, useEffect} from 'react';
 import Button from '../Button/Button';
 
 export function ContactForm() {
-    const [sendStatus, setSendStatus] = useState({status:0, message:""})
-    const {register, handleSubmit, formState, getValues} = useForm<ContactFormValues>({
+
+    const {register, handleSubmit, formState, getValues, reset} = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
         mode:"onChange"
 
     });
-    const {errors}= formState;
+    const {errors,isDirty, isSubmitting}= formState;
     
     async function onSubmit(formData:ContactFormValues){
+        toast.info('Wysyłanie wiadomości...')
         const status = await sendMail(formData)
-        setSendStatus(status)
+        if(status.status===200){
+            reset()
+            toast.success('Wiadomość została wysłana')}
+        else{
+            toast.error('Wysłanie wiadomości nie powiodło się')
+        }
     }
     
 
-    console.log('render')
+    console.log(isDirty)
     const isEmailOrTelephone = getValues('email')?.length==0 && getValues('telephone')?.length==0   
     return (
         <>
@@ -50,7 +55,7 @@ export function ContactForm() {
                 <textarea id="message" placeholder="Wpisz treść wiadomości" {...register("message")} className={`${styles.form__textarea} ${errors.message ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.message?.message}</p>
             </div>
-           
+
             
            
             {/* RODO PERMISSIONS */}
@@ -64,11 +69,9 @@ export function ContactForm() {
             <p className={styles.error}>{errors.rodo_permission?.message}</p>
             </div>    
 
-            <Button type="submit">Wyślij</Button>
+            <Button type="submit" disabled={!isDirty || isSubmitting}>Wyślij</Button>
         </form>
 
-        {/* Send status */}
-        {sendStatus.status!==0 && <p className={sendStatus.status===200 ? styles.success : styles.error}>{sendStatus.message}</p>}
         
         </>
     );
