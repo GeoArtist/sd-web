@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import styles from './Navbar.module.scss'
-import {DropDownMenu} from '@/components/DropDownMenu/DropDownMenu'
+import {OfferMenu} from '@/app/components/OfferMenu/OfferMenu'
 import Hamburger from "@/components/Hamburger/Hamburger";
 import { usePathname } from 'next/navigation';
 import { useToogle } from '@/hooks/useToogle';
@@ -24,8 +24,9 @@ export function Navbar(){
                 {/* Dropdown Offer Menu */}
                 <li onMouseEnter={()=>toggleValue(true)} onMouseLeave={()=>toggleValue(false)} className={styles.dropDown} >
                     <Link href="/oferta" className={currentPath === '/oferta' ? styles.active : "" } onClick={showMenuUpdate}>OFERTA</Link>
-                    {/* if sidebar dont render DropDownMenu */}
-                    {!showMenu && <DropDownMenu display={value}/>} 
+                    {/* if sidebar dont render OfferMenu */}
+                    {!showMenu && <OfferMenu display={value} menuType={'dropdown'}/>} 
+                    {/* {display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu */}
                 </li>
                 <li><Link href="/" className={currentPath === '/o-nas' ? styles.active : "" } onClick={showMenuUpdate}>O NAS</Link></li>
                 <li><Link href="/" className={currentPath === '/certyfikaty' ? styles.active : "" } onClick={showMenuUpdate}>CERTYFIKATY</Link></li>

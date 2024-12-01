@@ -22,6 +22,18 @@
             // Links
             & > a {
                 padding: 1rem 0.75rem;
+                position: relative;
+            }
+            &:nth-of-type(2) > a {
+                padding-right: 1.75rem;
+            }
+            &:nth-of-type(2) > a:after {
+                content: "^";
+                position: absolute;
+                transform: scale(2, 1) rotate(180deg) translateY(-60%);
+
+                right: 0.75rem;
+                top: 0;
             }
         }
     }
