@@ -1,3 +1,4 @@
+'use client'
 import React, { Fragment } from 'react'
 import styles from './Footer.module.scss'
 import Link from 'next/link'
@@ -5,9 +6,11 @@ import Image from 'next/image'
 import logo from '@/public/icons/feather_white.svg'
 import {regulations} from '@/constants/regulations'
 import {socialLinks} from '@/constants/socialLinks'
+import { usePathname } from 'next/navigation'
 
 export function Footer(){
     const year = new Date().getFullYear() 
+    const currentPath = usePathname()
     return <> 
         <footer className={styles.footer}>
             <div className={styles.footer__wrapper}>
@@ -19,11 +22,11 @@ export function Footer(){
                     <p> © {year}</p>
                 </section>
                 <section className={styles.footer__links}>
-                    <Link href="/kontakt"  className={styles.footer__link}>Kontakt</Link>
+                    <Link href="/kontakt"  className={`${styles.footer__link} ${ currentPath === "/kontakt" ? styles.active: ""}`}>Kontakt</Link>
                     {regulations.map((regulation, index )=> {
                        return <Fragment key={index}>
-                        <p  className={styles.divier}>|</p>
-                        <Link href={`/regulaminy/${regulation.path}`}  className={styles.link}>{regulation.navName}</Link>
+                        <p  className={styles.divider}>|</p>
+                        <Link href={`/regulaminy/${regulation.path}`}  className={`${styles.footer__link} ${ currentPath === `/regulaminy/${regulation.path}` ? styles.active: ""}`}>{regulation.navName}</Link>
                        </Fragment>
                         
                     })}

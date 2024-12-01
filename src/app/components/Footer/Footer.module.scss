@@ -92,6 +92,16 @@
             margin-inline: 0;
         }
     }
+
+    & .active {
+        font-weight: var(--fw-bold);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+        color: var(--clr-black);
+        transform: scale(1.1);
+        box-shadow: none;
+    }
 }
 @media (max-width: 1000px) {
     .footer {
