@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styles from './Footer.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/public/icons/feather_white.svg'
-
+import {regulations} from '@/constants/regulations'
 import {socialLinks} from '@/constants/socialLinks'
 
 export function Footer(){
@@ -20,8 +20,14 @@ export function Footer(){
                 </section>
                 <section className={styles.footer__links}>
                     <Link href="/kontakt"  className={styles.footer__link}>Kontakt</Link>
-                    <p className={styles.divier}>|</p>
-                    <Link href="#" className={styles.link}>Polityka prywatności</Link>
+                    {regulations.map((regulation, index )=> {
+                       return <Fragment key={index}>
+                        <p  className={styles.divier}>|</p>
+                        <Link href={`/regulaminy/${regulation.path}`}  className={styles.link}>{regulation.navName}</Link>
+                       </Fragment>
+                        
+                    })}
+                 
                 </section>
                 <section className={styles.footer__socials}>
                     {socialLinks.map((socialLink) => (

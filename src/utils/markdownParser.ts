@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { MarkDownContent } from '@/types/markdown';
-
+import { remark } from 'remark';
+import html from 'remark-html';
 
 function getPath(subfolder?:string):string {
   // Return the path of the content directory with the subfolder if provided
@@ -40,14 +41,14 @@ export async function getAllContents(subfolder?:string):Promise<MarkDownContent[
   return allPostsData
 }
 
-export async function getSelectedContent(fileName:string, subfolder?:string):Promise<MarkDownContentType> {
+export async function getSelectedContent(fileName:string, subfolder?:string):Promise<MarkDownContent> {
     const dir = getPath(subfolder)
     // All content fileNames
     const fileNames = fs.readdirSync(dir);
     const contentFileName = fileNames.find((file) => file.replace(/\.md$/, '') === fileName);
 
     if (!contentFileName) {
-        return {} as MarkDownContentType;
+        return {} as MarkDownContent;
     }
 
     const fullPath = path.join(dir, contentFileName);
@@ -71,3 +72,27 @@ export async function getContentFileNames(subfolder?:string):Promise<string[]> {
       const fileNames = fs.readdirSync(dir);
       return fileNames;
       }
+
+
+// Read as html
+export async function getSelectedContentHTML(fileName:string, subfolder?:string):Promise<string>{
+  const dir = getPath(subfolder)
+  // All content fileNames
+  const fileNames = fs.readdirSync(dir);
+  const contentFileName = fileNames.find((file) => file.replace(/\.md$/, '') === fileName);
+  if (!contentFileName) {
+        return ""
+  }
+
+  const fullPath = path.join(dir, contentFileName);
+  const fileContent = fs.readFileSync(fullPath, 'utf8');
+  
+  // Parse frontmatter using gray-matter
+  const { data, content } = matter(fileContent);
+
+  // Convert Markdown to HTML using remark
+  const processedContent = await remark().use(html).process(content);
+  const contentHtml = processedContent.toString();
+
+  return contentHtml
+}

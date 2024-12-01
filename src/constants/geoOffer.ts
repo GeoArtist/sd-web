@@ -1,6 +1,6 @@
-import { GeoOffer } from '@/types/geoOffer';
+import { MarkdownPaths } from '@/types/navigationPaths';
 
-export const geoOffer: GeoOffer[] = [
+export const geoOffer: MarkdownPaths[] = [
     {path: 'mapa-do-celow-projektowych', mdFileName: 'mdcp', navName: 'Mapa do celów projektowych'},
     {path: 'tyczenia-obiektow-budowlanych', mdFileName: 'tyczenia', navName: 'Tyczenie obiektów budowlanych'},
     {path: 'pomiary-inwentaryzacyjne', mdFileName: 'inwentaryzacje', navName: 'Pomiary inwentaryzacyjne'},
