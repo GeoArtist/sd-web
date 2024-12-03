@@ -1,5 +1,5 @@
 ---
-title: "Rozgraniczenia nieruchomości"
+title: "Rozgraniczenie nieruchomości"
 description: 
 - Rozgraniczenie nieruchomości jest postępowaniem mającym na celu ustalenie granic nieruchomości, gdy stały się one sporne, lub kiedy nie można stwierdzić stanu prawnego. 
 - Rozgraniczenie być wykonywane w trybie administracyjnym lub sądowym, na wniosek zainteresowanych stron lub z urzędu. 
@@ -9,5 +9,5 @@ description:
 time: Czas realizacji zależny jest od ilości punktów granicznych oraz prac urzędów
 legalBasis:
 - Ustawa z dnia 17.05.1989 r. Prawo geodezyjne i kartograficzne 
-- Rozporządzenie z dnia 14.04.1999 r. MSWiA oraz RiGŻ w sprawie rozgraniczania nieruchomości.
+- Rozporządzenie Ministrów Spraw Wewnętrznych i Administracji oraz Rolnictwa i Gospodarki Żywnościowej z dnia 14 kwietnia 1999 r. w sprawie rozgraniczania nieruchomości
 ---

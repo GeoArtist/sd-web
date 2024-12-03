@@ -1,5 +1,5 @@
 ---
-title: "Tyczenia: obiektów budowlanych, budynków, przyłączy, sieci"
+title: "Tyczenie: obiektów budowlanych, budynków, przyłączy, sieci"
 description:  
 - "Wytyczenie obiektu budowlanego jest pierwszym etapem inwestycji w terenie. Polega na prawidłowym ustaleniu położenia poziomego oraz pionowego nowo budowanych obiektów, w odniesieniu do granic działki ewidencyjnych oraz pozostałych elementów zagospodarowania. 
 Realizację tyczenia potwierdza sie poprzez sporządzenie szkicu tyczenia i dokonanie przez geodetę uprawnionego odpowiedniego wpisu w dzienniku budowy. "

@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    gap: 1rem;
+    gap: 1.5rem;
     max-width: 1000px;
     margin-top: 3rem;
     margin-inline: auto;
@@ -16,6 +16,8 @@
         padding-left: 0.75rem;
         background-color: var(--clr-theme-2);
         border: 1px solid var(--_border_clr);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
         color: var(--clr-white);
         font-weight: var(--fw-normal);
         box-shadow: 0px 5px 15px var(--_border_clr);

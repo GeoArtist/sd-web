@@ -3,13 +3,13 @@ import Link from "next/link";
 import styles from './Navbar.module.scss'
 import {OfferMenu} from '@/app/components/OfferMenu/OfferMenu'
 import Hamburger from "@/components/Hamburger/Hamburger";
-import { usePathname } from 'next/navigation';
+import {useCurrentPath} from '@/contexts/CurrentPathContext'
 import { useToogle } from '@/hooks/useToogle';
 import {useMenu, useMenuUpdate} from '@/contexts/MenuContext'
 
 
 export function Navbar(){
-    const currentPath = usePathname();
+    const currentPath = useCurrentPath();
     const [value, toggleValue] = useToogle(false);
     const showMenu = useMenu();
     const showMenuUpdate = useMenuUpdate();

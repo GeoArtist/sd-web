@@ -1,5 +1,5 @@
 ---
-title: "Wznowienia granic nieruchomości, wznowienia znaków granicznych"
+title: "Wznowienie granic nieruchomości, wznowienie znaków granicznych"
 description: 
 - "Zgodnie z Ustawą Prawo Geodezyjne i Kartograficzne: "
 - '"Przesunięte, uszkodzone lub zniszczone znaki graniczne, ustalone uprzednio, mogą być wznowione bez przeprowadzenia postępowania

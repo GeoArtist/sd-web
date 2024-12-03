@@ -6,6 +6,6 @@ description:
 - "W wyniku geodezyjnej inwentaryzacji powykonawczej zostaje sporządząona odpowiednia dokumentacja geodezyjno-kartogragiczna,  umożliwiającej odbiór i rozpoczęcie użytkownia powstałych obiektów."
 time: Czas realizacji od około 2 tygodni (zależnie od wielkości obiektu, pracy urzędów)
 legalBasis:
-- Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane 
+- Ustawa z dnia 7 lipca 1994 r. – Prawo budowlane
 - Rozporządzenie Ministra Rozwoju z dnia 18 sierpnia 2020 r. w sprawie standardów technicznych wykonywania geodezyjnych pomiarów sytuacyjnych i wysokościowych oraz opracowywania i przekazywania wyników tych pomiarów do państwowego zasobu geodezyjnego i kartograficznego
 ---

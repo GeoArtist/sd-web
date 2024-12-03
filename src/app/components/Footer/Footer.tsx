@@ -6,11 +6,11 @@ import Image from 'next/image'
 import logo from '@/public/icons/feather_white.svg'
 import {regulations} from '@/constants/regulations'
 import {socialLinks} from '@/constants/socialLinks'
-import { usePathname } from 'next/navigation'
+import {useCurrentPath} from '@/contexts/CurrentPathContext'
 
 export function Footer(){
     const year = new Date().getFullYear() 
-    const currentPath = usePathname()
+    const currentPath = useCurrentPath()
     return <> 
         <footer className={styles.footer}>
             <div className={styles.footer__wrapper}>

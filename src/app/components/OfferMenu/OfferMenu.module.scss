@@ -36,6 +36,7 @@
         color: var(--clr-white);
         background-color: var(--clr-theme-2);
         outline: 1px solid var(--_border_clr);
+        border-bottom: none;
     }
 }
 .open {
@@ -49,7 +50,7 @@
 
 .sideBar {
     --_border_clr: rgba(0, 0, 0, 0.2);
-
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -59,8 +60,10 @@
     color: var(--clr-black);
 
     border: 1px solid var(--_border_clr);
-
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     box-shadow: 0px 5px 15px var(--_border_clr);
+    overflow: hidden;
 
     & a {
         display: flex;
@@ -75,6 +78,15 @@
     & li:focus-visible {
         color: var(--clr-white);
         background-color: var(--clr-theme-2);
+        border-bottom: none;
         outline: 1px solid var(--_border_clr);
+    }
+
+    & .active {
+        font-weight: var(--fw-bold);
+        font-size: 1.1rem;
+        // text-decoration: underline;
+        // text-decoration-thickness: 2px;
+        // text-underline-offset: 3px;
     }
 }
