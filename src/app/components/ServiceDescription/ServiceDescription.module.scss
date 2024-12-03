@@ -42,22 +42,10 @@
     p {
         text-indent: 1.5rem;
     }
-    p,
-    li {
+    p {
         // margin-bottom: 0.25rem;
         text-wrap: pretty;
         line-height: 1.35rem;
         word-wrap: break-word;
-    }
-
-    & li {
-        &:before {
-            content: "-";
-            margin-inline: 1.5rem 0.5rem;
-        }
-        a:hover {
-            color: var(--clr-link-default);
-            // font-weight: var(--fw-bold);
-        }
     }
 }

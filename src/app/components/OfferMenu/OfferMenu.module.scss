@@ -90,3 +90,9 @@
         // text-underline-offset: 3px;
     }
 }
+
+@media (max-width: 1000px) {
+    .sidebar {
+        max-width: 600px;
+    }
+}

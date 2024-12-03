@@ -2,8 +2,8 @@ import { MarkDownContent } from "@/types/markdown";
 import styles from './ServiceDescription.module.scss'
 import Image from 'next/image'
 import { ImgsLinks } from "@/types/imgsLinks";
-import Link from "next/link";
-import {legalBasisLinks} from "@/constants/legalBasisLinks";
+
+import LegalBasisInfo from "@/components/LegalBasisInfo/LegalBasisInfo";
 
 
 export default function ServiceDescription({md_content, img}:{md_content:MarkDownContent, img:ImgsLinks}){
@@ -24,18 +24,7 @@ export default function ServiceDescription({md_content, img}:{md_content:MarkDow
                     </>
                 )}
             
-                {legalBasis && (
-                    <>
-                        <h3 className={styles.name}>Podstawa prawna:</h3>
-                        <ul>
-                            {legalBasis.map((basis, index) => 
-                            <li key={index}>
-                                {<Link href={legalBasisLinks.filter((legalBasis)=>legalBasis.name == basis)[0].link} target="_blank" rel="noopener noreferrer" >{basis}</Link>}
-                            
-                            </li>)}
-                        </ul>
-                    </>
-                )}
+                {legalBasis && <LegalBasisInfo legalBasis={legalBasis}/>}
             </div>
             
 

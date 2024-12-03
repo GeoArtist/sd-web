@@ -7,7 +7,7 @@ export default function ServiceLayoutView({children}:{children:React.ReactNode})
     <div className={styles.grid}>
         <div>
             <h1>Oferta Geodezyjna</h1>
-        <OfferMenu  menuType={'sidebar'}></OfferMenu>
+            <OfferMenu  menuType={'sidebar'}></OfferMenu>
         </div>
         {children}
     </div>
