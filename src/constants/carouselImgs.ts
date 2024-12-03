@@ -2,9 +2,9 @@ import map from '@/public/images/map.jpg'
 import rtk1 from '@/public/images/rtk-1.jpg'
 import rtk2 from '@/public/images/rtk-2.jpg'
 import rtk3 from '@/public/images/rtk-3.jpg'
-import { CarouselImg } from '@/types/carouselImg'
+import { ImgsLinks } from '@/types/imgsLinks'
 
-export const carouselImgs:CarouselImg[] = [{
+export const carouselImgs:ImgsLinks[] = [{
     url: map,
     alt: 'map'
 },{

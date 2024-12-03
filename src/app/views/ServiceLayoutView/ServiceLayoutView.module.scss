@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+    max-width: 1000px;
+    margin-top: 3rem;
+    margin-inline: auto;
+
+    justify-items: center;
+    align-items: start;
+
+    h1 {
+        --_border_clr: rgba(0, 0, 0, 0.2);
+        font-size: 1.35rem;
+        line-height: 2.5rem;
+        padding-left: 0.75rem;
+        background-color: var(--clr-theme-2);
+        border: 1px solid var(--_border_clr);
+        color: var(--clr-white);
+        font-weight: var(--fw-normal);
+        box-shadow: 0px 5px 15px var(--_border_clr);
+    }
+}

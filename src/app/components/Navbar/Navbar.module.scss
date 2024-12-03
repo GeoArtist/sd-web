@@ -57,6 +57,10 @@
     .navbar__list {
         display: none;
         position: relative;
+
+        & > li:nth-of-type(2) > a:after {
+            content: "";
+        }
     }
     .navbar__list:has(+ div:global(.showMenuSidebar)) {
         display: block;

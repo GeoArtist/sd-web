@@ -8,10 +8,18 @@ import { OfferMenuProps } from "@/types/offerMenu";
 export  function OfferMenu(props:OfferMenuProps) {
 
     let classNames = ''
-    if (props.menuType === 'dropdown') {
-        classNames = props.display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu
-    } else {classNames = styles.sideBar}
-
+    switch (props.menuType) {
+        case 'dropdown':
+            classNames = props.display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu
+            break;
+        case 'sidebar':
+            classNames = styles.sideBar
+            break;
+        default:
+            classNames = styles.sideBar
+            break;
+    }
+    
 
     return <>
         <ul className={classNames}>

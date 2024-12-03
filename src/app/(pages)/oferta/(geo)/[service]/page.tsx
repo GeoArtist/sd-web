@@ -1,5 +1,6 @@
 import ServiceDescription from "@/app/components/ServiceDescription/ServiceDescription"
 import { geoOffer } from "@/constants/geoOffer"
+import { geoOfferImgs } from "@/constants/geoOfferImgs"
 import { getSelectedContent } from "@/utils/markdownParser"
 
 export  default async function GeoOffer({params}:{params:Promise<{service:string}>}){
@@ -13,11 +14,10 @@ export  default async function GeoOffer({params}:{params:Promise<{service:string
         throw new Error('Service not found')
     }
     const md_content  = await getSelectedContent(md_filename, 'geo')
-    
+    const img = geoOfferImgs.filter(img => img.alt === md_filename)[0]
 
     return<>
-    <h1>GEO OFFER</h1>
-    <ServiceDescription md_content={md_content}/>
+    <ServiceDescription md_content={md_content} img={img}/>
    
     </>
 }

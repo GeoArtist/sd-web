@@ -20,17 +20,17 @@ export function Navbar(){
         <nav className={styles.navbar} >
             {showMenu && <div className={styles.sidebarBGC} onClick={showMenuUpdate}></div>}
             <ul className={styles.navbar__list}>
-                <li><Link href="/" className={currentPath === '/' ? styles.active : "" } onClick={showMenuUpdate}>STRONA GŁÓWNA</Link></li>
+                <li><Link href="/" className={currentPath === '/' ? styles.active : "" }>STRONA GŁÓWNA</Link></li>
                 {/* Dropdown Offer Menu */}
                 <li onMouseEnter={()=>toggleValue(true)} onMouseLeave={()=>toggleValue(false)} className={styles.dropDown} >
-                    <Link href="/oferta" className={currentPath === '/oferta' ? styles.active : "" } onClick={showMenuUpdate}>OFERTA</Link>
+                    <Link href="/oferta" className={currentPath.includes('/oferta') ? styles.active : "" } >OFERTA</Link>
                     {/* if sidebar dont render OfferMenu */}
                     {!showMenu && <OfferMenu display={value} menuType={'dropdown'}/>} 
                     {/* {display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu */}
                 </li>
-                <li><Link href="/" className={currentPath === '/o-nas' ? styles.active : "" } onClick={showMenuUpdate}>O NAS</Link></li>
-                <li><Link href="/" className={currentPath === '/certyfikaty' ? styles.active : "" } onClick={showMenuUpdate}>CERTYFIKATY</Link></li>
-                <li><Link href="/kontakt" className={currentPath === '/kontakt' ? styles.active : "" } onClick={showMenuUpdate}>KONTAKT</Link></li>
+                <li><Link href="/" className={currentPath === '/o-nas' ? styles.active : "" }>O NAS</Link></li>
+                <li><Link href="/" className={currentPath === '/certyfikaty' ? styles.active : "" }>CERTYFIKATY</Link></li>
+                <li><Link href="/kontakt" className={currentPath === '/kontakt' ? styles.active : "" }>KONTAKT</Link></li>
             </ul>
             <Hamburger />
         </nav>

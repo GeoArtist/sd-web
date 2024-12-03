@@ -1,9 +1,7 @@
-import { OfferMenu } from "@/app/components/OfferMenu/OfferMenu"
+
+import ServiceLayoutView from "@/app/views/ServiceLayoutView/ServiceLayoutView"
 
 
-export default function GeoOffer({children}:{children:React.ReactNode}) {
-    return <>
-    <OfferMenu display={true} menuType={'sidebar'}></OfferMenu>
-    {children}
-    </>
+export default function GeoOffer({children}:{children:React.ReactNode}){
+    return <ServiceLayoutView>{children}</ServiceLayoutView>
 }
