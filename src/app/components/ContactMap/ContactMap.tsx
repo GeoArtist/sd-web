@@ -14,11 +14,11 @@ const IconMarker = icon({
     popupAnchor: [0, -sizeMarkerIcon /3]
 })
 const popupDescription = <>
-<span className={styles.bold}>SOFT-DATA Marek Szczepkowski</span><br/>
-ul. Marii Dąbrowskiej 13/52<br/>
-10-685 Olsztyn<br/><br/>
-tel. +48 535 154 251<br/>
-e-mail: <a href="mailto:kontakt@soft-data.pl">kontakt@soft-data.pl</a>
+<p className={styles.bold}>SOFT-DATA Marek Szczepkowski</p>
+<p>ul. Marii Dąbrowskiej 13/52</p>
+<p>10-685 Olsztyn</p>
+<p>tel. +48 535 154 251</p>
+<span> e-mail: <a href="mailto:kontakt@soft-data.pl">kontakt@soft-data.pl</a></span>
 </>
 
 export default  function ContactMap(){
