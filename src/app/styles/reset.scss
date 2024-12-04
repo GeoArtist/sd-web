@@ -98,8 +98,9 @@ button {
 
 // TOASTER
 .custom-toaster {
-    top: 5vh; /* Adjust top position */
-    right: 2.5vw; /* Adjust left position */
+    top: 6vh; /* Adjust top position */
+    right: 1vw; /* Adjust left position */
+    // max-width: 250px;
     // right: auto; /* Prevent default alignment */
     // bottom: auto; /* Reset bottom alignment */
     // position: fixed !important; /* Ensure it's fixed */

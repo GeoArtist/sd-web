@@ -2,7 +2,9 @@
     display: grid;
     gap: 1rem;
     margin-inline: auto;
-    border: 2px solid var(--clr-theme-2);
+    // border: 2px solid var(--clr-theme-2);
+    background-color: var(--clr-white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     padding: 1.75rem 2rem;
     border-radius: 1rem;
 
@@ -21,14 +23,14 @@
     &__input {
         padding: 0.5rem;
         border-radius: 0.25rem;
-        // background-color: transparent;
+        background-color: var(--clr-grey);
     }
 
     &__textarea {
         min-height: 100px;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        // background-color: transparent;
+        background-color: var(--clr-grey);
     }
     .error {
         color: red;
@@ -38,6 +40,7 @@
     }
     .valid:not(:placeholder-shown) {
         border: 2px solid limegreen;
+        background-color: var(--clr-white);
     }
     .invalid {
         border: 2px solid red;
@@ -69,5 +72,6 @@
 
 @media (max-width: 1000px) {
     .form {
+        margin-inline: 2rem;
     }
 }

@@ -12,9 +12,9 @@
     & h1,
     h2 {
         font-size: 2rem;
-        border-bottom: 2px solid var(--clr-theme-2);
+
         margin-inline: auto;
-        margin-block: 1.5rem;
+        margin-block: 1.5rem 0.25rem;
         padding-bottom: 0.25rem;
         width: fit-content;
     }
@@ -22,6 +22,7 @@
 
 @media (max-width: 1000px) {
     .contactLayout {
+        min-width: 400px;
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 0;
