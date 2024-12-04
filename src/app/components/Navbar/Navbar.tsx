@@ -28,8 +28,8 @@ export function Navbar(){
                     {!showMenu && <OfferMenu display={value} menuType={'dropdown'}/>} 
                     {/* {display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu */}
                 </li>
-                <li><Link href="/" className={currentPath === '/o-nas' ? styles.active : "" }>O NAS</Link></li>
-                <li><Link href="/" className={currentPath === '/certyfikaty' ? styles.active : "" }>CERTYFIKATY</Link></li>
+                <li><Link href="/o-nas" className={currentPath === '/o-nas' ? styles.active : "" }>O NAS</Link></li>
+                <li><Link href="/certyfikaty" className={currentPath === '/certyfikaty' ? styles.active : "" }>CERTYFIKATY</Link></li>
                 <li><Link href="/kontakt" className={currentPath === '/kontakt' ? styles.active : "" }>KONTAKT</Link></li>
             </ul>
             <Hamburger />

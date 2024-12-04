@@ -1,0 +1,18 @@
+.aboutView {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+
+    background-color: var(--clr-white);
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .aboutView {
+        margin: 2rem 2rem;
+        min-width: 350px;
+    }
+}

@@ -1,0 +1,86 @@
+.aboutWrapper {
+    --_font-shadow: 8px;
+    --_font-blur: 10px;
+    display: grid;
+    justify-content: center;
+    h1 {
+        font-size: clamp(1rem, 1.25rem + 0.5vw, 1.7rem);
+        text-align: center;
+        margin-block: 0.25rem 1rem;
+        color: white;
+        text-shadow:
+            var(--_font-shadow) 0px var(--_font-blur) var(--clr-theme-2),
+            calc(-1 * var(--_font-shadow)) 0px var(--_font-blur) var(--clr-theme-2),
+            0px var(--_font-shadow) var(--_font-blur) var(--clr-theme-2),
+            0px calc(-1 * var(--_font-shadow)) var(--_font-blur) var(--clr-theme-2);
+        filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+    }
+    .logo {
+        width: 90%;
+        height: 100%;
+        margin-inline: auto;
+        padding-right: 1rem;
+        display: block;
+    }
+}
+.description {
+    margin-top: 2rem;
+    margin-inline: auto;
+    max-width: 80ch;
+    text-wrap: pretty;
+    line-height: 1.4;
+
+    & strong {
+        font-weight: var(--fw-bold);
+    }
+
+    & p {
+        text-indent: 1.5rem;
+    }
+    & p:not(:has(+ ul)) {
+        margin-bottom: 1rem;
+    }
+    p:last-of-type {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+    li {
+        margin-block: 0.25rem;
+        line-height: 1.35;
+    }
+    li:before {
+        content: "- ";
+        margin-inline-start: 3rem;
+    }
+
+    li:last-of-type {
+        margin-bottom: 1rem;
+    }
+
+    & a {
+        color: var(--clr-link-default);
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-block: 2rem 0.5rem;
+        text-align: center;
+        & + ul {
+            width: fit-content;
+            margin-inline: auto;
+        }
+    }
+
+    h3 {
+        text-indent: 1.5rem;
+        font-size: 1.15rem;
+        line-height: 1.5;
+        margin-block: 2rem 3rem;
+        margin-inline: auto;
+        color: var(--clr-theme-2);
+        text-wrap: pretty;
+        max-width: 60ch;
+    }
+}
