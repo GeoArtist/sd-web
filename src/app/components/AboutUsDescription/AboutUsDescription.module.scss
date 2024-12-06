@@ -38,49 +38,43 @@
     & p {
         text-indent: 1.5rem;
     }
-    & p:not(:has(+ ul)) {
-        margin-bottom: 1rem;
+
+    h2,
+    h3 {
+        font-size: 1.25rem;
+        margin-block: 2rem 0.5rem;
+        color: var(--clr-theme-2);
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
     }
-    p:last-of-type {
-        width: fit-content;
-        margin-inline: auto;
+    h3:last-of-type {
+        text-align: center;
+        margin-block: 3rem;
+        font-size: 1.25rem;
+        color: var(--clr-black);
     }
 
+    ul {
+        margin-block: 1rem 1rem;
+
+        width: fit-content;
+        text-wrap: nowrap;
+        margin-inline: auto;
+    }
     li {
         margin-block: 0.25rem;
         line-height: 1.35;
+
         &:before {
             content: "- ";
-            margin-inline-start: 3rem;
+            margin-inline-start: 2rem;
         }
-    }
-    ul {
-        margin-bottom: 1rem;
     }
 
     & a {
         color: var(--clr-link-default);
     }
+}
 
-    h2 {
-        font-size: 1.2rem;
-        margin-block: 2rem 0.5rem;
-        text-align: center;
-        & + ul {
-            width: fit-content;
-            margin-inline: auto;
-            margin-bottom: 2rem;
-        }
-    }
-
-    h3 {
-        text-indent: 1.5rem;
-        font-size: 1.15rem;
-        line-height: 1.5;
-        margin-block: 2rem 3rem;
-        margin-inline: auto;
-        color: var(--clr-theme-2);
-        text-wrap: pretty;
-        max-width: 60ch;
-    }
+.description:nth-last-child(1) {
+    margin-block-start: 1rem;
 }

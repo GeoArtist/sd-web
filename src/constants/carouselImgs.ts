@@ -1,7 +1,7 @@
-import map from '@/public/images/map.jpg'
-import rtk1 from '@/public/images/rtk-1.jpg'
-import rtk2 from '@/public/images/rtk-2.jpg'
-import rtk3 from '@/public/images/rtk-3.jpg'
+import map from '@/public/images/carousel/map.jpg'
+import rtk1 from '@/public/images/carousel/rtk-1.jpg'
+import rtk2 from '@/public/images/carousel/rtk-2.jpg'
+import rtk3 from '@/public/images/carousel/rtk-3.jpg'
 import { ImgsLinks } from '@/types/imgsLinks'
 
 export const carouselImgs:ImgsLinks[] = [{

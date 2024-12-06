@@ -29,7 +29,7 @@ export function Navbar(){
                     {/* {display ? `${styles.dropDownMenu} ${styles.open}` : styles.dropDownMenu */}
                 </li>
                 <li><Link href="/o-nas" className={currentPath === '/o-nas' ? styles.active : "" }>O NAS</Link></li>
-                <li><Link href="/certyfikaty" className={currentPath === '/certyfikaty' ? styles.active : "" }>CERTYFIKATY</Link></li>
+                <li><Link href="/technologie" className={currentPath === '/technologie' ? styles.active : "" }>TECHNOLOGIE</Link></li>
                 <li><Link href="/kontakt" className={currentPath === '/kontakt' ? styles.active : "" }>KONTAKT</Link></li>
             </ul>
             <Hamburger />
