@@ -1,5 +1,5 @@
 
-Pełna, szczegółowa lista naszych szkoleń, certyfikatów oraz uprawnień znajduje się na portalu [LinkedIn](https://www.linkedin.com/in/marekszczepkowski/details/certifications/)
+Pełna, szczegółowa lista naszych certyfikatów, uprawnień oraz odbytych szkoleń znajduje się na portalu [LinkedIn](https://www.linkedin.com/in/marekszczepkowski/details/certifications/)
 
 
 ### Technologie oraz produkty:

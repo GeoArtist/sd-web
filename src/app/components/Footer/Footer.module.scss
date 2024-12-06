@@ -29,7 +29,7 @@
         & a:hover,
         & a:focus-visible {
             filter: drop-shadow(var(--_link_shadow));
-            transform: scale(1.1);
+            transform: scale(1.05);
             font-weight: var(--fw-bold);
         }
     }

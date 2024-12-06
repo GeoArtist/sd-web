@@ -12,10 +12,10 @@ export default function CertificatesImage(){
 
     return <>
     <div className={styles.certificatesImageWrapper}>
-        <Link href="https://www.safe.com/"  target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.gov.pl/web/gugik"  target="_blank" rel="noopener noreferrer">
             <Image src={gugik} alt={'gugik logo'} />
         </Link>
-        <Link href="https://www.gov.pl/web/gugik"  target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.safe.com/"  target="_blank" rel="noopener noreferrer">
             <Image src={fme} alt={'fme logo'}/>
         </Link>
         <Link href="https://pythoninstitute.org"  target="_blank" rel="noopener noreferrer">
