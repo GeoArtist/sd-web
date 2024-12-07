@@ -25,7 +25,7 @@ export function Footer(){
                     <Link href="/kontakt"  className={`${styles.footer__link} ${ currentPath === "/kontakt" ? styles.active: ""}`}>Kontakt</Link>
                     {regulations.map((regulation, index )=> {
                        return <Fragment key={index}>
-                        <p  className={styles.divider}>|</p>
+                     
                         <Link href={`/regulaminy/${regulation.path}`}  className={`${styles.footer__link} ${ currentPath === `/regulaminy/${regulation.path}` ? styles.active: ""}`}>{regulation.navName}</Link>
                        </Fragment>
                         

@@ -1,10 +1,10 @@
 .certificatesImageWrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 185px);
 
     max-width: 80%;
     gap: 1rem;
-    margin-block: 1rem;
+    margin-block: 0.5rem 1rem;
     margin-inline: auto;
     justify-items: center;
 
@@ -25,5 +25,11 @@
     &:hover a:not(:has(> img:hover)) {
         filter: grayscale(1);
         opacity: 0.5;
+    }
+}
+
+@media (max-width: 880px) {
+    .certificatesImageWrapper {
+        margin-block: 0.5rem 0rem;
     }
 }

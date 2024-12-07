@@ -20,6 +20,7 @@
     &__links {
         display: inline-flex;
         align-items: center;
+
         filter: drop-shadow(var(--_link_shadow));
         & a {
             transition:
@@ -29,7 +30,7 @@
         & a:hover,
         & a:focus-visible {
             filter: drop-shadow(var(--_link_shadow));
-            transform: scale(1.05);
+            transform: scale(1.1);
             font-weight: var(--fw-bold);
         }
     }
@@ -41,7 +42,7 @@
     }
 
     &__links {
-        gap: 1rem;
+        gap: 1.25rem;
         a:hover,
         a:focus-visible {
             filter: drop-shadow(var(--_link_shadow));
