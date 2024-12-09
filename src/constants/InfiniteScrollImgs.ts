@@ -41,24 +41,24 @@ import redisLogo from '@/public/logos/technology/db/regis-logo.png'
 import sqlLogo from '@/public/logos/technology/db/sql-logo.jpg'
 
 export const imgsTechDb:ImgsLinks[] = [
+    {url: sqlLogo,
+    alt: 'sql-logo',
+    href: 'https://www.w3schools.com/sql/sql_intro.asp'},
+    {url: postgresLogo,
+    alt: 'postgres-logo',
+    href: 'https://www.postgresql.org/'},
+    {url: postgisLogo,
+    alt: 'postgis-logo',
+    href: 'https://postgis.net/'},
+    {url: redisLogo,
+    alt: 'redis-logo',
+    href: 'https://redis.io/'},
     {url: influxLogo,
     alt: 'influx-logo',
     href: 'https://www.influxdata.com/'},
     {url: mongodbLogo,
     alt: 'mongodb-logo',
     href: 'https://www.mongodb.com/'},
-    {url: postgisLogo,
-    alt: 'postgis-logo',
-    href: 'https://postgis.net/'},
-    {url: postgresLogo,
-    alt: 'postgres-logo',
-    href: 'https://www.postgresql.org/'},
-    {url: redisLogo,
-    alt: 'redis-logo',
-    href: 'https://redis.io/'},
-    {url: sqlLogo,
-    alt: 'sql-logo',
-    href: 'https://www.w3schools.com/sql/sql_intro.asp'},
 ]
 
 
@@ -99,31 +99,27 @@ import jiraLogo from '@/public/logos/technology/tech/jira-logo.png'
 import linuxLogo from '@/public/logos/technology/tech/linux-logo.png'
 import nodeLogo from '@/public/logos/technology/tech/node-logo.png'
 import psLogo from '@/public/logos/technology/tech/ps-logo.png'
-import streamlitLogo from '@/public/logos/technology/tech/streamlit-logo.png'
 import vscLogo from '@/public/logos/technology/tech/vsc-logo.svg'
 
 export const imgsTechTech:ImgsLinks[] = [
     {url: gitLogo,
     alt: 'git-logo',
     href: 'https://git-scm.com/'},
-    {url: jiraLogo,
-    alt: 'jira-logo',
-    href: 'https://www.atlassian.com/software/jira'},
-    {url: linuxLogo,
-    alt: 'linux-logo',
-    href: 'https://www.linux.org/'},
-    {url: nodeLogo,
-    alt: 'node-logo',
-    href: 'https://nodejs.org/en/'},
-    {url: psLogo,
-    alt: 'ps-logo',
-    href: 'https://www.adobe.com/pl/products/photoshop.html#modal-hash'},
-    {url: streamlitLogo,
-    alt: 'streamlit-logo',
-    href: 'https://streamlit.io/'},
     {url: vscLogo,
     alt: 'vsc-logo',
     href: 'https://code.visualstudio.com/'},
+    {url: jiraLogo,
+    alt: 'jira-logo',
+    href: 'https://www.atlassian.com/software/jira'},
+    {url: nodeLogo,
+    alt: 'node-logo',
+    href: 'https://nodejs.org/en/'},
+    {url: linuxLogo,
+    alt: 'linux-logo',
+    href: 'https://www.linux.org/'},
+    {url: psLogo,
+    alt: 'ps-logo',
+    href: 'https://www.adobe.com/pl/products/photoshop.html#modal-hash'},
 ]
 
 
@@ -136,33 +132,39 @@ import geoserverLogo from '@/public/logos/technology/web/geoserver-logo.png'
 import jsTsLogo from '@/public/logos/technology/web/js-ts-logo.jpg'
 import leafletLogo from '@/public/logos/technology/web/leaflet-logo.png'
 import nextJsLogo from '@/public/logos/technology/web/next-js-seeklogo.svg'
+import streamlitLogo from '@/public/logos/technology/web/streamlit-logo.png'
 
 export const imgsTechWeb:ImgsLinks[] = [
     {url: cssLogo,
     alt: 'css-logo',
     href: 'https://developer.mozilla.org/en-US/docs/Web/CSS'},
+    {url: jsTsLogo,
+    alt: 'js-ts-logo',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
+    {url: nextJsLogo,
+    alt: 'next-js-logo',
+    href: 'https://nextjs.org/'},
     {url: dashLogo,
     alt: 'dash-logo',
     href: 'https://dash.plotly.com/'},
     {url: djangoLogo,
     alt: 'django-logo',
     href: 'https://www.djangoproject.com/'},
-    {url: fastapiLogo,
-    alt: 'fastapi-logo',
-    href: 'https://fastapi.tiangolo.com/'},
     {url: flaskLogo,
     alt: 'flask-logo',
     href: 'https://flask.palletsprojects.com/en/2.0.x/'},
+    {url: streamlitLogo,
+    alt: 'streamlit-logo',
+    href: 'https://streamlit.io/'},
+    {url: fastapiLogo,
+    alt: 'fastapi-logo',
+    href: 'https://fastapi.tiangolo.com/'},
+{url: leafletLogo,
+    alt: 'leaflet-logo',
+    href: 'https://leafletjs.com/'},
     {url: geoserverLogo,
     alt: 'geoserver-logo',
     href: 'https://geoserver.org/'},
-    {url: jsTsLogo,
-    alt: 'js-ts-logo',
-    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
-    {url: leafletLogo,
-    alt: 'leaflet-logo',
-    href: 'https://leafletjs.com/'},
-    {url: nextJsLogo,
-    alt: 'next-js-logo',
-    href: 'https://nextjs.org/'},
+
+
 ]

@@ -1,9 +1,8 @@
 .scroller {
-    --_gap: 0.5rem;
-    --_animation-duration: 5s;
+    --_gap: 10px;
     --_mask-offset: 15%;
 
-    max-width: 800px;
+    max-width: 850px;
     overflow: hidden;
 
     mask: linear-gradient(
@@ -35,13 +34,14 @@
 
     li {
         // background: var(--clr-theme-2);
+
         box-shadow: 0 5px 1rem -0.25rem rgba(0, 0, 0, 0.5);
         border-radius: 0.5rem;
-        width: 110px;
+        width: 130px;
         background-color: var(--clr-white);
 
         & img {
-            padding: 0.35rem;
+            padding: 0.5rem;
             aspect-ratio: 1/1;
             object-fit: contain;
         }
@@ -60,6 +60,6 @@
 
 @keyframes scroll {
     to {
-        transform: translateX(calc(-50% - var(--_gap) / 2));
+        transform: translateX(calc(-50% - (var(--_gap) / 2)));
     }
 }

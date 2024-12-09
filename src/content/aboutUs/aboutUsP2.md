@@ -7,7 +7,7 @@ W codziennej pracy wykorzystujemy nowoczesne technologie informatyczne: open-sou
 
 Wszystkie powierzone nam zadania wykonujemy profesjonalnie, dbając o szybkość i lekkość naszych rozwiązań. Nasze produkty i  usługi staramy się realizować w jak w najkrótszym możliwym czasie. Nie boimy się nowych wyzwań i jesteśmy w stanie profesjonalnie wykonać każde powierzone nam zadanie.
 
-Więcej o stosowanych przez nas technologiach znajduje się w zakładce [TECHNOLOGIE](/technologie). 
+Przykłady stosowanych przez nas technologii znajduje się w zakładce [TECHNOLOGIE](/technologie). 
 
 
 

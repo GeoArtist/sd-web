@@ -1,9 +1,9 @@
 import { MarkDownContent } from "@/types/markdown";
-import styles from './ServiceDescription.module.scss'
 import Image from 'next/image'
 import { ImgsLinks } from "@/types/imgsLinks";
-
 import LegalBasisInfo from "@/components/LegalBasisInfo/LegalBasisInfo";
+
+import styles from './ServiceDescription.module.scss'
 
 
 export default function ServiceDescription({md_content, img}:{md_content:MarkDownContent, img:ImgsLinks}){

@@ -1,4 +1,6 @@
 .aboutView {
+    --_font-shadow: 8px;
+    --_font-blur: 10px;
     display: grid;
     justify-content: center;
     align-items: start;
@@ -6,9 +8,29 @@
     background-color: var(--clr-white);
     margin: 3rem auto;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 900px;
     border-radius: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    h1 {
+        font-size: clamp(1rem, 1.25rem + 0.5vw, 1.7rem);
+        text-align: center;
+        margin-block: 0.5rem 2rem;
+        color: white;
+        text-shadow:
+            var(--_font-shadow) 0px var(--_font-blur) var(--clr-theme-2),
+            calc(-1 * var(--_font-shadow)) 0px var(--_font-blur) var(--clr-theme-2),
+            0px var(--_font-shadow) var(--_font-blur) var(--clr-theme-2),
+            0px calc(-1 * var(--_font-shadow)) var(--_font-blur) var(--clr-theme-2);
+        filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+    }
+    .logo {
+        width: 90%;
+        height: 100%;
+        margin-inline: auto;
+        padding-right: 1rem;
+        display: block;
+    }
 }
 
 @media (max-width: 1000px) {
