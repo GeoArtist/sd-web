@@ -16,7 +16,7 @@ Specjalizujemy się w realizacji zadań z zakresu:
 - data-science, 
 - data-analysis  
 
-### Doświadczenie:
+## Doświadczenie:
 Wieloletnie doświadczenie w branży geodezyjnej oraz geoinformatycznej pozwala na rzetelne, sprawne oraz terminowe wykonywanie powierzonych nam zadań. Za najwyższy priorytet uważamy dobro naszego klienta, dlatego każde zlecenie traktujemy indywidualnie, dostosowując się do konkretnych potrzeb oraz wymagań zleceniodawcy. 
 
 Jakoś naszych usług ciągle podwyższamy doszkalając się, rozwiajając oraz testując nowe podejścia i technologie. Posiadamy m.in.

@@ -3,7 +3,7 @@ Pełna, szczegółowa lista naszych certyfikatów, uprawnień oraz odbytych szko
 
 
 ### Technologie oraz produkty:
-W codziennej pracy wykorzystujemy nowoczesne autorskie oraz open-sourcowe technologie informatyczne, wspomagane automatyzacją zadań oraz automatycznymi kontrolami. Nasze produkty cechują się wysoką jakością, rzetelnością oraz nowoczesnym i czytelnym designem. 
+W codziennej pracy wykorzystujemy nowoczesne technologie informatyczne: open-sourcowe oraz autorskie, wspomagane automatyzacją, harmonizacją zadań oraz automatycznymi testami, kontrolami. Nasze produkty cechują się wysoką jakością, rzetelnością oraz nowoczesnym, czytelnym designem. 
 
 Wszystkie powierzone nam zadania wykonujemy profesjonalnie, dbając o szybkość i lekkość naszych rozwiązań. Nasze produkty i  usługi staramy się realizować w jak w najkrótszym możliwym czasie. Nie boimy się nowych wyzwań i jesteśmy w stanie profesjonalnie wykonać każde powierzone nam zadanie.
 

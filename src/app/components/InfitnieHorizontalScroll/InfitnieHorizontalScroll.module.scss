@@ -1,0 +1,65 @@
+.scroller {
+    --_gap: 0.5rem;
+    --_animation-duration: 5s;
+    --_mask-offset: 15%;
+
+    max-width: 800px;
+    overflow: hidden;
+
+    mask: linear-gradient(
+        to right,
+        transparent,
+        white var(--_mask-offset),
+        white calc(100% - var(--_mask-offset)),
+        transparent
+    );
+    box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+
+    &__inner {
+        display: flex;
+        gap: var(--_gap);
+        flex-wrap: nowrap;
+        animation: scroll var(--_animation-duration) linear infinite;
+        width: max-content;
+
+        &:hover {
+            animation-play-state: paused;
+
+            // Not hovered li
+            & > :not(li:hover) {
+                filter: grayscale(1) opacity(0.5);
+            }
+        }
+    }
+
+    li {
+        // background: var(--clr-theme-2);
+        box-shadow: 0 5px 1rem -0.25rem rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        width: 110px;
+        background-color: var(--clr-white);
+
+        & img {
+            padding: 0.35rem;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+        }
+        transition:
+            transform 0.2s ease,
+            filter 0.2s ease,
+            box-shadow 0.2s ease;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            box-shadow: 0 0px 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - var(--_gap) / 2));
+    }
+}

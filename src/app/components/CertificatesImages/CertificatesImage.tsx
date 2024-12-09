@@ -1,9 +1,9 @@
 import styles from './CertificatesImage.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import gugik from '@/public/images/certificates/GUGiK_logo.svg'
-import fme from '@/public/images/certificates/fme_logo.png'
-import python from '@/public/images/certificates/python_institute_logo.svg'
+import gugik from '@/public/logos/certificates/GUGiK_logo.svg'
+import fme from '@/public/logos/certificates/fme_logo.png'
+import python from '@/public/logos/certificates/python_institute_logo.svg'
 
 
 

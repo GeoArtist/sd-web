@@ -87,8 +87,8 @@
     }
 }
 
-.description:nth-last-child(1) {
-    margin-block-start: 0.25rem;
+.description:has(> p) {
+    margin-top: 1.5rem;
     & h3:nth-last-of-type(1) {
         text-align: center;
         margin-block: 3rem;
