@@ -34,8 +34,6 @@
     }
 
     li {
-        // background: var(--clr-theme-2);
-
         box-shadow: 0 5px 1rem -0.25rem rgba(0, 0, 0, 0.5);
         border-radius: 0.5rem;
         width: 130px;
@@ -65,6 +63,13 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .scroller {
+        & li {
+            width: 98px;
+        }
+    }
+}
 @media (max-width: 600px) {
     .scroller {
         & li {
