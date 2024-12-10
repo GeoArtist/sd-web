@@ -4,6 +4,7 @@
 
     max-width: 850px;
     overflow: hidden;
+    position: relative;
 
     mask: linear-gradient(
         to right,
@@ -12,7 +13,7 @@
         white calc(100% - var(--_mask-offset)),
         transparent
     );
-    box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.5);
+
     padding: 1.5rem;
 
     &__inner {
@@ -61,5 +62,13 @@
 @keyframes scroll {
     to {
         transform: translateX(calc(-50% - (var(--_gap) / 2)));
+    }
+}
+
+@media (max-width: 600px) {
+    .scroller {
+        & li {
+            width: 65px;
+        }
     }
 }

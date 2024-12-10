@@ -11,19 +11,24 @@ export default function TechnologyView(){
         <div className={styles.technologyView}>
   
            <div className={styles.technologyWrapper}>
-             {/* <h1>TECHNOLOGIE</h1> */}
+              <Image src={logoCut} alt="logoCut" className={styles.logo} />
+                <h1>TECHNOLOGIE</h1>
 
-            <h2>Geodezja:</h2>
+            <h2>Geodezja</h2>
             <InfitnieHorizontalScroll imgs={imgsTechGeo}/>
-            <h2>Bazy Danych:</h2>
+            <hr/>
+            <h2>Bazy Danych</h2>
                     <InfitnieHorizontalScroll imgs={imgsTechDb}/>
-            <h2>Analiza i Przetwarzanie Danych:</h2>
+                    <hr/>
+            <h2>Analiza i Przetwarzanie Danych</h2>
                     <InfitnieHorizontalScroll imgs={imgsTechData}/>
-            <h2>Wizualizacje:</h2>
+                    <hr/>
+            <h2>Wizualizacje</h2>
                     <InfitnieHorizontalScroll imgs={imgsTechWeb}/> 
-            <h2>Narzędzia:</h2>
+                    <hr/>
+            <h2>Narzędzia</h2>
                     <InfitnieHorizontalScroll imgs={imgsTechTech}/>
-
+   <hr/>
         
             
                     
