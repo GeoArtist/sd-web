@@ -13,7 +13,8 @@
     h2 {
         font-size: 2rem;
         color: var(--clr-theme-2);
-        filter: drop-shadow(0 1px 5px rgb(0, 0, 0, 0.35));
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.2));
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
         margin-inline: auto;
         margin-block: 1.5rem 0.25rem;
         padding-bottom: 0.25rem;

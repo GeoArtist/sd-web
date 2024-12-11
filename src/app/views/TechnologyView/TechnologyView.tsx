@@ -1,10 +1,10 @@
 import AboutUsDescription from '@/app/components/AboutUsDescription/AboutUsDescription';
-import styles from './TechnologyView.module.scss'
 import InfitnieHorizontalScroll from '@/components/InfitnieHorizontalScroll/InfitnieHorizontalScroll'
 import { imgsTechData, imgsTechDb, imgsTechGeo, imgsTechTech, imgsTechWeb} from '@/constants/InfiniteScrollImgs';
 import logoCut from '@/public/logos/logo_cut.png'
 import Image from 'next/image'
 
+import styles from './TechnologyView.module.scss'
 
 export default function TechnologyView(){
     return <>
