@@ -1,7 +1,7 @@
-import styles from './OfferIconsCards.module.scss'
 import Image from 'next/image'
 import {offerIcons} from '@/constants/offerIcons'
 
+import styles from './OfferIconsCards.module.scss'
 
 export default function OfferIconCards(){
 
