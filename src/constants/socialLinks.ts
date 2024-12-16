@@ -1,5 +1,5 @@
-import fb from '@/public/icons/facebook.svg'
-import li from '@/public/icons/linkedin.svg'
+import fb from '@/public/icons/socials/facebook.svg'
+import li from '@/public/icons/socials/linkedin.svg'
 import { SocialLinks } from '@/types/socialLinks'
 
 export const socialLinks: SocialLinks[] = [{
