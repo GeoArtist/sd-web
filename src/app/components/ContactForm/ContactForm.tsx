@@ -36,23 +36,23 @@ export function ContactForm() {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div>
                 <label htmlFor="name" className={styles.form__label}>Imię: </label>
-                <input id="name" type="text" placeholder="Podaj Twoje imię" {...register("name")} className={`${styles.form__input} ${errors.name ? styles.invalid : styles.valid }`} />
+                <input id="name" type="text" placeholder="" {...register("name")} className={`${styles.form__input} ${errors.name ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.name?.message}</p>
             </div>  
             <div>
                 <label htmlFor="email" className={styles.form__label}>Email: </label>
-                <input id="email" type="text"placeholder="Podaj Twój adres e-mail" {...register("email")}  className={`${styles.form__input} ${(errors.email || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
+                <input id="email" type="text" placeholder="" {...register("email")}  className={`${styles.form__input} ${(errors.email || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.email?.message}</p>
             </div>
             <div>
                 <label htmlFor="telephone" className={styles.form__label}>Telefon: </label>
-                <input id="telephone" type="text" placeholder="Podaj Twój numer telefonu" {...register("telephone")} className={`${styles.form__input} ${(errors.telephone || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
+                <input id="telephone" type="text" placeholder="" {...register("telephone")} className={`${styles.form__input} ${(errors.telephone || isEmailOrTelephone && errors.telephoneOremail) ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.telephone?.message}</p>
                 <p className={styles.error}>{(isEmailOrTelephone || !errors.telephoneOremail ? errors.telephoneOremail?.message: '') }</p>
             </div>
              <div>
                 <label htmlFor="message" className={styles.form__label}>Wiadomość: </label>
-                <textarea id="message" placeholder="Wpisz treść wiadomości" {...register("message")} className={`${styles.form__textarea} ${errors.message ? styles.invalid : styles.valid }`} />
+                <textarea id="message" placeholder="" {...register("message")} className={`${styles.form__textarea} ${errors.message ? styles.invalid : styles.valid }`} />
                 <p className={styles.error}>{errors.message?.message}</p>
             </div>
 

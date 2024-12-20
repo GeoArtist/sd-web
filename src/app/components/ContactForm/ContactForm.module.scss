@@ -1,15 +1,31 @@
 .form {
     display: grid;
-    gap: 1rem;
+    // gap: 1rem;
     margin-inline: auto;
     // border: 2px solid var(--clr-theme-2);
     background-color: var(--clr-white);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 1.75rem 2rem;
+    padding: 0.5rem 2rem 1.5rem 2rem;
     border-radius: 1rem;
 
     & input {
         border: 1px solid black;
+    }
+    & label:has(+ input:focus-visible),
+    & label:has(+ input:not(:placeholder-shown)),
+    & label:has(+ textarea:focus-visible),
+    & label:has(+ textarea:not(:placeholder-shown)) {
+        transform: translateY(0.8rem);
+        background: linear-gradient(
+            0deg,
+            var(--clr-grey) 0%,
+            var(--clr-grey) 40%,
+            var(--clr-white) 40%,
+            var(--clr-white) 100%
+        );
+        color: var(--clr-black);
+        font-weight: var(--fw-bold);
+        font-size: 1rem;
     }
 
     & div {
@@ -17,13 +33,22 @@
     }
 
     &__label {
+        width: fit-content;
+        padding-inline: 0.025rem;
         margin-bottom: 0.25rem;
-        font-weight: var(--fw-bold);
+        margin-left: 0.5rem;
+        font-weight: var(--fw-normal);
+        color: var(--clr-disabled-color);
+        transform: translateY(2rem);
+        transition: transform 0.2s ease;
     }
     &__input {
         padding: 0.5rem;
         border-radius: 0.25rem;
         background-color: var(--clr-grey);
+        &:focus-visible {
+            border: 1px solid var(--clr-theme-2);
+        }
     }
 
     &__textarea {
@@ -33,21 +58,33 @@
         background-color: var(--clr-grey);
     }
     .error {
-        color: red;
+        color: var(--clr-red);
         font-style: italic;
         margin-left: 0.5rem;
         margin-top: 0.125rem;
     }
-    .valid:not(:placeholder-shown) {
-        border: 2px solid limegreen;
+
+    .valid:not(:placeholder-shown),
+    .valid:not(:placeholder-shown):focus-visible {
+        border: 2px solid var(--clr-light-green);
         background-color: var(--clr-white);
     }
+    label:has(+ .valid:not(:placeholder-shown)) {
+        color: var(--clr-light-green);
+        background: var(--clr-white);
+    }
     .invalid {
-        border: 2px solid red;
+        border: 2px solid var(--clr-red);
+        background: var(--clr-white);
+    }
+    label:has(+ input.invalid),
+    label:has(+ textarea.invalid) {
+        color: var(--clr-red);
+        background: var(--clr-white);
     }
 
     .success {
-        color: green;
+        color: var(--clr-dark-green);
     }
 }
 
@@ -56,13 +93,13 @@
         display: block;
     }
     text-wrap: pretty;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
     & input[type="checkbox"] {
         vertical-align: -4px;
         margin-inline: 0rem 0.5rem;
         width: 1.2rem;
         aspect-ratio: 1;
-        accent-color: limegreen;
+        accent-color: limegreen !important;
     }
     & span {
         font-style: italic;
