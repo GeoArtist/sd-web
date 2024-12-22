@@ -27,7 +27,7 @@
         display: block;
         flex-grow: 0;
         flex-shrink: 0;
-        animation: show ease-in-out infinite;
+        animation: show ease infinite;
     }
 }
 @keyframes show {
@@ -35,11 +35,11 @@
         opacity: 0;
         filter: blur(10px);
     }
-    10% {
+    15% {
         opacity: 1;
         filter: none;
     }
-    90% {
+    80% {
         opacity: 1;
         filter: none;
     }

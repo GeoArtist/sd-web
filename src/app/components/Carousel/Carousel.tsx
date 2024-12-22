@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 export default function Carousel() {
     const [imageIndex, setImageIndex] = useState(0);
-    const sliderTime = 10000
+    const sliderTime = 7000
 
     function showNextImage(){
         setImageIndex(index=>{
@@ -22,7 +22,7 @@ export default function Carousel() {
             showNextImage();
         }, sliderTime);
         return () => clearInterval(interval);
-    });
+    },[]);
 
     const img = carouselImgs[imageIndex];
     
@@ -31,7 +31,9 @@ export default function Carousel() {
             <div className={styles.carousel__container}>
                 <Image src={img.url} alt={img.alt} key={img.alt} 
                     className={styles.carousel__img} 
-                    style={{animationDuration: `${sliderTime}ms`}}/>
+                    placeholder = 'empty'
+                    fill
+                    style={{animationDuration: `${sliderTime+250}ms`}}/>
             </div>
         </div>
 
