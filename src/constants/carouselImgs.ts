@@ -12,10 +12,10 @@ import slope from '@/public/images/carousel/slope.jpg'
 import { ImgsLinks } from '@/types/imgsLinks'
 
 export const carouselImgs:ImgsLinks[] = [
-{
-    url: map,
-    alt: 'traditional-map-example'
-},
+// {
+//     url: map,
+//     alt: 'traditional-map-example'
+// },
 
 {
     url: rtk1,
@@ -38,8 +38,8 @@ export const carouselImgs:ImgsLinks[] = [
     alt: 'dashboard-example'
 },
 {
-    url: osm,
-    alt: 'open-street-map-example'
+    url: bdot,
+    alt: 'bdot-example'
 },
 {
     url: pointcloud,
