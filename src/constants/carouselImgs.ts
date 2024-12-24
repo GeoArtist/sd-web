@@ -7,7 +7,7 @@ import code from '@/public/images/carousel/code.jpg'
 import dashboard from '@/public/images/carousel/dashboard.jpg'
 import db from '@/public/images/carousel/db.jpg'
 import osm from '@/public/images/carousel/osm.jpg'
-import pointcloud from '@/public/images/carousel/pointcloud2.jpg'
+import pointcloud from '@/public/images/carousel/pointcloud.jpg'
 import slope from '@/public/images/carousel/slope.jpg'
 import { ImgsLinks } from '@/types/imgsLinks'
 
