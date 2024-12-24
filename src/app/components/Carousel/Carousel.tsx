@@ -1,9 +1,9 @@
 'use client'
-import styles from './Carousel.module.scss';
 import Image from 'next/image';
 import { carouselImgs } from '@/constants/carouselImgs';
 import { useState, useEffect } from 'react';
 
+import styles from './Carousel.module.scss';
 
 export default function Carousel() {
     const [imageIndex, setImageIndex] = useState(0);
