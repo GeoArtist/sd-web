@@ -1,9 +1,10 @@
-import styles from './TopBar.module.scss'
 import { Navbar } from "@/components/Navbar/Navbar";
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '@/public/logos/logo_cut.png'
 import { MenuProvider } from '@/contexts/MenuContext';
+
+import styles from './TopBar.module.scss'
 
 export function TopBar(){
     return <>

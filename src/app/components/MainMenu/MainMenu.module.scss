@@ -1,0 +1,110 @@
+.desktopMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+
+    > ul {
+        display: flex;
+        align-items: center;
+        text-wrap: nowrap;
+        font-size: 1.15rem;
+
+        & > li {
+            display: flex;
+            cursor: pointer;
+
+            &:hover,
+            &:focus-visible {
+                background: var(--clr-theme-2);
+                color: var(--clr-white);
+            }
+
+            // Links
+            & > a {
+                padding: 1rem 0.75rem;
+                position: relative;
+            }
+            &:nth-of-type(2) > a {
+                padding-right: 1.75rem;
+            }
+            &:nth-of-type(2) > a:after {
+                content: "^";
+                position: absolute;
+                transform: scale(2, 1) rotate(180deg) translateY(-60%);
+                right: 0.75rem;
+                top: 0;
+            }
+        }
+    }
+
+    & .active {
+        font-weight: var(--fw-bold);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+    }
+    .dropDown {
+        position: relative;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 54px 1fr;
+    grid-template-columns: 1fr 300px;
+    overflow: hidden;
+    transition: right 0.3s cubic-bezier(0.1, 0.76, 0.58, 1);
+    z-index: -1;
+
+    & > ul {
+        grid-row: 2;
+        grid-column: 2;
+        padding: 2rem 2rem;
+        background-color: var(--clr-theme-2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0.25rem;
+        color: var(--clr-white);
+        transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        & li {
+            display: flex;
+            text-align: center;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+
+            & a {
+                width: 100%;
+                padding: 1rem 0.75rem;
+                filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+            }
+
+            &:hover,
+            &:focus-visible {
+                filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+                transform: scale(1.1);
+                font-weight: var(--fw-bold);
+                box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+    & .sidebarBGC {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -2;
+    }
+    &:global(.displayMenu) {
+        right: 0px;
+    }
+}
