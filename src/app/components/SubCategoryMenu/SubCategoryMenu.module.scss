@@ -5,9 +5,12 @@
     height: 0;
     visibility: hidden;
 
-    transition:
-        height 0.5s ease,
-        visibility 0.5s ease;
+    transition: height 0.5s ease;
+    @supports (interpolate-size: allow-keywords) {
+        transition:
+            height 0.5s ease,
+            visibility 0.05s linear;
+    }
     & li {
         font-weight: var(--fw-regular);
         color: var(--clr-black);

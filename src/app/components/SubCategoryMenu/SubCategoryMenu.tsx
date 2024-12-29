@@ -1,24 +1,41 @@
 'use client'
-import { geoOffer} from "@/constants/offerCategories"
+import { OfferCategories} from "@/constants/offerCategories"
 import Link from "next/link";
 import { useCurrentPath } from "@/app/contexts/CurrentPathContext";
 import { OfferCategory } from "@/types/offerCategory";
-
+import {useState, useEffect, use} from "react";
 import styles from "./SubCategoryMenu.module.scss";
 
-export function SubCategoryMenu({display,onClickHandler, item}:{display:boolean, onClickHandler:()=>void, item:OfferCategory}) {
+export function SubCategoryMenu({ item}:{item:OfferCategory}) {
     const currentPath = useCurrentPath()
-    
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        if (currentPath.includes(item.path)) {
+            setOpen(true)}
+
+        return ()=>{
+            setOpen(false)
+        }
+    }, [currentPath])
+
+    const toggleOpen = () => {
+        setOpen(!open)
+    }
+
+    const category = item.name.toLowerCase()
+    const offerServices = OfferCategories.filter(offer => offer.path.split("/")[2] === category)[0].subcategories
+
     return <>
-        <li key={item.name} className={`${styles.subCategoryMenu} ${display ? styles.open : ""}`} onClick={onClickHandler} >
+        <li key={item.name} className={`${styles.subCategoryMenu} ${open ? styles.open : ""}`} onClick={toggleOpen} >
             {item.name}
         </li>
-       <ul className={`${styles.submenu} ${display ? styles.visible : ""}`}>
-            {geoOffer.map((item, index) => 
+       <ul className={`${styles.submenu} ${open ? styles.visible : ""}`}>
+            {offerServices.map((item, index) => 
                 <li key={index}  >
                     <Link 
                         key={`${index}__${index}`} 
-                        href={'/oferta/geodezja/' + item.path}
+                        href={`/oferta/${category}/` + item.path}
                         className={currentPath.includes(item.path) ? styles.active : ''}
                         >{item.navName}
                     </Link> 

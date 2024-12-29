@@ -1,4 +1,3 @@
-// import { GeoOffer } from '@/types/geoOffer';
 import clock from '@/public/icons/featureCards/clock.svg'
 import hand from '@/public/icons/featureCards/hand.svg'
 import experience from '@/public/icons/featureCards/experience.svg'

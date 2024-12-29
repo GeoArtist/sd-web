@@ -1,4 +1,3 @@
-// import { GeoOffer } from '@/types/geoOffer';
 import dashboard from '@/public/icons/offer/dashboard.svg'
 import data from '@/public/icons/offer/data.svg'
 import drone from '@/public/icons/offer/drone.svg'
