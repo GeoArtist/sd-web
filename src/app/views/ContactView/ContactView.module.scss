@@ -3,15 +3,16 @@
     max-width: 1000px;
     grid-template-columns: 1fr 1.125fr;
     margin-inline: auto;
-    margin-block: 2rem;
+    margin-block: 2rem 3rem;
     padding-top: 2rem;
-    gap: 2rem;
 
     &__wrapper {
-        margin-inline: 2rem;
+        max-width: 400px;
+        margin-inline: auto 3rem;
+        // margin-inline: 2rem;
     }
     &__wrapper:nth-last-of-type(1) {
-        margin-inline: 2rem 4rem;
+        margin-inline: 3rem auto;
     }
     & h1,
     h2 {
@@ -30,7 +31,10 @@
     top: 3rem;
     left: 0;
     margin-inline: auto;
-    max-width: 700px;
+    max-width: 1000px;
+    & div {
+        margin-inline: 2rem;
+    }
 }
 @media (max-width: 1000px) {
     .contactLayout {
@@ -55,8 +59,5 @@
     .contactHeader {
         min-width: max(400px, 75%);
         margin-inline: auto;
-        & div {
-            margin-inline: 2rem;
-        }
     }
 }
