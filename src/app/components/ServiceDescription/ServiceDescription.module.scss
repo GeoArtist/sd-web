@@ -1,4 +1,6 @@
 .wrapper {
+    grid-column: 2;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,5 +55,10 @@
         text-wrap: pretty;
         line-height: 1.35rem;
         word-wrap: break-word;
+    }
+}
+@media (max-width: 1000px) {
+    .wrapper {
+        grid-column: 1;
     }
 }

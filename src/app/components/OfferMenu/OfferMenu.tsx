@@ -3,11 +3,11 @@ import {OfferCategories } from "@/constants/offerCategories"
 import Link from "next/link";
 import { OfferMenuProps } from "@/types/offerMenu";
 import { useCurrentPath } from "@/app/contexts/CurrentPathContext";
-import styles from "./OfferMenu.module.scss";
 import { SubCategoryMenu } from "../SubCategoryMenu/SubCategoryMenu";
 
+import styles from "./OfferMenu.module.scss";
 
-export  function OfferMenu(props:OfferMenuProps) {
+export function OfferMenu(props:OfferMenuProps) {
     const currentPath = useCurrentPath()
     
     let classNames = ''
