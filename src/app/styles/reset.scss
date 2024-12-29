@@ -40,6 +40,7 @@ body {
     background: var(--clr-grey);
     position: relative;
     overflow-x: hidden;
+    interpolate-size: allow-keywords;
 }
 body:has(div.active) {
     // overflow-y: scroll;

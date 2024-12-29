@@ -3,7 +3,7 @@ type OfferDropDownProps={
     display:boolean,
 }
 type OfferSidebarProps={
-    menuType:'sidebar'
+    menuType:'offerMenu'
 }
 
 

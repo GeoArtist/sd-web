@@ -5,7 +5,8 @@
     position: absolute;
     top: 100%;
     left: 0;
-    display: none;
+    width: 150px;
+    // display: none;
     min-width: max-content;
     background-color: var(--clr-white);
     color: var(--clr-black);
@@ -39,6 +40,7 @@
         border-bottom: none;
     }
 }
+
 .open {
     display: grid;
     opacity: 1;
@@ -48,22 +50,36 @@
     }
 }
 
-.sideBar {
+.offerMenu {
     --_border_clr: rgba(0, 0, 0, 0.2);
-    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    font-size: 1.1rem;
 
-    min-width: max-content;
+    min-width: 300px;
     background-color: var(--clr-white);
-    color: var(--clr-black);
+    color: var(--clr-white);
 
     border: 1px solid var(--_border_clr);
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     box-shadow: 0px 5px 15px var(--_border_clr);
     overflow: hidden;
+
+    & > li {
+        background-color: var(--clr-theme-2);
+        font-weight: var(--fw-bold);
+        border-bottom: 1px solid var(--_border_clr);
+    }
+    & > li > ul {
+        background-color: var(--clr-white);
+    }
+    & > li:not(:has(.submenu)) {
+        border-bottom: 1px solid var(--_border_clr);
+    }
 
     & a {
         display: flex;
@@ -71,23 +87,22 @@
         align-items: center;
         padding: 0.5rem 0.75rem;
     }
-    & li {
-        border-bottom: 1px solid var(--_border_clr);
-    }
-    & li:hover,
-    & li:focus-visible {
-        color: var(--clr-white);
+
+    & a:hover,
+    & a:focus-visible {
+        color: var(--clr-black);
         background-color: var(--clr-theme-2);
         border-bottom: none;
         outline: 1px solid var(--_border_clr);
     }
 
     & .active {
+        color: var(--clr-black);
         font-weight: var(--fw-bold);
-        font-size: 1.1rem;
-        // text-decoration: underline;
-        // text-decoration-thickness: 2px;
-        // text-underline-offset: 3px;
+
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
     }
 }
 

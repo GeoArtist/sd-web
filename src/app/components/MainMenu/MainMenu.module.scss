@@ -1,15 +1,18 @@
 .desktopMenu {
+    align-self: stretch;
     display: flex;
     justify-content: space-between;
     margin-left: 3rem;
 
     > ul {
+        align-self: stretch;
         display: flex;
         align-items: center;
         text-wrap: nowrap;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
 
         & > li {
+            align-self: stretch;
             display: flex;
             cursor: pointer;
 
@@ -21,6 +24,7 @@
 
             // Links
             & > a {
+                align-self: center;
                 padding: 1rem 0.75rem;
                 position: relative;
             }
@@ -28,11 +32,11 @@
                 padding-right: 1.75rem;
             }
             &:nth-of-type(2) > a:after {
-                content: "^";
+                content: "▼";
                 position: absolute;
-                transform: scale(2, 1) rotate(180deg) translateY(-60%);
-                right: 0.75rem;
-                top: 0;
+                transform: scale(1, 0.5);
+                right: 0.5rem;
+                top: 1rem;
             }
         }
     }

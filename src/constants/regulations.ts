@@ -1,4 +1,5 @@
-import { MarkdownPaths } from '@/types/navigationPaths';
+import { MarkdownPaths } from "@/types/offerCategory";
+
 
 export const regulations: MarkdownPaths[] = [
     {path: 'polityka-prywatnosci', mdFileName: 'rodo', navName: 'Polityka Prywatności'},

@@ -4,12 +4,7 @@ import {OfferMenu} from '@/app/components/OfferMenu/OfferMenu'
 import {useCurrentPath} from '@/contexts/CurrentPathContext'
 import { useToogle } from '@/hooks/useToogle';
 import {useMenu, useMenuUpdate} from '@/contexts/MenuContext'
-
-
-type MainMenuProps = {
-    mode: "desktop" | "mobile";
-    showSidebar?: boolean;
-}
+import { MainMenuProps } from "@/types/mainMenu";
 
 import styles from './MainMenu.module.scss'
 
