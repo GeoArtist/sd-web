@@ -1,15 +1,16 @@
 import AboutUsDescription from '@/app/components/AboutUsDescription/AboutUsDescription'
 import aboutUs from '@/public/images/about-us.jpg'
-import logoCut from '@/public/logos/logo_cut.png'
 import Image from 'next/image'
+import { SubPageHeader } from '@/app/components/SubPageHeader/SubPageHeader'
 
 import styles from './AboutUsView.module.scss'
 
 export default function AboutUsView(){
     return <>
-        <div className={styles.aboutView}>
-        <Image src={logoCut} alt="logoCut" className={styles.logo} />
-        <h1>GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE</h1>
+        <div className={styles.aboutView__header}>
+            <SubPageHeader title={"GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE"} />
+        </div>
+        <div className={styles.aboutView__content}>
         <Image src={aboutUs} alt="about-us" />  
         <AboutUsDescription />
         

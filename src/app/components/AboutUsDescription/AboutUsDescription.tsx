@@ -1,6 +1,7 @@
-import styles from './AboutUsDescription.module.scss'
 import { getSelectedContentHTML } from '@/utils/markdownParser'
 import CertificatesImage from '../CertificatesImages/CertificatesImage'
+
+import styles from './AboutUsDescription.module.scss'
 
 export default async function AboutUsDescription(){
 

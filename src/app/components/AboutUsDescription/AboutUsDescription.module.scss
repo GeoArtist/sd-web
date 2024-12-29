@@ -2,14 +2,6 @@
     display: grid;
     justify-content: center;
     margin-top: 1rem;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
 }
 
 .description {

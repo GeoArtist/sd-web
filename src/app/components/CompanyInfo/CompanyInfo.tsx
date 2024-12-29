@@ -9,7 +9,7 @@ export function CompanyInfo() {
     return <>
     <article className={styles.companyInfo}>
         <section className={styles.contact}>
-            <h3>Zadzwoń do nas lub wyślij e-mail</h3>
+            <h4>Zadzwoń do nas lub wyślij e-mail</h4>
             <span className={styles.contactWay}>
                 <Image src={telephone} alt="phone"/>
                 <Link href="tel:+48535154251">+48 535 154 251</Link>

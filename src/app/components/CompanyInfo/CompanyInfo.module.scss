@@ -7,8 +7,8 @@
     border-radius: 1rem;
     margin-inline: auto;
 
-    & h3,
-    & h4 {
+    & h4,
+    & h5 {
         font-size: 1.15rem;
         margin-bottom: 0.35rem;
         text-wrap: pretty;
@@ -41,9 +41,7 @@
 
     & section.address {
         // margin-top: 1rem;
-        & h4 {
-            margin-bottom: 0.35rem;
-        }
+
         & p:not(:last-child) {
             margin-bottom: 0.35rem;
         }
