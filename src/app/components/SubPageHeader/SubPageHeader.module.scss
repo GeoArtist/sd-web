@@ -1,7 +1,7 @@
 .wrapper {
     background-color: var(--clr-white);
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     & h1 {
         --_font-shadow: 8px;
@@ -9,7 +9,6 @@
         --_border_clr: rgba(0, 0, 0, 0.2);
         font-size: clamp(1.5rem, 1.2rem + 2vw, 3.5rem);
         text-align: center;
-        // margin-block: 0.5rem 2rem;
         color: white;
         text-shadow:
             var(--_font-shadow) 0px var(--_font-blur) var(--clr-theme-2),

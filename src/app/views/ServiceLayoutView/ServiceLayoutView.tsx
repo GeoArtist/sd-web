@@ -1,5 +1,5 @@
 import { OfferMenu } from '@/app/components/OfferMenu/OfferMenu'
-import {OfferHeader} from '@/app/components/OfferHeader/OfferHeader'
+import {SubPageHeader} from '@/app/components/SubPageHeader/SubPageHeader'
 
 import styles from './ServiceLayoutView.module.scss'
 
@@ -7,7 +7,7 @@ export default function ServiceLayoutView({children}:{children:React.ReactNode})
     return <>
     <div className={styles.grid}>
         <div className={styles.header}>
-        <OfferHeader/>
+        <SubPageHeader title={"OFERTA"}/>
         </div>
             {children}
         <div className={styles.menu}>

@@ -5,16 +5,17 @@ import logoCut from '@/public/logos/logo_cut.png'
 import Image from 'next/image'
 
 import styles from './TechnologyView.module.scss'
+import { SubPageHeader } from '@/app/components/SubPageHeader/SubPageHeader';
 
 export default function TechnologyView(){
     return <>
         <div className={styles.technologyView}>
-  
-           <div className={styles.technologyWrapper}>
-                
-                <Image src={logoCut} alt="logoCut" className={styles.logo} />
-                <h1>TECHNOLOGIE</h1>
+            <div className={styles.technology__header}>
+                <SubPageHeader title={"TECHNOLOGIE"}/>
+            </div>
 
+            <div className={styles.technology__content}>
+                
                 <h2>Geodezja</h2>
                 <InfitnieHorizontalScroll imgs={imgsTechGeo}/>
                 <hr/>
