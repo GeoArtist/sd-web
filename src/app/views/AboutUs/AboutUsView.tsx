@@ -1,9 +1,9 @@
 import AboutUsDescription from '@/app/components/AboutUsDescription/AboutUsDescription'
-import styles from './AboutUsView.module.scss'
 import aboutUs from '@/public/images/about-us.jpg'
 import logoCut from '@/public/logos/logo_cut.png'
 import Image from 'next/image'
 
+import styles from './AboutUsView.module.scss'
 
 export default function AboutUsView(){
     return <>

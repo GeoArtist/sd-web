@@ -9,18 +9,36 @@
     justify-items: center;
     align-items: start;
 
-    h1 {
-        --_border_clr: rgba(0, 0, 0, 0.2);
-        font-size: 1.35rem;
-        line-height: 2.5rem;
-        padding-left: 0.75rem;
-        background-color: var(--clr-theme-2);
-        border: 1px solid var(--_border_clr);
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        color: var(--clr-white);
-        font-weight: var(--fw-normal);
-        box-shadow: 0px 5px 15px var(--_border_clr);
+    & .header {
+        grid-column: 2;
+        background-color: var(--clr-white);
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        & h1 {
+            --_font-shadow: 8px;
+            --_font-blur: 10px;
+            --_border_clr: rgba(0, 0, 0, 0.2);
+            font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3.5rem);
+            text-align: center;
+            // margin-block: 0.5rem 2rem;
+            color: white;
+            text-shadow:
+                var(--_font-shadow) 0px var(--_font-blur) var(--clr-theme-2),
+                calc(-1 * var(--_font-shadow)) 0px var(--_font-blur) var(--clr-theme-2),
+                0px var(--_font-shadow) var(--_font-blur) var(--clr-theme-2),
+                0px calc(-1 * var(--_font-shadow)) var(--_font-blur) var(--clr-theme-2);
+            filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+        }
+        & .logo {
+            width: 100%;
+            height: 100%;
+            margin-inline: auto;
+            padding-right: 1rem;
+            display: block;
+        }
     }
 }
 
@@ -29,6 +47,9 @@
         grid-template-columns: 1fr;
         margin-inline: 2rem;
         margin-bottom: 3rem;
+        .header {
+            grid-column: 1;
+        }
 
         // justify-items: stretch;
         & h1 {
