@@ -1,11 +1,11 @@
 .offerIcons {
     display: grid;
-    gap: 1em 1em;
+    gap: 1rem 1rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
     grid-template-rows: 55px auto;
     place-items: center;
     justify-content: center;
-    padding-block: 1.5rem;
+    padding-block: 2rem;
     padding-inline: 2rem;
     position: relative;
     isolation: isolate;
@@ -32,6 +32,9 @@
         opacity: 0.25;
         z-index: -1;
     }
+    &:has(div:hover) > div:not(div:hover) {
+        filter: grayscale(1);
+    }
 
     &__wrapper {
         display: grid;
@@ -44,6 +47,12 @@
         height: 100%;
         position: relative;
         border-radius: 0.5rem;
+        transition: transform 0.25s ease;
+
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.1);
+        }
 
         &::after {
             content: "";
