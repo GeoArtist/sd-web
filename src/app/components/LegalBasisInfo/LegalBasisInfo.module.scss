@@ -20,7 +20,7 @@
             content: "-";
             margin-inline: 1.5rem 0.5rem;
         }
-        a:hover {
+        a:hover,&:focus-visible {
             color: var(--clr-link-default);
         }
     }

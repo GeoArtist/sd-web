@@ -10,7 +10,7 @@
         color 0.3s ease,
         transform 0.3s ease;
     &:hover,
-    :focus-visible {
+    &:focus-visible {
         background-color: var(--clr-theme-2);
         color: var(--clr-white);
         transform: scale(1);

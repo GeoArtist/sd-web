@@ -54,7 +54,7 @@
     & a {
         color: var(--clr-link-default);
 
-        &:hover {
+        &:hover, &:focus-visible {
             font-weight: var(--fw-bold);
         }
     }

@@ -29,7 +29,7 @@
             filter 0.2s ease,
             transform 0.2s ease;
 
-        &:hover {
+        &:hover,&:focus-visible {
             transform: scale(1.2);
             box-shadow: 0 0px 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
             z-index: 2;

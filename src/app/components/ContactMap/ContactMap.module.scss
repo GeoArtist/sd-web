@@ -22,7 +22,7 @@
         & a {
             color: var(--clr-black);
         }
-        & a:hover {
+        & a:hover,&:focus-visible {
             color: var(--clr-link-default);
         }
         & p {
