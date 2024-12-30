@@ -10,7 +10,7 @@ import styles from './MainMenu.module.scss'
 
 export  function MainMenu({mode, showSidebar}:MainMenuProps) {
     const currentPath = useCurrentPath();
-    const [value, toggleValue] = useToogle(false);
+    const [openDropDown, toggleDropDown] = useToogle(false);
     const showSideBarMenu = useMenu();
     const showMenuUpdate = useMenuUpdate();
 
@@ -23,12 +23,12 @@ export  function MainMenu({mode, showSidebar}:MainMenuProps) {
             <ul >
                 <li><Link onClick={mobileFn}  href="/" className={currentPath === '/' ? styles.active : "" }>STRONA GŁÓWNA</Link></li>
                 <li onClick={mobileFn} 
-                    onMouseEnter={()=>toggleValue(true)} 
-                    onMouseLeave={()=>toggleValue(false)} 
+                    onMouseEnter={()=>toggleDropDown(true)} 
+                    onMouseLeave={()=>toggleDropDown(false)} 
                     className={styles.dropDown}>
                     <Link  href="/oferta" className={currentPath.includes('/oferta') ? styles.active : "" } >OFERTA</Link>
                     {/* if sidebar dont render OfferMenu */}
-                    {mode=='desktop' &&  <OfferMenu display={value} menuType={'dropdown'}/>} 
+                    {mode=='desktop' && openDropDown && <OfferMenu display={openDropDown} menuType={'dropdown'}/>} 
                 </li>
                 <li><Link onClick={mobileFn}  href="/o-nas" className={currentPath === '/o-nas' ? styles.active : "" }>O NAS</Link></li>
                 <li><Link onClick={mobileFn}  href="/technologie" className={currentPath === '/technologie' ? styles.active : "" }>TECHNOLOGIE</Link></li>
