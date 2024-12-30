@@ -7,7 +7,7 @@ export default function ServiceLayoutView({children}:{children:React.ReactNode})
     return <>
     <div className={styles.grid}>
         <div className={styles.header}>
-        <SubPageHeader title={"OFERTA"}/>
+            <SubPageHeader title={"OFERTA"}/>
         </div>
             {children}
         <div className={styles.menu}>

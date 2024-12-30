@@ -11,7 +11,7 @@ export const offerServices: MarkdownPaths[] = [
     {path: 'mapa-do-celow-prawnych', mdFileName: 'prawne', navName: 'Mapa do celów prawnych', category: 'geodezja'},
     {path: 'inne-opracowania', mdFileName: 'inne', navName: 'Inne opracowania', category: 'geodezja'},
     {path: 'gis', mdFileName: 'gis', navName: 'gis', category: 'gis'},
-    {path: 'data-analysis', mdFileName: 'data-analysis', navName: 'data-analysis', category: 'data-analysis'},
+    {path: 'data-analysis', mdFileName: 'data-analysis', navName: 'Data analysis', category: 'data-analysis'},
 ]
 
 export const  OfferCategories: OfferCategory[] = [

@@ -10,6 +10,10 @@
 
     & .header {
         grid-column: 2;
+        & img {
+            width: 95%;
+            height: 95%;
+        }
     }
     & .menu {
         grid-column: 1;
