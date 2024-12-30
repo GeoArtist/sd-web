@@ -1,11 +1,9 @@
 import { MarkDownContent } from "@/types/markdown";
+import { OfferSubCategory } from "@/types/offerCategory";
 import Image from 'next/image'
-
 import LegalBasisInfo from "@/components/LegalBasisInfo/LegalBasisInfo";
 
 import styles from './ServiceDescription.module.scss'
-import { OfferSubCategory } from "@/types/offerCategory";
-
 
 export default function ServiceDescription({md_content, offer}:{md_content:MarkDownContent, offer:OfferSubCategory}) {
     
@@ -17,11 +15,20 @@ export default function ServiceDescription({md_content, offer}:{md_content:MarkD
             <Image src={imgUrl} alt={imgAlt}/>
             <div className={styles.innerWrapper}>
                 <h3 className={styles.name}>Opis usługi:</h3>
-                {description.map((line, index) => <p key={index}>{line}</p>)}
+                {description.map((line, index) => {
+                    if (line.startsWith('-')) {
+                        return <p key={index} className={styles.listItem}>{line}</p>
+                    }
+                    return <p key={index}  className={styles.paragraph}>{line}</p>
+                
+                }
+            )
+                
+                }
                 {time && (
                     <>
                     <h3 className={styles.name}>Czas realizacji:</h3>
-                        <p>{time}</p>
+                        <p className={styles.paragraph}>{time}</p>
                     </>
                 )}
             

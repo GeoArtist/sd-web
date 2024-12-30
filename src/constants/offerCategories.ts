@@ -2,14 +2,15 @@
 import { OfferCategory, OfferSubCategory } from "@/types/offerCategory";
 
 // IMAGES
-import inne from "@/public/images/offer/inne.jpg";
-import inwentaryzacje from "@/public/images/offer/inwentaryzacje.jpg";
-import prawne from "@/public/images/offer/prawne.jpg";
 import mdcp from "@/public/images/offer/mdcp.jpg";
+import tyczenia from "@/public/images/offer/tyczenia.jpg";
+import inwentaryzacje from "@/public/images/offer/inwentaryzacje.jpg";
+import wznowienia from "@/public/images/offer/wznowienia.jpg";
 import podzialy from "@/public/images/offer/podzialy.jpg";
 import rozgraniczenie from "@/public/images/offer/rozgraniczenia.jpg";
-import tyczenia from "@/public/images/offer/tyczenia.jpg";
-import wznowienia from "@/public/images/offer/wznowienia.jpg";
+import prawne from "@/public/images/offer/prawne.jpg";
+import inne from "@/public/images/offer/inne.jpg";
+import obiektowanie from "@/public/images/offer/obiektowanie.jpg";
 import gis from "@/public/images/offer/world_map.jpg";
 
 export const offerServices: OfferSubCategory[] = [
@@ -76,6 +77,14 @@ export const offerServices: OfferSubCategory[] = [
     category: "geodezja",
     imgUrl: inne,
     imgAlt: "inne opracowania image",
+  },
+  {
+    path: "obiektowanie-map",
+    mdFileName: "obiektowanie",
+    navName: "Obiektowanie Map",
+    category: "geodezja",
+    imgUrl: obiektowanie,
+    imgAlt: "Obiektowanie map",
   },
   {
     path: "gis",

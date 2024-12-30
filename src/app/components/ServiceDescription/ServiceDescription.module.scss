@@ -44,15 +44,20 @@
         font-size: 1.25rem;
         margin-block: 1.25rem 0.25rem;
     }
-    p {
-        text-indent: 1.5rem;
+
+    .listItem {
+    margin-left: 3rem;
+    font-style: italic;
+    line-height: 1.4;
     }
-    p {
-        // margin-bottom: 0.25rem;
+    .paragraph {
+        margin-block: 0.25rem 0.5rem;
+        text-indent: 1.5rem;
         text-wrap: pretty;
         line-height: 1.35rem;
         word-wrap: break-word;
     }
+
 }
 @media (max-width: 1000px) {
     .wrapper {

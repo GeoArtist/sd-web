@@ -1,7 +1,7 @@
-import styles from './LegalBasisInfo.module.scss';
 import Link from "next/link";
 import {legalBasisLinks} from "@/constants/legalBasisLinks";
 
+import styles from './LegalBasisInfo.module.scss';
 
 
 export default function LegalBasisInfo({legalBasis}:{legalBasis: string[]}) {
