@@ -3,7 +3,9 @@
     border: 2px solid var(--clr-theme-2);
     border-radius: 0.75rem;
     color: var(--clr-theme-2);
+    font-weight: var(--fw-bold);
     padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 0.15rem rgba(0, 0, 0, 0.3);
     transform: scale(0.95);
     transition:
         background-color 0.3s ease,

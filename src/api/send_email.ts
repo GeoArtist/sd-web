@@ -1,7 +1,7 @@
 "use server";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
-import { EmailType, EmailResponseType } from "../types/email";
+import { Email, EmailResponse } from "@/types/email";
 dotenv.config(); // Load environment variables from .env file
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
@@ -26,7 +26,7 @@ export async function sendMail({
   telephone,
   email,
   message,
-}: EmailType): Promise<EmailResponseType> {
+}: Email): Promise<EmailResponse> {
   // Verify the connection configuration
   try {
     const isVerified = await transporter.verify();
@@ -43,10 +43,10 @@ export async function sendMail({
     };
   }
   // Prepare email content
-  const sendDateTime = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`
+  const sendDateTime = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
   const subject = `Nowa wiadomość z formularza kontaktowego od ${name} z dnia ${sendDateTime}`;
   const html = `Wiadomość od: <b>${name}</b> <br> Data wysłania: <b>${sendDateTime}</b> <br> Telefon: <b>${telephone}</b> <br> Email: <b>${email}</b> <br> Wiadomość:<br>&emsp;<b>${message}</b>`;
-  
+
   // Send email
   const info = await transporter.sendMail({
     from: SMTP_SERVER_USERNAME,

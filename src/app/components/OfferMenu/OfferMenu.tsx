@@ -3,7 +3,7 @@ import {OfferCategories } from "@/constants/offerCategories"
 import Link from "next/link";
 import { OfferMenuProps } from "@/types/offerMenu";
 import { useCurrentPath } from "@/app/contexts/CurrentPathContext";
-import { SubCategoryMenu } from "../SubCategoryMenu/SubCategoryMenu";
+import { SubCategoryMenu } from "@/components/SubCategoryMenu/SubCategoryMenu";
 
 import styles from "./OfferMenu.module.scss";
 
