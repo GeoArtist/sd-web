@@ -70,8 +70,9 @@
             }
         }
         & button {
+            width: 80%;
+            padding-block: 0.65rem;
             margin-top: 1rem;
-            width: 85%;
             margin-inline: auto;
             background-color: transparent;
             color: var(--clr-white);
