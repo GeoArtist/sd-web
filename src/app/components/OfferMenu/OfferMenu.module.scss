@@ -34,8 +34,9 @@
     }
     & li:hover,
     & li:focus-visible {
-        color: var(--clr-white);
-        background-color: var(--clr-theme-2);
+        font-weight: var(--fw-bold);
+        color: var(--clr-black);
+        background-color: var(--clr-hover-submenu);
         outline: 1px solid var(--_border_clr);
         border-bottom: none;
     }
