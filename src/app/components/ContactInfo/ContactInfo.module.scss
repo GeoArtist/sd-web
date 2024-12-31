@@ -2,19 +2,30 @@ span.contactWay {
     display: flex;
     width: fit-content;
     align-items: center;
+    margin-inline:auto;
     margin-block: 0.5rem;
+
+    & h4{
+        font-size: 1.35rem;
+        text-wrap:pretty;
+    }
     & img {
-        height: 1.5rem;
-        width: 1.5rem;
-        margin-top: 2px;
-        margin-inline: 0 0.5rem;
+        height: 2.25rem;
+        width:2.25rem;
+        margin-inline: 0 0.75rem;
         color: var(--clr-theme-2);
     }
     & a {
-        margin-left: 0.25rem;
+        display: flex;
+        align-items: center;
+        margin-block:0.35rem;
+        font-size: 1.15rem;
+        transition: scale 0.3s ease;
         &:hover,
         &:focus-visible {
             font-weight: var(--fw-bold);
+            scale: 1.05;
+            // color: var(--clr-link-default)
         }
     }
 }

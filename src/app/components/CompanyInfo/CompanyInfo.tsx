@@ -1,13 +1,13 @@
 import React from 'react'
-
-import styles from './CompanyInfo.module.scss'
 import { ContactInfo } from "@/components/ContactInfo/ContactInfo";
+
+import styles from "./CompanyInfo.module.scss";
 
 export function CompanyInfo() {
   return (
     <>
       <article className={styles.companyInfo}>
-        <ContactInfo />
+        <ContactInfo color="blue" />
         <section className={styles.address}>
           <h4>SOFT-DATA Marek Szczepkowski</h4>
           <p>ul. Marii Dąbrowskiej 13/52</p>

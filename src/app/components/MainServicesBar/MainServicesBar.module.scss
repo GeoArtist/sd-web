@@ -48,8 +48,9 @@
             text-align: left;
             color: var(--clr-theme-3);
             text-shadow:
-                0px 0px 1px rgba(0, 0, 0, 0.8),
+                1px 1px 2px rgba(0, 0, 0, 1),
                 2px 2px 4px rgba(0, 0, 0, 0.6);
+            filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
 
             &:nth-child(2) {
                 margin-left: calc((var(--_text-indent) * 2) * 0.95vw);
@@ -76,7 +77,6 @@
 
                 transparent 100%
             );
-            // z-index: 2;
         }
     }
 }

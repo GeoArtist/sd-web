@@ -1,9 +1,10 @@
 'use client'
 import { CompanyInfo } from '@/app/components/CompanyInfo/CompanyInfo';
 import  {ContactForm}  from '@/app/components/ContactForm/ContactForm';
-import dynamic from 'next/dynamic'
-import styles from './ContactView.module.scss'
-import { SubPageHeader } from '@/app/components/SubPageHeader/SubPageHeader';
+import dynamic from "next/dynamic";
+import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
+
+import styles from "./ContactView.module.scss";
  
 const DynamicMap = dynamic(() => import('@/app/components/ContactMap/ContactMap'), {
   ssr: false,

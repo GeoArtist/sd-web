@@ -13,7 +13,7 @@ export default function ContactBar() {
       <div className={styles.contactBar}>
         <Image src={contact} alt="contact-image" />
         <div className={styles.contactBar__info}>
-          <ContactInfo />
+          <ContactInfo color="white" />
           <Button
             type="button"
             onClick={() => redirect("/kontakt")}
