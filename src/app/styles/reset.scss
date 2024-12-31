@@ -37,10 +37,20 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--clr-grey);
+    // background: var(--clr-grey);
     position: relative;
     overflow-x: hidden;
     interpolate-size: allow-keywords;
+    &::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(50% 50% at 50% 50%, var(--clr-theme-3) 7%, var(--clr-theme-2) 100%),
+                    linear-gradient(125deg, var(--clr-theme-3) 1%, var(--clr-theme-2) 100%),
+                    linear-gradient(0deg, var(--clr-grey) 0%, var(--clr-theme-3) 100%);
+        opacity:0.1;
+        z-index: -1;
+    }
 }
 body:has(div.active) {
     // overflow-y: scroll;
