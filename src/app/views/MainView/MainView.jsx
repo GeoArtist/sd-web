@@ -11,9 +11,9 @@ export function MainView() {
     return <>
     <Carousel/>
     <MainServicesBar/>
-    <ContactBar/>
     <OfferIconsCards/>   
     <FeatureCards/>
+    <ContactBar/>
    
     </>
 }
