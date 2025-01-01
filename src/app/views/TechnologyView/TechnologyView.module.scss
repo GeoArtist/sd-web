@@ -61,11 +61,12 @@
         font-size: clamp(1.5rem, 1rem + 0.75vw, 1.75rem);
         text-align: center;
         color: var(--clr-theme-2);
-        filter: drop-shadow(var(--_drop-shadow));
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
         margin-block: 4rem 0rem;
         margin-inline: auto;
-        // text-decoration: underline;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.6),;
+        filter: drop-shadow(var(--_drop-shadow));
+
+
     }
     h2:first-of-type {
         margin-block: 2rem 0rem;

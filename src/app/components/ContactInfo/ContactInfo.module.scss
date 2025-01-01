@@ -5,7 +5,7 @@ span.contactWay {
     margin-inline:auto;
     margin-block: 0.5rem;
 
-    & h4{
+    & h3{
         font-size: 1.35rem;
         text-wrap:pretty;
     }
@@ -25,7 +25,7 @@ span.contactWay {
         &:focus-visible {
             font-weight: var(--fw-bold);
             scale: 1.05;
-            // color: var(--clr-link-default)
+
         }
     }
 }

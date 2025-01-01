@@ -11,21 +11,23 @@ const DynamicMap = dynamic(() => import('@/app/components/ContactMap/ContactMap'
 })
 
 export default function ContactView() {
-return <>
+return (
+  <>
     <div className={styles.contactHeader}>
-      <SubPageHeader title="Kontakt"/>
+      <SubPageHeader title="Kontakt" />
     </div>
     <div className={styles.contactLayout}>
       <div className={styles.contactLayout__wrapper}>
-        <h1>Skontaktuj się z nami!</h1>
-        <CompanyInfo/>
+        <h2>Skontaktuj się z nami!</h2>
+        <CompanyInfo />
       </div>
       <div className={styles.contactLayout__wrapper}>
-      <h2>Formularz kontaktowy</h2>
-      <ContactForm/>
+        <h3>Formularz kontaktowy</h3>
+        <ContactForm />
       </div>
     </div>
-    <DynamicMap/>
-    </>;
+    <DynamicMap />
+  </>
+);
 
 }

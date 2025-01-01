@@ -14,12 +14,12 @@
     &__wrapper:nth-last-of-type(1) {
         margin-inline: 3rem auto;
     }
-    & h1,
-    h2 {
+
+    &  h2, h3 {
         font-size: 2rem;
         color: var(--clr-theme-2);
-        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.2));
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
         margin-inline: auto;
         margin-block: 1.5rem 0.25rem;
         padding-bottom: 0.25rem;
@@ -50,14 +50,10 @@
             margin-block: 3rem 3rem;
             margin-inline: auto;
         }
-        & h1,
-        h2 {
-            margin-inline: auto;
-            margin-block: 1.5rem;
-        }
     }
     .contactHeader {
         min-width: max(400px, 75%);
         margin-inline: auto;
+        margin-bottom:4rem;
     }
 }
