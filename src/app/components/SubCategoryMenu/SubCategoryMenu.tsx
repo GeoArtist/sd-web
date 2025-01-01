@@ -26,21 +26,28 @@ export function SubCategoryMenu({ item}:{item:OfferCategory}) {
     const category = item.name.toLowerCase()
     const offerServices = OfferCategories.filter(offer => offer.path.split("/")[2] === category)[0].subcategories
 
-    return <>
-        <li key={item.name} className={`${styles.subCategoryMenu} ${open ? styles.open : ""}`} onClick={toggleOpen} >
-            {item.name}
+    return (
+      <>
+        <li
+          key={item.name}
+          className={`${styles.subCategoryMenu} ${open ? styles.open : ""}`}
+          onClick={toggleOpen}
+        >
+          {item.name}
         </li>
-       <ul className={`${styles.submenu} ${open ? styles.visible : ""}`}>
-            {offerServices.map((item, index) => 
-                <li key={index}  >
-                    <Link 
-                        key={`${index}__${index}`} 
-                        href={`/oferta/${category}/` + item.path}
-                        className={currentPath.includes(item.path) ? styles.active : ''}
-                        >{item.navName}
-                    </Link> 
-                </li>
-            )}
+        <ul className={`${styles.submenu} ${open ? styles.visible : ""}`}>
+          {offerServices.map((item, index) => (
+            <li key={index}>
+              <Link
+                key={`${index}__${index}`}
+                href={`/oferta/${category}/` + item.path}
+                className={currentPath.includes(item.path) ? styles.active : ""}
+              >
+                {item.navName}
+              </Link>
+            </li>
+          ))}
         </ul>
-    </>
+      </>
+    );
 }
