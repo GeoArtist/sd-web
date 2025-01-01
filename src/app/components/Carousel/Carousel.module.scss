@@ -40,7 +40,7 @@
         grid-column: 2;
         grid-row: 2;
         margin-inline: 2rem;
-        padding: 0.75rem 1rem;
+        padding: 1.5rem 2rem;
         border-radius: 0.5rem;
 
         color: var(--clr-text-logo);
@@ -62,6 +62,7 @@
             4px 4px 8px rgba(0, 0, 0, 0.4);
     }
     h2 {
+        margin-top: 0.25rem;
         margin-right: 1rem;
         color: var(--clr-grey);
         font-size: clamp(1rem, 2rem + 0.5vw, 3rem);
