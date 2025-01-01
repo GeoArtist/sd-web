@@ -3,6 +3,7 @@
     height: 0;
     visibility: hidden;
     transition: height 0.5s ease;
+
     @supports (interpolate-size: allow-keywords) {
         transition:
             height 0.5s ease,

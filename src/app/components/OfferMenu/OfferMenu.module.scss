@@ -28,17 +28,20 @@
         justify-content: flex-start;
         align-items: center;
         padding: 0.5rem 0.75rem;
+        font-weight: var(--fw-regular);
     }
     & li:not(:last-child) {
         border-bottom: 1px solid var(--_border_clr);
     }
     & li:hover,
     & li:focus-visible {
-        font-weight: var(--fw-bold);
         color: var(--clr-black);
         background-color: var(--clr-hover-submenu);
         outline: 1px solid var(--_border_clr);
         border-bottom: none;
+        & a {
+            font-weight: var(--fw-bold);
+        }
     }
 }
 
@@ -53,7 +56,7 @@
 
 .offerMenu {
     --_border_clr: rgba(0, 0, 0, 0.2);
-
+    font-weight: var(--fw-regular);
     display: flex;
     flex-direction: column;
     justify-content: start;
