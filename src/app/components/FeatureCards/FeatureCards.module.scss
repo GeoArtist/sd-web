@@ -1,13 +1,29 @@
 .cards__wrapper {
+
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+    justify-content: center;
     grid-auto-rows: 150px auto auto;
-    max-width: 1200px;
-    margin-inline: auto;
-    margin-block: 2rem;
+    // max-width: 1200px;
+    margin-inline:auto;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    position: relative;
 
-    &:has(div:hover) > :not(div:hover) {
+    &:has(div:hover) > div:not(div:hover) {
         filter: grayscale(1) opacity(0.5);
     }
 }
+
+
+.bgc__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.85) opacity(0.9) saturate(1.1) contrast(1.1);
+    }

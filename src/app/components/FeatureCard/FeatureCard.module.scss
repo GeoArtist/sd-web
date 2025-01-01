@@ -12,16 +12,17 @@
     text-wrap: balance;
     // border: 3px solid var(--clr-theme-2);
     border-radius: 1rem;
-    background-color: var(--clr-white);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2),0 5px 15px rgba(0, 0, 0, 0.8);
     transition:
         filter 0.25s ease,
         transform 0.25s ease;
 
+
     &:hover,
     &:focus-visible {
         transform: scale(1.1);
-        box-shadow: 0 0px 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
     }
 
     // Title
