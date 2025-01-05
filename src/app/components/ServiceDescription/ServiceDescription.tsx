@@ -16,8 +16,38 @@ export default function ServiceDescription({md_content, offer}:{md_content:MarkD
             <div className={styles.innerWrapper}>
                 <h3 className={styles.name}>Opis usługi:</h3>
                 {description.map((line, index) => {
-                    if (line.startsWith('-')) {
-                        return <p key={index} className={styles.listItem}>{line}</p>
+            
+
+                    const boldTextMatch = /\*\*(.*?)\*\*/.exec(line);
+                    if (boldTextMatch) {
+                      const parts = line.split(/\*\*(.*?)\*\*/).filter(Boolean);
+                      return (
+                        <p
+                          key={index}
+                          className={
+                            line.startsWith("-")
+                              ? styles.listItem
+                              : styles.paragraph
+                          }
+                        >
+                          {parts.map((part, i) =>
+                            boldTextMatch[1] === part ? (
+                              <span key={i} className={styles.bold}>
+                                {part}
+                              </span>
+                            ) : (
+                              part
+                            )
+                          )}
+                        </p>
+                      );
+                    }
+                    if (line.startsWith("-")) {
+                      return (
+                        <p key={index} className={styles.listItem}>
+                          {line}
+                        </p>
+                      );
                     }
                     return <p key={index}  className={styles.paragraph}>{line}</p>
                 

@@ -1,6 +1,4 @@
 .wrapper {
-    grid-column: 2;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,17 +7,17 @@
     background-color: var(--clr-white);
     border-radius: 0.5rem;
     padding: 2rem;
-    margin-bottom: 3rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
     .innerWrapper {
-        margin-inline: auto;
+
+        margin-inline: 1.5rem;
         padding-inline: 0.5rem;
     }
 
     img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         display: block;
         border-radius: 1rem;
@@ -30,7 +28,7 @@
 
     & h2 {
         color: var(--clr-theme-2);
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-block: 0.5rem 0.5rem;
         align-self: center;
         margin-bottom: 1.5rem;
@@ -47,6 +45,7 @@
 
     .listItem {
     margin-left: 3rem;
+    margin-bottom: 0.35rem;
     font-style: italic;
     line-height: 1.4;
     }
@@ -58,8 +57,16 @@
         word-wrap: break-word;
     }
 
+    // First paragraph after a list item
+    p.listItem:has(+ p.paragraph)+p {
+        margin-block: 1.25rem 0.5rem;
+    }
+    span {
+        font-weight: var(--fw-bold);
+    }
+
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .wrapper {
         grid-column: 1;
     }

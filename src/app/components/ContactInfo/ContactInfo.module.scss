@@ -5,16 +5,18 @@ span.contactWay {
     margin-inline:auto;
     margin-block: 0.5rem;
 
-    & h3{
+    & h4{
         font-size: 1.35rem;
         text-wrap:pretty;
     }
-    & img {
-        height: 2.25rem;
-        width:2.25rem;
+    & svg {
+        height: 1.75rem;
+        width:1.75rem;
         margin-inline: 0 0.75rem;
-        color: var(--clr-theme-2);
+color: var(--clr-theme-2);
+        rotate: 10deg;
     }
+
     & a {
         display: flex;
         align-items: center;

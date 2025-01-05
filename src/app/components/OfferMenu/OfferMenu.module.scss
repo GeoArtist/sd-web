@@ -98,6 +98,9 @@
     .sidebar {
         max-width: 600px;
     }
+}
+
+@media (max-width: 1200px) {
     .offerMenu {
         width: max(320px, 40vw);
     }
