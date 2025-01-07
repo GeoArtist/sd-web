@@ -8,13 +8,16 @@ export default function DefaultServicePage() {
     const category = currentPath.split("/")[2]
 
     if (currentPath.endsWith(category))
-    { switch (category) {
-        case 'geodezja':
-            redirect('/oferta/geodezja/mapa-do-celow-projektowych')
-        case 'gis':
-            redirect('/oferta/gis/gis')
-        case 'data-analysis':
-            redirect('/oferta/data-analysis/data-analysis')
+    {
+      switch (category) {
+        case "geodezja":
+          redirect("/oferta/geodezja/mapa-do-celow-projektowych");
+        case "gis":
+          redirect("/oferta/gis/opracowania-rastrowe");
+        case "analiza-danych":
+          redirect("/oferta/analiza-danych/przetwarzanie-danych");
         default:
-            redirect('/oferta/geodezja/mapa-do-celow-projektowych')}}
+          redirect("/oferta/geodezja/mapa-do-celow-projektowych");
+      }
+    }
 }

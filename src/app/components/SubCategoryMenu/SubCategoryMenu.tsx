@@ -33,7 +33,7 @@ export function SubCategoryMenu({ item}:{item:OfferCategory}) {
           className={`${styles.subCategoryMenu} ${open ? styles.open : ""}`}
           onClick={toggleOpen}
         >
-          {item.name}
+          {item.name.replace("-", " ")}
         </li>
         <ul className={`${styles.submenu} ${open ? styles.visible : ""}`}>
           {offerServices.map((item, index) => (

@@ -11,9 +11,8 @@ export  default async function Offer({params}:{params:Promise<{service:string, c
     const offer = offerServices.filter(offer => offer.path === service)[0]
 
     if (!offer) {
-        throw new Error('Service not found')
+      throw new Error("Service not found");
     } 
-
     const md_content  = await getSelectedContent(offer.mdFileName, 'offer/'+category)
 
     return<>

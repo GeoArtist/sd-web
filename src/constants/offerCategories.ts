@@ -11,7 +11,14 @@ import rozgraniczenie from "@/public/images/offer/rozgraniczenia.jpg";
 import prawne from "@/public/images/offer/prawne.jpg";
 import inne from "@/public/images/offer/inne.jpg";
 import obiektowanie from "@/public/images/offer/obiektowanie.jpg";
-import gis from "@/public/images/offer/world_map.jpg";
+import raster from "@/public/images/offer/raster.jpg";
+import vector from "@/public/images/offer/vector.jpg";
+import spatialAnalysis from "@/public/images/offer/spatial-analysis.jpg";
+import spatialDB from "@/public/images/offer/spatialDB.jpg";
+import geoportale from "@/public/images/offer/geoportale.jpg";
+import przetwarzanie from "@/public/images/offer/przetwarzanie.jpg";
+import harmonizacja from "@/public/images/offer/harmonizacja.jpg";
+import wizualizacje from "@/public/images/offer/wizualizacje.jpg";
 
 export const offerServices: OfferSubCategory[] = [
   {
@@ -84,23 +91,72 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Obiektowanie Map",
     category: "geodezja",
     imgUrl: obiektowanie,
-    imgAlt: "Obiektowanie map",
+    imgAlt: "Obiektowanie map image",
   },
   {
-    path: "gis",
-    mdFileName: "gis",
-    navName: "gis",
+    path: "opracowania-rastrowe",
+    mdFileName: "rastrowe",
+    navName: "Opracowania rastrowe",
     category: "gis",
-    imgUrl: gis,
-    imgAlt: "gis image",
+    imgUrl: raster,
+    imgAlt: "raster image",
   },
   {
-    path: "data-analysis",
-    mdFileName: "data-analysis",
-    navName: "Data analysis",
-    category: "data-analysis",
-    imgUrl: gis,
-    imgAlt: "data analysis image",
+    path: "opracowania-wektorowe",
+    mdFileName: "wektorowe",
+    navName: "Opracowania wektorowe",
+    category: "gis",
+    imgUrl: vector,
+    imgAlt: "wektor image",
+  },
+  {
+    path: "analizy-przestrzenne",
+    mdFileName: "analizyPrzestrzenne",
+    navName: "Analizy Przestrzenne",
+    category: "gis",
+    imgUrl: spatialAnalysis,
+    imgAlt: "analizy przestrzenne image",
+  },
+  {
+    path: "przestrzenne-bazy-danych",
+    mdFileName: "spatialDB",
+    navName: "Przestrzenne Bazy Danych",
+    category: "gis",
+    imgUrl: spatialDB,
+    imgAlt: "przestrzenne bazy danych image",
+  },
+  {
+    path: "geoportale",
+    mdFileName: "geoportale",
+    navName: "Geoportale",
+    category: "gis",
+    imgUrl: geoportale,
+    imgAlt: "geoportale image",
+  },
+
+  {
+    path: "przetwarzanie-danych",
+    mdFileName: "przetwarzanie",
+    navName: "Przetwarzanie Danych",
+    category: "analiza-danych",
+    imgUrl: przetwarzanie,
+    imgAlt: "przetwarzanie danych image",
+  },
+  {
+    path: "harmonizacja-danych",
+    mdFileName: "harmonizacja",
+    navName: "Harmonizacja Danych",
+    category: "analiza-danych",
+    imgUrl: harmonizacja,
+    imgAlt: "harmonizacja danych image",
+  },
+  {
+    path: "wizualizacje-danych",
+    mdFileName: "wizualizacje",
+    navName: "Wizualizacje Danych",
+    category: "analiza-danych",
+    imgUrl: wizualizacje,
+    imgAlt: "wizualizacje danych image",
   },
 ];
 
@@ -118,10 +174,10 @@ export const OfferCategories: OfferCategory[] = [
     subcategories: offerServices.filter((offer) => offer.category === "gis"),
   },
   {
-    name: "Data-Analysis",
-    path: "/oferta/data-analysis",
+    name: "Analiza-Danych",
+    path: "/oferta/analiza-danych",
     subcategories: offerServices.filter(
-      (offer) => offer.category === "data-analysis"
+      (offer) => offer.category === "analiza-danych"
     ),
   },
 ];

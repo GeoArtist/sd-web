@@ -7,7 +7,7 @@ export default function OfferFooter() {
   return (
     <>
       <div className={styles.wrapper}>
-        <h3>Jesteś zainteresowny tą, lub zupełnie inną usługą?</h3>
+        <h3>Jesteś zainteresowany naszą ofertą? Masz pytania? </h3>
         <Link href="/kontakt">Skontaktuj się z nami!</Link>
 
         <ContactInfo color="blue" />

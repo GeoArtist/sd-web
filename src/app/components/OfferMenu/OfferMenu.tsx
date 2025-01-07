@@ -23,23 +23,25 @@ export function OfferMenu(props:OfferMenuProps) {
             break;
     }
 
-    return <ul className={classNames} >
-            {OfferCategories.map((item, index) => 
-                props.menuType === 'dropdown' ? 
-                    <li key={index} className={styles.dropDownLink} >
-                        <Link 
-                            key={`${index}__${index}`} 
-                            href={item.path}
-                            className={currentPath.includes(item.path) ? styles.active : ''}
-                            >
-                            {item.name}
-                        </Link> 
-                    </li> 
-                :
-                <SubCategoryMenu item={item} key={`${item.name}Submenu`} />     
-            )}
-      
-        </ul>
+    return (
+      <ul className={classNames}>
+        {OfferCategories.map((item, index) =>
+          props.menuType === "dropdown" ? (
+            <li key={index} className={styles.dropDownLink}>
+              <Link
+                key={`${index}__${index}`}
+                href={item.path}
+                className={currentPath.includes(item.path) ? styles.active : ""}
+              >
+                {item.name.replace("-", " ")}
+              </Link>
+            </li>
+          ) : (
+            <SubCategoryMenu item={item} key={`${item.name}Submenu`} />
+          )
+        )}
+      </ul>
+    );
 
 }
 
