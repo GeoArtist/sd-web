@@ -5,27 +5,8 @@
     margin-inline: auto;
     margin-block: 2rem 3rem;
     padding-top: 2rem;
-
-    &__wrapper {
-        max-width: 435px;
-        margin-inline: auto 3rem;
-        // margin-inline: 2rem;
-    }
-    &__wrapper:nth-last-of-type(1) {
-        margin-inline: 3rem auto;
-    }
-
-    &  h2, h3 {
-        font-size: 2rem;
-        color: var(--clr-theme-2);
-        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
-        margin-inline: auto;
-        margin-block: 1.5rem 0.25rem;
-        padding-bottom: 0.25rem;
-        width: fit-content;
-    }
 }
+
 .contactHeader {
     position: relative;
     top: 3rem;
@@ -42,14 +23,7 @@
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 0;
-        &__wrapper {
-            max-width: 500px;
-            margin-inline: auto;
-        }
-        &__wrapper:nth-of-type(2) {
-            margin-block: 3rem 3rem;
-            margin-inline: auto;
-        }
+
     }
     .contactHeader {
         min-width: max(400px, 75%);
