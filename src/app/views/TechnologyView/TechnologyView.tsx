@@ -1,11 +1,3 @@
-import InfitnieHorizontalScroll from "@/components/InfitnieHorizontalScroll/InfitnieHorizontalScroll";
-import {
-  imgsTechData,
-  imgsTechDb,
-  imgsTechGeo,
-  imgsTechTech,
-  imgsTechWeb,
-} from "@/constants/InfiniteScrollImgs";
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 
 import styles from "./TechnologyView.module.scss";
