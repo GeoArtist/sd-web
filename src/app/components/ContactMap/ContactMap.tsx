@@ -1,5 +1,3 @@
-"use client";
-import dynamic from "next/dynamic";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./ContactMap.module.scss";
@@ -55,18 +53,6 @@ export default function ContactMap() {
           </Marker>
         </MapContainer>
       </div>
-    </>
-  );
-}
-
-const DynamicMap = dynamic(() => Promise.resolve(ContactMap), {
-  ssr: false,
-});
-
-export function DynamicContactMap() {
-  return (
-    <>
-      <DynamicMap />
     </>
   );
 }

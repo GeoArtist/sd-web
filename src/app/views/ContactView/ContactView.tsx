@@ -1,15 +1,8 @@
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
+import { ContactContent } from "@/app/components/ContactContent/ContactContent";
 
 import styles from "./ContactView.module.scss";
-import { ContactContent } from "@/app/components/ContactContent/ContactContent";
-import { DynamicContactMap } from "@/app/components/ContactMap/ContactMap";
-
-// const DynamicMap = dynamic(
-//   () => import("@/app/components/ContactMap/ContactMap"),
-//   {
-//     ssr: false,
-//   }
-// );
+import { DynamicContactMap } from "@/app/components/ContactMap/DynamicContactMap";
 
 export default function ContactView() {
   return (
