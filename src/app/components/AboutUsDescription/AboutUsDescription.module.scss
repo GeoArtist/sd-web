@@ -1,4 +1,4 @@
-.mainWrapper{
+.about{
         --_font-shadow: 8px;
     --_font-blur: 10px;
     display: grid;
@@ -18,13 +18,13 @@
     }
 }
 
-.aboutWrapper {
+.about__wrapper {
     display: grid;
     justify-content: center;
     margin-top: 1rem;
 }
 
-.description {
+.about__description {
     margin-top: 2rem;
     margin-inline: auto;
     max-width: 90ch;
@@ -57,7 +57,7 @@
     }
 
     ul {
-        margin-block: 1rem 1rem;
+        margin-block: 0.75rem 1rem;
 
         width: fit-content;
 
@@ -82,7 +82,7 @@
     }
 }
 
-.description:has(> p) {
+.about__description:last-of-type:has(> p) {
     margin-top: 1.5rem;
     & h3:nth-last-of-type(1) {
         text-align: center;

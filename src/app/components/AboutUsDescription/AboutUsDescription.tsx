@@ -10,17 +10,17 @@ export default async function AboutUsDescription() {
   const descriptionPart2 = await getSelectedContentHTML("aboutUsP2", "aboutUs");
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.about}>
       <Image src={aboutUs} alt="about-us" />
-      <div className={styles.aboutWrapper}>
+      <div className={styles.about__wrapper}>
         <div
           dangerouslySetInnerHTML={{ __html: descriptionPart1 }}
-          className={styles.description}
+          className={styles.about__description}
         />
         <CertificatesImage />
         <div
           dangerouslySetInnerHTML={{ __html: descriptionPart2 }}
-          className={styles.description}
+          className={styles.about__description}
         />
       </div>
     </div>
