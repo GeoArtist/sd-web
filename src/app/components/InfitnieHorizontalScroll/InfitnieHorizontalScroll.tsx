@@ -10,19 +10,32 @@ export default function InfitnieHorizontalScroll({imgs}:{imgs:ImgsLinks[]}){
     const animationSpeedFactor = 0.4
     const duplicatedImgs = [...imgs, ...imgs]
 
-    return <>
+    return (
+      <>
         <div className={styles.scroller}>
-            <ul className={styles.scroller__inner} style={{ '--_animation-duration' : `${imgs.length/animationSpeedFactor}s` } as React.CSSProperties}>
-                {duplicatedImgs.map((obj, index) => 
-
-                <li key={index}>
-                    <Link href={obj.href || "#"} target="_blank" rel="noopener noreferrer" >
-                        <Image src={obj.url} alt={obj.alt} />
-                    </Link>
-                </li>)}
-                            
-            </ul>
+          <ul
+            className={styles.scroller__wrapper}
+            style={
+              {
+                "--_animation-duration": `${
+                  imgs.length / animationSpeedFactor
+                }s`,
+              } as React.CSSProperties
+            }
+          >
+            {duplicatedImgs.map((obj, index) => (
+              <li key={index}>
+                <Link
+                  href={obj.href || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image src={obj.url} alt={obj.alt} />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        
-    </>
+      </>
+    );
 }

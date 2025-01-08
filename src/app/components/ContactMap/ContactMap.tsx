@@ -1,8 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import styles from "./ContactMap.module.scss";
 import { icon, LatLngExpression } from "leaflet";
 import feather from "@/public/icons/feather.svg";
+
+import styles from "./ContactMap.module.scss";
 
 const homePosition: LatLngExpression = [53.7487, 20.51345];
 const sizeMarkerIcon = 50;

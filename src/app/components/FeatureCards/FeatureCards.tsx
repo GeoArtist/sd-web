@@ -8,9 +8,9 @@ import styles from "./FeatureCards.module.scss";
 export default function FeatureCards() {
   return (
     <>
-      <div className={styles.cards__wrapper}>
+      <div className={styles.cards}>
         <Image
-          className={styles.bgc__img}
+          className={styles.cards__background}
           src={bgc}
           alt="feature cards background"
         />

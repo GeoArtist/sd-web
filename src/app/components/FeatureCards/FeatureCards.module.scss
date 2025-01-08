@@ -1,4 +1,4 @@
-.cards__wrapper {
+.cards {
 
     display: grid;
     grid-auto-flow: dense;
@@ -17,7 +17,7 @@
 }
 
 
-.bgc__img{
+.cards__background{
     position: absolute;
     top: 0;
     left: 0;

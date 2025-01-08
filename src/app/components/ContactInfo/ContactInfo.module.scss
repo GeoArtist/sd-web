@@ -1,4 +1,4 @@
-span.contactWay {
+span.contact__wrapper {
     display: flex;
     width: fit-content;
     align-items: center;
@@ -13,7 +13,7 @@ span.contactWay {
         height: 1.75rem;
         width:1.75rem;
         margin-inline: 0 0.75rem;
-color: var(--clr-theme-2);
+        color: var(--clr-theme-2);
         rotate: 10deg;
     }
 

@@ -20,7 +20,7 @@ export function TechnologyDescription() {
   };
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={styles.technologyDescription}>
         {Object.entries(wheelToImgsMap).map(([title, imgs]) => (
           <>
             <h2>{title}</h2>

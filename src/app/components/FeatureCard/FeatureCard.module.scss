@@ -12,35 +12,31 @@
     text-wrap: balance;
     // border: 3px solid var(--clr-theme-2);
     border-radius: 1rem;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2),0 5px 15px rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.8);
     transition:
         filter 0.25s ease,
         transform 0.25s ease;
-
-
     &:hover,
     &:focus-visible {
         transform: scale(1.1);
+    }
+}
 
-    }
-
-    // Title
-    & p:first-of-type {
-        font-weight: var(--fw-bold);
-        font-size: 1.25rem;
-    }
-    & p:last-of-type {
-        font-size: 1rem;
-        margin-top: 0.5rem;
-        align-self: start;
-        padding: 0.5rem;
-    }
-
-    // Img
-    & img {
-        width: 75px;
-        height: 75px;
-        margin: 1rem;
-    }
+.card__title {
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+}
+.card__description {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    align-self: start;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+.card__icon {
+    width: 75px;
+    height: 75px;
+    margin: 1rem;
 }

@@ -43,10 +43,7 @@
 
     &__links {
         gap: 1.25rem;
-        a:hover,
-        a:focus-visible {
-            filter: drop-shadow(var(--_link_shadow));
-        }
+   
     }
 
     &__logo {

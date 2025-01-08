@@ -5,10 +5,18 @@ import Image from 'next/image'
 
 export default function Card({title, description, icon}:FeatureCard){
 
-    return <>
-    <div className={styles.card}>
-        <Image src={icon} alt={title} className={styles.icon} quality={75} />
-        <p className={styles.title}>{title}</p>
-        <p className={styles.description}>{description}</p>
-    </div></>
+    return (
+      <>
+        <div className={styles.card}>
+          <Image
+            src={icon}
+            alt={title}
+            className={styles.card__icon}
+            quality={75}
+          />
+          <p className={styles.card__title}>{title}</p>
+          <p className={styles.card__description}>{description}</p>
+        </div>
+      </>
+    );
 }
