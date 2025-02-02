@@ -5,7 +5,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 150px;
+    width: 160px;
     // display: none;
     min-width: max-content;
     background-color: var(--clr-white);
@@ -59,7 +59,7 @@
     font-weight: var(--fw-regular);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 
     background-color: var(--clr-white);
     color: var(--clr-white);

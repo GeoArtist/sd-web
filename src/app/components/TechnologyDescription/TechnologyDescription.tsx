@@ -9,6 +9,7 @@ import {
   imgsTechWeb,
 } from "@/constants/InfiniteScrollImgs";
 import { ImgsLinks } from "@/types/imgsLinks";
+import { Fragment } from "react";
 
 export function TechnologyDescription() {
   const wheelToImgsMap: { [key: string]: ImgsLinks[] } = {
@@ -22,11 +23,11 @@ export function TechnologyDescription() {
     <>
       <div className={styles.technologyDescription}>
         {Object.entries(wheelToImgsMap).map(([title, imgs]) => (
-          <>
+          <Fragment key={title}>
             <h2>{title}</h2>
             <InfitnieHorizontalScroll imgs={imgs} />
             <hr />
-          </>
+          </Fragment>
         ))}
       </div>
     </>
