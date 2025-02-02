@@ -27,24 +27,28 @@ export default function Carousel() {
 
     const img = carouselImgs[imageIndex];
     
-    return <>
-        <div className={styles.carousel}> 
-                
-            <div className={styles.carousel__container}>
-                <Image src={img.url} alt={img.alt} key={img.alt} 
-                    className={styles.carousel__img} 
-                    placeholder = 'empty'
-                    fill
-                    style={{animationDuration: `${sliderTime+500}ms`}}/>
+    return (
+      <>
+        <div className={styles.carousel}>
+          <div className={styles.carousel__container}>
+            <Image
+              src={img.url}
+              alt={img.alt}
+              key={img.alt}
+              priority={img.priority}
+              className={styles.carousel__img}
+              placeholder="empty"
+              fill
+              style={{ animationDuration: `${sliderTime + 500}ms` }}
+            />
+          </div>
+          <div className={styles.slogan}>
+            <div className={styles.slogan__blur}>
+              <h1>SOFT-DATA</h1>
+              <h2>więcej niż dane</h2>
             </div>
-            <div className={styles.slogan}>
-                <div className={styles.slogan__blur}>
-                    <h1>SOFT-DATA</h1>
-                    <h2 >więcej niż dane</h2>
-                </div>
-
-            </div>
+          </div>
         </div>
-
-    </>
+      </>
+    );
 }
