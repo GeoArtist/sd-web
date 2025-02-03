@@ -1,7 +1,21 @@
 import ServiceDescription from "@/app/components/ServiceDescription/ServiceDescription"
-import { offerServices } from "@/constants/offerCategories"
+import { pagesMetadata } from "@/constants/metatags";
+import { offerServices } from "@/constants/offerCategories";
 
-import { getSelectedContent } from "@/utils/markdownParser"
+import { getSelectedContent } from "@/utils/markdownParser";
+import { Metadata } from "next/types";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ service: string; category: string }>;
+}): Promise<Metadata> {
+  const { service, category } = await params;
+  const categoryService = `${category}/${service}`;
+
+  return pagesMetadata[categoryService];
+}
+
 
 export  default async function Offer({params}:{params:Promise<{service:string, category:string}>}) {
     // Retrieve the category, service from the params

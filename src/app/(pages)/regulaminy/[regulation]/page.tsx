@@ -1,16 +1,34 @@
 import RegulationView from '@/app/views/RegulationView/RegulationView'
-import { regulations } from '@/constants/regulations'
+import { pagesMetadata } from "@/constants/metatags";
+import { regulations } from "@/constants/regulations";
 
-import { getSelectedContentHTML } from '@/utils/markdownParser'
+import { getSelectedContentHTML } from "@/utils/markdownParser";
+import { Metadata } from "next/types";
 
-export default async function RegulationsPage({params}:{params:Promise<{regulation:string}>}){
-    const regulation = (await params).regulation
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ regulation: string }>;
+}): Promise<Metadata> {
+  const regulation = (await params).regulation;
 
-    const md_filename = regulations.filter(reg => reg.path === regulation)[0]?.mdFileName
+  return pagesMetadata[regulation];
+}
 
-    const md_contentHTML  = await getSelectedContentHTML(md_filename, 'regulations')
-    
-    return (
-        <RegulationView md_contentHTML={md_contentHTML} />
-    )
+export default async function RegulationsPage({
+  params,
+}: {
+  params: Promise<{ regulation: string }>;
+}) {
+  const regulation = (await params).regulation;
+
+  const md_filename = regulations.filter((reg) => reg.path === regulation)[0]
+    ?.mdFileName;
+
+  const md_contentHTML = await getSelectedContentHTML(
+    md_filename,
+    "regulations"
+  );
+
+  return <RegulationView md_contentHTML={md_contentHTML} />;
 }
