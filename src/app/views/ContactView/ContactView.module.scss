@@ -19,14 +19,12 @@
 }
 @media (max-width: 1000px) {
     .contactLayout {
-        min-width: 400px;
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 0;
 
     }
     .contactHeader {
-        min-width: max(400px, 75%);
         margin-inline: auto;
         margin-bottom:4rem;
     }

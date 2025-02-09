@@ -71,3 +71,8 @@
         grid-column: 1;
     }
 }
+@media (max-width: 600px) {
+    .serviceDescription {
+        padding: 1rem;
+    }
+}
