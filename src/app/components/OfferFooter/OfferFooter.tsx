@@ -10,7 +10,7 @@ export default function OfferFooter() {
         <h3>Jesteś zainteresowany naszą ofertą? Masz pytania? </h3>
         <Link href="/kontakt">Skontaktuj się z nami!</Link>
 
-        <ContactInfo color="blue" />
+        <ContactInfo />
       </div>
     </>
   );

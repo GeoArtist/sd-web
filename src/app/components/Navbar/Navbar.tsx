@@ -12,23 +12,23 @@ export function Navbar(){
    
     // MEDIA QUERY
     useEffect(() => {
-        function handleResize() {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        }
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    },[]);
 
     // Close sidebar menu if window size is bigger than 1000px
-    useEffect(() =>  {
-        if (windowSize.width && windowSize.width > 1000 && showSidebarMenu) {
-            showMenuUpdate();
-        }
-    },[windowSize.width]);
+    useEffect(() => {
+      if (windowSize.width && windowSize.width > 1000 && showSidebarMenu) {
+        showMenuUpdate();
+      }
+    }, [windowSize.width, showSidebarMenu, showMenuUpdate]);
 
 
     return <>

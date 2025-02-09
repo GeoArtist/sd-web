@@ -1,9 +1,7 @@
 import { StaticImageData } from "next/image";
+import { MarkdownPaths } from "@/types/markdown";
 
-export type OfferSubCategory = {
-  path: string;
-  mdFileName: string;
-  navName: string;
+export type OfferSubCategory = MarkdownPaths & {
   category: string;
   imgUrl: StaticImageData;
   imgAlt: string;

@@ -3,7 +3,7 @@ import { OfferCategories} from "@/constants/offerCategories"
 import Link from "next/link";
 import { useCurrentPath } from "@/app/contexts/CurrentPathContext";
 import { OfferCategory } from "@/types/offerCategory";
-import {useState, useEffect, use} from "react";
+import { useState, useEffect } from "react";
 import styles from "./SubCategoryMenu.module.scss";
 
 export function SubCategoryMenu({ item}:{item:OfferCategory}) {
@@ -11,13 +11,14 @@ export function SubCategoryMenu({ item}:{item:OfferCategory}) {
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
-        if (currentPath.includes(item.path)) {
-            setOpen(true)}
+      if (currentPath.includes(item.path)) {
+        setOpen(true);
+      }
 
-        return ()=>{
-            setOpen(false)
-        }
-    }, [currentPath])
+      return () => {
+        setOpen(false);
+      };
+    }, [currentPath, item.path]);
 
     const toggleOpen = () => {
         setOpen(!open)

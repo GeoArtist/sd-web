@@ -29,7 +29,7 @@ export async function sendMail({
 }: Email): Promise<EmailResponse> {
   // Verify the connection configuration
   try {
-    const isVerified = await transporter.verify();
+    await transporter.verify();
   } catch (error) {
     console.error(
       "Something Went Wrong",

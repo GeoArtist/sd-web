@@ -7,7 +7,7 @@ export function CompanyInfo() {
   return (
     <>
       <article className={styles.companyInfo}>
-        <ContactInfo color="blue" />
+        <ContactInfo />
         <section className={styles.address}>
           <h4>SOFT-DATA Marek Szczepkowski</h4>
           <p>ul. Marii Dąbrowskiej 13/52</p>
