@@ -1,12 +1,12 @@
 'use client'
-import React, { Fragment } from 'react'
-import styles from './Footer.module.scss'
-import Link from 'next/link'
-import Image from 'next/image'
-import logo from '@/public/icons/feather_white.svg'
-import {regulations} from '@/constants/regulations'
-import {socialLinks} from '@/constants/socialLinks'
-import {useCurrentPath} from '@/contexts/CurrentPathContext'
+import React, { Fragment } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/icons/feather_white.svg";
+import { regulations } from "@/constants/regulations";
+import { socialLinks } from "@/constants/socialLinks";
+import { useCurrentPath } from "@/contexts/CurrentPathContext";
+import styles from "./Footer.module.scss";
 
 export function Footer(){
     const year = new Date().getFullYear() 

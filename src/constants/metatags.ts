@@ -11,11 +11,6 @@ export const GenerateMetatags = (
   return {
     title: title,
     description: description,
-    // icons: {
-    //   icon: "/favicon.ico",
-    //   shortcut: "/favicon.ico",
-    //   apple: "/apple-touch-icon.png",
-    // },
     openGraph: {
       title: title,
       description: description,
@@ -24,7 +19,7 @@ export const GenerateMetatags = (
       type: "website",
       images: [
         {
-          url: `${BASE_URL}/logos/social_logo.png`,
+          url: `/logos/social_logo.png`,
           width: 800,
           height: 600,
         },
@@ -35,7 +30,7 @@ export const GenerateMetatags = (
       card: "summary",
       title: title,
       description: description,
-      images: [`${BASE_URL}/logos/social_logo.png`],
+      images: [`/logos/social_logo.png`],
       site: "@softdatageo",
       creator: "@softdatageo",
     },
@@ -82,83 +77,83 @@ export const pagesMetadata: MetaTagsCollection = {
   "geodezja/tyczenia-obiektow-budowlanych": GenerateMetatags(
     "Tyczenie obiektów - oferta geodeta Olsztyn - Soft-Data",
     "Tyczenie obiektów budowlanych, rozpoczyna proces budowlany poprzez wyniesienie projektu w teren. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/tyczenia-obiektow-budowlanych`
+    `${BASE_URL}/oferta/geodezja/tyczenia-obiektow-budowlanych`
   ),
   "geodezja/pomiary-inwentaryzacyjne": GenerateMetatags(
     "Pomiary inwentaryzacyjne - oferta geodeta Olsztyn - Soft-Data",
     "Pomiar inwentaryzacyjny / powykonawczy, kończy proces inwestycyjny poprzez naniesienie nowo wybudowanych obiektów na mapę. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/pomiary-inwentaryzacyjne`
+    `${BASE_URL}/oferta/geodezja/pomiary-inwentaryzacyjne`
   ),
   "geodezja/wznowienia-granic": GenerateMetatags(
     "Wznowienia, wyznaczenia granic - oferta geodeta Olsztyn - Soft-Data",
     "Wznowienie / wyznaczenie granic ma na celu oznaczenie granic działki w terenie oraz sporządzenie odpowiedniej dokumentacji. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/wznowienia-granic`
+    `${BASE_URL}/oferta/geodezja/wznowienia-granic`
   ),
   "geodezja/podzialy-nieruchomosci": GenerateMetatags(
     "Podziały nieruchomości - oferta geodeta Olsztyn - Soft-Data",
     "Podział nieruchomości to proces, który ma na celu podział jednej nieruchomości na dwie lub więcej odrębnych działek. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/podzialy-nieruchomosci`
+    `${BASE_URL}/oferta/geodezja/podzialy-nieruchomosci`
   ),
   "geodezja/rozgraniczenie-nieruchomosci": GenerateMetatags(
     "Rozgraniczenie nieruchomości - oferta geodeta Olsztyn - Soft-Data",
     "Rozgraniczenie nieruchomości to proces, który ma na celu protokolarne ustalenie granic działek. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/rozgraniczenie-nieruchomosci`
+    `${BASE_URL}/oferta/geodezja/rozgraniczenie-nieruchomosci`
   ),
   "geodezja/mapa-do-celow-prawnych": GenerateMetatags(
     "Mapa do celów prawnych - oferta geodeta Olsztyn - Soft-Data",
     "Mapa do celów prawnych to opracowanie, zawierające informacje o stanie prawnym nieruchomości, sporządzane w wielu procedurach administracyjno-prawnych. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/mapa-do-celow-prawnych`
+    `${BASE_URL}/oferta/geodezja/mapa-do-celow-prawnych`
   ),
   "geodezja/inne-opracowania": GenerateMetatags(
     "Inne opracowania - oferta geodeta Olsztyn - Soft-Data",
     "Soft-Data oferuje również inne opracowania geodezyjne, takie jak: pomiary fotogrametryczne, pomiary specjalistyczne, opracowania kartograficzne. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/inne-opracowania`
+    `${BASE_URL}/oferta/geodezja/inne-opracowania`
   ),
   "geodezja/obiektowanie-map": GenerateMetatags(
     "Obiektowanie map - oferta geodeta Olsztyn - Soft-Data",
     "Obiektowanie map to proces tworzenia cyfrowej mapy zasadniczej na podstawie pomiarów geodezyjnych lub innych źródeł danych. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/geodezja/obiektowanie-map`
+    `${BASE_URL}/oferta/geodezja/obiektowanie-map`
   ),
 
   "gis/opracowania-rastrowe": GenerateMetatags(
     "Opracowania rastrowe - oferta GIS - Soft-Data",
     "Opracowania rastrowe to cyfrowe mapy, które zawierają informacje o obiektach geograficznych w postaci pikseli. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/gis/opracowania-rastrowe`
+    `${BASE_URL}/oferta/gis/opracowania-rastrowe`
   ),
   "gis/opracowania-wektorowe": GenerateMetatags(
     "Opracowania wektorowe - oferta GIS - Soft-Data",
     "Opracowania wektorowe to cyfrowe mapy, które zawierają informacje o obiektach geograficznych w postaci wektorów. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/gis/opracowania-wektorowe`
+    `${BASE_URL}/oferta/gis/opracowania-wektorowe`
   ),
   "gis/analizy-przestrzenne": GenerateMetatags(
     "Analizy przestrzenne - oferta GIS - Soft-Data",
     "Analizy przestrzenne to proces analizy danych, który pozwala na zrozumienie zależności przestrzennych pomiędzy obiektami otaczającego świata. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/gis/analizy-przestrzenne`
+    `${BASE_URL}/oferta/gis/analizy-przestrzenne`
   ),
   "gis/przestrzenne-bazy-danych": GenerateMetatags(
     "Przestrzenne bazy danych - oferta GIS - Soft-Data",
     "Przestrzenne bazy danych to specjalistyczne bazy danych, które przechowują dane geograficzne i umożliwiają ich przetwarzanie. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/gis/przestrzenne-bazy-danych`
+    `${BASE_URL}/oferta/gis/przestrzenne-bazy-danych`
   ),
   "gis/geoportale": GenerateMetatags(
     "Geoportale - oferta GIS - Soft-Data",
     "Geoportale to specjalistyczne portale internetowe, które umożliwiają dostęp do danych geograficznych oraz ich wizualizację. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/gis/geoportale`
+    `${BASE_URL}/oferta/gis/geoportale`
   ),
 
   "analiza-danych/przetwarzanie-danych": GenerateMetatags(
     "Przetwarzanie danych - oferta analiza danych - Soft-Data",
     "Przetwarzanie danych to proces obróbki danych, który ma na celu wydobycie informacji użytecznych / decyzyjnych z surowych danych. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/analiza-danych/przetwarzanie-danych`
+    `${BASE_URL}/oferta/analiza-danych/przetwarzanie-danych`
   ),
   "analiza-danych/harmonizacja-danych": GenerateMetatags(
     "Harmonizacja danych - oferta analiza danych - Soft-Data",
     "Harmonizacja danych to proces standaryzacji danych, który ma na celu usunięcie niezgodności i błędów w danych. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/analiza-danych/harmonizacja-danych`
+    `${BASE_URL}/oferta/analiza-danych/harmonizacja-danych`
   ),
   "analiza-danych/wizualizacje-danych": GenerateMetatags(
     "Wizualizacje danych - oferta analiza danych - Soft-Data",
     "Wizuazlizacje danych to proces prezentacji danych w formie graficznej, statycznej lub interaktywnej. Jesteś zainteresowany? Skontaktuj się z nami!",
-    `${BASE_URL}oferta/analiza-danych/wizualizacje-danych`
+    `${BASE_URL}/oferta/analiza-danych/wizualizacje-danych`
   ),
 };

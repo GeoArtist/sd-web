@@ -93,3 +93,28 @@
         filter: blur(10px);
     }
 }
+
+
+@media (max-width: 1000px) {
+    .slogan {
+        grid-template-columns: minmax(1000px, 1fr);
+        &__blur {
+            grid-column: 1;
+            grid-row: 2;}
+    }
+}
+
+@media (max-width: 500px) {
+    .slogan {
+        &__blur {
+            padding: 1rem 0.5rem;
+            margin-inline: 1rem;
+        }
+    h1{
+        font-size: clamp(1rem, 1.5rem + 5vw, 5rem);
+    }    
+    h2 {
+        font-size: clamp(1rem, 1.5rem + 0.5vw, 3rem);
+    }            
+}
+}

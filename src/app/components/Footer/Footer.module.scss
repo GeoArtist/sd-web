@@ -43,7 +43,6 @@
 
     &__links {
         gap: 1.25rem;
-   
     }
 
     &__logo {
@@ -104,5 +103,17 @@
 @media (max-width: 1000px) {
     .footer {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        &__card, &__socials{
+            min-height: 2rem;
+        }
+            &__links {
+                margin-block:2rem;
+                flex-direction: column;
+            }
     }
 }
