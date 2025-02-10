@@ -1,7 +1,7 @@
 .contactBar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max(35vh, 350px);
+    grid-template-rows: max(35vh, 400px);
     place-items: center;
     position: relative;
     isolation: isolate;

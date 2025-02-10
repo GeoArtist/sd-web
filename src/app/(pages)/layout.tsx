@@ -5,6 +5,7 @@ import { roboto } from "../fonts/fonts";
 import { Toaster } from "sonner";
 import { Layout } from "../components/Layout/Layout";
 import { pagesMetadata } from "@/constants/metatags";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = pagesMetadata["home"];
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           className="custom-toaster"
         />
       </body>
+      <GoogleAnalytics gaId="G-FYJF1529CR" />
     </html>
   );
 }

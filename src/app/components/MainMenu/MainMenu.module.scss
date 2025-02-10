@@ -55,14 +55,16 @@
 }
 
 .mobileMenu {
+    --_menu-width: 230px;
+
     position: fixed;
     top: 0px;
-    right: -300px;
-    width: 300px;
-    bottom: 0;
+    right: calc(-1 * var(--_menu-width));
+    width: var(--_menu-width);
+    height:min-content;
     display: grid;
     grid-template-rows: var(--navbar-height) 1fr;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr var(--_menu-width);
     overflow: hidden;
     transition: right 0.3s cubic-bezier(0.1, 0.76, 0.58, 1);
     z-index: -1;
@@ -76,7 +78,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        gap: 0.25rem;
+        gap: 1rem;
         color: var(--clr-white);
         transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
@@ -85,6 +87,7 @@
             text-align: center;
             transition: transform 0.3s ease;
             filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 
             & a {
                 width: 100%;
@@ -95,7 +98,7 @@
             &:hover,
             &:focus-visible {
                 filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
-                transform: scale(1.1);
+                transform: scale(1.2);
                 font-weight: var(--fw-bold);
                 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
             }
