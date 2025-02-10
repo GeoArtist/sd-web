@@ -6,7 +6,7 @@ const cspHeader = `
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: *.tile.openstreetmap.org https://www.google-analytics.com;
     font-src 'self';
-    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com;
+    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
