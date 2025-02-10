@@ -54,6 +54,5 @@ export async function sendMail({
     subject: subject,
     html: html,
   });
-  console.log("Message Sent", info);
   return { status: 200, message: "Wiadomość wysłana pomyślnie" };
 }

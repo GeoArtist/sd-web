@@ -29,7 +29,6 @@ export function ContactForm() {
     }
     
 
-    console.log(isDirty)
     const isEmailOrTelephone = getValues('email')?.length==0 && getValues('telephone')?.length==0   
     return (
         <>
