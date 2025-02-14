@@ -3,7 +3,7 @@ import styles from './MainServicesBar.module.scss';
 import bgcBlue from '@/public/images/bgc-blue.jpg'
 import Image from 'next/image';
 
-export default function MainServicesBar(){
+export function MainServicesBar(){
 
 return <>
     <div className={styles.MainServicesBar}>

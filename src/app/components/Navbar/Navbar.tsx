@@ -1,5 +1,5 @@
 'use client'
-import Hamburger from "@/components/Hamburger/Hamburger";
+import { Hamburger } from "@/components/Hamburger/Hamburger";
 import { useState, useEffect } from "react";
 import { WindowSizeType } from "@/types/window";
 import { MainMenu } from "@/components/MainMenu/MainMenu";

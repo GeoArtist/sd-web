@@ -1,11 +1,11 @@
 import { featureCards } from "@/constants/featureCards";
-import Card from "@/components/FeatureCard/FeatureCard";
+import { Card } from "@/components/FeatureCard/FeatureCard";
 import bgc from "@/public/images/feature_cards_bgc.jpg";
 import Image from "next/image";
 
 import styles from "./FeatureCards.module.scss";
 
-export default function FeatureCards() {
+export function FeatureCards() {
   return (
     <>
       <div className={styles.cards}>

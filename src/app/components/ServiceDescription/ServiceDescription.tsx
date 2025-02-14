@@ -1,11 +1,11 @@
 import { MarkdownContent } from "@/types/markdown";
 import { OfferSubCategory } from "@/types/offerCategory";
 import Image from "next/image";
-import LegalBasisInfo from "@/components/LegalBasisInfo/LegalBasisInfo";
+import { LegalBasisInfo } from "@/components/LegalBasisInfo/LegalBasisInfo";
 
 import styles from "./ServiceDescription.module.scss";
 
-export default function ServiceDescription({
+export function ServiceDescription({
   md_content,
   offer,
 }: {

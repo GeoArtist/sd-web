@@ -1,6 +1,6 @@
 import { OfferMenu } from '@/app/components/OfferMenu/OfferMenu'
 import {SubPageHeader} from '@/app/components/SubPageHeader/SubPageHeader'
-import OfferFooter from "@/app/components/OfferFooter/OfferFooter";
+import { OfferFooter } from "@/app/components/OfferFooter/OfferFooter";
 
 import styles from "./ServiceLayoutView.module.scss";
 

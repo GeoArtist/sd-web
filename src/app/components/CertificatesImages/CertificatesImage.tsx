@@ -6,7 +6,7 @@ import python from "@/public/logos/certificates/python_institute_logo.svg";
 
 import styles from "./CertificatesImage.module.scss";
 
-export default function CertificatesImage() {
+export function CertificatesImage() {
   return (
     <>
       <div className={styles.certificates}>

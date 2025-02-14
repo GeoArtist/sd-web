@@ -3,7 +3,7 @@ import {FeatureCard} from '@/types/featureCard'
 import Image from 'next/image'
 
 
-export default function Card({title, description, icon}:FeatureCard){
+export function Card({title, description, icon}:FeatureCard){
 
     return (
       <>

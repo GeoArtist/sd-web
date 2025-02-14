@@ -1,4 +1,4 @@
-import ServiceDescription from "@/app/components/ServiceDescription/ServiceDescription"
+import { ServiceDescription } from "@/app/components/ServiceDescription/ServiceDescription";
 import { pagesMetadata } from "@/constants/metatags";
 import { offerServices } from "@/constants/offerCategories";
 

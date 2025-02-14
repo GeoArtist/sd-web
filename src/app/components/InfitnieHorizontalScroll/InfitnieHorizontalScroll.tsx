@@ -6,7 +6,7 @@ import styles from './InfitnieHorizontalScroll.module.scss';
 
 
 
-export default function InfitnieHorizontalScroll({imgs}:{imgs:ImgsLinks[]}){ 
+export function InfitnieHorizontalScroll({imgs}:{imgs:ImgsLinks[]}){ 
     const animationSpeedFactor = 0.4
     const duplicatedImgs = [...imgs, ...imgs]
 

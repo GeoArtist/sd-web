@@ -1,5 +1,5 @@
 "use client";
-import Button from "../components/Button/Button";
+import {Button} from "../components/Button/Button";
 import styles from "./page.module.scss";
 import { redirect } from "next/navigation";
 

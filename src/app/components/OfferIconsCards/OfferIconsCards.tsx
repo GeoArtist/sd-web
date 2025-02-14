@@ -3,7 +3,7 @@ import {offerIcons} from '@/constants/offerIcons'
 import wordmap from '@/public/images/world_map.jpg'
 import styles from './OfferIconsCards.module.scss'
 
-export default function OfferIconCards(){
+export function OfferIconsCards(){
 
     return<>
         <div className={styles.offerIcons}>

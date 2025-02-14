@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "./OfferFooter.module.scss";
 
-export default function OfferFooter() {
+export function OfferFooter() {
   return (
     <>
       <div className={styles.offerFooter__wrapper}>

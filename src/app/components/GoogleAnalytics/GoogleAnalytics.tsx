@@ -58,7 +58,7 @@ function GoogleAnalyticsComponent({
   );
 }
 
-export default function GoogleAnalytics(props: { GA_MEASUREMENT_ID: string }) {
+export function GoogleAnalytics(props: { GA_MEASUREMENT_ID: string }) {
   return (
     <Suspense fallback={null}>
       <GoogleAnalyticsComponent {...props} />

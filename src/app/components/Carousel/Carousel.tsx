@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 import styles from './Carousel.module.scss';
 
-export default function Carousel() {
+export function Carousel() {
     const [imageIndex, setImageIndex] = useState(0);
     const sliderTime = 7000
 

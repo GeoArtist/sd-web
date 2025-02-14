@@ -2,7 +2,7 @@ import { ButtonProps } from "@/types/button";
 
 import styles from "./Button.module.scss";
 
-export default function Button({
+export function Button({
   children,
   type,
   onClick,

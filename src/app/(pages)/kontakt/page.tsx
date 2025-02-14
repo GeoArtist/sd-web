@@ -1,4 +1,4 @@
-import ContactView from '@/app/views/ContactView/ContactView';
+import { ContactView } from "@/app/views/ContactView/ContactView";
 import { pagesMetadata } from "@/constants/metatags";
 import { Metadata } from "next/types";
 

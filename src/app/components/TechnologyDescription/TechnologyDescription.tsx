@@ -1,6 +1,6 @@
 import styles from "./TechnologyDescription.module.scss";
 
-import InfitnieHorizontalScroll from "@/components/InfitnieHorizontalScroll/InfitnieHorizontalScroll";
+import { InfitnieHorizontalScroll } from "@/components/InfitnieHorizontalScroll/InfitnieHorizontalScroll";
 import {
   imgsTechData,
   imgsTechDb,

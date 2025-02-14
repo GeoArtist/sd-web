@@ -1,9 +1,9 @@
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
-
-import styles from "./TechnologyView.module.scss";
 import { TechnologyDescription } from "@/app/components/TechnologyDescription/TechnologyDescription";
 
-export default function TechnologyView() {
+import styles from "./TechnologyView.module.scss";
+
+export function TechnologyView() {
   return (
     <>
       <div className={styles.technologyView}>

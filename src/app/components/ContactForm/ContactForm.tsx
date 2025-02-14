@@ -6,7 +6,7 @@ import {contactFormSchema, ContactFormValues} from '@/schemas/contactForm'
 import styles from './ContactForm.module.scss'
 import { toast } from 'sonner';
 import {useForm} from 'react-hook-form'
-import Button from '../Button/Button';
+import { Button } from "../Button/Button";
 
 export function ContactForm() {
 

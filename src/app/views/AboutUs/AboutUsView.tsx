@@ -1,4 +1,4 @@
-import AboutUsDescription from "@/app/components/AboutUsDescription/AboutUsDescription";
+import { AboutUsDescription } from "@/app/components/AboutUsDescription/AboutUsDescription";
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 
 import styles from "./AboutUsView.module.scss";
