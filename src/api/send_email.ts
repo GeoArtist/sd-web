@@ -48,7 +48,7 @@ export async function sendMail({
   const html = `Wiadomość od: <b>${name}</b> <br> Data wysłania: <b>${sendDateTime}</b> <br> Telefon: <b>${telephone}</b> <br> Email: <b>${email}</b> <br> Wiadomość:<br>&emsp;<b>${message}</b>`;
 
   // Send email
-  const info = await transporter.sendMail({
+  await transporter.sendMail({
     from: SMTP_SERVER_USERNAME,
     to: SMTP_SERVER_USERNAME,
     subject: subject,

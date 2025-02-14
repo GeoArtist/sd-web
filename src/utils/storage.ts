@@ -1,7 +1,7 @@
 "use client";
 
 // Retrieves a value from local storage and parses it as JSON.
-export function getLocalStorage(key: string, defaultValue: any) {
+export function getLocalStorage<T>(key: string, defaultValue: T): T {
   // Get the value from local storage
   const stickyValue = localStorage.getItem(key);
 
@@ -19,6 +19,6 @@ export function getLocalStorage(key: string, defaultValue: any) {
 }
 
 // Stores a value in local storage after serializing it to JSON.
-export function setLocalStorage(key: string, value: any) {
+export function setLocalStorage<T>(key: string, value: T) {
   localStorage.setItem(key, JSON.stringify(value));
 }
