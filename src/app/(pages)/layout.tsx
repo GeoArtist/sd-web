@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-FYJF1529CR" />
       <body className={roboto.variable}>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-FYJF1529CR" />
         <Layout>{children}</Layout>
         <Toaster
           richColors
