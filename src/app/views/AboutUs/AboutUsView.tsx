@@ -3,7 +3,7 @@ import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 
 import styles from "./AboutUsView.module.scss";
 
-export default function AboutUsView() {
+export function AboutUsView() {
   return (
     <>
       <div className={styles.aboutView__header}>

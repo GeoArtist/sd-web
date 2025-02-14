@@ -1,6 +1,6 @@
 import styles from './RegulationView.module.scss';
 
-export default function RegulationView({md_contentHTML}:{md_contentHTML:string}) {
+export function RegulationView({md_contentHTML}:{md_contentHTML:string}) {
 
     return (
         <div className={styles.regulation} >

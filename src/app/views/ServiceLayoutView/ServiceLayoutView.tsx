@@ -4,11 +4,7 @@ import { OfferFooter } from "@/app/components/OfferFooter/OfferFooter";
 
 import styles from "./ServiceLayoutView.module.scss";
 
-export default function ServiceLayoutView({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function ServiceLayoutView({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className={styles.grid}>

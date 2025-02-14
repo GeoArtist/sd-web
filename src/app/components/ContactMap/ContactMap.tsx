@@ -26,7 +26,7 @@ const popupDescription = (
   </>
 );
 
-export default function ContactMap() {
+export function ContactMap() {
   return (
     <>
       <div>

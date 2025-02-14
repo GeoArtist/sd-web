@@ -1,4 +1,4 @@
-import RegulationView from '@/app/views/RegulationView/RegulationView'
+import { RegulationView } from "@/app/views/RegulationView/RegulationView";
 import { pagesMetadata } from "@/constants/metatags";
 import { regulations } from "@/constants/regulations";
 
