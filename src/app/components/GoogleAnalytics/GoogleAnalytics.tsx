@@ -2,8 +2,7 @@
 
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-
+import { useEffect, Suspense } from "react";
 
 declare global {
   interface Window {
@@ -11,13 +10,12 @@ declare global {
   }
 }
 
-export default function GoogleAnalytics({
+function GoogleAnalyticsComponent({
   GA_MEASUREMENT_ID,
 }: {
   GA_MEASUREMENT_ID: string;
 }) {
   const pathname = usePathname();
-  // SearchParams is a client side function.
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -30,7 +28,6 @@ export default function GoogleAnalytics({
     }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
-  // Script is added to the head of the document. To Begin, consent is denied.
   return (
     <>
       <Script
@@ -58,5 +55,13 @@ export default function GoogleAnalytics({
         }}
       />
     </>
+  );
+}
+
+export default function GoogleAnalytics(props: { GA_MEASUREMENT_ID: string }) {
+  return (
+    <Suspense fallback={null}>
+      <GoogleAnalyticsComponent {...props} />
+    </Suspense>
   );
 }
