@@ -1,0 +1,58 @@
+.cookieBanner{
+    position: fixed;
+    bottom: 2.5vw;
+    left:  2.5vw;
+    max-width: 300px;
+    padding: 1.5rem;
+    background-color: var( --clr-darkgrey);
+    color: var(--clr-white);
+    
+    text-align: center;
+    text-wrap: pretty;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    border:4px solid var(--clr-theme-2);
+
+    &__wrapper{
+        
+        align-items: center;
+        font-size: 0.85rem;
+        line-height:1.65;
+    }
+    &__text{
+        display: grid;
+        & a {
+            padding-inline:0.5rem;
+            color: var(--clr-theme-2);
+
+            &:hover, &:focus-visible {
+                font-weight: var(--fw-bold);
+            }
+        }
+    }
+    &__buttons{
+        display:flex;   
+        flex:1;
+        justify-content: space-evenly;
+        margin-top:0.5rem;
+        & button {
+            width: 45%;
+        }
+        & button:first-of-type {
+            border-color: rgb(from var(--clr-theme-2) R G B / 0.25);
+            box-shadow: unset;
+            &:hover, :focus-visible{
+                background-color: red;
+            }
+        }
+        & button:last-of-type {
+
+            &:hover, :focus-visible{
+                background-color: green;
+                border-color: rgb(from var(--clr-theme-2) R G B / 0.5);
+            }
+        }
+    }
+}

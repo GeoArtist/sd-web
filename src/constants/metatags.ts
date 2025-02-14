@@ -19,7 +19,10 @@ export const GenerateMetatags = (
       type: "website",
       images: [
         {
-          url: `/logos/social_logo.png`,
+          url: new URL(
+            "/logos/social_logo.png",
+            process.env.NEXT_PUBLIC_BASE_URL
+          ).toString(),
           width: 800,
           height: 600,
         },
@@ -30,7 +33,12 @@ export const GenerateMetatags = (
       card: "summary",
       title: title,
       description: description,
-      images: [`/logos/social_logo.png`],
+      images: [
+        new URL(
+          "/logos/social_logo.png",
+          process.env.NEXT_PUBLIC_BASE_URL
+        ).toString(),
+      ],
       site: "@softdatageo",
       creator: "@softdatageo",
     },
