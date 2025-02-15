@@ -48,7 +48,7 @@ export function Carousel() {
   return (
     <>
       <div className={styles.carousel}>
-        <div ref={sliderRef} className="keen-slider">
+        <div ref={sliderRef} className={`keen-slider ${styles.slider}`}>
           {carouselImgs.map((img, index) => {
             return (
               <div key={index} className="keen-slider__slide">

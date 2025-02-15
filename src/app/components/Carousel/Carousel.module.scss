@@ -12,7 +12,7 @@
         object-fit: cover;
 
     }
-    &:global(.keen-slider) {
+    & .slider{
         width: 100%;
         height: 100%;
     }
@@ -26,7 +26,7 @@
     grid-template-columns: 1fr minmax(1400px, 1fr) 1fr;
     grid-template-rows: 0.5fr 1fr 0.5fr;
     align-items: start;
-    justify-items: left;
+    justify-items: right;
     cursor: default;
     user-select: none; /* Standard syntax */
 
@@ -71,9 +71,17 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
     .slogan {
         grid-template-columns: minmax(1000px, 1fr);
+        &__blur {
+            grid-column: 1;
+            grid-row: 2;}
+    }
+}
+@media (max-width: 1000px) {
+    .slogan {
+        grid-template-columns: 1fr;
         &__blur {
             grid-column: 1;
             grid-row: 2;}
