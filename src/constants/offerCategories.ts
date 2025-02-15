@@ -2,23 +2,23 @@
 import { OfferCategory, OfferSubCategory } from "@/types/offerCategory";
 
 // IMAGES
-import mdcp from "@/public/images/offer/mdcp.jpg";
-import tyczenia from "@/public/images/offer/tyczenia.jpg";
-import inwentaryzacje from "@/public/images/offer/inwentaryzacje.jpg";
-import wznowienia from "@/public/images/offer/wznowienia.jpg";
-import podzialy from "@/public/images/offer/podzialy.jpg";
-import rozgraniczenie from "@/public/images/offer/rozgraniczenia.jpg";
-import prawne from "@/public/images/offer/prawne.jpg";
-import inne from "@/public/images/offer/inne.jpg";
-import obiektowanie from "@/public/images/offer/obiektowanie.jpg";
-import raster from "@/public/images/offer/raster.jpg";
-import vector from "@/public/images/offer/vector.jpg";
-import spatialAnalysis from "@/public/images/offer/spatial-analysis.jpg";
-import spatialDB from "@/public/images/offer/spatialDB.jpg";
-import geoportale from "@/public/images/offer/geoportale.jpg";
-import przetwarzanie from "@/public/images/offer/przetwarzanie.jpg";
-import harmonizacja from "@/public/images/offer/harmonizacja.jpg";
-import wizualizacje from "@/public/images/offer/wizualizacje.jpg";
+import mdcp from "@/public/images/offer/mdcp-min.jpg";
+import tyczenia from "@/public/images/offer/tyczenia-min.jpg";
+import inwentaryzacje from "@/public/images/offer/inwentaryzacje-min.jpg";
+import wznowienia from "@/public/images/offer/wznowienia-min.jpg";
+import podzialy from "@/public/images/offer/podzialy-min.jpg";
+import rozgraniczenie from "@/public/images/offer/rozgraniczenia-min.jpg";
+import prawne from "@/public/images/offer/prawne-min.jpg";
+import inne from "@/public/images/offer/inne-min.jpg";
+import obiektowanie from "@/public/images/offer/obiektowanie-min.jpg";
+import raster from "@/public/images/offer/raster-min.jpg";
+import vector from "@/public/images/offer/vector-min.jpg";
+import spatialAnalysis from "@/public/images/offer/spatial-analysis-min.jpg";
+import spatialDB from "@/public/images/offer/spatialDB-min.jpg";
+import geoportale from "@/public/images/offer/geoportale-min.jpg";
+import przetwarzanie from "@/public/images/offer/przetwarzanie-min.jpg";
+import harmonizacja from "@/public/images/offer/harmonizacja-min.jpg";
+import wizualizacje from "@/public/images/offer/wizualizacje-min.jpg";
 
 export const offerServices: OfferSubCategory[] = [
   {
