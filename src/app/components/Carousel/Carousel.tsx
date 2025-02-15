@@ -1,54 +1,71 @@
 'use client'
 import Image from 'next/image';
-import { carouselImgs } from '@/constants/carouselImgs';
-import { useState, useEffect } from 'react';
+import { carouselImgs } from "@/constants/carouselImgs";
 
-import styles from './Carousel.module.scss';
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+import styles from "./Carousel.module.scss";
 
 export function Carousel() {
-    const [imageIndex, setImageIndex] = useState(0);
-    const sliderTime = 7000
+  const ANIMATION_TIME = 7000;
+  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, ANIMATION_TIME);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
 
-    function showNextImage(){
-        setImageIndex(index=>{
-            if (index === carouselImgs.length -1){
-                return 0;
-            }
-            return index + 1;
-        })
-    }
+  return (
+    <>
+      <div className={styles.carousel}>
+        <div ref={sliderRef} className="keen-slider">
+          {carouselImgs.map((img, index) => {
+            return (
+              <div key={index} className="keen-slider__slide">
+                <Image src={img.url} alt={img.alt} priority={img.priority} />
+              </div>
+            );
+          })}
+        </div>
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            showNextImage();
-        }, sliderTime);
-        return () => clearInterval(interval);
-    },[]);
-
-    const img = carouselImgs[imageIndex];
-    
-    return (
-      <>
-        <div className={styles.carousel}>
-          <div className={styles.carousel__container}>
-            <Image
-              src={img.url}
-              alt={img.alt}
-              key={img.alt}
-              priority={img.priority}
-              className={styles.carousel__img}
-              placeholder="empty"
-              fill
-              style={{ animationDuration: `${sliderTime + 500}ms` }}
-            />
-          </div>
-          <div className={styles.slogan}>
-            <div className={styles.slogan__blur}>
-              <h1>SOFT-DATA</h1>
-              <h2>więcej niż dane</h2>
-            </div>
+        <div className={styles.slogan}>
+          <div className={styles.slogan__blur}>
+            <h1>SOFT-DATA</h1>
+            <h2>więcej niż dane</h2>
           </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
+
