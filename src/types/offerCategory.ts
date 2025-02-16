@@ -10,5 +10,6 @@ export type OfferSubCategory = MarkdownPaths & {
 export type OfferCategory = {
   name: string;
   path: string;
+  mainCategoryPage: string;
   subcategories: OfferSubCategory[];
 };

@@ -30,7 +30,7 @@ export function OfferMenu(props:OfferMenuProps) {
             <li key={index} className={styles.dropDownLink}>
               <Link
                 key={`${index}__${index}`}
-                href={item.path}
+                href={`${item.path}/${item.mainCategoryPage}`}
                 className={currentPath.includes(item.path) ? styles.active : ""}
               >
                 {item.name.replace("-", " ")}

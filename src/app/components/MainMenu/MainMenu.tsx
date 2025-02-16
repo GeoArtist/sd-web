@@ -47,7 +47,7 @@ export  function MainMenu({mode, showSidebar}:MainMenuProps) {
               className={styles.dropDown}
             >
               <Link
-                href="/oferta"
+                href="/oferta/geodezja/mapa-do-celow-projektowych"
                 className={currentPath.includes("/oferta") ? styles.active : ""}
                 prefetch={false}
               >
