@@ -1,0 +1,32 @@
+.footer {
+    &__version{
+        grid-column: 3;
+        align-self: end;
+        justify-self:right;
+        margin-inline-end: 2rem;
+        margin-block-end:0.25rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        &__version{
+            grid-column: 2/-1;
+         
+        }
+
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        &__version{
+            grid-column: 1;
+            justify-self: center;
+            margin-inline: 0;
+            margin-block-start:0.5rem;
+        }
+
+    }
+}
