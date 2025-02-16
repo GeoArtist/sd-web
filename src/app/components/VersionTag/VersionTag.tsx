@@ -1,13 +1,10 @@
 import fs from "fs";
 import path from "path";
+import { Tag } from "@/types/gitTags";
 import styles from "./VersionTag.module.scss";
 
 const TAG_FILE_PATH = path.join(process.cwd(), "tags.json");
 
-interface Tag {
-  tag: string;
-  date: string;
-}
 
 async function getTagFromFile(): Promise<Tag | null> {
   if (fs.existsSync(TAG_FILE_PATH)) {
