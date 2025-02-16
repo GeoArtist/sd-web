@@ -5,9 +5,9 @@ import { regulations } from "@/constants/regulations";
 import { getSelectedContentHTML } from "@/utils/markdownParser";
 import { Metadata } from "next/types";
 
-export async function generateStaticParams() {
-  return regulations.map((reg) => ({ regulation: reg.path }));
-}
+// export async function generateStaticParams() {
+//   return regulations.map((reg) => ({ regulation: reg.path }));
+// }
 
 
 export async function generateMetadata({

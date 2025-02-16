@@ -16,10 +16,12 @@ export function Footer(){
         <footer className={styles.footer}>
           <div className={styles.footer__wrapper}>
             <section className={styles.footer__card}>
-              <Link href="/">
+              <Link href="/" prefetch={false}>
                 <Image className={styles.footer__logo} src={logo} alt="logo" />
               </Link>
-              <Link href="/">SOFT-DATA</Link>
+              <Link href="/" prefetch={false}>
+                SOFT-DATA
+              </Link>
               <p> © {year}</p>
             </section>
             <section className={styles.footer__links}>
@@ -28,6 +30,7 @@ export function Footer(){
                 className={`${styles.footer__link} ${
                   currentPath === "/kontakt" ? styles.active : ""
                 }`}
+                prefetch={false}
               >
                 Kontakt
               </Link>
@@ -41,6 +44,7 @@ export function Footer(){
                           ? styles.active
                           : ""
                       }`}
+                      prefetch={false}
                     >
                       {regulation.navName}
                     </Link>

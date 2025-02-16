@@ -18,7 +18,7 @@ export function ServiceDescription({
     <>
       <div className={styles.serviceDescription}>
         <h2>{title}</h2>
-        <Image src={imgUrl} alt={imgAlt} />
+        <Image src={imgUrl} alt={imgAlt} placeholder="blur" />
         <div className={styles.serviceDescription__wrapper}>
           <h3 className={styles.serviceDescription__name}>Opis usługi:</h3>
           {description.map((line, index) => {
