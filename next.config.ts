@@ -1,4 +1,9 @@
 import type { NextConfig } from "next";
+import { execSync } from "child_process";
+
+const version = execSync("git describe --tags --always --abbrev=0")
+  .toString()
+  .trim();
 
 const cspHeader = `
     default-src 'self';
@@ -15,6 +20,9 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_APP_VERSION: version,
+  },
   reactStrictMode: false,
   webpack: (config) => {
     config.cache = false;
