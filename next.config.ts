@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 import { execSync } from "child_process";
 
+try {
+  execSync("git fetch --tags");
+} catch (error) {
+  console.error("Error getting tags from GIT:", error);
+}
+
 const version = execSync("git describe --tags --always --abbrev=0")
   .toString()
   .trim();
