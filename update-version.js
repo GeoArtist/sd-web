@@ -18,4 +18,4 @@ packageJson.version = gitVersion;
 // Zapisz zmiany do package.json
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
 
-console.log(`✅ Zaktualizowano wersję w package.json na: ${gitVersion}`);
+console.log(`✅ Updated version in package.json to version: ${gitVersion}`);

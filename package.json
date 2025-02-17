@@ -1,14 +1,14 @@
 {
   "name": "sd-web",
-  "version": "v1.1.4",
+  "version": "v1.1.5",
   "private": true,
   "type": "module",
   "scripts": {
+    "precommit": "node update-version.js",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run precommit && next build",
     "start": "next start",
-    "lint": "next lint",
-    "precommit": "node update-version.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
