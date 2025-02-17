@@ -1,7 +1,7 @@
 ---
 title: "Dokumentacje, mapa do celów prawnych"
 description: 
-- 'Na potrzeby podziałów nieruchomości oraz innych postępowań sporządzane są mapy do celów prawnych:'
+- 'Na potrzeby podziałów nieruchomości oraz innych postępowań, sporządzane są mapy do celów prawnych:'
 - "- mapy z projektami podziału nieruchomości,"
 - "- mapy z projektem scalenia i podziału nieruchomości,"
 - "- mapy połączenia działek ewidencyjnych,"

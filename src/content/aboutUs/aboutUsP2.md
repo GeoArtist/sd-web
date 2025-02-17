@@ -15,7 +15,7 @@ Przykłady stosowanych przez nas technologii znajduje się w zakładce [TECHNOLO
 
  
 
-### Wysoka jakość usług, atrakcyjne ceny oraz indiwidualne podejście do każdego zadania – to dewiza, którą kierujemy się naszej codziennej pracy.
+### Wysoka jakość usług, atrakcyjne ceny oraz indywidualne podejście do każdego zadania – to dewiza, którą kierujemy się naszej codziennej pracy.
 
 Pełna oferta naszych usług dostępna jest pod adresem [www.soft-data.pl/oferta](/oferta)
 

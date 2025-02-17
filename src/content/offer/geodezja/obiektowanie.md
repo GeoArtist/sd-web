@@ -6,7 +6,7 @@ description:
 - '- TurboMAP-a (wszystkie wersje i standardy)'
 - '- C-GML'
 
-- 'Wynikiem obiektowania są zdredagowane, uczytelnione mapy cyfrowe, zapisane w postaci cyfrowych plików w formatach tj.:'
+- 'Wynikiem obiektowania są zredagowane, uczytelnione mapy cyfrowe, zapisane w postaci cyfrowych plików w formatach tj.:'
 - '- gml'
 - '- kcd'
 - '- eob, eom, edz'

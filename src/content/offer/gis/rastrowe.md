@@ -14,7 +14,7 @@ description:
 - '- Numeryczne modele terenu (NMT / DTM),'
 - '- Numeryczne modele pokrycia terenu (NMPT / DSM),'
 - '- Mapy wegetacji/roślinności,'
-- '- Analizy spektralne - wielokanałowe,'
+- '- Analizy spektralne – wielokanałowe,'
 - '- Mapy ciepła, mapy hałasu,'
 - '- Analizy zmian w czasie,'
 - '- Modele klimatyczne i meteorologiczne.'
