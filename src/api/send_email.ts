@@ -53,6 +53,7 @@ export async function sendMail({
     to: SMTP_SERVER_USERNAME,
     subject: subject,
     html: html,
+    text: message,
   });
   return { status: 200, message: "Wiadomość wysłana pomyślnie" };
 }
