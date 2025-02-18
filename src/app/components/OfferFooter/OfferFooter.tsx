@@ -1,4 +1,4 @@
-import { ContactInfo } from "../ContactInfo/ContactInfo";
+import { ContactInfo } from "@/components/ContactInfo/ContactInfo";
 import Link from "next/link";
 
 import styles from "./OfferFooter.module.scss";

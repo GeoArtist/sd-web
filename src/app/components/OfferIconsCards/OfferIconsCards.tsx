@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {offerIcons} from '@/constants/offerIcons'
-import wordmap from '@/public/images/world_map.jpg'
+import wordmap from "@/public/images/world_map-min.jpg";
 import styles from './OfferIconsCards.module.scss'
 
 export function OfferIconsCards(){

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FooterLinks } from "@/components/FooterLinks/FooterLinks";
-import { VersionTag } from "../VersionTag/VersionTag";
+import { VersionTag } from "@/components/VersionTag/VersionTag";
 
 import styles from "./Footer.module.scss";
 

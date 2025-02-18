@@ -3,7 +3,7 @@ import "../styles/reset.scss";
 import "../styles/theme.scss";
 import { roboto } from "../fonts/fonts";
 import { Toaster } from "sonner";
-import { Layout } from "../components/Layout/Layout";
+import { Layout } from "@/components/Layout/Layout";
 import { pagesMetadata } from "@/constants/metatags";
 
 import { GoogleAnalytics } from "@/components/GoogleAnalytics/GoogleAnalytics";

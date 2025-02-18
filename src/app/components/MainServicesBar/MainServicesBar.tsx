@@ -1,6 +1,6 @@
 
 import styles from './MainServicesBar.module.scss';
-import bgcBlue from '@/public/images/bgc-blue.jpg'
+import bgcBlue from "@/public/images/bgc-blue-min.jpg";
 import Image from 'next/image';
 
 export function MainServicesBar(){

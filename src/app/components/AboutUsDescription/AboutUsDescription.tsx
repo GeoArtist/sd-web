@@ -1,6 +1,6 @@
 import { getSelectedContentHTML } from '@/utils/markdownParser'
-import { CertificatesImage } from "../CertificatesImages/CertificatesImage";
-import aboutUs from "@/public/images/about-us.jpg";
+import { CertificatesImage } from "@/components/CertificatesImages/CertificatesImage";
+import aboutUs from "@/public/images/about-us-min.jpg";
 import Image from "next/image";
 
 import styles from "./AboutUsDescription.module.scss";

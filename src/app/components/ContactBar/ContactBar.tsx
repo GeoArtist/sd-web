@@ -1,5 +1,5 @@
 "use client";
-import contact from "@/public/images/contact-bgc.jpg";
+import contact from "@/public/images/contact-bgc-min.jpg";
 import Image from "next/image";
 import { Button } from "@/components/Button/Button";
 import { ContactInfo } from "@/components/ContactInfo/ContactInfo";

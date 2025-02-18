@@ -1,6 +1,6 @@
 import { featureCards } from "@/constants/featureCards";
 import { Card } from "@/components/FeatureCard/FeatureCard";
-import bgc from "@/public/images/feature_cards_bgc.jpg";
+import bgc from "@/public/images/feature_cards_bgc-min.jpg";
 import Image from "next/image";
 
 import styles from "./FeatureCards.module.scss";

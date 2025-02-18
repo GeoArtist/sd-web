@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getLocalStorage, setLocalStorage } from "@/utils/storage";
 import Link from "next/link";
 import styles from "./CookieBanner.module.scss";
-import {Button} from "../Button/Button";
+import { Button } from "@/components/Button/Button";
 
 // CookieBanner component that displays a banner for cookie consent.
 export  function CookieBanner() {
