@@ -3,10 +3,11 @@
 import {zodResolver} from '@hookform/resolvers/zod'
 import { sendMail } from '@/api/send_email';
 import {contactFormSchema, ContactFormValues} from '@/schemas/contactForm'
-import styles from './ContactForm.module.scss'
 import { toast } from 'sonner';
 import {useForm} from 'react-hook-form'
 import { Button } from "@/components/Button/Button";
+
+import styles from './ContactForm.module.scss'
 
 export function ContactForm() {
 
