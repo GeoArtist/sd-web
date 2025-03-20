@@ -11,7 +11,7 @@ export async function AboutUsDescription() {
 
   return (
     <div className={styles.about}>
-      <Image src={aboutUs} alt="about-us" />
+      <Image src={aboutUs} alt="niebieskie pióro przed komputerem" />
       <div className={styles.about__wrapper}>
         <div
           dangerouslySetInnerHTML={{ __html: descriptionPart1 }}

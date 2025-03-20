@@ -27,7 +27,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Mapa do celów projektowych",
     category: "geodezja",
     imgUrl: mdcp,
-    imgAlt: "mapa-do-celow-projektowych image",
+    imgAlt: "mapa do celow projektowych",
   },
   {
     path: "tyczenia-obiektow-budowlanych",
@@ -35,7 +35,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Tyczenie obiektów budowlanych",
     category: "geodezja",
     imgUrl: tyczenia,
-    imgAlt: "tyczenia image",
+    imgAlt: "tyczenie",
   },
   {
     path: "pomiary-inwentaryzacyjne",
@@ -43,7 +43,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Pomiary inwentaryzacyjne",
     category: "geodezja",
     imgUrl: inwentaryzacje,
-    imgAlt: "inwentaryzacje image",
+    imgAlt: "inwentaryzacje",
   },
   {
     path: "wznowienia-granic",
@@ -51,7 +51,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Wznowienie / wyznaczenie granic",
     category: "geodezja",
     imgUrl: wznowienia,
-    imgAlt: "wznowienia image",
+    imgAlt: "wznowienia",
   },
   {
     path: "podzialy-nieruchomosci",
@@ -59,7 +59,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Podziały nieruchomości",
     category: "geodezja",
     imgUrl: podzialy,
-    imgAlt: "podzialy image",
+    imgAlt: "podzialy",
   },
   {
     path: "rozgraniczenie-nieruchomosci",
@@ -75,7 +75,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Mapa do celów prawnych",
     category: "geodezja",
     imgUrl: prawne,
-    imgAlt: "mapy do celów prawnych image",
+    imgAlt: "mapy do celów prawnych",
   },
   {
     path: "inne-opracowania",
@@ -83,7 +83,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Inne opracowania",
     category: "geodezja",
     imgUrl: inne,
-    imgAlt: "inne opracowania image",
+    imgAlt: "inne opracowania",
   },
   {
     path: "obiektowanie-map",
@@ -91,7 +91,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Obiektowanie Map",
     category: "geodezja",
     imgUrl: obiektowanie,
-    imgAlt: "Obiektowanie map image",
+    imgAlt: "Obiektowanie map",
   },
   {
     path: "opracowania-rastrowe",
@@ -99,7 +99,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Opracowania rastrowe",
     category: "gis",
     imgUrl: raster,
-    imgAlt: "raster image",
+    imgAlt: "przykład danych rastrowych",
   },
   {
     path: "opracowania-wektorowe",
@@ -107,7 +107,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Opracowania wektorowe",
     category: "gis",
     imgUrl: vector,
-    imgAlt: "wektor image",
+    imgAlt: "przykład danych wektorowych",
   },
   {
     path: "analizy-przestrzenne",
@@ -115,7 +115,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Analizy Przestrzenne",
     category: "gis",
     imgUrl: spatialAnalysis,
-    imgAlt: "analizy przestrzenne image",
+    imgAlt: "przykład analiz przestrzennych",
   },
   {
     path: "przestrzenne-bazy-danych",
@@ -123,7 +123,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Przestrzenne Bazy Danych",
     category: "gis",
     imgUrl: spatialDB,
-    imgAlt: "przestrzenne bazy danych image",
+    imgAlt: "przykład przestrzennych baz danych",
   },
   {
     path: "geoportale",
@@ -131,7 +131,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Geoportale",
     category: "gis",
     imgUrl: geoportale,
-    imgAlt: "geoportale image",
+    imgAlt: "przykład geoportalu",
   },
 
   {
@@ -140,7 +140,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Przetwarzanie Danych",
     category: "analiza-danych",
     imgUrl: przetwarzanie,
-    imgAlt: "przetwarzanie danych image",
+    imgAlt: "przykładowy schemat przetwarzania danych",
   },
   {
     path: "harmonizacja-danych",
@@ -148,7 +148,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Harmonizacja Danych",
     category: "analiza-danych",
     imgUrl: harmonizacja,
-    imgAlt: "harmonizacja danych image",
+    imgAlt: "przykładowy schemat harmonizacji danych",
   },
   {
     path: "wizualizacje-danych",
@@ -156,7 +156,7 @@ export const offerServices: OfferSubCategory[] = [
     navName: "Wizualizacje Danych",
     category: "analiza-danych",
     imgUrl: wizualizacje,
-    imgAlt: "wizualizacje danych image",
+    imgAlt: "przykładowa wizualizacja danych ",
   },
 ];
 

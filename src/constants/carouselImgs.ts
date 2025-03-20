@@ -19,37 +19,37 @@ export const carouselImgs: ImgsLinks[] = [
 
   {
     url: rtk1,
-    alt: "rtk1-example",
+    alt: "RTK sprzęt w terenie",
     priority: false,
   },
   {
     url: slope,
-    alt: "slope-map-example",
+    alt: "mapa nachylenia terenu",
     priority: false,
   },
   {
     url: code,
-    alt: "code-example",
+    alt: "widok edytora kodu",
     priority: false,
   },
   {
     url: db,
-    alt: "database-example",
+    alt: "schemat bazy danych",
     priority: false,
   },
   {
     url: dashboard,
-    alt: "dashboard-example",
+    alt: "widok dashboardu",
     priority: false,
   },
   {
     url: bdot,
-    alt: "bdot-example",
+    alt: "wizualizacja bazy danych obiektów topograficznych",
     priority: false,
   },
   {
     url: pointcloud,
-    alt: "point-cloud-example",
+    alt: "widok chmury punktów 3D",
     priority: false,
   },
 ];
