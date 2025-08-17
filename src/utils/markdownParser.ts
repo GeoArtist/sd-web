@@ -1,117 +1,136 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { MarkdownContent } from "@/types/markdown";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { getContentPath } from "@/utils/paths";
+import { MarkdownOfferContent } from "@/types/markdown";
+import { MarkdownBlogContent } from "@/types/markdown"; // zakładam, że tu jest ten typ
 
-function getPath(subfolder?: string): string {
-  // Return the path of the content directory with the subfolder if provided
-  const contentDir = path.join(process.cwd(), "src", "content");
-  if (subfolder) {
-    return path.join(contentDir, subfolder);
-  } else {
-    return contentDir;
-  }
-}
+/**
+ * Universal function to get Markdown file content
+ */
+async function getMarkdownFile({
+  subfolder,
+  slug,
+  toHtml = false,
+}: {
+  subfolder?: string;
+  slug: string;
+  toHtml?: boolean;
+}) {
+  const dir = getContentPath(subfolder);
 
-export async function getAllContents(
-  subfolder?: string
-): Promise<MarkdownContent[]> {
-  const dir = getPath(subfolder);
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(dir);
-  const allPostsData = fileNames.map((filename) => {
-    // Remove ".md" from file name to get id
-    const fileName = filename.replace(/\.md$/, "");
-    // Read markdown file as string
-    const fullPath = path.join(dir, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    // Use gray-matter to parse the post metadata section
-    const {
-      data: { title, description, time, legalBasis },
-      content,
-    } = matter(fileContents);
-
-    // Combine the data with the id
-    return {
-      fileName,
-      title,
-      description,
-      time,
-      legalBasis,
-      content,
-    };
-  });
-  return allPostsData;
-}
-
-export async function getSelectedContent(
-  fileName: string,
-  subfolder?: string
-): Promise<MarkdownContent> {
-  const dir = getPath(subfolder);
-  // All content fileNames
+  // Get  Markdown file name
   const fileNames = fs.readdirSync(dir);
   const contentFileName = fileNames.find(
-    (file) => file.replace(/\.md$/, "") === fileName
+    (file) => file.replace(/\.md$/, "") === slug
   );
 
   if (!contentFileName) {
-    return {} as MarkdownContent;
+    return null;
   }
-
+  // Read file content elements
   const fullPath = path.join(dir, contentFileName);
   const fileContent = fs.readFileSync(fullPath, "utf8");
-  const {
-    data: { title, description, time, legalBasis },
-    content,
-  } = matter(fileContent);
+  const { data, content } = matter(fileContent);
+
+  let processedContent = content;
+  if (toHtml) {
+    const processed = await remark().use(html).process(content);
+    processedContent = processed.toString();
+  }
+
+  return { data, content: processedContent };
+}
+
+/**
+ * Universal list of slugs
+ */
+export function getAllSlugs(subfolder?: string) {
+  const dir = getContentPath(subfolder);
+  return fs
+    .readdirSync(dir)
+    .filter((file) => file.endsWith(".md"))
+    .map((fileName) => fileName.replace(/\.md$/, ""));
+}
+
+/**
+ * Offer Content (Markdown)
+ */
+export async function getOfferContent(
+  fileName: string,
+  subfolder?: string
+): Promise<MarkdownOfferContent> {
+  const result = await getMarkdownFile({
+    subfolder,
+    slug: fileName,
+    toHtml: false,
+  });
+
+  if (!result) {
+    return {} as MarkdownOfferContent;
+  }
 
   return {
     fileName,
-    title,
-    description,
-    time,
-    legalBasis,
-    content,
+    title: result.data.title,
+    description: result.data.description,
+    time: result.data.time,
+    legalBasis: result.data.legalBasis,
+    content: result.content,
   };
 }
 
-export async function getContentFileNames(
-  subfolder?: string
-): Promise<string[]> {
-  const dir = getPath(subfolder);
-  // All content fileNames
-  const fileNames = fs.readdirSync(dir);
-  return fileNames;
-}
-
-// Read as html
+/**
+ * Read as HTML only
+ */
 export async function getSelectedContentHTML(
   fileName: string,
   subfolder?: string
 ): Promise<string> {
-  const dir = getPath(subfolder);
-  // All content fileNames
-  const fileNames = fs.readdirSync(dir);
-  const contentFileName = fileNames.find(
-    (file) => file.replace(/\.md$/, "") === fileName
-  );
-  if (!contentFileName) {
-    return "";
+  const result = await getMarkdownFile({
+    subfolder,
+    slug: fileName,
+    toHtml: true,
+  });
+
+  return result ? (result.content as string) : "";
+}
+
+/**
+ * Blog – list all slugs
+ */
+export function getAllPosts() {
+  return getAllSlugs("blogPosts").map((slug) => ({
+    postName: slug,
+  }));
+}
+
+/**
+ * Blog – single post data
+ */
+export async function getPostData(
+  postName: string
+): Promise<MarkdownBlogContent> {
+  const result = await getMarkdownFile({
+    subfolder: "blogPosts",
+    slug: postName,
+    toHtml: true,
+  });
+
+  if (!result) {
+    return {} as MarkdownBlogContent;
   }
 
-  const fullPath = path.join(dir, contentFileName);
-  const fileContent = fs.readFileSync(fullPath, "utf8");
-
-  // Parse frontmatter using gray-matter
-  const { content } = matter(fileContent);
-
-  // Convert Markdown to HTML using remark
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
-
-  return contentHtml;
+  return {
+    id: result.data.id,
+    postName: postName,
+    title: result.data.title,
+    addTime: new Date(result.data.addDate),
+    modTime: new Date(result.data.modifyDate),
+    keywords: result.data.keywords || [],
+    summary: result.data.summary || "",
+    content: result.content as string,
+  };
 }

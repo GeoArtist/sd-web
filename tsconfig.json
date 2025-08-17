@@ -28,6 +28,7 @@
       "@/contexts/*": ["./src/app/contexts/*"],
       "@/views/*": ["./src/app/views/*"],
       "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "update-version.js"],

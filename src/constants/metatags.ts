@@ -78,6 +78,11 @@ export const pagesMetadata: MetaTagsCollection = {
     "Zapoznaj się z naszą polityką cookies, aby dowiedzieć się, jakie pliki cookies używamy i w jaki sposób je przetwarzamy.",
     `${BASE_URL}/polityka-cookies`
   ),
+  blog: GenerateMetatags(
+    "Blog - Soft-Data",
+    "Przeczytaj nasze najnowsze artykuły na blogu, aby być na bieżąco z trendami w geodezji, GIS oraz w świecie data-science.",
+    `${BASE_URL}/blog`
+  ),
 
   "geodezja/mapa-do-celow-projektowych": GenerateMetatags(
     "Mapa do celów projektowych - oferta geodeta Olsztyn - Soft-Data",

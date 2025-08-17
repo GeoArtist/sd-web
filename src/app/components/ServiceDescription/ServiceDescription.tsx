@@ -1,4 +1,4 @@
-import { MarkdownContent } from "@/types/markdown";
+import { MarkdownOfferContent } from "@/types/markdown";
 import { OfferSubCategory } from "@/types/offerCategory";
 import Image from "next/image";
 import { LegalBasisInfo } from "@/components/LegalBasisInfo/LegalBasisInfo";
@@ -9,7 +9,7 @@ export function ServiceDescription({
   md_content,
   offer,
 }: {
-  md_content: MarkdownContent;
+  md_content: MarkdownOfferContent;
   offer: OfferSubCategory;
 }) {
   const { title, description, time, legalBasis } = md_content;

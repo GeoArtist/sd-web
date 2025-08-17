@@ -1,11 +1,12 @@
 import path from 'path';
 
-export function getBasename(filePath:string):string {
-    const baseName = path.basename(filePath, path.extname(filePath))
-
-    if (baseName.includes('.')) {
-        return baseName.split('.')[0]
-    }
-    return baseName
-
+export function getContentPath(subfolder?: string): string {
+  // Return the path of the content directory with the subfolder if provided
+  const contentDir = path.join(process.cwd(), "src", "content");
+  if (subfolder) {
+    return path.join(contentDir, subfolder);
+  } else {
+    return contentDir;
+  }
 }
+

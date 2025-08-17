@@ -1,0 +1,40 @@
+import { BlogPostImg } from "@/types/blogPost";
+
+import dtmUsageExamplesThumbnail from "@/public/images/blog/thumbnails/dtm-usage-thumbnail.jpg";
+import dtmDsmNdsm from "@/public/images/blog/thumbnails/dtm-dsm-ndsm-thumbnail.jpg";
+import vegetationIndexes from "@/public/images/blog/thumbnails/vegetation-indexes-thumbnail.jpg";
+import orthophotomap from "@/public/images/blog/thumbnails/orthophotomap-thumbnail.jpg";
+import aiBuilding from "@/public/images/blog/thumbnails/ai-building-thumbnail.jpg";
+
+export const blogPostsImgs: BlogPostImg[] = [
+  {
+    postId: 2,
+    url: dtmUsageExamplesThumbnail,
+    alt: "dtm usage examples thumbnail",
+    type: "thumbnail",
+  },
+  {
+    postId: 3,
+    url: dtmDsmNdsm,
+    alt: "dtm dsm ndsm thumbnail",
+    type: "thumbnail",
+  },
+  {
+    postId: 4,
+    url: vegetationIndexes,
+    alt: "vegetation indexes thumbnail",
+    type: "thumbnail",
+  },
+  {
+    postId: 5,
+    url: orthophotomap,
+    alt: "orthophotomap RGB and NIR thumbnail",
+    type: "thumbnail",
+  },
+  {
+    postId: 6,
+    url: aiBuilding,
+    alt: "automatic ai building detection thumbnail",
+    type: "thumbnail",
+  },
+];

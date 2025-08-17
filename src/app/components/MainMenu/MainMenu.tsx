@@ -88,6 +88,17 @@ export  function MainMenu({mode, showSidebar}:MainMenuProps) {
                 KONTAKT
               </Link>
             </li>
+
+            <li>
+              <Link
+                onClick={mobileFn}
+                href="/blog"
+                className={currentPath === "/blog" ? styles.active : ""}
+                prefetch={false}
+              >
+                BLOG
+              </Link>
+            </li>
           </ul>
         </nav>
       </>

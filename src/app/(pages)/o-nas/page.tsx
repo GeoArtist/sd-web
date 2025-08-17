@@ -1,12 +1,13 @@
-import { AboutUsView } from "@/app/views/AboutUs/AboutUsView";
+import { AboutUsView } from "@/app/views/AboutUsView/AboutUsView";
 import { pagesMetadata } from "@/constants/metatags";
 import { Metadata } from "next/types";
 
 export const metadata: Metadata = pagesMetadata["o-nas"];
 
-
-export default function AboutUs(){
-    return <>
-    <AboutUsView />
+export default function AboutUs() {
+  return (
+    <>
+      <AboutUsView />
     </>
+  );
 }
