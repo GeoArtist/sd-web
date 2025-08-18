@@ -1,5 +1,5 @@
 import { getAllPosts, getPostData } from "@/utils/markdownParser";
-import { BlogLayoutView } from "@/app/views/BlogLayoutView/BlogLayoutView";
+import { BlogView } from "@/app/views/BlogView/BlogView";
 import { Metadata } from "next/types";
 import { pagesMetadata } from "@/constants/metatags";
 
@@ -11,7 +11,5 @@ export default async function BlogList() {
     slugs.map(({ postName }) => getPostData(postName))
   );
 
-  return (
-    <BlogLayoutView posts={posts} />
-  );
+  return <BlogView posts={posts} />;
 }

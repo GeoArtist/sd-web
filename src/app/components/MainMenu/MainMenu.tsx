@@ -93,7 +93,7 @@ export  function MainMenu({mode, showSidebar}:MainMenuProps) {
               <Link
                 onClick={mobileFn}
                 href="/blog"
-                className={currentPath === "/blog" ? styles.active : ""}
+                className={currentPath.includes("/blog") ? styles.active : ""}
                 prefetch={false}
               >
                 BLOG

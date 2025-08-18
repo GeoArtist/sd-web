@@ -6,7 +6,7 @@ modifyDate: 2025-08-16
 keywords:
     - geodezja
     - it
-summary: "Jakie barwne kompozycje można stworzyć na podstawie zdjęć lotniczych RGB+NIR? Jakie są zastosowania bliskiej podczerwieni?"
+summary: "Barwne kompozycje można stworzyć na podstawie zdjęć lotniczych RGB+NIR? Jakie są zastosowania bliskiej podczerwieni w fotogrametrii?"
 ---
 
 Ortofotomapa to jedno z najważniejszych narzędzi w teledetekcji i systemach informacji geograficznej (GIS). Jest to zdjęcie lotnicze lub satelitarne, które zostało przetworzone w taki sposób, aby każdy jego punkt odpowiadał dokładnym współrzędnym na powierzchni Ziemi. W odróżnieniu od zwykłych fotografii lotniczych, ortofotomapy są geometrycznie poprawne — można na nich wykonywać dokładne pomiary odległości, powierzchni, czy kątów, tak jak na mapach topograficznych.
