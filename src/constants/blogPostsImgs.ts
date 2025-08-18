@@ -1,6 +1,7 @@
 import { BlogPostImg } from "@/types/blogPost";
 
-import dtmUsageExamplesThumbnail from "@/public/images/blog/thumbnails/dtm-usage-thumbnail.jpg";
+import watershedanalsis from "@/public/images/blog/thumbnails/watershed-analsis-thumbnail.jpg";
+import dtmUsage from "@/public/images/blog/thumbnails/dtm-usage-thumbnail.jpg";
 import dtmDsmNdsm from "@/public/images/blog/thumbnails/dtm-dsm-ndsm-thumbnail.jpg";
 import vegetationIndexes from "@/public/images/blog/thumbnails/vegetation-indexes-thumbnail.jpg";
 import orthophotomap from "@/public/images/blog/thumbnails/orthophotomap-thumbnail.jpg";
@@ -8,8 +9,14 @@ import aiBuilding from "@/public/images/blog/thumbnails/ai-building-thumbnail.jp
 
 export const blogPostsImgs: BlogPostImg[] = [
   {
+    postId: 1,
+    url: watershedanalsis,
+    alt: "watershed analysis thumbnail",
+    type: "thumbnail",
+  },
+  {
     postId: 2,
-    url: dtmUsageExamplesThumbnail,
+    url: dtmUsage,
     alt: "dtm usage examples thumbnail",
     type: "thumbnail",
   },

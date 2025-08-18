@@ -10,5 +10,5 @@ export default async function BlogList() {
     slugs.map(({ postName }) => getPostData(postName))
   );
 
-  return <BlogView posts={posts} />;
+  return <BlogView posts={[...posts].reverse()} />;
 }

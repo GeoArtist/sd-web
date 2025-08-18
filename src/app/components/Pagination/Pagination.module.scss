@@ -44,6 +44,14 @@
     }
 }
 
-.pagination__disabled{
-    display: none;
+.pagination__disabled a{
+    background-color: var(--clr-disabled-bg);
+    cursor: default ;
+    color: var(--clr-disabled-color);
+    opacity: 0.35;
+    &:hover{
+        background-color: var(--clr-disabled-bg);
+        font-weight: var(--fw-normal);
+        color: var(--clr-disabled-color);
+    }
 }
