@@ -45,13 +45,13 @@
 }
 
 .pagination__disabled a{
-    background-color: var(--clr-disabled-bg);
+    background-color: transparent;
     cursor: default ;
-    color: var(--clr-disabled-color);
+    color: transparent;
     opacity: 0.35;
     &:hover{
-        background-color: var(--clr-disabled-bg);
+        background-color: transparent;
         font-weight: var(--fw-normal);
-        color: var(--clr-disabled-color);
+        color: transparent;
     }
 }

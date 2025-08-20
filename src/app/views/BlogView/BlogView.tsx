@@ -1,13 +1,12 @@
 "use client";
-import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 import { blogPostsImgs } from "@/constants/blogPostsImgs"; // Make sure this import is correct
 import { MarkdownBlogContent } from "@/types/markdown";
 import BlogCard from "@/app/components/BlogCard/BlogCard";
-import styles from "./BlogView.module.scss";
 import { useSearchParams } from "next/navigation";
 import Pagination from "@/app/components/Pagination/Pagination";
+import styles from "./BlogView.module.scss";
 
-const POSTS_PER_PAGE = 2;
+const POSTS_PER_PAGE = 3;
 
 export function BlogView({ posts }: { posts: MarkdownBlogContent[] }) {
   const searchParams = useSearchParams();
