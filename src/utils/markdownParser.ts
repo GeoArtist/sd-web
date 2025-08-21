@@ -6,7 +6,7 @@ import html from "remark-html";
 import { getContentPath } from "@/utils/paths";
 import { MarkdownOfferContent } from "@/types/markdown";
 import { MarkdownBlogContent } from "@/types/markdown"; // zakładam, że tu jest ten typ
-
+import remarkGfm from "remark-gfm";
 /**
  * Universal function to get Markdown file content
  */
@@ -37,7 +37,7 @@ async function getMarkdownFile({
 
   let processedContent = content;
   if (toHtml) {
-    const processed = await remark().use(html).process(content);
+    const processed = await remark().use(remarkGfm).use(html).process(content);
     processedContent = processed.toString();
   }
 

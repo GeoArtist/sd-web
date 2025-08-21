@@ -35,6 +35,7 @@ ________________________________________
 Wyobraź sobie teren podzielony na równą siatkę kwadratów, z których każdy posiada przypisaną wysokość w metrach nad poziomem morza. Te kwadraty mogą mieć różną wielkość (np. 1 m, 5 m, 10 m), a im mniejsze, tym dokładniejszy jest model.
 W przypadku NMT taka struktura umożliwia m.in. generowanie przekrojów terenu, analizę spadków czy modelowanie odpływu wód opadowych.
 
+![grid](/images/blog/images/2/grid.jpg)
 
 ________________________________________
 ### Przykłady zastosowań NMT w siatce GRID
@@ -52,7 +53,8 @@ Określa kierunek nachylenia stoków względem stron świata. Stosowana w rolnic
 8.	Planowanie infrastruktury – optymalizacja przebiegu dróg, linii kolejowych czy sieci przesyłowych.
 9.	Archeologia – wykrywanie dawnych struktur terenowych ukrytych pod roślinnością.
 
-![numeryczny model terenu praktyczne zastosowania](/images/blog/images/2/nmt-zastosowania.jpg){.custom}
+![numeryczny model terenu praktyczne zastosowania - część 1](/images/blog/images/2/nmt-zastosowania_1.jpg)
+![numeryczny model terenu praktyczne zastosowania - część 2](/images/blog/images/2/nmt-zastosowania_2.jpg)
 ________________________________________
 Numeryczny Model Terenu w siatce GRID to niezastąpione narzędzie w analizach przestrzennych. Dzięki jasnej strukturze, łatwości integracji i wszechstronnym zastosowaniom, stanowi fundament nowoczesnych projektów inżynieryjnych, planistycznych i środowiskowych.
 

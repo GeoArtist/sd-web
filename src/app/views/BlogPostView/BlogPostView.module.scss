@@ -40,11 +40,14 @@
         color: var(--clr-black);
         text-wrap: pretty;
         line-height: 1.35;
+
     }
     li {
         list-style: "🔹";
         margin-block: 0.5rem 0.25rem;
-       
+        & li{
+           list-style: "- ";
+       }
     }
     strong {
         font-weight: var(--fw-bold);
@@ -54,9 +57,13 @@
     }
     img {
         object-fit: cover;
-        max-height: 60vh;
+        max-height: 50vh;
         width: auto;
+        max-width: 80%;
         margin-inline: auto;
         margin-block: 0.5rem;
     }
+
+ 
+
 }
