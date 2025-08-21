@@ -2,7 +2,6 @@ import { MarkdownBlogContent } from "@/types/markdown";
 import styles from "./BlogPostView.module.scss";
 
 export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
-  console.log(post.content);
   return (
     <>
       <div className={styles.blogPost}>

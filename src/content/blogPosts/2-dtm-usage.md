@@ -16,14 +16,10 @@ Taka struktura pozwala na bardzo efektywne przetwarzanie i analizowanie danych g
 ________________________________________
 ### Skąd pochodzą dane do NMT w siatce GRID?
 Źródła danych do budowy Numerycznego Modelu Terenu są różnorodne i obejmują zarówno pomiary bezpośrednie, jak i te pozyskiwane z powietrza czy przestrzeni kosmicznej. Najczęściej wykorzystywane są:
-- Dane LiDAR (Light Detection and Ranging)
-Pozyskiwane z dronów, samolotów, helikopterów oraz satelitów. Charakteryzują się bardzo wysoką dokładnością (nawet do kilku centymetrów) i pozwalają na tworzenie modeli o dużej rozdzielczości.
-- Dane fotogrametryczne
-Oparte na analizie zdjęć lotniczych i satelitarnych, pozyskiwanych z dronów, helikopterów czy samolotów. Dzięki technikom fotogrametrii możliwe jest odwzorowanie trójwymiarowego kształtu powierzchni.
-- Pomiary geodezyjne w terenie
-Wykonywane przy użyciu tachimetrów, odbiorników GNSS RTK i innych instrumentów pomiarowych, pozwalają na pozyskanie precyzyjnych punktów wysokościowych.
-- Dane satelitarne radarowe (np. z misji SRTM, TanDEM-X)
-Umożliwiają pozyskanie modelu wysokościowego w skali globalnej.
+- **dane LiDAR (Light Detection and Ranging)** - pozyskiwane z dronów, samolotów, helikopterów oraz satelitów. Charakteryzują się bardzo wysoką dokładnością (nawet do kilku centymetrów) i pozwalają na tworzenie modeli o dużej rozdzielczości.
+- **dane fotogrametryczne** - oparte na analizie zdjęć lotniczych i satelitarnych, pozyskiwanych z dronów, helikopterów czy samolotów. Dzięki technikom fotogrametrii możliwe jest odwzorowanie trójwymiarowego kształtu powierzchni.
+- **pomiary geodezyjne w terenie** - wykonywane przy użyciu tachimetrów, odbiorników GNSS RTK i innych instrumentów pomiarowych, pozwalają na pozyskanie precyzyjnych punktów wysokościowych.
+- **dane satelitarne radarowe (np. z misji SRTM, TanDEM-X)** - umożliwiają pozyskanie modelu wysokościowego w skali globalnej.
 ________________________________________
 ### Dlaczego model w siatce GRID jest tak skuteczny?
 Prosta i regularna struktura danych – podział na kwadraty ułatwia matematyczne przetwarzanie, analizę statystyczną i integrację z innymi danymi przestrzennymi.
@@ -39,19 +35,15 @@ W przypadku NMT taka struktura umożliwia m.in. generowanie przekrojów terenu, 
 
 ________________________________________
 ### Przykłady zastosowań NMT w siatce GRID
-1.	Mapa hipsometryczna
-Pokazuje zróżnicowanie wysokości terenu w formie kolorowego gradientu. Stosowana w analizach rzeźby terenu, badaniach geomorfologicznych i planowaniu infrastruktury.
-2.	Mapa nachylenia terenu
-Oblicza kąt spadku powierzchni. Kluczowa w analizach osuwisk, projektowaniu dróg, planowaniu tras sieci energetycznych czy badaniach erozji.
-3.	Mapa warstwicowa
-Tworzona na podstawie NMT, prezentuje izolinie wysokości, umożliwiając czytelne przedstawienie ukształtowania terenu w dokumentacji kartograficznej.
-4.	Mapa ekspozycji stoków
-Określa kierunek nachylenia stoków względem stron świata. Stosowana w rolnictwie (dobór upraw), urbanistyce (nasłonecznienie zabudowy) i planowaniu energetyki solarnej.
-5.	Modelowanie odpływu wód opadowych – identyfikacja obszarów zagrożonych podtopieniami.
-6.	Analiza widoczności (viewshed) – określanie obszarów widocznych z danego punktu (np. dla lokalizacji masztów telekomunikacyjnych).
-7.	Symulacje środowiskowe – modelowanie procesów erozji, ruchów masowych czy zmian pokrywy śnieżnej.
-8.	Planowanie infrastruktury – optymalizacja przebiegu dróg, linii kolejowych czy sieci przesyłowych.
-9.	Archeologia – wykrywanie dawnych struktur terenowych ukrytych pod roślinnością.
+1.	**Mapa hipsometryczna** - Pokazuje zróżnicowanie wysokości terenu w formie kolorowego gradientu. Stosowana w analizach rzeźby terenu, badaniach geomorfologicznych i planowaniu infrastruktury.
+2.	**Mapa nachylenia terenu** - reprezentuje kąt spadku powierzchni. Kluczowa w analizach osuwisk, projektowaniu dróg, planowaniu tras sieci energetycznych czy badaniach erozji.
+3.	**Mapa warstwicowa** - tworzona na podstawie NMT, prezentuje izolinie wysokości, umożliwiając czytelne przedstawienie ukształtowania terenu w dokumentacji kartograficznej.
+4.	**Mapa ekspozycji stoków** - określa kierunek nachylenia stoków względem stron świata. Stosowana w rolnictwie (dobór upraw), urbanistyce (nasłonecznienie zabudowy) i planowaniu energetyki solarnej.
+5.	**Modelowanie odpływu wód opadowych** – identyfikacja obszarów zagrożonych podtopieniami.
+6.	**Analiza widoczności (viewshed)** – określanie obszarów widocznych z danego punktu (np. dla lokalizacji masztów telekomunikacyjnych).
+7.	**Symulacje środowiskowe** – modelowanie procesów erozji, ruchów masowych czy zmian pokrywy śnieżnej.
+8.	**Planowanie infrastruktury** – optymalizacja przebiegu dróg, linii kolejowych czy sieci przesyłowych.
+9.	**Archeologia** – wykrywanie dawnych struktur terenowych ukrytych pod roślinnością.
 
 ![numeryczny model terenu praktyczne zastosowania - część 1](/images/blog/images/2/nmt-zastosowania_1.jpg)
 ![numeryczny model terenu praktyczne zastosowania - część 2](/images/blog/images/2/nmt-zastosowania_2.jpg)

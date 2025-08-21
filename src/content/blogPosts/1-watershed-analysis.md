@@ -25,11 +25,11 @@ Analiza zlewni pozwala zrozumieć, jak woda krąży w środowisku, gdzie może g
 ________________________________________
 ### GIS w zarządzaniu wodą
 Systemy informacji geograficznej (GIS) umożliwiają przeprowadzanie skomplikowanych analiz hydrologicznych, które dawniej wymagały lat badań w terenie. Obecnie w kilka minut możemy:
-- wyznaczać zlewnie i sieć rzeczną na podstawie cyfrowego modelu terenu (DEM).
-- analizować przepływ wody – czyli symulować, jak deszcz spływa po powierzchni i które miejsca są najbardziej narażone na podtopienia.
-- prognozować powodzie – łącząc dane o opadach, retencji terenu i sieci rzecznej.
-- badać jakość wód – śledząc źródła zanieczyszczeń i ich rozprzestrzenianie się wzdłuż koryta.
-- odtwarzać historyczne zmiany rzek – porównując archiwalne mapy z obrazami satelitarnymi i lidar-owymi.
+- **wyznaczać zlewnie i sieć rzeczną** -  na podstawie cyfrowego modelu terenu (DEM).
+- **analizować przepływ wody** – czyli symulować, jak deszcz spływa po powierzchni i które miejsca są najbardziej narażone na podtopienia.
+- **prognozować powodzie** – łącząc dane o opadach, retencji terenu i sieci rzecznej.
+- **badać jakość wód** – śledząc źródła zanieczyszczeń i ich rozprzestrzenianie się wzdłuż koryta.
+- **odtwarzać historyczne zmiany rzek** – porównując archiwalne mapy z obrazami satelitarnymi i lidar-owymi.
 ________________________________________
 ### Dlaczego rzeki przypominają drzewa? 🌿
 Układ rzeczny rozwija się zgodnie z prawami fizyki i geometrii – woda zawsze dąży do najniższego punktu, a najmniejsze strumienie łączą się, tworząc coraz większe cieki. To sprawia, że powstają charakterystyczne rozgałęzienia, przypominające korzenie czy gałęzie drzewa.
@@ -37,10 +37,10 @@ Co ciekawe, matematycy opisują takie struktury przy pomocy analizy fraktalnej �
 ________________________________________
 ### GIS w praktyce – od badań do codziennego życia
 Analizy hydrologiczne w GIS to nie tylko akademickie ćwiczenia – mają one ogromne znaczenie praktyczne:
--  zarządzanie ryzykiem powodziowym 🌊 – planowanie wałów przeciwpowodziowych i retencji.
--  ochrona zasobów wodnych 🚰 – kontrola jakości wody pitnej i identyfikacja źródeł zanieczyszczeń.
--  planowanie przestrzenne 🌱– lokalizacja nowych inwestycji w zgodzie z naturalnym obiegiem wody.
--  renaturyzacja rzek 🏞️ – przywracanie naturalnych koryt, aby zwiększyć bioróżnorodność i poprawić retencję.
+-  **zarządzanie ryzykiem powodziowym** 🌊 – planowanie wałów przeciwpowodziowych i retencji.
+-  **ochrona zasobów wodnych** 🚰 – kontrola jakości wody pitnej i identyfikacja źródeł zanieczyszczeń.
+-  **planowanie przestrzenne** 🌱– lokalizacja nowych inwestycji w zgodzie z naturalnym obiegiem wody.
+-  **renaturyzacja rzek** 🏞️ – przywracanie naturalnych koryt, aby zwiększyć bioróżnorodność i poprawić retencję.
 ________________________________________
 ### Woda rzeźbi naszą planetę 🌎✨
 Rzeki to nie tylko ciek wodny – to dynamiczny system, który kształtuje krajobraz, wpływa na życie ludzi i przyrody. Dzięki GIS możemy lepiej zrozumieć te procesy, przewidywać ich skutki i podejmować decyzje, które pozwolą na zrównoważone zarządzanie wodą.
@@ -53,5 +53,7 @@ ________________________________________
 - planowaniu retencji i ochrony zasobów wodnych,
 - monitoringu zmian w sieci rzecznej,
 - przygotowywaniu map i raportów wspierających proces decyzyjny.
+
+
 Dzięki połączeniu wiedzy hydrologicznej z nowoczesnymi narzędziami geoinformatycznymi pomagamy tworzyć rozwiązania, które łączą potrzeby człowieka z troską o środowisko.
 ![watershed areas](/images/blog/images/1/watershed.jpg)

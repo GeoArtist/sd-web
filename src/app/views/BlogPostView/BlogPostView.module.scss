@@ -7,19 +7,19 @@
     max-width: 900px;
     border-radius: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    
-    &__title{
-    font-size: 2.5rem;
-    margin-block: 2.5rem 0.5rem;
-    color: var(--clr-theme-2);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
-    text-align: center;
-}
 
-    h3{
+    &__title {
+        font-size: 2.5rem;
+        margin-block: 2.5rem 0.5rem;
+        color: var(--clr-theme-2);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+
+    h3 {
         font-size: 1.25rem;
         margin-block: 1.5rem 0rem;
-        text-indent: 2.5rem ;
+        text-indent: 2.5rem;
         text-align: center;
     }
 
@@ -32,28 +32,33 @@
         text-indent: 1.5rem;
         text-wrap: pretty;
     }
-    ul {
-        
+    ul,ol {
         margin-inline: 1rem;
+        margin-block: 0.5rem 1rem;
         padding-left: 2rem;
         list-style-type: disc;
+         font-style: italic;
         color: var(--clr-black);
         text-wrap: pretty;
         line-height: 1.35;
+        & li {
+            list-style: "🔹";
+            margin-block: 0.5rem 0.5rem;
+            & li {
+                list-style: "- ";
+            }
+        }
+    }
+    ol li {
+        list-style: counter+" ";
 
     }
-    li {
-        list-style: "🔹";
-        margin-block: 0.5rem 0.25rem;
-        & li{
-           list-style: "- ";
-       }
-    }
+
     strong {
         font-weight: var(--fw-bold);
     }
     hr {
-        margin-top: 1rem;
+        margin-block: 1rem;
     }
     img {
         object-fit: cover;
@@ -61,9 +66,19 @@
         width: auto;
         max-width: 80%;
         margin-inline: auto;
-        margin-block: 0.5rem;
+        margin-block: 0.75rem;
     }
 
- 
+    th {
+        padding: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: var(--fw-bold);
+        border-bottom: 2px solid var(--clr-theme-2);
+    }
 
+    td {
+        font-size: 0.75rem;
+        margin-inline: 0.25em;
+        padding: 0.25rem;
+    }
 }

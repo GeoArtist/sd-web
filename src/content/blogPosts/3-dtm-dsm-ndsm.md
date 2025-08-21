@@ -12,35 +12,40 @@ summary: "Czym różnią się: NMT, NMPT, zNMPT? Który model wysokościowy wybr
 NMT, NMPT i zNMPT – Kluczowe Narzędzia w Analizie Danych Przestrzennych
 Nowoczesna geoinformatyka zapewnia nam narzędzia do precyzyjnego modelowania powierzchni ziemi oraz wszystkich obiektów się na niej znajdujących. Interesujące dane, szczególnie dane geoprzestrzenne w postaci różnych modeli terenu, stanowią podstawę prac analitycznych w geodezji/GiS, planowaniu miast, inżynierii, monitorowaniu środowiskowym i wielu innych dziedzinach
 
+________________________________________
+
 ### Źródła danych
 Numeryczne modele terenu potrzebują danych wejściowych – współrzędnych charakterystycznych punktów terenu poziomych X, Y oraz wysokości. Dane te mogą zostać pozyskane bezpośrednio, lub potrzebują specjalnego przetworzenia, aby mogły służyć do generowania modeli pokrycia terenu. Źródłami danych do tworzenia modeli terenu są m.in.:
-- LIDAR (Light Detection and Ranging) – pozyskiwany z różnych platform:
+1. **LIDAR (Light Detection and Ranging)** – pozyskiwany z różnych platform:
     - drony (UAV LiDAR),
     - helikoptery (ALS – Airborne Laser Scanning),
     - samoloty (np. skanowanie w ramach projektów krajowych),
     - satelity (np. ICESat-2, GEDI).
-- Pomiary bezpośrednie wykonywane przez geodetów:
+2. **Pomiary bezpośrednie** wykonywane przez geodetów:
     - tachimetry,
     - GNSS RTK,
     - niwelacja precyzyjna.
-- Dane fotogrametryczne:
+3. **Dane fotogrametryczne:**
     - ortofotomapy z dronów i helikopterów,
     - zdjęcia lotnicze z samolotów,
     - obrazy satelitarne o wysokiej rozdzielczości.
-- Dane radarowe (SAR – Synthetic Aperture Radar):
+4. **Dane radarowe (SAR – Synthetic Aperture Radar):**
     - misje satelitarne (np. SRTM, TanDEM-X).
-- Zasoby archiwalne:
+5. **Zasoby archiwalne:**
     - mapy topograficzne i wysokościowe w wersji cyfrowej,
     - dane z wcześniejszych pomiarów terenowych
-     
+________________________________________
+
 ### Rodzaje Modeli Pokrycia Terenu
 Wyróżniamy trzy podstawowe rodzaje modeli pokrycia terenu:
-- Numeryczny Model Terenu (NMT)
-- Numeryczny Model Pokrycia Terenu (NMPT)
-- Znormalizowany Model Pokrycia Terenu (zNMPT)
+1. Numeryczny Model Terenu (NMT)
+2. Numeryczny Model Pokrycia Terenu (NMPT)
+3. Znormalizowany Model Pokrycia Terenu (zNMPT)
 Każdy z nich dostarcza unikalnych informacji, a ich wybór zależy od charakteru projektu i celu analizy.
 
 ![porównanie modeli pokrycia terenu](/images/blog/images/3/compare_terrain_models.jpg)
+
+________________________________________
 
 ### Numeryczny Model Terenu (NMT) 🌍
 NMT to cyfrowe odwzorowanie powierzchni ziemi w jej „czystej” postaci – pozbawione wszelkich obiektów znajdujących się nad gruntem, takich jak budynki, mosty, drzewa. Odwzorowuje wyłącznie naturalne ukształtowanie terenu: góry, doliny, równiny, stoki.
@@ -86,21 +91,22 @@ Zastosowania zNMPT:
 ________________________________________
 ### Model terenu jako raster – jak to działa?
 Numeryczne modele terenu i pokrycia terenu często zapisuje się w formacie rastrowym.
-Raster to nic innego jak siatka kwadratów (tzw. pikseli) o jednakowej długości boku – np. 1 m, 5 m czy 30 m – które wspólnie pokrywają cały analizowany obszar.
+Raster to nic innego jak siatka kwadratów (tzw. pikseli) o jednakowej długości boku – np. 1m, 5m czy 30m – które wspólnie pokrywają cały analizowany obszar.
 Każdy piksel ma przypisaną wartość opisującą daną cechę terenu.
 W przypadku NMT, NMPT czy zNMPT tą cechą jest wysokość (najczęściej w metrach nad poziomem morza).
 Dzięki temu możemy w prosty sposób wykonywać obliczenia, analizy przestrzenne i wizualizacje – bo komputer może traktować taki raster jak „mapę wysokości” i wykonywać na nim operacje matematyczne.
 Przykładowo:
 - Piksel (50, 100) może mieć wartość 128,5 m – co oznacza, że w tym fragmencie terenu wysokość wynosi 128,5 m n.p.m.
-- W zNMPT ta wartość oznaczałaby wysokość obiektu nad powierzchnią gruntu – np. 15,3 m, co mogłoby odpowiadać koronowi drzewa.
+- W zNMPT ta wartość oznaczałaby wysokość obiektu nad powierzchnią gruntu – np. 15,3 m, co mogłoby odpowiadać wysokości drzewa.
 Im mniejszy rozmiar piksela, tym dokładniejszy model (więcej szczegółów), ale też większy rozmiar pliku i większe wymagania obliczeniowe.
 
- 
+________________________________________
+
 ### Dlaczego te modele są tak istotne?
 Każdy z modeli dostarcza innych informacji:
-- NMT – czysta topografia, niezbędna w analizach geomorfologicznych i hydrologicznych.
-- NMPT – pełny obraz terenu wraz z elementami pokrycia.
-- zNMPT – analiza wysokości względnych obiektów.
+- **NMT** – czysta topografia, niezbędna w analizach geomorfologicznych i hydrologicznych.
+- **NMPT** – pełny obraz terenu wraz z elementami pokrycia.
+- **zNMPT** – analiza wysokości względnych obiektów.
 W praktyce często łączy się te modele, aby uzyskać kompleksową analizę i maksymalną wartość informacyjną.
 
 ________________________________________
