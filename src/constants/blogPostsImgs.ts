@@ -28,14 +28,14 @@ export const blogPostsImgs: BlogPostImg[] = [
   },
   {
     postId: 4,
-    url: vegetationIndexes,
-    alt: "vegetation indexes thumbnail",
+    url: orthophotomap,
+    alt: "orthophotomap RGB and NIR thumbnail",
     type: "thumbnail",
   },
   {
     postId: 5,
-    url: orthophotomap,
-    alt: "orthophotomap RGB and NIR thumbnail",
+    url: vegetationIndexes,
+    alt: "vegetation indexes thumbnail",
     type: "thumbnail",
   },
   {
