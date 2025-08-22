@@ -6,7 +6,7 @@ modifyDate: 2025-08-15
 keywords:
     - geodezja
     - it
-summary: Dowiedz się czym jest Numeryczny Model Terenu? Jak się go tworzy? Jakie są jego zastosowania?
+summary: Dowiedz się, czym jest Numeryczny Model Terenu? Jak się go tworzy? Jakie są jego zastosowania?
 ---
 Numeryczny Model Terenu (NMT) to jedna z kluczowych form cyfrowej reprezentacji powierzchni Ziemi, powszechnie stosowana w geodezji, geoinformatyce i systemach GIS. Stanowi podstawę wielu analiz środowiskowych, inżynierskich i planistycznych.
 Jedną z najpopularniejszych form NMT jest model w siatce GRID – regularna struktura danych, w której powierzchnia terenu odwzorowana jest w postaci kwadratowych komórek (pikseli), a każdej z nich przypisana jest wartość wysokości.

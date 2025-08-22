@@ -1,6 +1,6 @@
 ---
 id: 5
-title: Wskaźniki spektralne - indeksy wegetacyjne
+title: Wskaźniki spektralne — indeksy wegetacyjne
 addDate: 2025-05-17
 modifyDate: 2025-08-16
 keywords:

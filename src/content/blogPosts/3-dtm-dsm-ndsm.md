@@ -10,12 +10,12 @@ summary: "Czym różnią się: NMT, NMPT, zNMPT? Który model wysokościowy wybr
 ---
 
 NMT, NMPT i zNMPT – Kluczowe Narzędzia w Analizie Danych Przestrzennych
-Nowoczesna geoinformatyka zapewnia nam narzędzia do precyzyjnego modelowania powierzchni ziemi oraz wszystkich obiektów się na niej znajdujących. Interesujące dane, szczególnie dane geoprzestrzenne w postaci różnych modeli terenu, stanowią podstawę prac analitycznych w geodezji/GiS, planowaniu miast, inżynierii, monitorowaniu środowiskowym i wielu innych dziedzinach
+Nowoczesna geoinformatyka zapewnia nam narzędzia do precyzyjnego modelowania powierzchni ziemi oraz wszystkich obiektów się na niej znajdujących. Interesujące dane, szczególnie dane geoprzestrzenne w postaci różnych modeli terenu, stanowią podstawę prac analitycznych w geodezji/GiS, planowaniu miast, inżynierii, monitorowaniu środowiskowym i wielu innych dziedzinach.
 
 ________________________________________
 
 ### Źródła danych
-Numeryczne modele terenu potrzebują danych wejściowych – współrzędnych charakterystycznych punktów terenu poziomych X, Y oraz wysokości. Dane te mogą zostać pozyskane bezpośrednio, lub potrzebują specjalnego przetworzenia, aby mogły służyć do generowania modeli pokrycia terenu. Źródłami danych do tworzenia modeli terenu są m.in.:
+Numeryczne modele terenu potrzebują danych wejściowych – współrzędnych charakterystycznych punktów terenu poziomych X, Y oraz wysokości. Dane te mogą zostać pozyskane bezpośrednio lub potrzebują specjalnego przetworzenia, aby mogły służyć do generowania modeli pokrycia terenu. Źródłami danych do tworzenia modeli terenu są m.in.:
 1. **LIDAR (Light Detection and Ranging)** – pozyskiwany z różnych platform:
     - drony (UAV LiDAR),
     - helikoptery (ALS – Airborne Laser Scanning),

@@ -19,7 +19,7 @@ ________________________________________
 Podstawowym pojęciem w analizie sieci rzecznej jest zlewnia – obszar, z którego woda spływa do jednego cieku głównego. Granice zlewni wyznaczają działy wodne, czyli linie oddzielające wody płynące do różnych systemów rzecznych.
 Przykłady:
 - największa zlewnia na świecie – dorzecze Amazonki obejmuje aż 7 mln km², co stanowi prawie połowę Ameryki Południowej.
-- w Polsce centralną rolę pełni zlewnia Wisły, której dopływy tworzą charakterystyczny układ „gałęzi”.
+- w Polsce centralną funkcję pełni zlewnia Wisły, której dopływy tworzą charakterystyczny układ „gałęzi”.
 Analiza zlewni pozwala zrozumieć, jak woda krąży w środowisku, gdzie może gromadzić się nadmiar opadów i które obszary są narażone na powodzie.
 
 ________________________________________

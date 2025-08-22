@@ -1,6 +1,6 @@
 ---
 id: 4
-title: Ortofotomapy - kombinacje wielokanałowe
+title: Ortofotomapy — kombinacje wielokanałowe
 addDate: 2025-04-11
 modifyDate: 2025-08-16
 keywords:
@@ -9,7 +9,7 @@ keywords:
 summary: "Barwne kompozycje można stworzyć na podstawie zdjęć lotniczych RGB+NIR? Jakie są zastosowania bliskiej podczerwieni w fotogrametrii?"
 ---
 
-Ortofotomapa to jedno z najważniejszych narzędzi w teledetekcji i systemach informacji geograficznej (GIS). Jest to zdjęcie lotnicze lub satelitarne, które zostało przetworzone w taki sposób, aby każdy jego punkt odpowiadał dokładnym współrzędnym na powierzchni Ziemi. W odróżnieniu od zwykłych fotografii lotniczych, ortofotomapy są geometrycznie poprawne — można na nich wykonywać dokładne pomiary odległości, powierzchni, czy kątów, tak jak na mapach topograficznych.
+Ortofotomapa to jedno z najważniejszych narzędzi w teledetekcji i systemach informacji geograficznej (GIS). Jest to zdjęcie lotnicze lub satelitarne, które zostało przetworzone w taki sposób, aby każdy jego punkt odpowiadał dokładnym współrzędnym na powierzchni Ziemi. W odróżnieniu od zwykłych fotografii lotniczych ortofotomapy są geometrycznie poprawne — można na nich wykonywać dokładne pomiary odległości, powierzchni, czy kątów  tak jak na mapach topograficznych.
 Proces tworzenia ortofotomapy polega na połączeniu metodami fotogrametrycznymi zdjęć  z danymi o wysokości terenu (np. z Numerycznego Modelu Terenu), co pozwala skorygować zniekształcenia wynikające z ukształtowania powierzchni i perspektywy aparatu. Efektem jest wierny, przeskalowany obraz terenu, który można bezpośrednio zintegrować z innymi danymi GIS.
 ________________________________________
 ### Rodzaje ortofotomap według kombinacji kanałów spektralnych
@@ -54,5 +54,5 @@ ________________________________________
 ________________________________________
 
 
-W **Soft-Data** tworzymy, przetwarzamy i analizujemy ortofotomapy, wykorzystając nowoczesne technologie oraz know-how. Łączymy wiedzę z zakresów: geodezji, GIS, data science i programowania, aby dostarczać kompleksowe, lekkie rozwiązania skrojone na miarę.
+W **Soft-Data** tworzymy, przetwarzamy i analizujemy ortofotomapy, wykorzystując nowoczesne technologie oraz know-how. Łączymy wiedzę z zakresów: geodezji, GIS, data science i programowania, aby dostarczać kompleksowe, lekkie rozwiązania skrojone na miarę.
 
