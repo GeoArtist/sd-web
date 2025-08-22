@@ -11,15 +11,15 @@ summary: "Czym są: analizy przebiegu rzek, zlewni, gospodarki wodnej w GiS? Do 
 
 
 
-Kiedy spojrzymy na mapę sieci rzecznej, łatwo zauważyć, że układ rzek i ich dopływów przypomina system korzeniowy drzewa, a czasem nawet sieć naczyń krwionośnych. To nie przypadek – natura lubi powtarzać podobne wzory w różnych skalach, a nauka nazywa je strukturami fraktalnymi. Dzięki technologiom GIS możemy dziś nie tylko je obserwować, ale także analizować i zrozumieć procesy, które stoją za kształtowaniem krajobrazu wodnego.
+Kiedy spojrzymy na mapę sieci rzecznej, łatwo zauważymy, że układ rzek i ich dopływów przypomina system korzeniowy drzewa, a czasem nawet sieć naczyń krwionośnych. To nie przypadek – natura lubi powtarzać podobne wzory w różnych skalach, a nauka nazywa je strukturami fraktalnymi. Dzięki technologiom GIS możemy już dziś nie tylko je obserwować, ale również analizować i zrozumieć procesy, które stoją za kształtowaniem wodnego krajobrazu.
 
 ![rivers watershed](/images/blog/images/1/rivers.jpg)
 ________________________________________
 ### Zlewnie i dorzecza – serce hydrologii
-Podstawowym pojęciem w analizie sieci rzecznej jest zlewnia – obszar, z którego woda spływa do jednego cieku głównego. Granice zlewni wyznaczają działy wodne, czyli linie oddzielające wody płynące do różnych systemów rzecznych.
-Przykłady:
+Podstawowym pojęciem w analizie sieci rzecznej jest zlewnia – obszar, z którego woda spływa do jednego cieku głównego. Granice zlewni wyznaczają działy wodne, czyli linie oddzielające wody płynące do różnych systemów rzecznych, np.:
 - największa zlewnia na świecie – dorzecze Amazonki obejmuje aż 7 mln km², co stanowi prawie połowę Ameryki Południowej.
 - w Polsce centralną funkcję pełni zlewnia Wisły, której dopływy tworzą charakterystyczny układ „gałęzi”.
+
 Analiza zlewni pozwala zrozumieć, jak woda krąży w środowisku, gdzie może gromadzić się nadmiar opadów i które obszary są narażone na powodzie.
 
 ________________________________________
@@ -29,7 +29,7 @@ Systemy informacji geograficznej (GIS) umożliwiają przeprowadzanie skomplikowa
 - **analizować przepływ wody** – czyli symulować, jak deszcz spływa po powierzchni i które miejsca są najbardziej narażone na podtopienia.
 - **prognozować powodzie** – łącząc dane o opadach, retencji terenu i sieci rzecznej.
 - **badać jakość wód** – śledząc źródła zanieczyszczeń i ich rozprzestrzenianie się wzdłuż koryta.
-- **odtwarzać historyczne zmiany rzek** – porównując archiwalne mapy z obrazami satelitarnymi i lidar-owymi.
+- **odtwarzać historyczne zmiany rzek** – porównując archiwalne mapy z obrazami satelitarnymi i lidarowymi.
 ________________________________________
 ### Dlaczego rzeki przypominają drzewa? 🌿
 Układ rzeczny rozwija się zgodnie z prawami fizyki i geometrii – woda zawsze dąży do najniższego punktu, a najmniejsze strumienie łączą się, tworząc coraz większe cieki. To sprawia, że powstają charakterystyczne rozgałęzienia, przypominające korzenie czy gałęzie drzewa.

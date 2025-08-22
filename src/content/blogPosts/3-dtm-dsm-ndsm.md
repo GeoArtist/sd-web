@@ -9,7 +9,7 @@ keywords:
 summary: "Czym różnią się: NMT, NMPT, zNMPT? Który model wysokościowy wybrać do konkretnego zadania?"
 ---
 
-NMT, NMPT i zNMPT – Kluczowe Narzędzia w Analizie Danych Przestrzennych
+**NMT, NMPT i zNMPT** – Kluczowe Narzędzia w Analizie Danych Przestrzennych
 Nowoczesna geoinformatyka zapewnia nam narzędzia do precyzyjnego modelowania powierzchni ziemi oraz wszystkich obiektów się na niej znajdujących. Interesujące dane, szczególnie dane geoprzestrzenne w postaci różnych modeli terenu, stanowią podstawę prac analitycznych w geodezji/GiS, planowaniu miast, inżynierii, monitorowaniu środowiskowym i wielu innych dziedzinach.
 
 ________________________________________
@@ -38,9 +38,10 @@ ________________________________________
 
 ### Rodzaje Modeli Pokrycia Terenu
 Wyróżniamy trzy podstawowe rodzaje modeli pokrycia terenu:
-1. Numeryczny Model Terenu (NMT)
-2. Numeryczny Model Pokrycia Terenu (NMPT)
-3. Znormalizowany Model Pokrycia Terenu (zNMPT)
+- Numeryczny Model Terenu (NMT)
+- Numeryczny Model Pokrycia Terenu (NMPT)
+- Znormalizowany Model Pokrycia Terenu (zNMPT)
+
 Każdy z nich dostarcza unikalnych informacji, a ich wybór zależy od charakteru projektu i celu analizy.
 
 ![porównanie modeli pokrycia terenu](/images/blog/images/3/compare_terrain_models.jpg)

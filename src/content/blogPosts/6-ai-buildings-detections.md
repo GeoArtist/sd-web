@@ -23,29 +23,29 @@ ________________________________________
 
 ### 🧠 Jak AI „widzi” obiekty na ortofotomapie?
 Model AI uczy się rozpoznawać obiekty, analizując tysiące oznakowanych przykładów (tzw. dane treningowe). Proces ten obejmuje:
-- Segmentację semantyczną – każdy piksel obrazu zostaje przypisany do określonej klasy (np. budynek, droga, woda)
-- Segmentację instance – rozróżnienie poszczególnych obiektów w tej samej klasie (np. dwa budynki obok siebie)
-- Klasyfikację obiektów – przypisanie fragmentu obrazu do jednej z kilku kategorii (np. dom mieszkalny, magazyn, budynek przemysłowy).
+- **Segmentację semantyczną** – każdy piksel obrazu zostaje przypisany do określonej klasy (np. budynek, droga, woda)
+- **Segmentację instance** – rozróżnienie poszczególnych obiektów w tej samej klasie (np. dwa budynki obok siebie)
+- **Klasyfikację obiektów** – przypisanie fragmentu obrazu do jednej z kilku kategorii (np. dom mieszkalny, magazyn, budynek przemysłowy).
 
 Modele mogą być trenowane zarówno na danych RGB, jak i wielospektralnych czy hiperspektralnych (np. z dronów lub satelitów). W geodezji często wykorzystuje się dodatkowe warstwy wysokościowe (np. NMT, NMPT z LiDAR), które pomagają w odróżnieniu obiektów o podobnym kolorze, ale różnej wysokości.
 
 🔍 Przykłady obiektów wykrywanych automatycznie
-- 🏠 Budynki – w tym domy jednorodzinne, bloki, hale przemysłowe
-- 🚗 Drogi i ścieżki – utwardzone i nieutwardzone, parkingi
-- 🚉 Infrastruktura transportowa – tory kolejowe, przystanki, mosty
-- 🌊 Cieki wodne – rzeki, jeziora, stawy, kanały
-- 🌾 Pokrycie terenu – pola uprawne, lasy, nieużytki
-- 🪧 Elementy małej infrastruktury – ogrodzenia, place składowe
-- ⚡ Infrastruktura techniczna – słupy energetyczne, turbiny wiatrowe, farmy PV
+- **🏠 Budynki** – w tym domy jednorodzinne, bloki, hale przemysłowe
+- **🚗 Drogi i ścieżki** – utwardzone i nieutwardzone, parkingi
+- **🚉 Infrastruktura transportowa** – tory kolejowe, przystanki, mosty
+- **🌊 Cieki wodne** – rzeki, jeziora, stawy, kanały
+- **🌾 Pokrycie terenu** – pola uprawne, lasy, nieużytki
+- **🪧 Elementy małej infrastruktury** – ogrodzenia, place składowe
+- **⚡ Infrastruktura techniczna** – słupy energetyczne, turbiny wiatrowe, farmy PV
 
 ________________________________________
 
 ### 🛠️ Zastosowania w praktyce
-- Aktualizacja baz GIS – szybkie i tanie uzupełnianie i poprawianie danych o obiektach.
-- Planowanie przestrzenne – bieżąca wiedza o stanie zabudowy i układzie komunikacyjnym.
-- Zarządzanie kryzysowe – analiza zniszczeń po powodzi, pożarze, trzęsieniu ziemi.
-- Podatki i kontrola samowoli – automatyczna weryfikacja nowych budynków w terenie.
-- Inwentaryzacje branżowe – np. sieci energetycznych, obiektów przemysłowych, infrastruktury sportowej.
+- **Aktualizacja baz GIS** – szybkie i tanie uzupełnianie i poprawianie danych o obiektach.
+- **Planowanie przestrzenne** – bieżąca wiedza o stanie zabudowy i układzie komunikacyjnym.
+- **Zarządzanie kryzysowe** – analiza zniszczeń po powodzi, pożarze, trzęsieniu ziemi.
+- **Podatki i kontrola samowoli** – automatyczna weryfikacja nowych budynków w terenie.
+- **Inwentaryzacje branżowe** – np. sieci energetycznych, obiektów przemysłowych, infrastruktury sportowej.
 
 ________________________________________
 ### 🚀 Dlaczego to rewolucja?

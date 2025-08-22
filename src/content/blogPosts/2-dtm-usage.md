@@ -28,7 +28,7 @@ Uniwersalność – możliwe jest proste przekształcanie skali i rozdzielczośc
 Szybka integracja z narzędziami GIS – pełna kompatybilność z popularnymi programami, takimi jak QGIS, ArcGIS czy GRASS GIS.
 ________________________________________
 ### Siatka GRID – jak to wygląda w praktyce?
-Wyobraź sobie teren podzielony na równą siatkę kwadratów, z których każdy posiada przypisaną wysokość w metrach nad poziomem morza. Te kwadraty mogą mieć różną wielkość (np. 1 m, 5 m, 10 m), a im mniejsze, tym dokładniejszy jest model.
+Wyobraź sobie teren podzielony na równą siatkę kwadratów, z których każdy posiada przypisaną wysokość w metrach nad poziomem morza. Te kwadraty mogą mieć różną wielkość (np. 1m, 5m, 10m), a im mniejsze, tym dokładniejszy jest model.
 W przypadku NMT taka struktura umożliwia m.in. generowanie przekrojów terenu, analizę spadków czy modelowanie odpływu wód opadowych.
 
 ![grid](/images/blog/images/2/grid.jpg)

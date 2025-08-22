@@ -7,9 +7,10 @@
     max-width: 900px;
     border-radius: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: clamp(1rem, 1vw, 1.1rem);
 
     &__title {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 1vw + 1.5rem, 2.5rem);
         margin-block: 2.5rem 0.5rem;
         color: var(--clr-theme-2);
         text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
@@ -17,7 +18,7 @@
     }
 
     h3 {
-        font-size: 1.25rem;
+        font-size: clamp(1.1rem, 1vw, 1.25rem);
         margin-block: 1.5rem 0rem;
         text-indent: 2.5rem;
         text-align: center;
@@ -31,6 +32,7 @@
         color: var(--clr-black);
         text-indent: 1.5rem;
         text-wrap: pretty;
+        
     }
     ul,ol {
         margin-inline: 1rem;
@@ -40,10 +42,10 @@
          font-style: italic;
         color: var(--clr-black);
         text-wrap: pretty;
-        line-height: 1.35;
+        line-height: 1.4;
         & li {
             list-style: "🔹";
-            margin-block: 0.5rem 0.5rem;
+            
             & li {
                 list-style: "- ";
             }
@@ -53,6 +55,7 @@
         list-style: counter+" ";
 
     }
+    li {margin-block: 0.5rem 0.5rem;}
 
     strong {
         font-weight: var(--fw-bold);
