@@ -24,3 +24,4 @@ export type MarkdownBlogContent = {
   summary: string;
   content: string;
 };
+

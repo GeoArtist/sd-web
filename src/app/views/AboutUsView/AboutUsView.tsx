@@ -2,18 +2,21 @@ import { AboutUsDescription } from "@/app/components/AboutUsDescription/AboutUsD
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 
 import styles from "./AboutUsView.module.scss";
+import FrameMotionSection from "@/app/components/FrameMotion/FrameMotionSection";
 
 export function AboutUsView() {
   return (
     <>
-      <div className={styles.aboutView__header}>
-        <SubPageHeader
-          title={"GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE"}
-        />
-      </div>
-      <div className={styles.aboutView__content}>
-        <AboutUsDescription />
-      </div>
+      <FrameMotionSection>
+        <div className={styles.aboutView__header}>
+          <SubPageHeader
+            title={"GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE"}
+          />
+        </div>
+        <div className={styles.aboutView__content}>
+          <AboutUsDescription />
+        </div>
+      </FrameMotionSection>
     </>
   );
 }

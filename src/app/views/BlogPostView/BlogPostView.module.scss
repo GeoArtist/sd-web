@@ -9,6 +9,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     font-size: clamp(1rem, 1vw, 1.1rem);
 
+   
+
     &__title {
         font-size: clamp(1.5rem, 1vw + 1.5rem, 2.5rem);
         margin-block: 2.5rem 0.5rem;
@@ -85,3 +87,5 @@
         padding: 0.25rem;
     }
 }
+
+

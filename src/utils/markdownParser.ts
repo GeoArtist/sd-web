@@ -116,7 +116,7 @@ export async function getPostData(
   const result = await getMarkdownFile({
     subfolder: "blogPosts",
     slug: postName,
-    toHtml: true,
+    toHtml: false,
   });
 
   if (!result) {
