@@ -6,13 +6,17 @@ import { ContactInfo } from "@/components/ContactInfo/ContactInfo";
 import { redirect } from "next/navigation";
 
 import styles from "./ContactBar.module.scss";
+import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 
 export function ContactBar() {
   return (
     <>
       <div className={styles.contactBar}>
         <Image src={contact} alt="contact-image" />
-        <div className={styles.contactBar__info}>
+        <AnimatedSection
+          className={styles.contactBar__info}
+          variantType="fromRight"
+        >
           <ContactInfo />
           <Button
             type="button"
@@ -21,7 +25,7 @@ export function ContactBar() {
           >
             Napisz do nas
           </Button>
-        </div>
+        </AnimatedSection>
       </div>
     </>
   );

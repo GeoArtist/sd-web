@@ -4,11 +4,12 @@ import bgc from "@/public/images/feature_cards_bgc-min.jpg";
 import Image from "next/image";
 
 import styles from "./FeatureCards.module.scss";
+import { AnimatedUl } from "@/components/FrameMotion/FrameMotionList";
 
 export function FeatureCards() {
   return (
     <>
-      <div className={styles.cards}>
+      <AnimatedUl className={styles.cards}>
         <Image
           className={styles.cards__background}
           src={bgc}
@@ -24,7 +25,7 @@ export function FeatureCards() {
             />
           );
         })}
-      </div>
+      </AnimatedUl>
     </>
   );
 }

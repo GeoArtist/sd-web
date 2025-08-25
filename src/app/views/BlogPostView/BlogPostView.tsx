@@ -7,11 +7,11 @@ import remarkGfm from "remark-gfm";
 import { MarkdownBlogContent } from "@/types/markdown";
 import styles from "./BlogPostView.module.scss";
 import { createMarkdownComponents } from "./BlogMarkdownComponents";
-import MotionWrapper from "@/app/components/FrameMotion/FrameMotionSection";
+import AnimatedSection from "@/app/components/FrameMotion/FrameMotionSection";
 
 export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
   return (
-    <MotionWrapper className={styles.blogPost}>
+    <AnimatedSection className={styles.blogPost}>
       <h2 className={styles.blogPost__title}>{post.title}</h2>
       <div className={styles.blogPost__content}>
         <ReactMarkdown
@@ -21,6 +21,6 @@ export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
           {post.content}
         </ReactMarkdown>
       </div>
-    </MotionWrapper>
+    </AnimatedSection>
   );
 }

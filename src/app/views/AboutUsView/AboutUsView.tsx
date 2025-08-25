@@ -7,16 +7,16 @@ import FrameMotionSection from "@/app/components/FrameMotion/FrameMotionSection"
 export function AboutUsView() {
   return (
     <>
-      <FrameMotionSection>
-        <div className={styles.aboutView__header}>
-          <SubPageHeader
-            title={"GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE"}
-          />
-        </div>
-        <div className={styles.aboutView__content}>
-          <AboutUsDescription />
-        </div>
-      </FrameMotionSection>
+      {/* <FrameMotionSection> */}
+      <div className={styles.aboutView__header}>
+        <SubPageHeader
+          title={"GEODEZJA | GIS | GEOINFORMATYKA | PROGRAMOWANIE"}
+        />
+      </div>
+      <div className={styles.aboutView__content}>
+        <AboutUsDescription />
+      </div>
+      {/* </FrameMotionSection> */}
     </>
   );
 }

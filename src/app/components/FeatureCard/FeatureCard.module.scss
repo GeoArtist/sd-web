@@ -19,10 +19,10 @@
         0 5px 15px rgba(0, 0, 0, 0.8);
     transition:
         filter 0.25s ease,
-        transform 0.25s ease;
+        scale 0.25s ease;
     &:hover,
     &:focus-visible {
-        transform: scale(1.1);
+        scale: 1.1;
     }
 }
 

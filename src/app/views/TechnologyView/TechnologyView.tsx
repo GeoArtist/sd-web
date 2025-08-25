@@ -7,14 +7,14 @@ import FrameMotionSection from "@/app/components/FrameMotion/FrameMotionSection"
 export function TechnologyView() {
   return (
     <>
-      <FrameMotionSection className={styles.technologyView}>
+      <div className={styles.technologyView}>
         <div className={styles.technology__header}>
           <SubPageHeader title={"TECHNOLOGIE"} />
         </div>
         <div className={styles.technology__content}>
           <TechnologyDescription />
         </div>
-      </FrameMotionSection>
+      </div>
     </>
   );
 }

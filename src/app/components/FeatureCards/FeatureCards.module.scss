@@ -11,7 +11,7 @@
     padding-block: 4rem;
     position: relative;
 
-    &:has(div:hover) > div:not(div:hover) {
+    &:has(li:hover) > li:not(li:hover) {
         filter: grayscale(1) opacity(0.5);
     }
 }
