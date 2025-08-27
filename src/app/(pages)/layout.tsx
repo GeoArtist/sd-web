@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
+    <html lang="pl" data-google-analytics-opt-out="">
       <body className={roboto.variable}>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-FYJF1529CR" />
         <Layout>{children}</Layout>

@@ -6,8 +6,27 @@ import Link from "next/link";
 import styles from "./CookieBanner.module.scss";
 import { Button } from "@/components/Button/Button";
 
+// helper: aktualizuje <html data-google-analytics-opt-out="...">
+function updateHtmlConsentAttribute(consent: boolean | null) {
+  if (typeof document === "undefined") return;
+
+  if (consent === true) {
+    document.documentElement.setAttribute(
+      "data-google-analytics-opt-out",
+      "false"
+    ); // zgoda → opt-out = false
+  } else if (consent === false) {
+    document.documentElement.setAttribute(
+      "data-google-analytics-opt-out",
+      "true"
+    ); // brak zgody → opt-out = true
+  } else {
+    document.documentElement.setAttribute("data-google-analytics-opt-out", "");
+  }
+}
+
 // CookieBanner component that displays a banner for cookie consent.
-export  function CookieBanner() {
+export function CookieBanner() {
   const [cookieConsent, setCookieConsent] = useState<boolean | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,18 +37,20 @@ export  function CookieBanner() {
     setIsLoading(false);
   }, []);
 
-  // Update local storage and Google Analytics consent status when cookieConsent changes
+  // Update local storage, GA consent status and <html> attribute when cookieConsent changes
   useEffect(() => {
     if (cookieConsent !== null) {
       setLocalStorage("cookie_consent", cookieConsent);
-    }
 
-    const newValue = cookieConsent ? "granted" : "denied";
+      const newValue = cookieConsent ? "granted" : "denied";
 
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        analytics_storage: newValue,
-      });
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("consent", "update", {
+          analytics_storage: newValue,
+        });
+      }
+
+      updateHtmlConsentAttribute(cookieConsent);
     }
   }, [cookieConsent]);
 

@@ -2,6 +2,7 @@ import { MarkdownOfferContent } from "@/types/markdown";
 import { OfferSubCategory } from "@/types/offerCategory";
 import Image from "next/image";
 import { LegalBasisInfo } from "@/components/LegalBasisInfo/LegalBasisInfo";
+import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 
 import styles from "./ServiceDescription.module.scss";
 
@@ -16,7 +17,7 @@ export function ServiceDescription({
   const { imgUrl, imgAlt } = offer;
   return (
     <>
-      <div className={styles.serviceDescription}>
+      <AnimatedSection className={styles.serviceDescription}>
         <h2>{title}</h2>
         <Image src={imgUrl} alt={imgAlt} placeholder="blur" />
         <div className={styles.serviceDescription__wrapper}>
@@ -68,7 +69,7 @@ export function ServiceDescription({
 
           {legalBasis && <LegalBasisInfo legalBasis={legalBasis} />}
         </div>
-      </div>
+      </AnimatedSection>
     </>
   );
 }
