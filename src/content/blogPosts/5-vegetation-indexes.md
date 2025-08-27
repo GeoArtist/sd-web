@@ -23,6 +23,27 @@ NDVI to jeden z najczęściej stosowanych wskaźników do monitorowania roślinn
 
 ![NDVI](/images/blog/images/5/NDVI.jpg)
 
+**🍃 GNDVI (Green Normalized Difference Vegetation Index)**
+GNDVI wykorzystuje pasmo zielone zamiast czerwonego do lepszej oceny zdrowia roślin.
+
+Zastosowania:
+- Monitorowanie zawartości chlorofilu.
+- Wczesna detekcja stresu wodnego lub chorób roślin.
+
+**🌱 DVI (Difference Vegetation Index)**
+DVI to prosty wskaźnik różnicy między NIR a Red, wykorzystywany do podstawowej analizy roślinności.
+
+Zastosowania:
+- Szybka ocena pokrycia roślinnego.
+- Wstępne analizy porównawcze wegetacji.
+
+**🍂 NDRE (Red Edge NDVI)**
+NDRE wykorzystuje pasmo RedEdge zamiast czerwonego, by dokładniej ocenić zawartość chlorofilu w roślinach.
+
+Zastosowania:
+- Monitorowanie kondycji upraw.
+- Wczesna detekcja niedoboru składników odżywczych.
+
 **🌱 EVI (Enhanced Vegetation Index)**
 EVI jest rozszerzoną wersją NDVI, stworzony z myślą o poprawie dokładności analizy wegetacji w trudnych warunkach, takich jak obszary o dużej wilgotności, obecność pyłów atmosferycznych lub na terenach o dużym zróżnicowaniu wegetacyjnym. Dzięki wprowadzeniu korekcji na wpływ atmosfery oraz zmienne wagi dla kanałów spektralnych (NIR, Red, Blue), EVI oferuje większą odporność na zakłócenia i jest bardziej precyzyjny w takich warunkach.
 
@@ -31,8 +52,49 @@ Zastosowania:
 - Precyzyjne wykrywanie cykli wegetacyjnych.
 - Ocena roślinności w warunkach wysokiej wilgotności atmosferycznej.
 
-
 ![EVI](/images/blog/images/5/EVI.jpg)
+
+**🧪 CVI (Chlorophyll Vegetation Index)**
+CVI szacuje zawartość chlorofilu w roślinach, opierając się na relacji NIR i pasma zielonego.
+
+Zastosowania:
+- Identyfikacja zmian zdrowia roślin.
+- Monitorowanie wzrostu upraw.
+
+**🌤️ TVI (Transformed Vegetation Index)**
+TVI modyfikuje klasyczny NDVI, aby zmniejszyć efekt nasycenia w terenach o wysokiej wegetacji.
+
+Zastosowania:
+- Lepsza analiza intensywnej roślinności.
+- Zwiększona czułość na różnice w biomase.
+
+**🌾 RVI (Ratio Vegetation Index)**
+RVI to klasyczny wskaźnik stosunku odbicia NIR do Red, wykorzystywany do oceny roślinności.
+
+Zastosowania:
+- Szybka analiza terenów zielonych.
+- Wstępne klasyfikacje pokrycia terenu.
+
+**🌾 GCI (Green Chlorophyll Index)**
+GCI służy do estymacji ilości chlorofilu w liściach roślin. Wykorzystuje bliską podczerwień NIR oraz kanał zielony.
+
+Zastosowania:
+- Ocena zdrowia roślin w rolnictwie precyzyjnym.
+- Wykrywanie stresu wegetacyjnego na wczesnym etapie.
+
+**🌡️ VHI (Vegetation Health Index)**
+VHI łączy dane z NDVI i temperatury powierzchni, tworząc wskaźnik zdrowia roślin.
+
+Zastosowania:
+- Śledzenie suszy i stresu cieplnego.
+- Monitorowanie wpływu pogody na wegetację.
+
+**🔥 VARI (Visible Atmospherically Resistant Index)**
+VARI ogranicza wpływ atmosfery w analizach roślinności przy użyciu tylko pasm widzialnych.
+
+Zastosowania:
+- Analiza roślinności z kamer RGB lub dronów.
+- Uproszczone monitorowanie terenów rolnych.
 
 **💧 NDWI (Normalized Difference Water Index)**
 NDWI jest wskaźnikiem stosowanym do wykrywania obszarów wilgotnych i powierzchni wód, takich jak jeziora, rzeki, bagna oraz obszary o wysokiej wilgotności gleby. Bazując na różnicy pomiędzy promieniowaniem odbitym w paśmie zielonym (Green) i bliskiej podczerwieni (NIR), NDWI pozwala na łatwą identyfikację zbiorników wodnych oraz terenów zalanych.
@@ -51,21 +113,19 @@ Zastosowania:
 - Analiza roślinności w strefach suchych.
 - Monitorowanie pustynnienia i degradacji gleby.
 
-
-**🔥 NBR (Normalized Burn Ratio)**
-Wskaźnik do oceny skutków pożarów. Formuła NBR jest bardzo podobna do wskaźnika NDVI, ale oparta na obserwacjach na kanałach NIR i SWIR.
-
-Zastosowania:
-- Identyfikacja obszarów spalonych.
-- Monitorowanie regeneracji po pożarach.
-
-**🌾 GCI (Green Chlorophyll Index)**
-GCI służy do estymacji ilości chlorofilu w liściach roślin. Wykorzystuje bliską podczerwień NIR oraz kanał zielony.
+**❄️ DPSI (Difference Polar Snow Index)**
+DPSI wykorzystuje niebieskie i NIR pasmo do detekcji pokrywy śnieżnej lub lodowej.
 
 Zastosowania:
-- Ocena zdrowia roślin w rolnictwie precyzyjnym.
-- Wykrywanie stresu wegetacyjnego na wczesnym etapie.
+- Monitoring śniegu i zlodzenia powierzchni.
+- Wspomaganie modeli hydrologicznych.
 
+**🌫️ ARVI (Atmospherically Resistant Vegetation Index)**
+ARVI redukuje wpływ atmosfery w pomiarach wegetacji poprzez korektę błękitnego pasma.
+
+Zastosowania:
+- Dokładniejsza analiza roślinności z uwzględnieniem zanieczyszczeń powietrza.
+- Obserwacje w warunkach wysokiego zamglenia.
 
 **🌡 LST (Land Surface Temperature)** 
 Analizuje temperaturę powierzchni terenu na podstawie pasm termalnych, chociaż nie jest to klasyczny indeks wegetacyjny.
