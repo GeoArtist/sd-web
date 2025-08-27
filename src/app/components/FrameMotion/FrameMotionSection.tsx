@@ -6,7 +6,7 @@ import { Variants } from "framer-motion";
 type AnimatedSectionProps = {
   children: ReactNode;
   className?: string;
-  variantType?: "fromRight" | "fromTop";
+  variantType?: keyof typeof sectionVariants;
 };
 
 const sectionVariants: Record<string, Variants> = {
@@ -15,7 +15,7 @@ const sectionVariants: Record<string, Variants> = {
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.4, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   },
   fromTop: {
@@ -23,7 +23,14 @@ const sectionVariants: Record<string, Variants> = {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  },
+  clipCircle: {
+    hidden: { clipPath: "circle(0% at 100% 0%)" },
+    show: {
+      clipPath: "circle(150% at 100% 0%)",
+      transition: { duration: 2, ease: "easeInOut" },
     },
   },
 };
@@ -31,15 +38,24 @@ const sectionVariants: Record<string, Variants> = {
 export default function AnimatedSection({
   children,
   className,
-  variantType = "fromTop", // domyślnie slide z góry
+  variantType = "fromTop",
 }: AnimatedSectionProps) {
+  let amount;
+  switch (variantType) {
+    case "clipCircle":
+      amount = 0;
+      break;
+    default:
+      amount = 0.25;
+      break;
+  }
   return (
     <motion.div
       className={className}
       variants={sectionVariants[variantType]}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: amount }}
     >
       {children}
     </motion.div>
