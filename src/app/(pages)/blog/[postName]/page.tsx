@@ -1,5 +1,5 @@
 
-import BlogPostView from "@/app/views/BlogPostView/BlogPostView";
+import BlogPostView from "@/views/BlogPostView/BlogPostView";
 import { getAllPosts, getPostData } from "@/utils/markdownParser";
 
 export default async function BlogPost({

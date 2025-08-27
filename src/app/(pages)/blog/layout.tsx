@@ -1,6 +1,6 @@
 import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
 import styles from "./page.module.scss";
-import FrameMotionSection from "@/app/components/FrameMotion/FrameMotionSection";
+import AnimatedSection from "@/app/components/FrameMotion/FrameMotionSection";
 
 export default function BlogPostLayout({
   children,
@@ -9,12 +9,12 @@ export default function BlogPostLayout({
 }) {
   return (
     <>
-      <FrameMotionSection className={styles.grid}>
+      <AnimatedSection className={styles.grid}>
         <div className={styles.blogView__header}>
           <SubPageHeader title={"Blog"} />
         </div>
         {children}
-      </FrameMotionSection>
+      </AnimatedSection>
     </>
   );
 }

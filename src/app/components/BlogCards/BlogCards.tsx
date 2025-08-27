@@ -1,10 +1,10 @@
 
 import { blogPostsImgs } from "@/constants/blogPostsImgs"; // Make sure this import is correct
 
-import BlogCard from "@/app/components/BlogCard/BlogCard";
+import BlogCard from "@/components/BlogCard/BlogCard";
 import { MarkdownBlogContent } from "@/types/markdown";
 
-import { AnimatedUl } from "@/app/components/FrameMotion/FrameMotionList";
+import { AnimatedUl } from "@/components/FrameMotion/FrameMotionList";
 import styles from "./BlogCards.module.scss";
 
 export default function BlogCards({

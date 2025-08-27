@@ -1,4 +1,4 @@
-import { RegulationView } from "@/app/views/RegulationView/RegulationView";
+import { RegulationView } from "@/views/RegulationView/RegulationView";
 import { pagesMetadata } from "@/constants/metatags";
 import { regulations } from "@/constants/regulations";
 
@@ -8,7 +8,6 @@ import { Metadata } from "next/types";
 // export async function generateStaticParams() {
 //   return regulations.map((reg) => ({ regulation: reg.path }));
 // }
-
 
 export async function generateMetadata({
   params,

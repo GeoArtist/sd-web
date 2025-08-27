@@ -1,4 +1,4 @@
-import { ServiceDescription } from "@/app/components/ServiceDescription/ServiceDescription";
+import { ServiceDescription } from "@/components/ServiceDescription/ServiceDescription";
 import { pagesMetadata } from "@/constants/metatags";
 import { offerServices } from "@/constants/offerCategories";
 
@@ -47,4 +47,3 @@ export default async function Offer({
     </>
   );
 }
-

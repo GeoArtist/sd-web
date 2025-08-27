@@ -3,7 +3,7 @@ import { Hamburger } from "@/components/Hamburger/Hamburger";
 import { useState, useEffect } from "react";
 import { WindowSizeType } from "@/types/window";
 import { MainMenu } from "@/components/MainMenu/MainMenu";
-import { useMenu, useMenuUpdate } from "@/app/contexts/MenuContext";
+import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 
 export function Navbar(){
   const showSidebarMenu = useMenu();

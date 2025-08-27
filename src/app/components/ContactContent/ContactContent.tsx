@@ -1,7 +1,6 @@
-import { CompanyInfo } from "@/app/components/CompanyInfo/CompanyInfo";
-import { ContactForm } from "@/app/components/ContactForm/ContactForm";
+import { CompanyInfo } from "@/components/CompanyInfo/CompanyInfo";
+import { ContactForm } from "@/components/ContactForm/ContactForm";
 import styles from "./ContactContent.module.scss";
-
 
 export function ContactContent() {
   return (

@@ -1,4 +1,4 @@
-import { TechnologyView } from "@/app/views/TechnologyView/TechnologyView";
+import { TechnologyView } from "@/views/TechnologyView/TechnologyView";
 
 import { pagesMetadata } from "@/constants/metatags";
 import { Metadata } from "next/types";

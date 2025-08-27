@@ -1,6 +1,6 @@
-import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
-import { TechnologyDescription } from "@/app/components/TechnologyDescription/TechnologyDescription";
-import AnimatedSection from "@/app/components/FrameMotion/FrameMotionSection";
+import { SubPageHeader } from "@/components/SubPageHeader/SubPageHeader";
+import { TechnologyDescription } from "@/components/TechnologyDescription/TechnologyDescription";
+import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 
 import styles from "./TechnologyView.module.scss";
 

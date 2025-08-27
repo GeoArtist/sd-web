@@ -1,7 +1,7 @@
 'use client'
 import { OfferCategories} from "@/constants/offerCategories"
 import Link from "next/link";
-import { useCurrentPath } from "@/app/contexts/CurrentPathContext";
+import { useCurrentPath } from "@/contexts/CurrentPathContext";
 import { OfferCategory } from "@/types/offerCategory";
 import { useState, useEffect } from "react";
 import styles from "./SubCategoryMenu.module.scss";

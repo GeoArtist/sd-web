@@ -1,4 +1,4 @@
-import { AboutUsView } from "@/app/views/AboutUsView/AboutUsView";
+import { AboutUsView } from "@/views/AboutUsView/AboutUsView";
 import { pagesMetadata } from "@/constants/metatags";
 import { Metadata } from "next/types";
 

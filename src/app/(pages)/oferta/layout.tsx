@@ -1,5 +1,5 @@
 
-import { ServiceLayoutView } from "@/app/views/ServiceLayoutView/ServiceLayoutView";
+import { ServiceLayoutView } from "@/views/ServiceLayoutView/ServiceLayoutView";
 
 
 export default function OfferLayout({children}:{children:React.ReactNode}){

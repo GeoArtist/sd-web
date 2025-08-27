@@ -1,8 +1,8 @@
 import {FeatureCards} from '@/components/FeatureCards/FeatureCards';
-import {Carousel} from '@/app/components/Carousel/Carousel';
-import {OfferIconsCards} from '@/app/components/OfferIconsCards/OfferIconsCards';
-import {MainServicesBar} from '@/app/components/MainServicesBar/MainServicesBar'; 
-import {ContactBar} from '@/app/components/ContactBar/ContactBar'; 
+import {Carousel} from '@/components/Carousel/Carousel';
+import {OfferIconsCards} from '@/components/OfferIconsCards/OfferIconsCards';
+import {MainServicesBar} from '@/components/MainServicesBar/MainServicesBar'; 
+import {ContactBar} from '@/components/ContactBar/ContactBar'; 
 
 export function MainView() {
  

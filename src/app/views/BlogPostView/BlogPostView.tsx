@@ -5,8 +5,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import { MarkdownBlogContent } from "@/types/markdown";
-import { createMarkdownComponents } from "@/app/components/BlogMarkdown/BlogMarkdownComponents";
-import AnimatedSection from "@/app/components/FrameMotion/FrameMotionSection";
+import { createMarkdownComponents } from "@/components/BlogMarkdown/BlogMarkdownComponents";
+import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 import styles from "./BlogPostView.module.scss";
 
 export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {

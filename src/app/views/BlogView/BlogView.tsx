@@ -1,7 +1,7 @@
 "use client";
 import { MarkdownBlogContent } from "@/types/markdown";
 import { useSearchParams } from "next/navigation";
-import Pagination from "@/app/components/Pagination/Pagination";
+import Pagination from "@/components/Pagination/Pagination";
 import BlogCards from "@/components/BlogCards/BlogCards";
 
 const POSTS_PER_PAGE = 5;

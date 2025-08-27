@@ -1,7 +1,7 @@
-import { AboutUsDescription } from "@/app/components/AboutUsDescription/AboutUsDescription";
-import { SubPageHeader } from "@/app/components/SubPageHeader/SubPageHeader";
+import { AboutUsDescription } from "@/components/AboutUsDescription/AboutUsDescription";
+import { SubPageHeader } from "@/components/SubPageHeader/SubPageHeader";
 
-import AnimatedSection from "@/app/components/FrameMotion/FrameMotionSection";
+import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 import styles from "./AboutUsView.module.scss";
 
 export function AboutUsView() {
