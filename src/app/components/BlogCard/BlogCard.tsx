@@ -4,8 +4,8 @@ import { BlogPostImg } from "@/types/blogPost";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/Button/Button";
+import { AnimatedLi } from "@/components/FrameMotion/FrameMotionList";
 import styles from "./BlogCard.module.scss";
-
 
 export default function BlogCard({
   post,
@@ -14,9 +14,12 @@ export default function BlogCard({
   post: MarkdownBlogContent;
   thumbnail: BlogPostImg | undefined;
 }) {
-
   return (
-    <li key={post.postName} className={styles.blogCard}>
+    <AnimatedLi
+      key={post.postName}
+      className={styles.blogCard}
+      variantType="fromTop"
+    >
       <Link href={`/blog/${post.postName}`} className={styles.blogCard__link}>
         <h2 className={styles.blogCard__title}>{post.title}</h2>
       </Link>
@@ -30,10 +33,13 @@ export default function BlogCard({
           className={styles.blogCard__image}
         />
       )}
-      <p className={styles.blogCard__summary}>{post.summary}</p>
-      <Link href={`/blog/${post.postName}`} >
+      <p
+        className={styles.blogCard__summary}
+        dangerouslySetInnerHTML={{ __html: post.summary }}
+      />
+      <Link href={`/blog/${post.postName}`}>
         <Button type="button">Czytaj więcej</Button>
       </Link>
-    </li>
+    </AnimatedLi>
   );
 }

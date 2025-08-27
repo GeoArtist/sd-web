@@ -1,12 +1,10 @@
 "use client";
-import { blogPostsImgs } from "@/constants/blogPostsImgs"; // Make sure this import is correct
 import { MarkdownBlogContent } from "@/types/markdown";
-import BlogCard from "@/app/components/BlogCard/BlogCard";
 import { useSearchParams } from "next/navigation";
 import Pagination from "@/app/components/Pagination/Pagination";
-import styles from "./BlogView.module.scss";
+import BlogCards from "@/components/BlogCards/BlogCards";
 
-const POSTS_PER_PAGE = 3;
+const POSTS_PER_PAGE = 5;
 
 export function BlogView({ posts }: { posts: MarkdownBlogContent[] }) {
   const searchParams = useSearchParams();
@@ -18,14 +16,7 @@ export function BlogView({ posts }: { posts: MarkdownBlogContent[] }) {
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   return (
     <>
-      <ul className={styles.blogList}>
-        {currentPosts.map((post) => {
-          const thumbnail = blogPostsImgs.find((img) => img.postId === post.id);
-          return (
-            <BlogCard key={post.postName} post={post} thumbnail={thumbnail} />
-          );
-        })}
-      </ul>
+      <BlogCards currentPosts={currentPosts} currentPage={currentPage} />
       <Pagination currentPage={currentPage} totalPages={totalPages} />
     </>
   );

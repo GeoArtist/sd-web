@@ -19,12 +19,12 @@
         0 5px 15px rgba(0, 0, 0, 0.8);
     transition:
         filter 0.25s ease,
-        transform 0.25s ease;
+        scale 0.25s ease;
     &:hover,
     &:focus-visible {
-        transform: scale(1.05);
+        scale: 1.05;
         & .blogCard__image{
-            transform: scale(1.0)
+            scale: 1;
         }
     }
 
@@ -76,8 +76,8 @@
     max-width: calc(300px - 2rem);
     height: 200px;
     margin: 0.25rem auto 0.35rem auto;
-    transform: scale(0.95);
-    transition: transform 0.25s ease;
+    scale: 0.95;
+    transition: scale 0.25s ease;
 
 }
 
@@ -85,11 +85,13 @@
     margin: 1rem 0.5rem 1.5rem 0.5rem;
 }
 .blogCard__summary{
-    margin-inline: 2rem;
-    font-size: clamp(0.85rem, 1vw, 0.9rem);
+    align-self: start;
+    margin-inline: 2.75rem 2rem;
+    margin-block: 0.25rem 0.25rem;
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
     text-align: start;
     text-indent: .5rem;
-    // text-wrap: balance;
+    text-wrap: pretty;
 
 
 }

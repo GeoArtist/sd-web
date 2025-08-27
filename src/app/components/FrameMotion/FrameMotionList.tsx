@@ -31,7 +31,7 @@ const listVariants = {
   initial: {},
   whileInView: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -42,7 +42,7 @@ export function AnimatedUl(props: HTMLMotionProps<"ul">) {
       variants={listVariants}
       initial="initial"
       whileInView="whileInView"
-      viewport={{ once: true, amount: 0.75 }}
+      viewport={{ once: false, amount: 0.75 }}
       {...props}
     />
   );
