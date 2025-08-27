@@ -16,6 +16,7 @@ export function ContactBar() {
         <AnimatedSection
           className={styles.contactBar__info}
           variantType="fromRight"
+          animateOnlyFirst={true}
         >
           <ContactInfo />
           <Button
