@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination/Pagination";
 import BlogCards from "@/components/BlogCards/BlogCards";
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 6;
 
 export function BlogView({ posts }: { posts: MarkdownBlogContent[] }) {
   const searchParams = useSearchParams();

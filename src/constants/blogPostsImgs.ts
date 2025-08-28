@@ -6,42 +6,49 @@ import dtmDsmNdsm from "@/public/images/blog/thumbnails/dtm-dsm-ndsm-thumbnail.j
 import vegetationIndexes from "@/public/images/blog/thumbnails/vegetation-indexes-thumbnail.jpg";
 import orthophotomap from "@/public/images/blog/thumbnails/orthophotomap-thumbnail.jpg";
 import aiBuilding from "@/public/images/blog/thumbnails/ai-building-thumbnail.jpg";
+import cartography from "@/public/images/blog/thumbnails/cartography_thumbnail.jpg";
 
 export const blogPostsImgs: BlogPostImg[] = [
   {
     postId: 1,
     url: watershedanalsis,
-    alt: "watershed analysis thumbnail",
+    alt: "analiza zlewni miniaturka",
     type: "thumbnail",
   },
   {
     postId: 2,
     url: dtmUsage,
-    alt: "dtm usage examples thumbnail",
+    alt: "numeryczny model terenu i jego zastosowania miniaturka",
     type: "thumbnail",
   },
   {
     postId: 3,
     url: dtmDsmNdsm,
-    alt: "dtm dsm ndsm thumbnail",
+    alt: "numeryczne modele powierzchni terenu miniaturka",
     type: "thumbnail",
   },
   {
     postId: 4,
     url: orthophotomap,
-    alt: "orthophotomap RGB and NIR thumbnail",
+    alt: "ortofotomapa RGB i NIR miniaturka",
     type: "thumbnail",
   },
   {
     postId: 5,
     url: vegetationIndexes,
-    alt: "vegetation indexes thumbnail",
+    alt: "indeksy wegetacyjne miniaturka",
     type: "thumbnail",
   },
   {
     postId: 6,
     url: aiBuilding,
-    alt: "automatic ai building detection thumbnail",
+    alt: "automatyczna detekcja budynków AI miniaturka",
+    type: "thumbnail",
+  },
+  {
+    postId: 7,
+    url: cartography,
+    alt: "metody kartograficzne miniaturka",
     type: "thumbnail",
   },
 ];
