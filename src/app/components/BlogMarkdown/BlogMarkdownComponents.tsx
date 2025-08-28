@@ -6,10 +6,7 @@ import type { Components } from "react-markdown";
 const MotionImage = motion.img;
 
 // Wrapper for a single image
-function AnimatedImage({
-  className,
-  ...props
-}: any & { className?: string }) {
+function AnimatedImage({ className, ...props }: { className?: string }) {
   return (
     <MotionImage
       {...props}
@@ -20,7 +17,7 @@ function AnimatedImage({
         stiffness: 350,
         damping: 30,
         mass: 1.5,
-        bounce: 1
+        bounce: 1,
       }}
       viewport={{ once: true, amount: 0.2 }}
       className={`${className ?? ""}`}
