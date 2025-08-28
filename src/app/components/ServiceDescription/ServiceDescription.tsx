@@ -17,7 +17,10 @@ export function ServiceDescription({
   const { imgUrl, imgAlt } = offer;
   return (
     <>
-      <AnimatedSection className={styles.serviceDescription}>
+      <AnimatedSection
+        className={styles.serviceDescription}
+        animateOnlyFirst={true}
+      >
         <h2>{title}</h2>
         <Image src={imgUrl} alt={imgAlt} placeholder="blur" />
         <div className={styles.serviceDescription__wrapper}>
