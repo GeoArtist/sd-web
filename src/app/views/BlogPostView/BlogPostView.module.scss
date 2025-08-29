@@ -65,11 +65,15 @@
     hr {
         margin-block: 1rem;
     }
+    // IMG
+    & p:has(img) {
+        margin:0;
+    }
     img {
         object-fit: cover;
         max-height: 50vh;
         width: auto;
-        max-width: 80%;
+        max-width: 100%;
         margin-inline: auto;
         margin-block: 0.75rem;
     }
@@ -96,5 +100,4 @@
         }
     }
 }
-
 
