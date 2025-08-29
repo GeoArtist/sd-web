@@ -64,7 +64,7 @@ export default function AnimatedSection({
   variantType = "fromTop",
   animateOnlyFirst = false,
 }: AnimatedSectionProps) {
-  const amount = variantType === "clipCircle" ? 0 : 0.15;
+  const amount = variantType === "fromRight" ? 0.15 : 0;
 
   const childrenArray = Children.toArray(children);
 
