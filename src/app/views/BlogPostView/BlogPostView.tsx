@@ -14,10 +14,15 @@ import styles from "./BlogPostView.module.scss";
 export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
   const router = useRouter();
 
-  const handleBack = () => {
-    router.back(); // cofa do poprzedniej strony w historii
-  };
 
+  const handleBackClick = () => {
+    // Use document.referrer to check if user has a previous page
+    if (document.referrer) {
+      router.back();
+    } else {
+      router.push("/blog"); // default fallback
+    }
+  };
   return (
     <>
       <AnimatedSection className={styles.blogPost}>
@@ -31,7 +36,7 @@ export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
           </ReactMarkdown>
         </div>
 
-        <Button onClick={handleBack} type="submit">
+        <Button onClick={handleBackClick} type="submit">
           Powrót
         </Button>
       </AnimatedSection>
