@@ -22,6 +22,7 @@ export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
     } else {
       router.push("/blog"); // default fallback
     }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <>
