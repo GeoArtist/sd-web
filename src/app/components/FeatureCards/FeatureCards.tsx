@@ -9,7 +9,7 @@ import { AnimatedUl } from "@/components/FrameMotion/FrameMotionList";
 export function FeatureCards() {
   return (
     <>
-      <AnimatedUl className={styles.cards}>
+      <AnimatedUl className={styles.cards} amount={0.4}>
         <Image
           className={styles.cards__background}
           src={bgc}

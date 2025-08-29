@@ -15,7 +15,7 @@ export function MainServicesBar() {
           alt="rtk-background"
           className={styles.MainServicesBar__img}
         />
-        <AnimatedUl className={styles.MainServicesBar__wrapper}>
+        <AnimatedUl className={styles.MainServicesBar__wrapper} amount={0.4}>
           <AnimatedLi>Pozyskiwanie</AnimatedLi>
           <AnimatedLi>Przetwarzanie</AnimatedLi>
           <AnimatedLi>Analizowanie</AnimatedLi>

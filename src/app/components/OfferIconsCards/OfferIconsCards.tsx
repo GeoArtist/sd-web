@@ -10,7 +10,7 @@ import styles from "./OfferIconsCards.module.scss";
 export function OfferIconsCards() {
   return (
     <>
-      <AnimatedUl className={styles.offerIcons}>
+      <AnimatedUl className={styles.offerIcons} amount={0.4}>
         <Image src={wordmap} alt="world-map" className={styles.background} />
         {offerIcons.map((icon) => {
           return (

@@ -37,7 +37,7 @@ const listVariants = {
 };
 
 export function AnimatedUl({
-  amount = 0.2,
+  amount = 0.1,
   ...props
 }: HTMLMotionProps<"ul"> & { amount?: number }) {
   return (
@@ -51,12 +51,16 @@ export function AnimatedUl({
   );
 }
 
-export function AnimatedOl(props: HTMLMotionProps<"ol">) {
+export function AnimatedOl({
+  amount = 0.15,
+  ...props
+}: HTMLMotionProps<"ol"> & { amount?: number }) {
   return (
     <motion.ol
       variants={listVariants}
       initial="initial"
       whileInView="whileInView"
+      viewport={{ once: true, amount }}
       {...props}
     />
   );
