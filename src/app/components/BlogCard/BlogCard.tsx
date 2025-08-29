@@ -27,11 +27,13 @@ export default function BlogCard({
         {post.addTime.toLocaleDateString()}
       </p>
       {thumbnail && (
-        <Image
-          src={thumbnail.url}
-          alt={thumbnail.alt}
-          className={styles.blogCard__image}
-        />
+        <Link href={`/blog/${post.postName}`}>
+          <Image
+            src={thumbnail.url}
+            alt={thumbnail.alt}
+            className={styles.blogCard__image}
+          />
+        </Link>
       )}
       <p
         className={styles.blogCard__summary}

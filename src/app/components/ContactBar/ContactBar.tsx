@@ -5,8 +5,8 @@ import { Button } from "@/components/Button/Button";
 import { ContactInfo } from "@/components/ContactInfo/ContactInfo";
 import { redirect } from "next/navigation";
 
-import styles from "./ContactBar.module.scss";
 import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
+import styles from "./ContactBar.module.scss";
 
 export function ContactBar() {
   return (
