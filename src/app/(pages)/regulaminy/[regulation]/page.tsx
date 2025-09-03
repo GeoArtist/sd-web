@@ -19,12 +19,10 @@ export async function generateMetadata({
   return pagesMetadata[regulation];
 }
 
-export default async function RegulationsPage({
-  params,
-}: {
-  params: Promise<{ regulation: string }>;
-}) {
-  const regulation = (await params).regulation;
+export default async function RegulationsPage(
+  props: PageProps<"/regulaminy/[regulation]">
+) {
+  const regulation = (await props.params).regulation;
 
   const md_filename = regulations.filter((reg) => reg.path === regulation)[0]
     ?.mdFileName;

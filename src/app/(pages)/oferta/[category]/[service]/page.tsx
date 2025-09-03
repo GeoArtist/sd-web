@@ -22,13 +22,11 @@ export async function generateMetadata({
   return pagesMetadata[categoryService];
 }
 
-export default async function Offer({
-  params,
-}: {
-  params: Promise<{ service: string; category: string }>;
-}) {
+export default async function Offer(
+  props: PageProps<"/oferta/[category]/[service]">
+) {
   // Retrieve the category, service from the params
-  const { service, category } = await params;
+  const { service, category } = await props.params;
 
   // Get the markdown file name from the service (query param)
   const offer = offerServices.filter((offer) => offer.path === service)[0];

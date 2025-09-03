@@ -10,16 +10,12 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics/GoogleAnalytics";
 
 export const metadata: Metadata = pagesMetadata["home"];
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout(props: LayoutProps<"/">) {
   return (
     <html lang="pl" data-google-analytics-opt-out="">
       <body className={roboto.variable}>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-FYJF1529CR" />
-        <Layout>{children}</Layout>
+        <Layout>{props.children}</Layout>
         <Toaster
           richColors
           position={"top-right"}

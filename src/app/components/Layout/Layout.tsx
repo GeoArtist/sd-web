@@ -4,17 +4,14 @@ import { TopBar } from "@/components/TopBar/TopBar";
 import { MainContent } from "@/components/MainContent/MainContent";
 import {CurrentPathProvider} from '@/contexts/CurrentPathContext';
 import { CookieBanner } from "@/components/CookieBanner/CookieBanner";
-type LayoutProps = {
-  children: React.ReactNode;
-};
 
-export function Layout({ children }: LayoutProps) {
+export function Layout(props: LayoutProps<"/">) {
   return (
     <>
       <CurrentPathProvider>
         <TopBar />
 
-        <MainContent>{children}</MainContent>
+        <MainContent>{props.children}</MainContent>
         <CookieBanner />
         <Footer />
       </CurrentPathProvider>
