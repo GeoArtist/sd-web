@@ -1,11 +1,15 @@
+.notFound,
 .loader {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 100%;
+    margin-top: 30vh;
 
+    & h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .grid {
