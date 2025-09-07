@@ -13,9 +13,11 @@
     &:has(li:hover) > li:not(li:hover) {
         filter: grayscale(1) opacity(0.5);
     }
-}
-@media (max-width: 800px) {
-    .blogList {
+//     @media (width< 1100px) {
+//         grid-template-columns:repeat(2, 300px);;
+// }
+    @media (width< 800px) {
         grid-template-columns: 1fr;
-    }
 }
+}
+

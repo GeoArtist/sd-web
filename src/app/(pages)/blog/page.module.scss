@@ -15,22 +15,18 @@
     margin-top: 3rem;
     margin-inline: auto;
     place-items: center;
-   
-
-}
-
-@media (max-width: 1200px) {
-    .grid {
+   @media (width < 1200px) {
         grid-template-columns: 1fr;
+        padding-inline: 0.75rem;
         margin-inline: 2rem;
         margin-bottom: 3rem;
-    }
+        }
 
-}
-
-@media (max-width: 600px) {
-    .grid {
+    @media (width < 600px) {
         margin-inline:0.75rem;
-    }
-     
 }
+}
+
+
+
+

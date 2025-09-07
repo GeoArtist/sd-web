@@ -16,8 +16,12 @@
             content: "-";
             margin-inline: 1.5rem 0.5rem;
         }
+        a {
+            text-decoration: underline;
+        }
         a:hover,&:focus-visible {
             color: var(--clr-link-default);
+
         }
     }
 

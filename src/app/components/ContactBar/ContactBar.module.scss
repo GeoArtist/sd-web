@@ -105,10 +105,10 @@
     .contactBar {
         grid-template-columns: 1fr;
         justify-items:end;
-    & .contactBar__info {
-        grid-column: 1;}
+        & .contactBar__info {
+            grid-column: 1;}
+        }
     }
-}
 
 
 

@@ -32,7 +32,7 @@
         margin-inline: 1rem;
         line-height: 1.6;
         color: var(--clr-black);
-        text-indent: 1.5rem;
+        text-indent: 1rem;
         text-wrap: pretty;
         
     }
@@ -41,7 +41,7 @@
         margin-block: 0.5rem 1rem;
         padding-left: 2rem;
         list-style-type: disc;
-         font-style: italic;
+        font-style: italic;
         color: var(--clr-black);
         text-wrap: pretty;
         line-height: 1.4;
@@ -78,17 +78,18 @@
         margin-block: 0.75rem;
     }
 
-    th {
-        padding: 0.25rem;
-        font-size: 0.9rem;
+    a {
+        // margin-bottom: 0.25rem;
+        text-wrap: pretty;
+        word-wrap: break-word;
+        font-style: italic;
+        text-decoration: underline;
         font-weight: var(--fw-bold);
-        border-bottom: 2px solid var(--clr-theme-2);
-    }
-
-    td {
-        font-size: 0.75rem;
-        margin-inline: 0.25em;
-        padding: 0.25rem;
+        
+        
+        &:hover,&:focus-visible {
+            color: var(--clr-link-default);
+        }
     }
 
     & div:has(button) {
