@@ -28,12 +28,11 @@ function AnimatedImage({ className, ...props }: { className?: string }) {
 // Function to create markdown components
 export function createMarkdownComponents(customImgClass = "blogPost__img"): Components {
   return {
-    img: ({ node, className, ...props }) => (
+    img: ({ className, ...props }) => (
       <AnimatedImage
         {...props}
         className={`${customImgClass} ${className ?? ""}`}
       />
     ),
-
   };
 }
