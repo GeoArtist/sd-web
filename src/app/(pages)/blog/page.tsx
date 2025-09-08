@@ -2,6 +2,7 @@ import { getAllPosts, getPostData } from "@/utils/markdownParser";
 import { BlogView } from "@/views/BlogView/BlogView";
 import { Metadata } from "next/types";
 import { pagesMetadata } from "@/constants/metatags";
+
 export const metadata: Metadata = pagesMetadata["blog"];
 
 export default async function BlogList() {
