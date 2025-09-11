@@ -14,7 +14,6 @@ export default function RootLayout(props: LayoutProps<"/">) {
   return (
     <html lang="pl" data-google-analytics-opt-out="">
       <body className={roboto.variable}>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-P34N4D71RT" />
         <Layout>{props.children}</Layout>
         <Toaster
           richColors
