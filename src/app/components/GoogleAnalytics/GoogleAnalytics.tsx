@@ -48,7 +48,7 @@ function GoogleAnalyticsComponent({
 
             // Default GA block
             gtag('consent', 'default', {
-              'analytics_storage': 'denied'
+              'analytics_storage': 'granted'
             });
 
             gtag('config', '${GA_MEASUREMENT_ID}', {
