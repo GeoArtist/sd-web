@@ -21,56 +21,58 @@ export function ServiceDescription({
         className={styles.serviceDescription}
         animateOnlyFirst={true}
       >
-        <h2>{title}</h2>
-        <Image src={imgUrl} alt={imgAlt} placeholder="blur" />
-        <div className={styles.serviceDescription__wrapper}>
-          <h3 className={styles.serviceDescription__name}>Opis usługi:</h3>
-          {description.map((line, index) => {
-            const boldTextMatch = /\*\*(.*?)\*\*/.exec(line);
-            if (boldTextMatch) {
-              const parts = line.split(/\*\*(.*?)\*\*/).filter(Boolean);
+        <div>
+          <h2>{title}</h2>
+          <Image src={imgUrl} alt={imgAlt} placeholder="blur" />
+          <div className={styles.serviceDescription__wrapper}>
+            <h3 className={styles.serviceDescription__name}>Opis usługi:</h3>
+            {description.map((line, index) => {
+              const boldTextMatch = /\*\*(.*?)\*\*/.exec(line);
+              if (boldTextMatch) {
+                const parts = line.split(/\*\*(.*?)\*\*/).filter(Boolean);
+                return (
+                  <p
+                    key={index}
+                    className={
+                      line.startsWith("-") ? styles.listItem : styles.paragraph
+                    }
+                  >
+                    {parts.map((part, i) =>
+                      boldTextMatch[1] === part ? (
+                        <span key={i} className={styles.bold}>
+                          {part}
+                        </span>
+                      ) : (
+                        part
+                      )
+                    )}
+                  </p>
+                );
+              }
+              if (line.startsWith("-")) {
+                return (
+                  <p key={index} className={styles.listItem}>
+                    {line}
+                  </p>
+                );
+              }
               return (
-                <p
-                  key={index}
-                  className={
-                    line.startsWith("-") ? styles.listItem : styles.paragraph
-                  }
-                >
-                  {parts.map((part, i) =>
-                    boldTextMatch[1] === part ? (
-                      <span key={i} className={styles.bold}>
-                        {part}
-                      </span>
-                    ) : (
-                      part
-                    )
-                  )}
-                </p>
-              );
-            }
-            if (line.startsWith("-")) {
-              return (
-                <p key={index} className={styles.listItem}>
+                <p key={index} className={styles.paragraph}>
                   {line}
                 </p>
               );
-            }
-            return (
-              <p key={index} className={styles.paragraph}>
-                {line}
-              </p>
-            );
-          })}
-          {time && (
-            <>
-              <h3 className={styles.serviceDescription__name}>
-                Czas realizacji:
-              </h3>
-              <p className={styles.paragraph}>{time}</p>
-            </>
-          )}
+            })}
+            {time && (
+              <>
+                <h3 className={styles.serviceDescription__name}>
+                  Czas realizacji:
+                </h3>
+                <p className={styles.paragraph}>{time}</p>
+              </>
+            )}
 
-          {legalBasis && <LegalBasisInfo legalBasis={legalBasis} />}
+            {legalBasis && <LegalBasisInfo legalBasis={legalBasis} />}
+          </div>
         </div>
       </AnimatedSection>
     </>
