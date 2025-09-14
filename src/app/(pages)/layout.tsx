@@ -6,8 +6,6 @@ import { Toaster } from "sonner";
 import { Layout } from "@/components/Layout/Layout";
 import { pagesMetadata } from "@/constants/metatags";
 
-import { GoogleAnalytics } from "@/components/GoogleAnalytics/GoogleAnalytics";
-
 export const metadata: Metadata = pagesMetadata["home"];
 
 export default function RootLayout(props: LayoutProps<"/">) {
