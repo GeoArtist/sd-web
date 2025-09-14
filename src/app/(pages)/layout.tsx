@@ -10,7 +10,7 @@ export const metadata: Metadata = pagesMetadata["home"];
 
 export default function RootLayout(props: LayoutProps<"/">) {
   return (
-    <html lang="pl" data-google-analytics-opt-out="">
+    <html lang="pl">
       <body className={roboto.variable}>
         <Layout>{props.children}</Layout>
         <Toaster
