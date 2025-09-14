@@ -1,18 +1,18 @@
 import type { NextConfig } from "next";
 
 const cspHeader = `
-  default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' blob: data: *.tile.openstreetmap.org https://www.google-analytics.com https://www.googletagmanager.com;
-  font-src 'self';
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net;
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
-  upgrade-insecure-requests;
-`;
+              default-src 'self';
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.googlesyndication.com;
+              style-src 'self' 'unsafe-inline';
+              img-src 'self' blob: data: *.tile.openstreetmap.org https://www.google-analytics.com https://www.googletagmanager.com https://www.google.pl https://www.google.com https://www.googlesyndication.com https://www.gstatic.com https://stats.g.doubleclick.net;
+              font-src 'self';
+              connect-src 'self' https://www.google-analytics.com https://region1.analytics.google.com https://www.googletagmanager.com https://analytics.google.com https://stats.g.doubleclick.net;
+              object-src 'none';
+              base-uri 'self';
+              form-action 'self';
+              frame-ancestors 'none';
+              upgrade-insecure-requests;
+            `.replace(/\s{2,}/g, " "); // remove newlines and extra spaces
 
 
 
