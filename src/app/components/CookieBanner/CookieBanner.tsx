@@ -72,6 +72,7 @@ export function CookieBanner() {
         injectGTM(); // tylko przy akceptacji
       }
     }
+    injectGTM();
   }, [cookieConsent]);
 
   // Do not render the banner if loading or consent is already given
