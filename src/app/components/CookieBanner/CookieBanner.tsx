@@ -1,27 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { getLocalStorage, setLocalStorage } from "@/utils/storage";
+import { useEffect } from "react";
 import Link from "next/link";
 import styles from "./CookieBanner.module.scss";
 import { Button } from "@/components/Button/Button";
-import {
-  updateHtmlConsentAttribute,
-  useCookieConsent,
-} from "@/contexts/CookieConsentContext";
+import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { injectGTM } from "@/contexts/CookieConsentContext";
+
 // CookieBanner component
 export function CookieBanner() {
   const { consent, setConsent } = useCookieConsent();
   useEffect(() => {
     if (consent === true) {
-      injectGTM(); // wstrzyknięcie GTM dopiero jeśli zgoda istnieje
-      // updateHtmlConsentAttribute(consent);
+      injectGTM(); // inject GTM only if consent exists
     }
   }, [consent]);
 
   // Do not render the banner if loading or consent is already given
-  if (consent !== null) return null; // już zaakceptowano/odrzucono
+  if (consent !== null) return null; // already accepted or rejected
   return (
     <div className={styles.cookieBanner}>
       <div className={styles.cookieBanner__wrapper}>
