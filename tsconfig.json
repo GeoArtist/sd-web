@@ -25,7 +25,7 @@
       "@/hooks/*": ["./src/hooks/*"],
       "@/components/*": ["./src/app/components/*"],
       "@/constants/*": ["./src/constants/*"],
-      "@/contexts/*": ["./src/app/contexts/*"],
+      "@/contexts/*": ["./src/contexts/*"],
       "@/views/*": ["./src/app/views/*"],
       "@/types/*": ["./src/types/*"],
       "@/utils/*": ["./src/utils/*"],

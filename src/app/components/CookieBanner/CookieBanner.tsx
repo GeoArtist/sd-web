@@ -8,8 +8,8 @@ import { Button } from "@/components/Button/Button";
 import {
   updateHtmlConsentAttribute,
   useCookieConsent,
-} from "@/hooks/useCookie";
-import { injectGTM } from "@/hooks/useCookie";
+} from "@/contexts/CookieConsentContext";
+import { injectGTM } from "@/contexts/CookieConsentContext";
 // CookieBanner component
 export function CookieBanner() {
   const { consent, setConsent } = useCookieConsent();

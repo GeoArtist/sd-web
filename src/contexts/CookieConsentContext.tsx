@@ -37,9 +37,9 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <CookieConsentContext.Provider value={{ consent, setConsent }}>
+    <CookieConsentContext value={{ consent, setConsent }}>
       {children}
-    </CookieConsentContext.Provider>
+    </CookieConsentContext>
   );
 }
 

@@ -2,9 +2,9 @@
 import { Footer } from "@/components/Footer/Footer";
 import { TopBar } from "@/components/TopBar/TopBar";
 import { MainContent } from "@/components/MainContent/MainContent";
-import {CurrentPathProvider} from '@/contexts/CurrentPathContext';
+import { CurrentPathProvider } from "@/contexts/CurrentPathContext";
 import { CookieBanner } from "@/components/CookieBanner/CookieBanner";
-import { CookieConsentProvider } from "@/hooks/useCookie";
+import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

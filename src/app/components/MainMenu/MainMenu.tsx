@@ -1,9 +1,9 @@
 'use client'
 import Link from "next/link";
 import { OfferMenu } from "@/components/OfferMenu/OfferMenu";
-import {useCurrentPath} from '@/contexts/CurrentPathContext'
-import { useToogle } from '@/hooks/useToogle';
-import {useMenu, useMenuUpdate} from '@/contexts/MenuContext'
+import { useCurrentPath } from "@/contexts/CurrentPathContext";
+import { useToogle } from "@/hooks/useToogle";
+import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 import { MainMenuProps } from "@/types/mainMenu";
 
 import styles from './MainMenu.module.scss'
