@@ -8,6 +8,7 @@ import orthophotomap from "@/public/images/blog/thumbnails/orthophotomap-thumbna
 import aiBuilding from "@/public/images/blog/thumbnails/ai-building-thumbnail.jpg";
 import cartography from "@/public/images/blog/thumbnails/cartography_thumbnail.jpg";
 import canopyHeightModel from "@/public/images/blog/thumbnails/canopy-height-model-thumbnail.jpg";
+import treesDetection from "@/public/images/blog/thumbnails/trees-detection-thumbnail.jpg";
 
 export const blogPostsImgs: BlogPostImg[] = [
   {
@@ -56,6 +57,12 @@ export const blogPostsImgs: BlogPostImg[] = [
     postId: 8,
     url: canopyHeightModel,
     alt: "model wysokości koron drzew miniaturka",
+    type: "thumbnail",
+  },
+  {
+    postId: 9,
+    url: treesDetection,
+    alt: "model wykrywania drzew miniaturka",
     type: "thumbnail",
   },
 ];
