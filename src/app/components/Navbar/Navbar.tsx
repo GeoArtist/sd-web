@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import { Hamburger } from "@/components/Hamburger/Hamburger";
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 import { WindowSizeType } from "@/types/window";
 import { MainMenu } from "@/components/MainMenu/MainMenu";
 import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 
-export function Navbar(){
+export function Navbar() {
   const showSidebarMenu = useMenu();
   const showMenuUpdate = useMenuUpdate();
   const [windowSize, setWindowSize] = useState<WindowSizeType>({
@@ -14,7 +14,7 @@ export function Navbar(){
   });
 
   // MEDIA QUERY
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleResize() {
       setWindowSize({
         width: window.innerWidth,
@@ -26,7 +26,7 @@ export function Navbar(){
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Close sidebar menu if window size is bigger than 1100px
+  // Close sidebar menu 
   useEffect(() => {
     if (windowSize.width && windowSize.width > 1100 && showSidebarMenu) {
       showMenuUpdate();
