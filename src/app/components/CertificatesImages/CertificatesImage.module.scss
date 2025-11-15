@@ -1,6 +1,6 @@
 .certificates {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(185px, 100%), 1fr));
 
     max-width: 80%;
     gap: 1rem;

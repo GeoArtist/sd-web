@@ -13,9 +13,9 @@
     left: 0;
     margin-inline: auto;
     max-width: 1000px;
-    // & div {
-    //     margin-inline: 3rem;
-    // }
+    & div {
+        margin-inline: 2rem;
+    }
 }
 @media (max-width: 1000px) {
     .contactLayout {

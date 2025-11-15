@@ -73,7 +73,7 @@
 
 .blogCard__image {
     object-fit: cover;
-    max-width: calc(300px - 2rem);
+    max-width: calc(100% - 2rem);
     height: 200px;
     margin: 0.25rem auto 0.35rem auto;
     scale: 0.95;
