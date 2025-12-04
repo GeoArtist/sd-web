@@ -1,6 +1,6 @@
 {
   "name": "sd-web",
-  "version": "v1.2.6",
+  "version": "v1.2.5",
   "private": true,
   "type": "module",
   "scripts": {
