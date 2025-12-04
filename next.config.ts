@@ -19,10 +19,7 @@ const cspHeader = `
 
 const nextConfig: NextConfig = {
   reactStrictMode: false,
-  webpack: (config) => {
-    config.cache = false;
-    return config;
-  },
+
   async headers() {
     return [
       {
