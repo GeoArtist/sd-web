@@ -5,11 +5,12 @@ import { offerServices } from "@/constants/offerCategories";
 import { getOfferContent } from "@/utils/markdownParser";
 import { Metadata } from "next/types";
 
-// export async function generateStaticParams() {
-//   return offerServices.map((service) => ({
-//     params: { service: service.path, category: service.category },
-//   }));
-// }
+export async function generateStaticParams() {
+  return offerServices.map((service) => ({
+    service: service.path,
+    category: service.category,
+  }));
+}
 
 export async function generateMetadata({
   params,

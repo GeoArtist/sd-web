@@ -1,8 +1,15 @@
 import BlogPostView from "@/views/BlogPostView/BlogPostView";
-import { getPostData } from "@/utils/markdownParser";
+import { getAllPosts, getPostData } from "@/utils/markdownParser";
 import { notFound } from "next/navigation";
 import { Metadata } from "next/types";
 import { GenerateMetatags } from "@/constants/metatags";
+
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({
+    postName: post.postName,
+  }));
+}
 
 export async function generateMetadata(
   props: PageProps<"/blog/[postName]">
