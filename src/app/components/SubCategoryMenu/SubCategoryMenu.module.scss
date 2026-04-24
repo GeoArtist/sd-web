@@ -76,7 +76,7 @@
 .open {
     &::after {
         content: "▼";
-        rotate: 0deg;
+        rotate: 180deg;
         display: flex;
     }
 }
