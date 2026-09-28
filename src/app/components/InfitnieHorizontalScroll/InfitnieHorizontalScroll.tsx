@@ -21,16 +21,18 @@ export function InfitnieHorizontalScroll({imgs}:{imgs:ImgsLinks[]}){
                   imgs.length / animationSpeedFactor
                 }s`,
               } as React.CSSProperties
-            }
-          >
+            }>
             {duplicatedImgs.map((obj, index) => (
               <li key={index}>
                 <Link
                   href={obj.href || "#"}
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image src={obj.url} alt={obj.alt} />
+                  rel="noopener noreferrer">
+                  <Image
+                    src={obj.url}
+                    alt={obj.alt}
+                    sizes="(max-width: 600px) 65px, (max-width: 1000px) 98px, 130px"
+                  />
                 </Link>
               </li>
             ))}

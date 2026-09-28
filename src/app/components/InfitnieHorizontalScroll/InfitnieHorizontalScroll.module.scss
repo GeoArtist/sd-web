@@ -40,6 +40,8 @@
         background-color: var(--clr-white);
 
         & img {
+            width: 100%;
+            height: auto;
             padding: 0.5rem;
             aspect-ratio: 1/1;
             object-fit: contain;
