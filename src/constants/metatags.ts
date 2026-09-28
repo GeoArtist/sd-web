@@ -3,42 +3,59 @@ import type { Metadata } from "next";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
+export type ArticleMetadata = {
+  publishedTime: Date;
+  modifiedTime: Date;
+  keywords?: string[];
+  image?: { url: string; width: number; height: number; alt: string };
+};
+
+const DEFAULT_SOCIAL_IMAGE = {
+  url: "/logos/social_logo.png",
+  width: 800,
+  height: 600,
+  alt: "Soft-Data",
+};
+
+/**
+ * Page metadata with OpenGraph/Twitter. `url` is the absolute canonical URL.
+ * Pass `article` for blog posts: OG type article, dates, keywords and the post image.
+ */
 export const GenerateMetatags = (
   title: string,
   description: string,
-  url: string
+  url: string,
+  article?: ArticleMetadata
 ): Metadata => {
+  const image = article?.image ?? DEFAULT_SOCIAL_IMAGE;
+  const imageUrl = new URL(image.url, process.env.NEXT_PUBLIC_BASE_URL).toString();
+
   return {
     title: title,
     description: description,
+    keywords: article?.keywords,
+    alternates: { canonical: url },
     openGraph: {
       title: title,
       description: description,
       siteName: "Soft-Data",
       url: url,
-      type: "website",
-      images: [
-        {
-          url: new URL(
-            "/logos/social_logo.png",
-            process.env.NEXT_PUBLIC_BASE_URL
-          ).toString(),
-          width: 800,
-          height: 600,
-        },
-      ],
+      images: [{ url: imageUrl, width: image.width, height: image.height, alt: image.alt }],
       locale: "pl_PL",
+      ...(article
+        ? {
+            type: "article" as const,
+            publishedTime: article.publishedTime.toISOString(),
+            modifiedTime: article.modifiedTime.toISOString(),
+            tags: article.keywords,
+          }
+        : { type: "website" as const }),
     },
     twitter: {
-      card: "summary",
+      card: article?.image ? "summary_large_image" : "summary",
       title: title,
       description: description,
-      images: [
-        new URL(
-          "/logos/social_logo.png",
-          process.env.NEXT_PUBLIC_BASE_URL
-        ).toString(),
-      ],
+      images: [imageUrl],
       site: "@softdatageo",
       creator: "@softdatageo",
     },
