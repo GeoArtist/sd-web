@@ -1,5 +1,5 @@
 import BlogPostView from "@/views/BlogPostView/BlogPostView";
-import { getAllPosts, getPostData } from "@/utils/markdownParser";
+import { getAllPostsMeta, getPost } from "@/utils/blog";
 import { notFound } from "next/navigation";
 import { Metadata } from "next/types";
 import { GenerateMetatags } from "@/constants/metatags";
@@ -8,9 +8,9 @@ import { GenerateMetatags } from "@/constants/metatags";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = await getAllPostsMeta();
   return posts.map((post) => ({
-    postName: post.postName,
+    postName: post.slug,
   }));
 }
 
@@ -18,7 +18,8 @@ export async function generateMetadata(
   props: PageProps<"/blog/[postName]">
 ): Promise<Metadata> {
   const { postName } = await props.params;
-  const post = await getPostData(postName);
+  const post = await getPost(postName);
+  if (!post) notFound();
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
 
@@ -30,14 +31,10 @@ export async function generateMetadata(
   );
 }
 
-
-
 export default async function BlogPost(props: PageProps<"/blog/[postName]">) {
-  // Get params, searchParams
   const { postName } = await props.params;
-  const post = await getPostData(postName);
-  if (!post || Object.keys(post).length === 0) {
-    notFound();
-  }
+  const post = await getPost(postName);
+  if (!post) notFound();
+
   return <BlogPostView post={post} />;
 }

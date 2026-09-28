@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Czym są indeksy wegetacyjne? Jakie są ich rodzaje? Gdzie można je wykorzystać?"
+thumbnail: /images/blog/thumbnails/vegetation-indexes-thumbnail.jpg
+thumbnailAlt: "indeksy wegetacyjne miniaturka"
 ---
 
 ### 🌿 Wskaźniki Spektralne – Potężne Narzędzie w Monitorowaniu Środowiska

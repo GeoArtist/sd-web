@@ -13,15 +13,3 @@ export type MarkdownPaths = {
   mdFileName: string;
   navName: string;
 };
-
-export type MarkdownBlogContent = {
-  id: number;
-  postName: string;
-  title: string;
-  addTime: Date;
-  modTime: Date;
-  keywords: string[];
-  summary: string;
-  content: string;
-};
-

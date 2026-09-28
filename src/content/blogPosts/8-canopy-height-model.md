@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Numeryczny model roślinności - tworzenie i zastosowanie w GiS"
+thumbnail: /images/blog/thumbnails/canopy-height-model-thumbnail.jpg
+thumbnailAlt: "model wysokości koron drzew miniaturka"
 ---
 
 **Canopy Height Model (CHM)** to cyfrowa mapa wysokości roślinności nad powierzchnią terenu. CHM pokazuje, jak wysoko sięgają drzewa lub inna roślinność w danym obszarze. 

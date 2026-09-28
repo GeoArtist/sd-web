@@ -1,4 +1,4 @@
-import { getAllPosts, getPostData } from "@/utils/markdownParser";
+import { getAllPostsMeta } from "@/utils/blog";
 import { BlogView } from "@/views/BlogView/BlogView";
 import { Metadata } from "next/types";
 import { pagesMetadata } from "@/constants/metatags";
@@ -6,15 +6,7 @@ import { pagesMetadata } from "@/constants/metatags";
 export const metadata: Metadata = pagesMetadata["blog"];
 
 export default async function BlogList() {
-  const slugs = getAllPosts();
-  const posts = await Promise.all(
-    slugs.map(({ postName }) => getPostData(postName))
-  );
+  const posts = await getAllPostsMeta();
 
-  // Newest first; `readdir` order is lexical and not guaranteed, so sort explicitly
-  const sortedPosts = [...posts].sort(
-    (a, b) => b.addTime.getTime() - a.addTime.getTime() || b.id - a.id
-  );
-
-  return <BlogView posts={sortedPosts} />;
+  return <BlogView posts={posts} />;
 }

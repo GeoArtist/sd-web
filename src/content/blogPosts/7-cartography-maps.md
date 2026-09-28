@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Krótka charakterystyka jakościowych i ilościowych metod prezentacji kartograficznych"
+thumbnail: /images/blog/thumbnails/cartography_thumbnail.jpg
+thumbnailAlt: "metody kartograficzne miniaturka"
 ---
 
 **Mapa** to nie tylko tło z granicami i rzekami – to przede wszystkim narzędzie przekazu informacji. W zależności od tego, czy chcemy pokazać, gdzie coś występuje (aspekt jakościowy), czy ile tego jest (aspekt ilościowy), stosujemy różne metody prezentacji.

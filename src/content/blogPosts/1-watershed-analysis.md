@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Czym są: analizy przebiegu rzek, zlewni, gospodarki wodnej w GiS? Do czego służą i gdzie znajdują zastosowanie?"
+thumbnail: /images/blog/thumbnails/watershed-analsis-thumbnail.jpg
+thumbnailAlt: "analiza zlewni miniaturka"
 ---
 
 

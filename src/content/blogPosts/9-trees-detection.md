@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Wykrywanie drzew na podstawie CHM - Numerycznego Modelu Roślinności"
+thumbnail: /images/blog/thumbnails/trees-detection-thumbnail.jpg
+thumbnailAlt: "model wykrywania drzew miniaturka"
 ---
 
 **Wykrywanie drzew 🌳**  jest kluczowe w leśnictwie, ekologii, planowaniu miejskim czy monitoringu środowiska. 

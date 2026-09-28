@@ -1,12 +1,12 @@
 "use client";
-import { MarkdownBlogContent } from "@/types/markdown";
+import { BlogPostMeta } from "@/types/blogPost";
 import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination/Pagination";
 import BlogCards from "@/components/BlogCards/BlogCards";
 
 const POSTS_PER_PAGE = 6;
 
-export function BlogView({ posts }: { posts: MarkdownBlogContent[] }) {
+export function BlogView({ posts }: { posts: BlogPostMeta[] }) {
   const searchParams = useSearchParams();
 
   const currentPage = parseInt(searchParams.get("page") || "1", 10);

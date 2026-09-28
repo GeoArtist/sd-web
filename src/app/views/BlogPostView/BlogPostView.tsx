@@ -4,14 +4,14 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import { MarkdownBlogContent } from "@/types/markdown";
+import { BlogPost } from "@/types/blogPost";
 import { createMarkdownComponents } from "@/components/BlogMarkdown/BlogMarkdownComponents";
 import AnimatedSection from "@/components/FrameMotion/FrameMotionSection";
 import { Button } from "@/app/components/Button/Button";
 import { useRouter } from "next/navigation";
 import styles from "./BlogPostView.module.scss";
 
-export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
+export default function BlogPostView({ post }: { post: BlogPost }) {
   const router = useRouter();
 
 

@@ -7,6 +7,8 @@ keywords:
     - geodezja
     - it
 summary: "Czym różnią się: NMT, NMPT, zNMPT? Który model wysokościowy wybrać do konkretnego zadania?"
+thumbnail: /images/blog/thumbnails/dtm-dsm-ndsm-thumbnail.jpg
+thumbnailAlt: "numeryczne modele powierzchni terenu miniaturka"
 ---
 
 **NMT, NMPT i zNMPT** – Kluczowe Narzędzia w Analizie Danych Przestrzennych

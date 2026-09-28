@@ -8,6 +8,8 @@ keywords:
     - it
     - ai
 summary: "Jak szybko i efektywnie wydobyć z ortofotomapy obrysy budynków oraz budowli z pomocą sztuczną inteligencji?"
+thumbnail: /images/blog/thumbnails/ai-building-thumbnail.jpg
+thumbnailAlt: "automatyczna detekcja budynków AI miniaturka"
 ---
 
 🏗️ Wykorzystanie AI w detekcji budynków i obiektów na ortofotomapie – rewolucja w geodezji i analizie przestrzennej

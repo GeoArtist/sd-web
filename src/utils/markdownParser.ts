@@ -5,7 +5,6 @@ import { remark } from "remark";
 import html from "remark-html";
 import { getContentPath } from "@/utils/paths";
 import { MarkdownOfferContent } from "@/types/markdown";
-import { MarkdownBlogContent } from "@/types/markdown"; // zakładam, że tu jest ten typ
 import remarkGfm from "remark-gfm";
 /**
  * Universal function to get Markdown file content
@@ -42,17 +41,6 @@ async function getMarkdownFile({
   }
 
   return { data, content: processedContent };
-}
-
-/**
- * Universal list of slugs
- */
-export function getAllSlugs(subfolder?: string) {
-  const dir = getContentPath(subfolder);
-  return fs
-    .readdirSync(dir)
-    .filter((file) => file.endsWith(".md"))
-    .map((fileName) => fileName.replace(/\.md$/, ""));
 }
 
 /**
@@ -96,41 +84,4 @@ export async function getSelectedContentHTML(
   });
 
   return result ? (result.content as string) : "";
-}
-
-/**
- * Blog – list all slugs
- */
-export function getAllPosts() {
-  return getAllSlugs("blogPosts").map((slug) => ({
-    postName: slug,
-  }));
-}
-
-/**
- * Blog – single post data
- */
-export async function getPostData(
-  postName: string
-): Promise<MarkdownBlogContent> {
-  const result = await getMarkdownFile({
-    subfolder: "blogPosts",
-    slug: postName,
-    toHtml: false,
-  });
-
-  if (!result) {
-    return {} as MarkdownBlogContent;
-  }
-
-  return {
-    id: result.data.id,
-    postName: postName,
-    title: result.data.title,
-    addTime: new Date(result.data.addDate),
-    modTime: new Date(result.data.modifyDate),
-    keywords: result.data.keywords || [],
-    summary: result.data.summary || "",
-    content: result.content as string,
-  };
 }
