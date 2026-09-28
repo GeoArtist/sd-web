@@ -5,7 +5,8 @@ import matter from "gray-matter";
 import sharp from "sharp";
 import { z } from "zod";
 import { getContentPath } from "@/utils/paths";
-import { BlogPost, BlogPostMeta, BlogPostThumbnail } from "@/types/blogPost";
+import { BlogImageSizes, BlogPost, BlogPostMeta, BlogPostThumbnail } from "@/types/blogPost";
+import { POSTS_PER_PAGE } from "@/constants/blog";
 
 const POSTS_DIR = getContentPath("blogPosts");
 const PUBLIC_DIR = path.join(process.cwd(), "public");
@@ -32,22 +33,36 @@ function listSlugs(): string[] {
     .map((file) => file.replace(/\.md$/, ""));
 }
 
+async function readImageSize(slug: string, src: string) {
+  const filePath = path.join(PUBLIC_DIR, src);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Blog post "${slug}": image not found: public${src}`);
+  }
+  const { width, height } = await sharp(filePath).metadata();
+  return { width: width ?? 0, height: height ?? 0 };
+}
+
+// Local images referenced as ![alt](/path.jpg "optional title") in the body
+async function readBodyImages(slug: string, content: string): Promise<BlogImageSizes> {
+  const srcs = new Set(
+    [...content.matchAll(/!\[[^\]]*\]\((\/[^)\s]+)/g)].map((match) => match[1])
+  );
+  const entries = await Promise.all(
+    [...srcs].map(async (src) => [src, await readImageSize(slug, src)] as const)
+  );
+  return Object.fromEntries(entries);
+}
+
 async function readThumbnail(
   slug: string,
   frontmatter: Frontmatter
 ): Promise<BlogPostThumbnail | undefined> {
   if (!frontmatter.thumbnail) return undefined;
 
-  const filePath = path.join(PUBLIC_DIR, frontmatter.thumbnail);
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Blog post "${slug}": thumbnail not found: public${frontmatter.thumbnail}`);
-  }
-  const { width, height } = await sharp(filePath).metadata();
   return {
     src: frontmatter.thumbnail,
     alt: frontmatter.thumbnailAlt ?? frontmatter.title,
-    width: width ?? 0,
-    height: height ?? 0,
+    ...(await readImageSize(slug, frontmatter.thumbnail)),
   };
 }
 
@@ -74,6 +89,7 @@ const readPost = cache(async (slug: string): Promise<(BlogPost & { draft: boolea
     thumbnail: await readThumbnail(slug, frontmatter),
     draft: frontmatter.draft,
     content,
+    images: await readBodyImages(slug, content),
   };
 });
 
@@ -90,7 +106,7 @@ export const getAllPostsMeta = cache(async (): Promise<BlogPostMeta[]> => {
   return posts
     .filter((post): post is BlogPost & { draft: boolean } => post !== null && isPublished(post))
     .sort((a, b) => b.addDate.getTime() - a.addDate.getTime() || (b.id ?? 0) - (a.id ?? 0))
-    .map(({ content: _content, draft: _draft, ...meta }) => meta);
+    .map(({ content: _content, images: _images, draft: _draft, ...meta }) => meta);
 });
 
 /**
@@ -101,4 +117,16 @@ export async function getPost(slug: string): Promise<BlogPost | null> {
   if (!post || !isPublished(post)) return null;
   const { draft: _draft, ...rest } = post;
   return rest;
+}
+
+/**
+ * One page of the post list (1-based), or null when the page does not exist.
+ */
+export async function getBlogPage(page: number) {
+  const posts = await getAllPostsMeta();
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+  if (!Number.isInteger(page) || page < 1 || page > totalPages) return null;
+
+  const start = (page - 1) * POSTS_PER_PAGE;
+  return { posts: posts.slice(start, start + POSTS_PER_PAGE), currentPage: page, totalPages };
 }

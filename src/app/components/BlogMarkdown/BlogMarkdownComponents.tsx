@@ -1,40 +1,20 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { Components } from "react-markdown";
+import BlogImage from "@/components/BlogMarkdown/BlogImage";
+import { BlogImageSizes } from "@/types/blogPost";
 
-const MotionImage = motion.img;
-
-// Wrapper for a single image
-function AnimatedImage({ className, ...props }: { className?: string }) {
-  return (
-    <MotionImage
-      {...props}
-      initial={{ x: 100, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{
-        type: "spring",
-        stiffness: 350,
-        damping: 30,
-        mass: 1.5,
-        bounce: 1,
-      }}
-      viewport={{ once: true, amount: 0.2 }}
-      className={`${className ?? ""}`}
-    />
-  );
-}
-
-// Function to create markdown components
-export function createMarkdownComponents(customImgClass = "blogPost__img"): Components {
+// Markdown element overrides; local images go through next/image with build-time dimensions
+export function createMarkdownComponents(images: BlogImageSizes): Components {
   return {
     // `node` is react-markdown's AST node; it must not reach the DOM
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    img: ({ node, className, ...props }) => (
-      <AnimatedImage
-        {...props}
-        className={`${customImgClass} ${className ?? ""}`}
-      />
-    ),
+    img: ({ node, src, alt, ...props }) => {
+      const size = typeof src === "string" ? images[src] : undefined;
+      if (!size) {
+        // External image: no known dimensions, keep a plain lazy <img>
+        // eslint-disable-next-line @next/next/no-img-element
+        return <img src={src} alt={alt ?? ""} loading="lazy" {...props} />;
+      }
+      return <BlogImage src={src as string} alt={alt ?? ""} {...size} />;
+    },
   };
 }

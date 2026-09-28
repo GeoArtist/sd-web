@@ -1,7 +1,7 @@
-// app/components/Pagination.tsx
 "use client";
 import ReactPaginate from "react-paginate";
-import { useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
+import { blogPageHref } from "@/constants/blog";
 import styles from "./Pagination.module.scss";
 
 export default function Pagination({
@@ -14,8 +14,7 @@ export default function Pagination({
   const router = useRouter();
 
   const handlePageClick = (data: { selected: number }) => {
-    const selectedPage = data.selected + 1;
-    router.push(`/blog?page=${selectedPage}`);
+    router.push(blogPageHref(data.selected + 1));
   };
 
   return (
@@ -30,6 +29,8 @@ export default function Pagination({
         marginPagesDisplayed={2}
         pageRangeDisplayed={2}
         onPageChange={handlePageClick}
+        // Real hrefs so crawlers can reach every page; clicks still go through the router
+        hrefBuilder={(page) => blogPageHref(page)}
         forcePage={currentPage - 1}
         containerClassName={styles.pagination__container}
         pageClassName={styles.pagination__page}

@@ -20,6 +20,19 @@ const cspHeader = `
 const nextConfig: NextConfig = {
   reactStrictMode: false,
 
+  async redirects() {
+    return [
+      // Old client-side pagination (/blog?page=N) -> prerendered pages
+      {
+        source: "/blog",
+        has: [{ type: "query", key: "page", value: "(?<page>[2-9]|[1-9][0-9]+)" }],
+        destination: "/blog/strona/:page",
+        permanent: true,
+      },
+      { source: "/blog/strona/1", destination: "/blog", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

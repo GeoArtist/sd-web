@@ -17,6 +17,10 @@ export type BlogPostMeta = {
   thumbnail?: BlogPostThumbnail;
 };
 
+// Intrinsic size of each local image used in a post body, keyed by its Markdown src
+export type BlogImageSizes = Record<string, { width: number; height: number }>;
+
 export type BlogPost = BlogPostMeta & {
   content: string; // raw Markdown body
+  images: BlogImageSizes;
 };

@@ -1,22 +1,19 @@
-"use client";
 import { BlogPostMeta } from "@/types/blogPost";
-import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination/Pagination";
 import BlogCards from "@/components/BlogCards/BlogCards";
 
-const POSTS_PER_PAGE = 6;
-
-export function BlogView({ posts }: { posts: BlogPostMeta[] }) {
-  const searchParams = useSearchParams();
-
-  const currentPage = parseInt(searchParams.get("page") || "1", 10);
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const endIndex = startIndex + POSTS_PER_PAGE;
-  const currentPosts = posts.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+export function BlogView({
+  posts,
+  currentPage,
+  totalPages,
+}: {
+  posts: BlogPostMeta[]; // posts of the current page only
+  currentPage: number;
+  totalPages: number;
+}) {
   return (
     <>
-      <BlogCards currentPosts={currentPosts} currentPage={currentPage} />
+      <BlogCards currentPosts={posts} currentPage={currentPage} />
       <Pagination currentPage={currentPage} totalPages={totalPages} />
     </>
   );
