@@ -24,7 +24,7 @@ export default function BlogCard({
         <h2 className={styles.blogCard__title}>{post.title}</h2>
       </Link>
       <p className={styles.blogCard__date}>
-        {post.addTime.toLocaleDateString()}
+        {post.addTime.toLocaleDateString("pl-PL")}
       </p>
       {thumbnail && (
         <Link href={`/blog/${post.postName}`}>

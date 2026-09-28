@@ -37,7 +37,7 @@ export default function BlogPostView({ post }: { post: MarkdownBlogContent }) {
           </ReactMarkdown>
         </div>
 
-        <Button onClick={handleBackClick} type="submit">
+        <Button onClick={handleBackClick} type="button">
           Powrót
         </Button>
       </AnimatedSection>

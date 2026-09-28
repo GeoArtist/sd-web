@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next/types";
 import { GenerateMetatags } from "@/constants/metatags";
 
+// Only prerendered posts exist; any other slug is a 404
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({

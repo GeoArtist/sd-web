@@ -11,5 +11,10 @@ export default async function BlogList() {
     slugs.map(({ postName }) => getPostData(postName))
   );
 
-  return <BlogView posts={[...posts].reverse()} />;
+  // Newest first; `readdir` order is lexical and not guaranteed, so sort explicitly
+  const sortedPosts = [...posts].sort(
+    (a, b) => b.addTime.getTime() - a.addTime.getTime() || b.id - a.id
+  );
+
+  return <BlogView posts={sortedPosts} />;
 }

@@ -1,11 +1,13 @@
 "use client";
 import { Button } from "@/components/Button/Button";
 import styles from "./page.module.scss";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
+  const router = useRouter();
+  // redirect() is meant for render/server code; event handlers navigate with the router
   const goToMain = () => {
-    redirect("/blog");
+    router.push("/blog");
   };
 
   return (

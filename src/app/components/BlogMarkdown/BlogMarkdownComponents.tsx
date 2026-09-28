@@ -28,7 +28,9 @@ function AnimatedImage({ className, ...props }: { className?: string }) {
 // Function to create markdown components
 export function createMarkdownComponents(customImgClass = "blogPost__img"): Components {
   return {
-    img: ({ className, ...props }) => (
+    // `node` is react-markdown's AST node; it must not reach the DOM
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    img: ({ node, className, ...props }) => (
       <AnimatedImage
         {...props}
         className={`${customImgClass} ${className ?? ""}`}
