@@ -71,12 +71,12 @@ export const pagesMetadata: MetaTagsCollection = {
   "polityka-prywatnosci": GenerateMetatags(
     "Polityka Prywatności - Soft-Data",
     "Zapoznaj się z naszą polityką prywatności, aby dowiedzieć się, jakie dane zbieramy i w jaki sposób je przetwarzamy.",
-    `${BASE_URL}/polityka-prywatnosci`
+    `${BASE_URL}/regulaminy/polityka-prywatnosci`
   ),
   "polityka-cookies": GenerateMetatags(
     "Polityka Cookies - Soft-Data",
     "Zapoznaj się z naszą polityką cookies, aby dowiedzieć się, jakie pliki cookies używamy i w jaki sposób je przetwarzamy.",
-    `${BASE_URL}/polityka-cookies`
+    `${BASE_URL}/regulaminy/polityka-cookies`
   ),
   blog: GenerateMetatags(
     "Blog - Soft-Data",
