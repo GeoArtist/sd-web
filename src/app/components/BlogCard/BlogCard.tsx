@@ -18,7 +18,8 @@ export default function BlogCard({ post }: { post: BlogPostMeta }) {
         <h2 className={styles.blogCard__title}>{post.title}</h2>
       </Link>
       <p className={styles.blogCard__date}>
-        {post.addDate.toLocaleDateString("pl-PL")}
+        {/* Frontmatter dates are UTC midnight; UTC keeps the day the same everywhere */}
+        {post.addDate.toLocaleDateString("pl-PL", { timeZone: "UTC" })}
       </p>
       {post.thumbnail && (
         <Link href={href}>

@@ -35,6 +35,13 @@ export default function BlogImage({
         width={width}
         height={height}
         sizes="(max-width: 900px) 100vw, 900px"
+        // Display size must not depend on which srcset candidate loads (the optimizer never
+        // upscales, so a small original would shrink on HiDPI screens): fill the column, but
+        // never exceed the original width or 50vh of height.
+        style={{
+          width: `min(100%, ${width}px, calc(50vh * ${width / height}))`,
+          height: "auto",
+        }}
       />
     </motion.span>
   );
