@@ -13,6 +13,9 @@ export function MainServicesBar() {
         <Image
           src={bgcBlue}
           alt="rtk-background"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="low"
           className={styles.MainServicesBar__img}
         />
         <AnimatedUl className={styles.MainServicesBar__wrapper} amount={0.4}>

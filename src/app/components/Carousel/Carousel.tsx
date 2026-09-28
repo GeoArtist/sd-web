@@ -52,7 +52,8 @@ export function Carousel() {
           {carouselImgs.map((img, index) => {
             return (
               <div key={index} className="keen-slider__slide">
-                <Image src={img.url} alt={img.alt} priority={img.priority} />
+                {/* The first slide is the LCP image: preload it; the rest stay lazy */}
+                <Image src={img.url} alt={img.alt} sizes="100vw" preload={index === 0} />
               </div>
             );
           })}

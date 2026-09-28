@@ -12,43 +12,36 @@ export const imgsTechData: ImgsLinks[] = [
   {
     url: gdalLogo,
     alt: "gdal-logo",
-    priority: false,
     href: "https://gdal.org/en/stable/",
   },
   {
     url: pandasLogo,
     alt: "pandas-logo",
-    priority: false,
     href: "https://pandas.pydata.org/",
   },
   {
     url: geopandasLogo,
     alt: "geopandas_logo",
-    priority: false,
     href: "https://geopandas.org/",
   },
   {
     url: sagaGisLogo,
     alt: "saga-gis-logo",
-    priority: false,
     href: "https://www.saga-gis.org/en/index.html",
   },
   {
     url: numpyLogo,
     alt: "numpy-logo",
-    priority: false,
     href: "https://numpy.org/",
   },
   {
     url: scikitlearnLogo,
     alt: "scikitlearn-logo",
-    priority: false,
     href: "https://scikit-learn.org/stable/",
   },
   {
     url: tensorflowLogo,
     alt: "tensorflow-logo",
-    priority: false,
     href: "https://www.tensorflow.org/",
   },
 ];
@@ -64,37 +57,31 @@ export const imgsTechDb: ImgsLinks[] = [
   {
     url: sqlLogo,
     alt: "sql logo",
-    priority: false,
     href: "https://www.w3schools.com/sql/sql_intro.asp",
   },
   {
     url: postgresLogo,
     alt: "postgres logo",
-    priority: false,
     href: "https://www.postgresql.org/",
   },
   {
     url: postgisLogo,
     alt: "postgis logo",
-    priority: false,
     href: "https://postgis.net/",
   },
   {
     url: redisLogo,
     alt: "redis logo",
-    priority: false,
     href: "https://redis.io/",
   },
   {
     url: influxLogo,
     alt: "influx logo",
-    priority: false,
     href: "https://www.influxdata.com/",
   },
   {
     url: mongodbLogo,
     alt: "mongodb logo",
-    priority: false,
     href: "https://www.mongodb.com/",
   },
 ];
@@ -110,37 +97,31 @@ export const imgsTechGeo: ImgsLinks[] = [
   {
     url: ewmapaLogo,
     alt: "ewmapa logo",
-    priority: false,
     href: "https://geobid.pl/",
   },
   {
     url: turbomapLogo,
     alt: "turbomap logo",
-    priority: false,
     href: "https://geomatyka-krakow.pl/portal/index.php/oprogramowanie/13-turbomap",
   },
   {
     url: cgmlLogo,
     alt: "cgml logo",
-    priority: false,
     href: "https://softline.geo.pl/index.php/oferta?view=article&id=22&catid=8",
   },
   {
     url: coderLogo,
     alt: "coder logo",
-    priority: false,
     href: "https://www.coder.pl",
   },
   {
     url: autocadLogo,
     alt: "autocad logo",
-    priority: false,
     href: "https://www.autodesk.com/products/autocad/overview",
   },
   {
     url: qgisLogo,
     alt: "qgis logo",
-    priority: false,
     href: "https://www.qgis.org/",
   },
 ];
@@ -156,37 +137,31 @@ export const imgsTechTech: ImgsLinks[] = [
   {
     url: gitLogo,
     alt: "git logo",
-    priority: false,
     href: "https://git-scm.com/",
   },
   {
     url: vscLogo,
     alt: "vsc logo",
-    priority: false,
     href: "https://code.visualstudio.com/",
   },
   {
     url: jiraLogo,
     alt: "jira logo",
-    priority: false,
     href: "https://www.atlassian.com/software/jira",
   },
   {
     url: nodeLogo,
     alt: "node logo",
-    priority: false,
     href: "https://nodejs.org/en/",
   },
   {
     url: linuxLogo,
     alt: "linux logo",
-    priority: false,
     href: "https://www.linux.org/",
   },
   {
     url: psLogo,
     alt: "ps logo",
-    priority: false,
     href: "https://www.adobe.com/pl/products/photoshop.html#modal-hash",
   },
 ];
@@ -206,61 +181,51 @@ export const imgsTechWeb: ImgsLinks[] = [
   {
     url: cssLogo,
     alt: "css logo",
-    priority: false,
     href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     url: jsTsLogo,
     alt: "js-ts logo",
-    priority: false,
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     url: nextJsLogo,
     alt: "next-js logo",
-    priority: false,
     href: "https://nextjs.org/",
   },
   {
     url: dashLogo,
     alt: "dash logo",
-    priority: false,
     href: "https://dash.plotly.com/",
   },
   {
     url: djangoLogo,
     alt: "django logo",
-    priority: false,
     href: "https://www.djangoproject.com/",
   },
   {
     url: flaskLogo,
     alt: "flask logo",
-    priority: false,
     href: "https://flask.palletsprojects.com/en/2.0.x/",
   },
   {
     url: streamlitLogo,
     alt: "streamlit logo",
-    priority: false,
     href: "https://streamlit.io/",
   },
   {
     url: fastapiLogo,
     alt: "fastapi logo",
-    priority: false,
     href: "https://fastapi.tiangolo.com/",
   },
   {
     url: leafletLogo,
     alt: "leaflet logo",
-    priority: false,
     href: "https://leafletjs.com/",
   },
   {
     url: geoserverLogo,
     alt: "geoserver logo",
-    priority: false,
     href: "https://geoserver.org/",
   },
 ];

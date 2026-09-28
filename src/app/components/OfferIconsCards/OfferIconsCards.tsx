@@ -11,14 +11,20 @@ export function OfferIconsCards() {
   return (
     <>
       <AnimatedUl className={styles.offerIcons} amount={0.4}>
-        <Image src={wordmap} alt="world-map" className={styles.background} />
+        <Image
+          src={wordmap}
+          alt="world-map"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="low"
+          className={styles.background}
+        />
         {offerIcons.map((icon) => {
           return (
             <AnimatedLi
               variantType="fromTop"
               key={icon.title}
-              className={styles.offerIcons__wrapper}
-            >
+              className={styles.offerIcons__wrapper}>
               <Image src={icon.icon} alt={icon.title} />
               <h3>{icon.title}</h3>
             </AnimatedLi>

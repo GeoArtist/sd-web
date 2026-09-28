@@ -20,36 +20,29 @@ export const carouselImgs: ImgsLinks[] = [
   {
     url: rtk1,
     alt: "RTK sprzęt w terenie",
-    priority: false,
   },
   {
     url: slope,
     alt: "mapa nachylenia terenu",
-    priority: false,
   },
   {
     url: code,
     alt: "widok edytora kodu",
-    priority: false,
   },
   {
     url: db,
     alt: "schemat bazy danych",
-    priority: false,
   },
   {
     url: dashboard,
     alt: "widok dashboardu",
-    priority: false,
   },
   {
     url: bdot,
     alt: "wizualizacja bazy danych obiektów topograficznych",
-    priority: false,
   },
   {
     url: pointcloud,
     alt: "widok chmury punktów 3D",
-    priority: false,
   },
 ];
