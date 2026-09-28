@@ -21,6 +21,7 @@ export type BlogPostMeta = {
 export type BlogImageSizes = Record<string, { width: number; height: number }>;
 
 export type BlogPost = BlogPostMeta & {
-  content: string; // raw Markdown body
+  content: string; // raw Markdown/MDX body
+  format: "md" | "mdx"; // from the file extension
   images: BlogImageSizes;
 };

@@ -1,13 +1,17 @@
-import type { Components } from "react-markdown";
+import type { MDXComponents } from "next-mdx-remote-client/rsc";
 import BlogImage from "@/components/BlogMarkdown/BlogImage";
 import { BlogImageSizes } from "@/types/blogPost";
 
-// Markdown element overrides; local images go through next/image with build-time dimensions
-export function createMarkdownComponents(images: BlogImageSizes): Components {
+/**
+ * Components available to blog posts.
+ * - Overrides of Markdown elements (img) apply to both .md and .mdx posts.
+ * - Any other component added here can be used as JSX in .mdx posts,
+ *   e.g. `<MyChart data="..." />`, without importing it in the post.
+ */
+export function createBlogMdxComponents(images: BlogImageSizes): MDXComponents {
   return {
-    // `node` is react-markdown's AST node; it must not reach the DOM
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    img: ({ node, src, alt, ...props }) => {
+    // Local images go through next/image with build-time dimensions
+    img: ({ src, alt, ...props }) => {
       const size = typeof src === "string" ? images[src] : undefined;
       if (!size) {
         // External image: no known dimensions, keep a plain lazy <img>

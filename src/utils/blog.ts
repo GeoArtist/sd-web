@@ -26,11 +26,21 @@ const frontmatterSchema = z.object({
 
 type Frontmatter = z.infer<typeof frontmatterSchema>;
 
-function listSlugs(): string[] {
-  return fs
-    .readdirSync(POSTS_DIR)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.replace(/\.md$/, ""));
+type PostFile = { fileName: string; format: BlogPost["format"] };
+
+// slug -> file; `.md` is plain Markdown, `.mdx` may also use JSX components
+function listPostFiles(): Map<string, PostFile> {
+  const files = new Map<string, PostFile>();
+  for (const fileName of fs.readdirSync(POSTS_DIR)) {
+    const match = fileName.match(/^(.+)\.(mdx?)$/);
+    if (!match) continue;
+    const [, slug, format] = match;
+    if (files.has(slug)) {
+      throw new Error(`Blog post "${slug}" exists as both .md and .mdx`);
+    }
+    files.set(slug, { fileName, format: format as PostFile["format"] });
+  }
+  return files;
 }
 
 async function readImageSize(slug: string, src: string) {
@@ -68,9 +78,10 @@ async function readThumbnail(
 
 const readPost = cache(async (slug: string): Promise<(BlogPost & { draft: boolean }) | null> => {
   // Only known file names: the slug comes from the URL and must not become an arbitrary path
-  if (!listSlugs().includes(slug)) return null;
+  const file = listPostFiles().get(slug);
+  if (!file) return null;
 
-  const filePath = path.join(POSTS_DIR, `${slug}.md`);
+  const filePath = path.join(POSTS_DIR, file.fileName);
   const { data, content } = matter(fs.readFileSync(filePath, "utf8"));
   const parsed = frontmatterSchema.safeParse(data);
   if (!parsed.success) {
@@ -89,6 +100,7 @@ const readPost = cache(async (slug: string): Promise<(BlogPost & { draft: boolea
     thumbnail: await readThumbnail(slug, frontmatter),
     draft: frontmatter.draft,
     content,
+    format: file.format,
     images: await readBodyImages(slug, content),
   };
 });
@@ -102,11 +114,11 @@ function isPublished(post: { draft: boolean }): boolean {
  * Published posts without their body, newest first.
  */
 export const getAllPostsMeta = cache(async (): Promise<BlogPostMeta[]> => {
-  const posts = await Promise.all(listSlugs().map(readPost));
+  const posts = await Promise.all([...listPostFiles().keys()].map(readPost));
   return posts
     .filter((post): post is BlogPost & { draft: boolean } => post !== null && isPublished(post))
     .sort((a, b) => b.addDate.getTime() - a.addDate.getTime() || (b.id ?? 0) - (a.id ?? 0))
-    .map(({ content: _content, images: _images, draft: _draft, ...meta }) => meta);
+    .map(({ content: _content, format: _format, images: _images, draft: _draft, ...meta }) => meta);
 });
 
 /**
