@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/Button/Button";
+import { blogPageHref } from "@/constants/blog";
 
 export default function BlogBackButton() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function BlogBackButton() {
     if (document.referrer) {
       router.back();
     } else {
-      router.push("/blog"); // default fallback
+      router.push(blogPageHref(1)); // default fallback
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

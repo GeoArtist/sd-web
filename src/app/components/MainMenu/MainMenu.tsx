@@ -5,6 +5,7 @@ import { useCurrentPath } from "@/contexts/CurrentPathContext";
 import { useToogle } from "@/hooks/useToogle";
 import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 import { MainMenuProps } from "@/types/mainMenu";
+import { blogPageHref } from "@/constants/blog";
 
 import styles from './MainMenu.module.scss'
 
@@ -92,7 +93,7 @@ export  function MainMenu({mode, showSidebar}:MainMenuProps) {
             <li>
               <Link
                 onClick={mobileFn}
-                href="/blog"
+                href={blogPageHref(1)}
                 className={currentPath.includes("/blog") ? styles.active : ""}
                 prefetch={false}
               >

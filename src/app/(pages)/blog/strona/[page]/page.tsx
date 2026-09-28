@@ -5,13 +5,13 @@ import { Metadata } from "next/types";
 import { GenerateMetatags } from "@/constants/metatags";
 import { blogPageHref } from "@/constants/blog";
 
-// Pages 2..n are prerendered; page 1 lives at /blog
+// Pages 1..n are prerendered; anything else is a 404
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const { totalPages } = (await getBlogPage(1))!;
-  return Array.from({ length: totalPages - 1 }, (_, index) => ({
-    page: String(index + 2),
+  return Array.from({ length: totalPages }, (_, index) => ({
+    page: String(index + 1),
   }));
 }
 
@@ -22,7 +22,7 @@ export async function generateMetadata(
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
 
   return GenerateMetatags(
-    `Blog - strona ${page} | Soft-Data`,
+    page === "1" ? "Blog - Soft-Data" : `Blog - strona ${page} | Soft-Data`,
     "Przeczytaj nasze najnowsze artykuły na blogu, aby być na bieżąco z trendami w geodezji, GIS oraz w świecie data-science.",
     `${BASE_URL}${blogPageHref(Number(page))}`
   );

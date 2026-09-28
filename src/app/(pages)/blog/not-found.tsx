@@ -2,12 +2,12 @@
 import { Button } from "@/components/Button/Button";
 import styles from "./page.module.scss";
 import { useRouter } from "next/navigation";
+import { blogPageHref } from "@/constants/blog";
 
 export default function NotFound() {
   const router = useRouter();
-  // redirect() is meant for render/server code; event handlers navigate with the router
   const goToMain = () => {
-    router.push("/blog");
+    router.push(blogPageHref(1));
   };
 
   return (

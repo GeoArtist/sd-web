@@ -22,14 +22,15 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // Old client-side pagination (/blog?page=N) -> prerendered pages
+      // Old client-side pagination (/blog?page=N) -> prerendered pages; must precede the rule below
       {
         source: "/blog",
-        has: [{ type: "query", key: "page", value: "(?<page>[2-9]|[1-9][0-9]+)" }],
+        has: [{ type: "query", key: "page", value: "(?<page>[1-9][0-9]*)" }],
         destination: "/blog/strona/:page",
         permanent: true,
       },
-      { source: "/blog/strona/1", destination: "/blog", permanent: true },
+      // The list itself lives at /blog/strona/<n>; temporary, so /blog stays free for a future landing page
+      { source: "/blog", destination: "/blog/strona/1", permanent: false },
     ];
   },
 
