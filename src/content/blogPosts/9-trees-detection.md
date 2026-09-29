@@ -60,7 +60,7 @@ Istnieje kilka sposobów wykrywania drzew, każdy z własnymi zaletami i ogranic
 - 🌳 CHM / LiDAR - najdokładniejsza metoda do wykrywania czubków drzew i pomiaru ich wysokości. Dobrze sprawdza się w lasach naturalnych i zróżnicowanych strukturach. Wymaga danych LiDAR, które są kosztowne, ale dają wysoką precyzję.
 - 🛰 Obrazowanie optyczne - wykorzystuje zdjęcia satelitarne lub z dronów. Pozwala na szybkie pokrycie dużych obszarów. Wadą jest brak informacji o wysokości drzew oraz trudności w gęstych lasach, gdzie cienie i nachylenie terenu mogą powodować błędy.
 - 🤖 AI / Deep Learning - metody uczenia maszynowego potrafią automatycznie wykrywać drzewa i ich gatunki na podstawie obrazów RGB, multispektralnych lub CHM. Są bardzo obiecujące, ale wymagają danych treningowych i mogą nie działać dobrze w nowym środowisku, jeśli model nie był wcześniej nauczony na podobnych lasach.
-- 📡 Klasyczny LiDAR - detekcja na podstawie chmur punktów LiDAR. Pozwala na pełną segmentację koron, analizę struktury lasu i dokładne pomiary wysokości. Wymaga jednak zaawansowanego przetwarzania i specjalistycznego oprogramowania.
+- 📡 Klasyczny LiDAR - detekcja na podstawie chmury punktów LiDAR. Pozwala na pełną segmentację koron, analizę struktury lasu i dokładne pomiary wysokości. Wymaga jednak zaawansowanego przetwarzania i specjalistycznego oprogramowania.
 ________________________________________
 
 ### Podsumowanie 🎨

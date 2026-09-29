@@ -1,6 +1,6 @@
 ---
 id: 10
-title: Klasyfikacja chmur punktów LiDAR w QGIS z pomocą AI
+title: Klasyfikacja chmury punktów LiDAR w QGIS z pomocą AI
 addDate: 2026-09-28
 modifyDate: 2026-09-28
 keywords:

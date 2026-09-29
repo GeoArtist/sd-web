@@ -18,7 +18,7 @@ Jest to kluczowy produkt w analizach lasów, planowaniu przestrzennym, monitorin
 ________________________________________
 
 ### Źródła danych📡
-Najczęściej CHM tworzy się na podstawie chmur punktów LiDAR (Light Detection and Ranging), które mierzą odległość od urządzenia do obiektów za pomocą laserów 🔦.
+Najczęściej CHM tworzy się na podstawie chmury punktów LiDAR (Light Detection and Ranging), które mierzą odległość od urządzenia do obiektów za pomocą laserów 🔦.
 Typowe źródła danych:
 1. Publiczne bazy LiDAR:
     - [USGS 3DEP](https://www.usgs.gov/core-science-systems/ngp/3dep)
@@ -33,7 +33,7 @@ Typowe źródła danych:
 
 
 **Format danych lidarowych** najczęściej wykorzystywane w GiS to:
-- LAS – standardowy format chmur punktów, nieskompresowany.
+- LAS – standardowy format chmury punktów, nieskompresowany.
 - LAZ – skompresowana wersja LAS, mniejszy rozmiar pliku.
 
 **Pliki LAS/LAZ** zawierają wiele informacji, lecz na potrzeby tworzenia CHM najbardziej kluczowe są:
