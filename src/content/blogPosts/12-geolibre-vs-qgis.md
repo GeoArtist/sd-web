@@ -184,7 +184,7 @@ ________________________________________
 
 ________________________________________
 
-Źródła: 
+### 📚 Źródła
 - [repozytorium opengeos/GeoLibre](https://github.com/opengeos/GeoLibre), 
 - [dokumentacja i porównanie z innymi programami](https://geolibre.app/comparison/), 
 - [ogłoszenie wersji 1.0 na blogu autora](https://gishub.org/blog/geolibre/), 
