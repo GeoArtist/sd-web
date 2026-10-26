@@ -1,5 +1,5 @@
-'use client'
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 import { carouselImgs } from "@/constants/carouselImgs";
 
 import { useKeenSlider } from "keen-slider/react";
@@ -42,7 +42,7 @@ export function Carousel() {
         slider.on("animationEnded", nextTimeout);
         slider.on("updated", nextTimeout);
       },
-    ]
+    ],
   );
 
   return (
@@ -53,7 +53,12 @@ export function Carousel() {
             return (
               <div key={index} className="keen-slider__slide">
                 {/* The first slide is the LCP image: preload it; the rest stay lazy */}
-                <Image src={img.url} alt={img.alt} sizes="100vw" preload={index === 0} />
+                <Image
+                  src={img.url}
+                  alt={img.alt}
+                  sizes="100vw"
+                  preload={index === 0}
+                />
               </div>
             );
           })}
@@ -69,4 +74,3 @@ export function Carousel() {
     </>
   );
 }
-

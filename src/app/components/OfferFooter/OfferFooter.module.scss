@@ -1,4 +1,4 @@
-.offerFooter__wrapper{
+.offerFooter__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,10 +11,10 @@
     margin-bottom: 3rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-    h4{
+    h4 {
         display: none;
     }
-    h3{
+    h3 {
         font-size: 1.15rem;
         text-wrap: pretty;
         text-align: center;
@@ -22,12 +22,14 @@
     a {
         color: var(--clr-theme-2);
         font-weight: var(--fw-bold);
-        margin-block:1.5rem 0.5rem;
+        margin-block: 1.5rem 0.5rem;
         font-size: 1.75rem;
         text-decoration: none;
-        transition: transform 0.2s, font-weight 0.2s;
+        transition:
+            transform 0.2s,
+            font-weight 0.2s;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-        text-wrap:pretty;
+        text-wrap: pretty;
         text-align: center;
 
         &:hover {
@@ -35,11 +37,10 @@
             transform: scale(1.05);
         }
     }
-    p{  
+    p {
         margin-top: 1rem;
-        font-size: 1.0rem;
+        font-size: 1rem;
         text-align: center;
         text-wrap: pretty;
     }
-
 }

@@ -24,7 +24,7 @@ export async function generateMetadata({
 }
 
 export default async function Offer(
-  props: PageProps<"/oferta/[category]/[service]">
+  props: PageProps<"/oferta/[category]/[service]">,
 ) {
   // Retrieve the category, service from the params
   const { service, category } = await props.params;
@@ -37,7 +37,7 @@ export default async function Offer(
   }
   const md_content = await getOfferContent(
     offer.mdFileName,
-    "offer/" + category
+    "offer/" + category,
   );
 
   return (

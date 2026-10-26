@@ -24,7 +24,8 @@ export function OfferIconsCards() {
             <AnimatedLi
               variantType="fromTop"
               key={icon.title}
-              className={styles.offerIcons__wrapper}>
+              className={styles.offerIcons__wrapper}
+            >
               <Image src={icon.icon} alt={icon.title} />
               <h3>{icon.title}</h3>
             </AnimatedLi>

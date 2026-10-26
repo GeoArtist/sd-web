@@ -2,16 +2,16 @@ span.contact__wrapper {
     display: flex;
     width: fit-content;
     align-items: center;
-    margin-inline:auto;
+    margin-inline: auto;
     margin-block: 0.5rem;
 
-    & h4{
+    & h4 {
         font-size: 1.35rem;
-        text-wrap:pretty;
+        text-wrap: pretty;
     }
     & svg {
         height: 1.75rem;
-        width:1.75rem;
+        width: 1.75rem;
         margin-inline: 0 0.75rem;
         color: var(--clr-theme-2);
         rotate: 10deg;
@@ -20,14 +20,13 @@ span.contact__wrapper {
     & a {
         display: flex;
         align-items: center;
-        margin-block:0.35rem;
+        margin-block: 0.35rem;
         font-size: 1.15rem;
         transition: scale 0.3s ease;
         &:hover,
         &:focus-visible {
             font-weight: var(--fw-bold);
             scale: 1.05;
-
         }
     }
 }

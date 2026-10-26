@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { ContactInfo } from "@/components/ContactInfo/ContactInfo";
 
 import styles from "./CompanyInfo.module.scss";

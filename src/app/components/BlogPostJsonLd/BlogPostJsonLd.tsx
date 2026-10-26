@@ -31,7 +31,9 @@ export default function BlogPostJsonLd({ post }: { post: BlogPostMeta }) {
     <script
       type="application/ld+json"
       // `<` is escaped so frontmatter text cannot close the script tag
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\u003c") }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\u003c"),
+      }}
     />
   );
 }

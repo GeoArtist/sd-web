@@ -5,9 +5,7 @@ import { execSync } from "child_process";
 const packageJsonPath = "./package.json";
 
 // Pobierz aktualny tag z Git
-const gitVersion = execSync("git describe --tags --abbrev=0")
-  .toString()
-  .trim();
+const gitVersion = execSync("git describe --tags --abbrev=0").toString().trim();
 
 // Wczytaj package.json
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));

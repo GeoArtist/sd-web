@@ -1,4 +1,4 @@
 export type LegalBasis = {
-    name: string;
-    link: string;
-} 
+  name: string;
+  link: string;
+};

@@ -11,13 +11,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPostsMeta();
   const { totalPages } = (await getBlogPage(1))!;
   const lastPostChange = posts.reduce<Date | undefined>(
-    (latest, post) => (!latest || post.modifyDate > latest ? post.modifyDate : latest),
-    undefined
+    (latest, post) =>
+      !latest || post.modifyDate > latest ? post.modifyDate : latest,
+    undefined,
   );
 
-  const staticPages = ["", "/o-nas", "/kontakt", "/technologie"].map((path) => ({
-    url: `${BASE_URL}${path}`,
-  }));
+  const staticPages = ["", "/o-nas", "/kontakt", "/technologie"].map(
+    (path) => ({
+      url: `${BASE_URL}${path}`,
+    }),
+  );
   const offerPages = offerServices.map((service) => ({
     url: `${BASE_URL}/oferta/${service.category}/${service.path}`,
   }));
@@ -33,5 +36,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: post.modifyDate,
   }));
 
-  return [...staticPages, ...offerPages, ...regulationPages, ...blogListPages, ...postPages];
+  return [
+    ...staticPages,
+    ...offerPages,
+    ...regulationPages,
+    ...blogListPages,
+    ...postPages,
+  ];
 }

@@ -1,5 +1,4 @@
-
-import styles from './Hamburger.module.scss'
+import styles from "./Hamburger.module.scss";
 import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 
 export function Hamburger() {

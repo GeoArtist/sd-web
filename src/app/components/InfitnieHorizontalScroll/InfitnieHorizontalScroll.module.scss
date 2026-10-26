@@ -23,7 +23,8 @@
         animation: scroll var(--_animation-duration) linear infinite;
         width: max-content;
 
-        &:hover,&:focus-visible {
+        &:hover,
+        &:focus-visible {
             animation-play-state: paused;
 
             // Not hovered li
@@ -50,7 +51,8 @@
             transform 0.2s ease,
             filter 0.2s ease,
             box-shadow 0.2s ease;
-        &:hover,&:focus-visible {
+        &:hover,
+        &:focus-visible {
             cursor: pointer;
             transform: scale(1.2);
             box-shadow: 0 0px 0.5rem 0.25rem rgba(0, 0, 0, 0.2);

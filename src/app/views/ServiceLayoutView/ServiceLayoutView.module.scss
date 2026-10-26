@@ -19,14 +19,13 @@
         grid-column: 1;
         grid-row: 1/3;
     }
-    .footerDescription{
-                grid-column: 2;
+    .footerDescription {
+        grid-column: 2;
     }
-
 }
 
 @media (max-width: 1200px) {
-.grid {
+    .grid {
         grid-template-columns: 1fr;
         margin-inline: 2rem;
         margin-bottom: 3rem;
@@ -38,14 +37,14 @@
             grid-column: 1;
             grid-row: 2;
         }
-        .footerDescription{
-                grid-column: 1;
-    }
+        .footerDescription {
+            grid-column: 1;
+        }
     }
 }
 
 @media (max-width: 600px) {
     .grid {
-        margin-inline:0.75rem;
+        margin-inline: 0.75rem;
     }
 }

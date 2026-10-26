@@ -1,12 +1,12 @@
-import { ImgsLinks } from '@/types/imgsLinks'
+import { ImgsLinks } from "@/types/imgsLinks";
 
-import gdalLogo from '@/public/logos/technology/data/gdal-logo.svg'
-import pandasLogo from '@/public/logos/technology/data/pandas-logo.png'
-import geopandasLogo from '@/public/logos/technology/data/geopandas_logo.png'
-import sagaGisLogo from '@/public/logos/technology/data/saga-gis-logo.png'
-import numpyLogo from '@/public/logos/technology/data/numpy-logo.png'
-import scikitlearnLogo from '@/public/logos/technology/data/scikitlearn-logo.png'
-import tensorflowLogo from '@/public/logos/technology/data/tensorflow-logo.png'
+import gdalLogo from "@/public/logos/technology/data/gdal-logo.svg";
+import pandasLogo from "@/public/logos/technology/data/pandas-logo.png";
+import geopandasLogo from "@/public/logos/technology/data/geopandas_logo.png";
+import sagaGisLogo from "@/public/logos/technology/data/saga-gis-logo.png";
+import numpyLogo from "@/public/logos/technology/data/numpy-logo.png";
+import scikitlearnLogo from "@/public/logos/technology/data/scikitlearn-logo.png";
+import tensorflowLogo from "@/public/logos/technology/data/tensorflow-logo.png";
 
 export const imgsTechData: ImgsLinks[] = [
   {

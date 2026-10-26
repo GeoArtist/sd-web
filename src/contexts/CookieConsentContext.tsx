@@ -41,7 +41,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
   const consent = useSyncExternalStore(
     subscribeConsent,
     getConsentSnapshot,
-    getServerConsentSnapshot
+    getServerConsentSnapshot,
   );
 
   const setConsent = (value: boolean) => {
@@ -64,12 +64,10 @@ export function useCookieConsent() {
   const context = useContext(CookieConsentContext);
   if (!context)
     throw new Error(
-      "useCookieConsent must be used within a CookieConsentProvider"
+      "useCookieConsent must be used within a CookieConsentProvider",
     );
   return context;
 }
-
-
 
 // helper: dynamicznie wstrzykuje GTM
 export function injectGTM() {
@@ -102,12 +100,12 @@ export function updateHtmlConsentAttribute(consent: boolean | null) {
   if (consent === true) {
     document.documentElement.setAttribute(
       "data-google-analytics-opt-out",
-      "false"
+      "false",
     );
   } else if (consent === false) {
     document.documentElement.setAttribute(
       "data-google-analytics-opt-out",
-      "true"
+      "true",
     );
   } else {
     document.documentElement.setAttribute("data-google-analytics-opt-out", "");

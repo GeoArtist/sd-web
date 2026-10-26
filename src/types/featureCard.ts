@@ -1,5 +1,5 @@
-export type FeatureCard ={
-    title: string;
-    icon: string;
-    description: string;
-}
+export type FeatureCard = {
+  title: string;
+  icon: string;
+  description: string;
+};

@@ -1,11 +1,10 @@
-.legalBasis{
+.legalBasis {
     &__name {
         font-weight: var(--fw-bold);
         font-size: 1.25rem;
         margin-block: 3rem 0.25rem;
     }
 
- 
     li {
         // margin-bottom: 0.25rem;
         text-wrap: pretty;
@@ -19,10 +18,9 @@
         a {
             text-decoration: underline;
         }
-        a:hover,&:focus-visible {
+        a:hover,
+        &:focus-visible {
             color: var(--clr-link-default);
-
         }
     }
-
 }

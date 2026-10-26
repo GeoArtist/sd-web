@@ -23,7 +23,7 @@ async function getMarkdownFile({
   // Get  Markdown file name
   const fileNames = fs.readdirSync(dir);
   const contentFileName = fileNames.find(
-    (file) => file.replace(/\.md$/, "") === slug
+    (file) => file.replace(/\.md$/, "") === slug,
   );
 
   if (!contentFileName) {
@@ -48,7 +48,7 @@ async function getMarkdownFile({
  */
 export async function getOfferContent(
   fileName: string,
-  subfolder?: string
+  subfolder?: string,
 ): Promise<MarkdownOfferContent> {
   const result = await getMarkdownFile({
     subfolder,
@@ -75,7 +75,7 @@ export async function getOfferContent(
  */
 export async function getSelectedContentHTML(
   fileName: string,
-  subfolder?: string
+  subfolder?: string,
 ): Promise<string> {
   const result = await getMarkdownFile({
     subfolder,

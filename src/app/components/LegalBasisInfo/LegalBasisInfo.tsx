@@ -1,8 +1,7 @@
 import Link from "next/link";
-import {legalBasisLinks} from "@/constants/legalBasisLinks";
+import { legalBasisLinks } from "@/constants/legalBasisLinks";
 
-import styles from './LegalBasisInfo.module.scss';
-
+import styles from "./LegalBasisInfo.module.scss";
 
 export function LegalBasisInfo({ legalBasis }: { legalBasis: string[] }) {
   return (
@@ -16,7 +15,7 @@ export function LegalBasisInfo({ legalBasis }: { legalBasis: string[] }) {
                 <Link
                   href={
                     legalBasisLinks.filter(
-                      (legalBasis) => legalBasis.name == basis
+                      (legalBasis) => legalBasis.name == basis,
                     )[0].link
                   }
                   target="_blank"

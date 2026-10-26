@@ -20,7 +20,7 @@ export async function generateMetadata({
 }
 
 export default async function RegulationsPage(
-  props: PageProps<"/regulaminy/[regulation]">
+  props: PageProps<"/regulaminy/[regulation]">,
 ) {
   const regulation = (await props.params).regulation;
 
@@ -29,7 +29,7 @@ export default async function RegulationsPage(
 
   const md_contentHTML = await getSelectedContentHTML(
     md_filename,
-    "regulations"
+    "regulations",
   );
 
   return <RegulationView md_contentHTML={md_contentHTML} />;

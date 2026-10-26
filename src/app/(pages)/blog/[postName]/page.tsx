@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: PageProps<"/blog/[postName]">
+  props: PageProps<"/blog/[postName]">,
 ): Promise<Metadata> {
   const { postName } = await props.params;
   const post = await getPost(postName);
@@ -39,7 +39,7 @@ export async function generateMetadata(
         height: post.thumbnail.height,
         alt: post.thumbnail.alt,
       },
-    }
+    },
   );
 }
 

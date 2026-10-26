@@ -29,12 +29,14 @@ async function optimize(file, maxEdge) {
     fit: "inside",
     withoutEnlargement: true,
   });
-  if (ext === ".png") pipeline = pipeline.png({ compressionLevel: 9, palette: true });
+  if (ext === ".png")
+    pipeline = pipeline.png({ compressionLevel: 9, palette: true });
   else if (ext === ".webp") pipeline = pipeline.webp({ quality: QUALITY });
   else pipeline = pipeline.jpeg({ quality: QUALITY, mozjpeg: true });
 
   const output = await pipeline.toBuffer();
-  if (output.length > input.length * (1 - MIN_SAVING)) return [input.length, input.length];
+  if (output.length > input.length * (1 - MIN_SAVING))
+    return [input.length, input.length];
   fs.writeFileSync(file, output);
   return [input.length, output.length];
 }
@@ -47,8 +49,12 @@ for (const [folder, maxEdge] of Object.entries(LIMITS)) {
     before += from;
     after += to;
     if (from !== to) {
-      console.log(`${path.relative(ROOT, file)}: ${(from / 1e6).toFixed(2)} MB -> ${(to / 1e6).toFixed(2)} MB`);
+      console.log(
+        `${path.relative(ROOT, file)}: ${(from / 1e6).toFixed(2)} MB -> ${(to / 1e6).toFixed(2)} MB`,
+      );
     }
   }
 }
-console.log(`Total: ${(before / 1e6).toFixed(1)} MB -> ${(after / 1e6).toFixed(1)} MB`);
+console.log(
+  `Total: ${(before / 1e6).toFixed(1)} MB -> ${(after / 1e6).toFixed(1)} MB`,
+);

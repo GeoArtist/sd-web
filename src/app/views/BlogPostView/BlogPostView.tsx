@@ -16,7 +16,9 @@ export default function BlogPostView({ post }: { post: BlogPost }) {
       <div className={styles.blogPost__content}>
         <MDXRemote
           source={post.content}
-          options={{ mdxOptions: { format: post.format, remarkPlugins: [remarkGfm] } }}
+          options={{
+            mdxOptions: { format: post.format, remarkPlugins: [remarkGfm] },
+          }}
           components={createBlogMdxComponents(post.images)}
         />
       </div>

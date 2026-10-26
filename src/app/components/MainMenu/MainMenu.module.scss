@@ -16,7 +16,6 @@
             display: flex;
             cursor: pointer;
 
-
             &:hover,
             &:focus-visible {
                 background: var(--clr-theme-2);
@@ -62,7 +61,7 @@
     top: 0px;
     right: calc(-1 * var(--_menu-width));
     width: var(--_menu-width);
-    height:min-content;
+    height: min-content;
     display: grid;
     grid-template-rows: var(--navbar-height) 1fr;
     grid-template-columns: 1fr var(--_menu-width);

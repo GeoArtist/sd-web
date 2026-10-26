@@ -35,7 +35,7 @@ export async function sendMail({
       "Something Went Wrong",
       SMTP_SERVER_USERNAME,
       SMTP_SERVER_PASSWORD,
-      error
+      error,
     );
     return {
       status: 500,

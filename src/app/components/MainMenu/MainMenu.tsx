@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { OfferMenu } from "@/components/OfferMenu/OfferMenu";
 import { useCurrentPath } from "@/contexts/CurrentPathContext";
@@ -7,101 +7,101 @@ import { useMenu, useMenuUpdate } from "@/contexts/MenuContext";
 import { MainMenuProps } from "@/types/mainMenu";
 import { blogPageHref } from "@/constants/blog";
 
-import styles from './MainMenu.module.scss'
+import styles from "./MainMenu.module.scss";
 
-export  function MainMenu({mode, showSidebar}:MainMenuProps) {
-    const currentPath = useCurrentPath();
-    const [openDropDown, toggleDropDown] = useToogle(false);
-    const showSideBarMenu = useMenu();
-    const showMenuUpdate = useMenuUpdate();
+export function MainMenu({ mode, showSidebar }: MainMenuProps) {
+  const currentPath = useCurrentPath();
+  const [openDropDown, toggleDropDown] = useToogle(false);
+  const showSideBarMenu = useMenu();
+  const showMenuUpdate = useMenuUpdate();
 
-    // Mobile toggle function
-    const mobileFn = mode==='mobile' ? showMenuUpdate : undefined
+  // Mobile toggle function
+  const mobileFn = mode === "mobile" ? showMenuUpdate : undefined;
 
-    return (
-      <>
-        <nav
-          className={
-            mode == "desktop"
-              ? styles.desktopMenu
-              : `${styles.mobileMenu} ${showSidebar ? "displayMenu" : ""}`
-          }
-        >
-          {showSideBarMenu && (
-            <div className={styles.sidebarBGC} onClick={showMenuUpdate}></div>
-          )}
-          <ul>
-            <li>
-              <Link
-                onClick={mobileFn}
-                href="/"
-                className={currentPath === "/" ? styles.active : ""}
-                prefetch={false}
-              >
-                STRONA GŁÓWNA
-              </Link>
-            </li>
-            <li
+  return (
+    <>
+      <nav
+        className={
+          mode == "desktop"
+            ? styles.desktopMenu
+            : `${styles.mobileMenu} ${showSidebar ? "displayMenu" : ""}`
+        }
+      >
+        {showSideBarMenu && (
+          <div className={styles.sidebarBGC} onClick={showMenuUpdate}></div>
+        )}
+        <ul>
+          <li>
+            <Link
               onClick={mobileFn}
-              onMouseEnter={() => toggleDropDown(true)}
-              onMouseLeave={() => toggleDropDown(false)}
-              className={styles.dropDown}
+              href="/"
+              className={currentPath === "/" ? styles.active : ""}
+              prefetch={false}
             >
-              <Link
-                href="/oferta/geodezja/mapa-do-celow-projektowych"
-                className={currentPath.includes("/oferta") ? styles.active : ""}
-                prefetch={false}
-              >
-                OFERTA
-              </Link>
-              {/* if sidebar dont render OfferMenu */}
-              {mode == "desktop" && openDropDown && (
-                <OfferMenu display={openDropDown} menuType={"dropdown"} />
-              )}
-            </li>
-            <li>
-              <Link
-                onClick={mobileFn}
-                href="/o-nas"
-                className={currentPath === "/o-nas" ? styles.active : ""}
-                prefetch={false}
-              >
-                O NAS
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={mobileFn}
-                href="/technologie"
-                className={currentPath === "/technologie" ? styles.active : ""}
-                prefetch={false}
-              >
-                TECHNOLOGIE
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={mobileFn}
-                href="/kontakt"
-                className={currentPath === "/kontakt" ? styles.active : ""}
-                prefetch={false}
-              >
-                KONTAKT
-              </Link>
-            </li>
+              STRONA GŁÓWNA
+            </Link>
+          </li>
+          <li
+            onClick={mobileFn}
+            onMouseEnter={() => toggleDropDown(true)}
+            onMouseLeave={() => toggleDropDown(false)}
+            className={styles.dropDown}
+          >
+            <Link
+              href="/oferta/geodezja/mapa-do-celow-projektowych"
+              className={currentPath.includes("/oferta") ? styles.active : ""}
+              prefetch={false}
+            >
+              OFERTA
+            </Link>
+            {/* if sidebar dont render OfferMenu */}
+            {mode == "desktop" && openDropDown && (
+              <OfferMenu display={openDropDown} menuType={"dropdown"} />
+            )}
+          </li>
+          <li>
+            <Link
+              onClick={mobileFn}
+              href="/o-nas"
+              className={currentPath === "/o-nas" ? styles.active : ""}
+              prefetch={false}
+            >
+              O NAS
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={mobileFn}
+              href="/technologie"
+              className={currentPath === "/technologie" ? styles.active : ""}
+              prefetch={false}
+            >
+              TECHNOLOGIE
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={mobileFn}
+              href="/kontakt"
+              className={currentPath === "/kontakt" ? styles.active : ""}
+              prefetch={false}
+            >
+              KONTAKT
+            </Link>
+          </li>
 
-            <li>
-              <Link
-                onClick={mobileFn}
-                href={blogPageHref(1)}
-                className={currentPath.includes("/blog") ? styles.active : ""}
-                prefetch={false}
-              >
-                BLOG
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </>
-    );
+          <li>
+            <Link
+              onClick={mobileFn}
+              href={blogPageHref(1)}
+              className={currentPath.includes("/blog") ? styles.active : ""}
+              prefetch={false}
+            >
+              BLOG
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 }

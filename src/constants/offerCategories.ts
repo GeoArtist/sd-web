@@ -1,4 +1,3 @@
-
 import { OfferCategory, OfferSubCategory } from "@/types/offerCategory";
 
 // IMAGES
@@ -166,7 +165,7 @@ export const OfferCategories: OfferCategory[] = [
     path: "/oferta/geodezja",
     mainCategoryPage: "mapa-do-celow-projektowych",
     subcategories: offerServices.filter(
-      (offer) => offer.category === "geodezja"
+      (offer) => offer.category === "geodezja",
     ),
   },
   {
@@ -180,8 +179,7 @@ export const OfferCategories: OfferCategory[] = [
     path: "/oferta/analiza-danych",
     mainCategoryPage: "przetwarzanie-danych",
     subcategories: offerServices.filter(
-      (offer) => offer.category === "analiza-danych"
+      (offer) => offer.category === "analiza-danych",
     ),
   },
 ];
-

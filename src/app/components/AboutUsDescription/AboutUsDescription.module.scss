@@ -1,5 +1,5 @@
-.about{
-        --_font-shadow: 8px;
+.about {
+    --_font-shadow: 8px;
     --_font-blur: 10px;
     display: grid;
     justify-content: center;
@@ -52,7 +52,7 @@
         color: var(--clr-theme-2);
         text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
     }
-    h3:last-of-type{
+    h3:last-of-type {
         text-shadow: none;
     }
 
@@ -76,7 +76,8 @@
     & a {
         color: var(--clr-link-default);
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
             font-weight: var(--fw-bold);
         }
     }

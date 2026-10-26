@@ -14,9 +14,6 @@ const cspHeader = `
               upgrade-insecure-requests;
             `.replace(/\s{2,}/g, " "); // remove newlines and extra spaces
 
-
-
-
 const nextConfig: NextConfig = {
   reactStrictMode: false,
 
