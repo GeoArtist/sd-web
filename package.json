@@ -4,11 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "vp config --hooks --no-agent --hooks-dir .vite-hooks",
+    "hooks": "vp hooks enable --hooks-dir .vite-hooks",
     "precommit": "node update-version.js",
     "dev": "next dev",
     "build": "npm run precommit && next build",
     "start": "next start",
-    "lint": "next lint",
+    "format": "vp fmt .",
+    "lint": "vp fmt . && vp lint --fix",
+    "lint-no-fix": "vp fmt --check . && vp lint",
     "optimize:images": "node scripts/optimize-blog-images.mjs"
   },
   "dependencies": {
@@ -43,10 +47,15 @@
     "@types/node": "^26.6.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^10",
-    "eslint-config-next": "^16.3.6",
     "sass": "^1.105.0",
     "ts-node": "^10.9.2",
-    "typescript": "^7"
+    "typescript": "^7",
+    "vite-plus": "1.2.0"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.2.0"
   }
 }

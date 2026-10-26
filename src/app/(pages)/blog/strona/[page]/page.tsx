@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: PageProps<"/blog/strona/[page]">
+  props: PageProps<"/blog/strona/[page]">,
 ): Promise<Metadata> {
   const { page } = await props.params;
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "";
@@ -24,11 +24,13 @@ export async function generateMetadata(
   return GenerateMetatags(
     page === "1" ? "Blog - Soft-Data" : `Blog - strona ${page} | Soft-Data`,
     "Przeczytaj nasze najnowsze artykuły na blogu, aby być na bieżąco z trendami w geodezji, GIS oraz w świecie data-science.",
-    `${BASE_URL}${blogPageHref(Number(page))}`
+    `${BASE_URL}${blogPageHref(Number(page))}`,
   );
 }
 
-export default async function BlogListPage(props: PageProps<"/blog/strona/[page]">) {
+export default async function BlogListPage(
+  props: PageProps<"/blog/strona/[page]">,
+) {
   const { page } = await props.params;
   const blogPage = await getBlogPage(Number(page));
   if (!blogPage || page !== String(blogPage.currentPage)) notFound();

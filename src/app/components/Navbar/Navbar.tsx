@@ -26,7 +26,7 @@ export function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Close sidebar menu 
+  // Close sidebar menu
   useEffect(() => {
     if (windowSize.width && windowSize.width > 1100 && showSidebarMenu) {
       showMenuUpdate();

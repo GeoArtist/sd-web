@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { BlogPostMeta } from "@/types/blogPost";
 import Link from "next/link";
 import Image from "next/image";

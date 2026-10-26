@@ -1,7 +1,6 @@
-'use client'
-import {createContext, useContext } from "react";
-import { usePathname } from 'next/navigation'
-
+"use client";
+import { createContext, useContext } from "react";
+import { usePathname } from "next/navigation";
 
 const CurrentPath = createContext("/");
 

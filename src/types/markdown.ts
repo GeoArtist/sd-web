@@ -1,4 +1,3 @@
-
 export type MarkdownOfferContent = {
   fileName: string;
   title: string;

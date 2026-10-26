@@ -14,9 +14,11 @@
         color: white;
         text-shadow:
             var(--_font-shadow) 0px var(--_font-blur) var(--clr-theme-2),
-            calc(-1 * var(--_font-shadow)) 0px var(--_font-blur) var(--clr-theme-2),
+            calc(-1 * var(--_font-shadow)) 0px var(--_font-blur)
+                var(--clr-theme-2),
             0px var(--_font-shadow) var(--_font-blur) var(--clr-theme-2),
-            0px calc(-1 * var(--_font-shadow)) var(--_font-blur) var(--clr-theme-2);
+            0px calc(-1 * var(--_font-shadow)) var(--_font-blur)
+                var(--clr-theme-2);
         filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
     }
     &__logo {

@@ -5,7 +5,12 @@ import matter from "gray-matter";
 import sharp from "sharp";
 import { z } from "zod";
 import { getContentPath } from "@/utils/paths";
-import { BlogImageSizes, BlogPost, BlogPostMeta, BlogPostThumbnail } from "@/types/blogPost";
+import {
+  BlogImageSizes,
+  BlogPost,
+  BlogPostMeta,
+  BlogPostThumbnail,
+} from "@/types/blogPost";
 import { POSTS_PER_PAGE } from "@/constants/blog";
 
 const POSTS_DIR = getContentPath("blogPosts");
@@ -16,7 +21,9 @@ const frontmatterSchema = z.object({
   id: z.number().int().optional(),
   title: z.string().min(1),
   addDate: z.coerce.date({ error: "expected a date (YYYY-MM-DD)" }),
-  modifyDate: z.coerce.date({ error: "expected a date (YYYY-MM-DD)" }).optional(),
+  modifyDate: z.coerce
+    .date({ error: "expected a date (YYYY-MM-DD)" })
+    .optional(),
   keywords: z.array(z.string()).default([]),
   summary: z.string().default(""),
   thumbnail: z.string().startsWith("/").optional(),
@@ -53,19 +60,24 @@ async function readImageSize(slug: string, src: string) {
 }
 
 // Local images referenced as ![alt](/path.jpg "optional title") in the body
-async function readBodyImages(slug: string, content: string): Promise<BlogImageSizes> {
+async function readBodyImages(
+  slug: string,
+  content: string,
+): Promise<BlogImageSizes> {
   const srcs = new Set(
-    [...content.matchAll(/!\[[^\]]*\]\((\/[^)\s]+)/g)].map((match) => match[1])
+    [...content.matchAll(/!\[[^\]]*\]\((\/[^)\s]+)/g)].map((match) => match[1]),
   );
   const entries = await Promise.all(
-    [...srcs].map(async (src) => [src, await readImageSize(slug, src)] as const)
+    [...srcs].map(
+      async (src) => [src, await readImageSize(slug, src)] as const,
+    ),
   );
   return Object.fromEntries(entries);
 }
 
 async function readThumbnail(
   slug: string,
-  frontmatter: Frontmatter
+  frontmatter: Frontmatter,
 ): Promise<BlogPostThumbnail | undefined> {
   if (!frontmatter.thumbnail) return undefined;
 
@@ -76,34 +88,38 @@ async function readThumbnail(
   };
 }
 
-const readPost = cache(async (slug: string): Promise<(BlogPost & { draft: boolean }) | null> => {
-  // Only known file names: the slug comes from the URL and must not become an arbitrary path
-  const file = listPostFiles().get(slug);
-  if (!file) return null;
+const readPost = cache(
+  async (slug: string): Promise<(BlogPost & { draft: boolean }) | null> => {
+    // Only known file names: the slug comes from the URL and must not become an arbitrary path
+    const file = listPostFiles().get(slug);
+    if (!file) return null;
 
-  const filePath = path.join(POSTS_DIR, file.fileName);
-  const { data, content } = matter(fs.readFileSync(filePath, "utf8"));
-  const parsed = frontmatterSchema.safeParse(data);
-  if (!parsed.success) {
-    throw new Error(`Blog post "${slug}": invalid frontmatter\n${z.prettifyError(parsed.error)}`);
-  }
-  const frontmatter = parsed.data;
+    const filePath = path.join(POSTS_DIR, file.fileName);
+    const { data, content } = matter(fs.readFileSync(filePath, "utf8"));
+    const parsed = frontmatterSchema.safeParse(data);
+    if (!parsed.success) {
+      throw new Error(
+        `Blog post "${slug}": invalid frontmatter\n${z.prettifyError(parsed.error)}`,
+      );
+    }
+    const frontmatter = parsed.data;
 
-  return {
-    slug,
-    id: frontmatter.id,
-    title: frontmatter.title,
-    addDate: frontmatter.addDate,
-    modifyDate: frontmatter.modifyDate ?? frontmatter.addDate,
-    keywords: frontmatter.keywords,
-    summary: frontmatter.summary,
-    thumbnail: await readThumbnail(slug, frontmatter),
-    draft: frontmatter.draft,
-    content,
-    format: file.format,
-    images: await readBodyImages(slug, content),
-  };
-});
+    return {
+      slug,
+      id: frontmatter.id,
+      title: frontmatter.title,
+      addDate: frontmatter.addDate,
+      modifyDate: frontmatter.modifyDate ?? frontmatter.addDate,
+      keywords: frontmatter.keywords,
+      summary: frontmatter.summary,
+      thumbnail: await readThumbnail(slug, frontmatter),
+      draft: frontmatter.draft,
+      content,
+      format: file.format,
+      images: await readBodyImages(slug, content),
+    };
+  },
+);
 
 // Drafts are visible in `next dev` only
 function isPublished(post: { draft: boolean }): boolean {
@@ -116,9 +132,23 @@ function isPublished(post: { draft: boolean }): boolean {
 export const getAllPostsMeta = cache(async (): Promise<BlogPostMeta[]> => {
   const posts = await Promise.all([...listPostFiles().keys()].map(readPost));
   return posts
-    .filter((post): post is BlogPost & { draft: boolean } => post !== null && isPublished(post))
-    .sort((a, b) => b.addDate.getTime() - a.addDate.getTime() || (b.id ?? 0) - (a.id ?? 0))
-    .map(({ content: _content, format: _format, images: _images, draft: _draft, ...meta }) => meta);
+    .filter(
+      (post): post is BlogPost & { draft: boolean } =>
+        post !== null && isPublished(post),
+    )
+    .sort(
+      (a, b) =>
+        b.addDate.getTime() - a.addDate.getTime() || (b.id ?? 0) - (a.id ?? 0),
+    )
+    .map(
+      ({
+        content: _content,
+        format: _format,
+        images: _images,
+        draft: _draft,
+        ...meta
+      }) => meta,
+    );
 });
 
 /**
@@ -140,5 +170,9 @@ export async function getBlogPage(page: number) {
   if (!Number.isInteger(page) || page < 1 || page > totalPages) return null;
 
   const start = (page - 1) * POSTS_PER_PAGE;
-  return { posts: posts.slice(start, start + POSTS_PER_PAGE), currentPage: page, totalPages };
+  return {
+    posts: posts.slice(start, start + POSTS_PER_PAGE),
+    currentPage: page,
+    totalPages,
+  };
 }

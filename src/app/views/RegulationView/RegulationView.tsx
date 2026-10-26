@@ -7,7 +7,6 @@ export function RegulationView({ md_contentHTML }: { md_contentHTML: string }) {
       <AnimatedSection className={styles.regulation}>
         <div dangerouslySetInnerHTML={{ __html: md_contentHTML }} />
       </AnimatedSection>
-
     </>
   );
 }

@@ -22,7 +22,9 @@
 
     &::after {
         content: "";
-        background-color: var(--clr-theme-2); /* Used if the image is unavailable */
+        background-color: var(
+            --clr-theme-2
+        ); /* Used if the image is unavailable */
         position: absolute;
         top: 0;
         left: 0;
@@ -37,8 +39,6 @@
     }
 
     &__wrapper {
-
-        
         display: grid;
         grid-template-rows: subgrid;
         grid-row: span 2;

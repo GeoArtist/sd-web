@@ -1,4 +1,4 @@
-export type OfferIconsLink ={
-    title: string;
-    icon: string;
-}
+export type OfferIconsLink = {
+  title: string;
+  icon: string;
+};

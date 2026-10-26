@@ -44,7 +44,7 @@ export function ServiceDescription({
                         </span>
                       ) : (
                         part
-                      )
+                      ),
                     )}
                   </p>
                 );

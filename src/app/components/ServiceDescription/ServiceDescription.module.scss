@@ -10,7 +10,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
     &__wrapper {
-
         margin-inline: 1.5rem;
         padding-inline: 0.5rem;
     }
@@ -35,7 +34,6 @@
         text-wrap: balance;
         text-align: center;
         text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
-
     }
     &__name {
         font-weight: var(--fw-bold);
@@ -44,10 +42,10 @@
     }
 
     .listItem {
-    margin-left: 3rem;
-    margin-bottom: 0.35rem;
-    font-style: italic;
-    line-height: 1.4;
+        margin-left: 3rem;
+        margin-bottom: 0.35rem;
+        font-style: italic;
+        line-height: 1.4;
     }
     .paragraph {
         margin-block: 0.25rem 0.5rem;
@@ -58,13 +56,12 @@
     }
 
     // First paragraph after a list item
-    p.listItem:has(+ p.paragraph)+p {
+    p.listItem:has(+ p.paragraph) + p {
         margin-block: 1.25rem 0.5rem;
     }
     span {
         font-weight: var(--fw-bold);
     }
-
 }
 @media (max-width: 1200px) {
     .serviceDescription {

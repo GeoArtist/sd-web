@@ -1,9 +1,9 @@
-import clock from '@/public/icons/featureCards/clock.svg'
-import hand from '@/public/icons/featureCards/hand.svg'
-import experience from '@/public/icons/featureCards/experience.svg'
-import agile from '@/public/icons/featureCards/agile.svg'
-import software from '@/public/icons/featureCards/software.svg'
-import { FeatureCard } from '@/types/featureCard';
+import clock from "@/public/icons/featureCards/clock.svg";
+import hand from "@/public/icons/featureCards/hand.svg";
+import experience from "@/public/icons/featureCards/experience.svg";
+import agile from "@/public/icons/featureCards/agile.svg";
+import software from "@/public/icons/featureCards/software.svg";
+import { FeatureCard } from "@/types/featureCard";
 
 export const featureCards: FeatureCard[] = [
   {

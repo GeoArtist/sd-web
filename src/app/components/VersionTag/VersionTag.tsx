@@ -6,7 +6,7 @@ import styles from "./VersionTag.module.scss";
 
 export async function VersionTag() {
   const packageJson = JSON.parse(
-    fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf8")
+    fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf8"),
   );
 
   // Odczytaj wersję

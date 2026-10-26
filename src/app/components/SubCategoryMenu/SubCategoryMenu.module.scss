@@ -39,7 +39,7 @@
     & a:hover,
     & a:focus-visible {
         color: var(--clr-black);
-         background-color: var(--clr-hover-submenu);
+        background-color: var(--clr-hover-submenu);
         border-bottom: none;
         outline: 1px solid var(--_border_clr);
     }
@@ -70,7 +70,6 @@
     &:hover,
     &:focus-visible {
         color: var(--clr-black);
-       
     }
 }
 .open {

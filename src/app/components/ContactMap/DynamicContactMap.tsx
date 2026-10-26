@@ -6,7 +6,7 @@ const DynamicMap = dynamic(
     import("@/components/ContactMap/ContactMap").then((mod) => mod.ContactMap),
   {
     ssr: false,
-  }
+  },
 );
 
 export function DynamicContactMap() {

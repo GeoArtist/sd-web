@@ -1,0 +1,21 @@
+# Checks only, never modifies files. A staged lint/format config or dependency change can break files nobody
+# touched: then the whole repository is checked. Otherwise only the staged files (the `staged` block in
+# vite.config.ts).
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$STAGED" ] && exit 0
+
+# vp staged passes all staged paths in one command line, which on Windows fails ("The command line is too long")
+# past roughly a hundred files: a large commit is checked as a whole instead.
+if echo "$STAGED" | grep -qxE "vite\.config\.ts|\.oxfmtrc\.json|\.oxlintrc\.json|package\.json"; then
+  echo "📝 Lint config or dependencies staged, running lint-no-fix on the whole repository..."
+  npm run lint-no-fix || exit 1
+elif [ "$(echo "$STAGED" | wc -l)" -gt 50 ]; then
+  echo "📝 More than 50 files staged, running lint-no-fix on the whole repository..."
+  npm run lint-no-fix || exit 1
+else
+  echo "📝 Running vp staged on the staged files..."
+  npx vp staged --continue-on-error || exit 1
+fi
+
+echo "✅ All checks passed!"
+exit 0
