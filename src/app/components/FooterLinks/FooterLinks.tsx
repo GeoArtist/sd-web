@@ -8,8 +8,9 @@ import { socialLinks } from "@/constants/socialLinks";
 import { useCurrentPath } from "@/contexts/CurrentPathContext";
 import styles from "./FooterLinks.module.scss";
 
+const year = new Date().getFullYear();
+
 export function FooterLinks() {
-  const year = new Date().getFullYear();
   const currentPath = useCurrentPath();
   return (
     <>

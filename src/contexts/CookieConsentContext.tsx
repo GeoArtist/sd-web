@@ -2,8 +2,7 @@
 import {
   createContext,
   useContext,
-  useEffect,
-  useState,
+  useSyncExternalStore,
   ReactNode,
 } from "react";
 
@@ -18,19 +17,36 @@ const CookieConsentContext = createContext<
   CookieConsentContextType | undefined
 >(undefined);
 
-export function CookieConsentProvider({ children }: { children: ReactNode }) {
-  const [consent, setConsentState] = useState<boolean | null>(null);
+// The consent lives in localStorage, read through useSyncExternalStore: the server and the hydration render get
+// null (getServerSnapshot), the next render the stored value, so the markup still matches the server HTML
+const consentListeners = new Set<() => void>();
 
-  useEffect(() => {
-    const stored = localStorage.getItem("cookie_consent");
-    setConsentState(
-      stored === "true" ? true : stored === "false" ? false : null
-    );
-  }, []);
+function subscribeConsent(listener: () => void) {
+  consentListeners.add(listener);
+  return () => {
+    consentListeners.delete(listener);
+  };
+}
+
+function getConsentSnapshot(): boolean | null {
+  const stored = localStorage.getItem("cookie_consent");
+  return stored === "true" ? true : stored === "false" ? false : null;
+}
+
+function getServerConsentSnapshot(): boolean | null {
+  return null;
+}
+
+export function CookieConsentProvider({ children }: { children: ReactNode }) {
+  const consent = useSyncExternalStore(
+    subscribeConsent,
+    getConsentSnapshot,
+    getServerConsentSnapshot
+  );
 
   const setConsent = (value: boolean) => {
     localStorage.setItem("cookie_consent", String(value));
-    setConsentState(value);
+    consentListeners.forEach((listener) => listener());
     // updateHtmlConsentAttribute(value);
     if (value === true) injectGTM();
     console.log(value);

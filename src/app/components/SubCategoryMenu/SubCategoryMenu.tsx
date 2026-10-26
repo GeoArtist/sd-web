@@ -3,25 +3,17 @@ import { OfferCategories} from "@/constants/offerCategories"
 import Link from "next/link";
 import { useCurrentPath } from "@/contexts/CurrentPathContext";
 import { OfferCategory } from "@/types/offerCategory";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./SubCategoryMenu.module.scss";
 
 export function SubCategoryMenu({ item}:{item:OfferCategory}) {
     const currentPath = useCurrentPath()
-    const [open, setOpen] = useState(false)
-
-    useEffect(() => {
-      if (currentPath.includes(item.path)) {
-        setOpen(true);
-      }
-
-      return () => {
-        setOpen(false);
-      };
-    }, [currentPath, item.path]);
+    // The menu of the current category is open; a click overrides that until the path changes
+    const [toggled, setToggled] = useState<{ path: string; open: boolean } | null>(null)
+    const open = toggled?.path === currentPath ? toggled.open : currentPath.includes(item.path)
 
     const toggleOpen = () => {
-        setOpen(!open)
+        setToggled({ path: currentPath, open: !open })
     }
 
     const category = item.name.toLowerCase()

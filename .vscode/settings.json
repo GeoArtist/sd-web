@@ -1,8 +1,35 @@
-
 {
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#4ca1de71"
+  },
 
-    "workbench.colorCustomizations":{
-        "titleBar.activeBackground":"#4ca1de71",
-    }
+  // Formatuje rozszerzenie Oxc (oxc.oxc-vscode) opcjami z .oxfmtrc.json, a lintuje regułami z .oxlintrc.json.
+  // Oxfmt nie formatuje zakresów, stąd formatOnSaveMode "file".
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+
+  // Osobne klucze, nie "[javascript][typescript]...": klucz dla wielu języków przegrywa z pojedynczym
+  // "[typescript]" z ustawień użytkownika/profilu (np. z Prettierem).
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.oxc": "explicit" }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.oxc": "explicit" }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.oxc": "explicit" }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.codeActionsOnSave": { "source.fixAll.oxc": "explicit" }
+  },
+  "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[css]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[scss]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  // Markdown z src/content/ jest pominięty w .oxfmtrc.json: formatowanie mogłoby zmienić treść wpisów i MDX.
+  "[markdown]": { "editor.formatOnSave": false }
 }
-
