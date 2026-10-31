@@ -73,6 +73,10 @@
         object-fit: cover;
         max-height: 50vh;
         width: auto;
+        // `![alt](src "full")` in Markdown: tall charts shown whole, without the height cap
+        &[data-full] {
+            max-height: none;
+        }
         height: auto;
         max-width: 100%;
         margin-inline: auto;

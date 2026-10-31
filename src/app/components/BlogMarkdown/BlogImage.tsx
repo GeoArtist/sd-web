@@ -9,11 +9,13 @@ export default function BlogImage({
   alt,
   width,
   height,
+  full = false,
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
+  full?: boolean; // Skip the 50vh height cap
 }) {
   return (
     <motion.span
@@ -35,11 +37,14 @@ export default function BlogImage({
         width={width}
         height={height}
         sizes="(max-width: 900px) 100vw, 900px"
+        data-full={full ? "" : undefined}
         // Display size must not depend on which srcset candidate loads (the optimizer never
         // upscales, so a small original would shrink on HiDPI screens): fill the column, but
-        // never exceed the original width or 50vh of height.
+        // never exceed the original width or 50vh of height (unless `full`).
         style={{
-          width: `min(100%, ${width}px, calc(50vh * ${width / height}))`,
+          width: full
+            ? `min(100%, ${width}px)`
+            : `min(100%, ${width}px, calc(50vh * ${width / height}))`,
           height: "auto",
         }}
       />

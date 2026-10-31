@@ -11,6 +11,7 @@ import { BlogImageSizes } from "@/types/blogPost";
 export function createBlogMdxComponents(images: BlogImageSizes): MDXComponents {
   return {
     // Local images go through next/image with build-time dimensions
+    // The Markdown title doubles as a size hint: `![alt](src "full")` lifts the height cap
     img: ({ src, alt, ...props }) => {
       const size = typeof src === "string" ? images[src] : undefined;
       if (!size) {
@@ -18,7 +19,14 @@ export function createBlogMdxComponents(images: BlogImageSizes): MDXComponents {
         // eslint-disable-next-line @next/next/no-img-element
         return <img src={src} alt={alt ?? ""} loading="lazy" {...props} />;
       }
-      return <BlogImage src={src as string} alt={alt ?? ""} {...size} />;
+      return (
+        <BlogImage
+          src={src as string}
+          alt={alt ?? ""}
+          full={props.title === "full"}
+          {...size}
+        />
+      );
     },
   };
 }
