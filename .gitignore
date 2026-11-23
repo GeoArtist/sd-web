@@ -17,6 +17,9 @@ package-lock.json
 # socials
 /social-posts
 
+# blog wiki (LLM Wiki for posts and social posts): local only
+/knowledge
+
 # next.js
 /.next/
 /out/
