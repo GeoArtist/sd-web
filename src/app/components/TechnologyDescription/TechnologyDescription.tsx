@@ -7,17 +7,19 @@ import {
   imgsTechGeo,
   imgsTechTech,
   imgsTechWeb,
+  imgsTechAi,
 } from "@/constants/InfiniteScrollImgs";
 import { ImgsLinks } from "@/types/imgsLinks";
 import { Fragment } from "react";
 
 export function TechnologyDescription() {
   const wheelToImgsMap: { [key: string]: ImgsLinks[] } = {
-    Geodezja: imgsTechGeo,
-    "Bazy Danych": imgsTechDb,
-    "Analiza i Przetwarzanie Danych": imgsTechData,
-    Wizualizacje: imgsTechWeb,
+    AI: imgsTechAi,
     Narzędzia: imgsTechTech,
+    Wizualizacje: imgsTechWeb,
+    "Analiza i Przetwarzanie Danych": imgsTechData,
+    "Bazy Danych": imgsTechDb,
+    Geodezja: imgsTechGeo,
   };
   return (
     <>

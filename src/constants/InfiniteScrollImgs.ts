@@ -229,3 +229,73 @@ export const imgsTechWeb: ImgsLinks[] = [
     href: "https://geoserver.org/",
   },
 ];
+
+import claudeLogo from "@/public/logos/technology/ai/claude.svg";
+import codexLogo from "@/public/logos/technology/ai/codex.jpg";
+import geminiLogo from "@/public/logos/technology/ai/gemini.jpg";
+import ollamaLogo from "@/public/logos/technology/ai/ollama.jpg";
+import bielikLogo from "@/public/logos/technology/ai/bielik.jpg";
+import herdrLogo from "@/public/logos/technology/ai/herdr.png";
+import t3CodeLogo from "@/public/logos/technology/ai/t3code.png";
+import hermesLogo from "@/public/logos/technology/ai/hermes.jpg";
+import lmStudioLogo from "@/public/logos/technology/ai/lmstudio.jpg";
+import handyLogo from "@/public/logos/technology/ai/handy.jpg";
+import whisperflowLogo from "@/public/logos/technology/ai/whisperflow.png";
+
+export const imgsTechAi: ImgsLinks[] = [
+  {
+    url: claudeLogo,
+    alt: "claude logo",
+    href: "https://claude.com/",
+  },
+  {
+    url: codexLogo,
+    alt: "codex logo",
+    href: "https://openai.com/codex/",
+  },
+  {
+    url: geminiLogo,
+    alt: "gemini logo",
+    href: "https://gemini.google.com/",
+  },
+  {
+    url: ollamaLogo,
+    alt: "ollama logo",
+    href: "https://ollama.com/",
+  },
+  {
+    url: bielikLogo,
+    alt: "bielik logo",
+    href: "https://www.bielik.ai/",
+  },
+  {
+    url: herdrLogo,
+    alt: "herdr logo",
+    href: "https://www.herdr.dev/",
+  },
+  {
+    url: t3CodeLogo,
+    alt: "t3code logo",
+    href: "https://t3.codes/",
+  },
+  {
+    url: hermesLogo,
+    alt: "hermes logo",
+    href: "https://hermes-agent.nousresearch.com/",
+  },
+  {
+    url: lmStudioLogo,
+    alt: "lmstudio logo",
+    href: "https://lmstudio.ai/",
+  },
+  {
+    url: handyLogo,
+    alt: "handy logo",
+    href: "https://handy.computer/",
+  },
+  {
+    url: whisperflowLogo,
+    alt: "whisperflow logo",
+    href: "https://wisprflow.ai/",
+  },
+];
